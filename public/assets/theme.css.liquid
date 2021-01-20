@@ -1,0 +1,18 @@
+---
+permalink: '/assets/theme.css'
+---
+
+{% for theme in themes %}
+[data-theme='{{ theme.id }}'] {
+    --text: {{ theme.colors.text }};
+    --text-dark: {{ theme.colors.text-dark }};
+    --border: {{ theme.colors.border }};
+    --primary: {{ theme.colors.primary }};
+    --secondary: {{ theme.colors.secondary }};
+    --primary-dark: {{ theme.colors.primary-dark }};
+    --bg: {{ theme.colors.bg }};
+    --bg-alt: {{ theme.colors.bg-alt }};
+}
+{% endfor %}
+
+   

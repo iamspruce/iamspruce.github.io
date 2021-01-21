@@ -34,14 +34,17 @@ border-right: 1px solid var(--border);
     .story-card__list {
         flex: 1 0 60%
     }
+    .story-card__list {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+        }
 }
 @media (min-width: 900px) {
     .story-card__list {
-        flex: 1 0 37%
+        flex: 1 0 33.3333333%
     }
 }
 .story-card__link {
-    margin-top: 30px;
     display: flex;
     flex-direction: column;
     color: var(--text);
@@ -52,7 +55,7 @@ border-right: 1px solid var(--border);
 }
 .story-card__image {
     width: 100%;
-    max-height: 204px;
+    height: 204px;
     object-fit: cover;
     object-position: center;
     border: 1px solid rgba(99, 115, 129, 0.1);

@@ -1,7 +1,7 @@
 const pluginDate = require("eleventy-plugin-date");
 module.exports = function(eleventyConfig) {
 
-    eleventyConfig.setUseGitIgnore(true);
+    eleventyConfig.setUseGitIgnore(false);
     eleventyConfig.addPlugin(pluginDate);
     eleventyConfig.addWatchTarget("./src/sass/");
     eleventyConfig.addPassthroughCopy("./src/sass/");

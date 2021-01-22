@@ -1,6 +1,10 @@
 .section {
     background-color: var(--bg);
 }
+.section__hero {
+    border-bottom: 1px solid var(--border);
+    padding:.5em 0 2em 0;
+}
  
 .section--alt {
     background-color: var(--bg-alt);

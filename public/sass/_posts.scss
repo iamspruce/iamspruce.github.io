@@ -1,3 +1,10 @@
+@media (min-width: 567px) {
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 18px;
+    }
+}
 .article__list {
     border-bottom: 1px solid var(--border);
     margin-bottom: .5em;
@@ -6,24 +13,31 @@
 .article__out {
     display: none;
 }
-.article__list--author {
+.article__tag {
     margin-bottom: 4px;
+}
+.article__tag--text {
+    text-transform: lowercase;
+    text-transform: capitalize;
+    font-size: 16px;
+    margin-right: 4px;
+    display: inline-block;
+
+}
+.article__tag--icon {
+    margin-right: 1px;
 }
 .post__list--title .link {
     border-bottom: none;
 }
 @media (min-width: 900px) {
-    .article__list {
+    .article__list { 
         display: flex;
-
-        .article__main {
-            max-width: 20em;
-        }
     }
     .article__out {
         display: block;
         margin-right: .4em;
-        order: 2;
+        order: 2; 
 
         .link__items {
             list-style: none;

@@ -893,6 +893,13 @@ div.nav__overlay {
     text-align: center;
   }
 }
+@media (min-width: 567px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 18px;
+  }
+}
 .article__list {
   border-bottom: 1px solid var(--border);
   margin-bottom: 0.5em;
@@ -903,8 +910,20 @@ div.nav__overlay {
   display: none;
 }
 
-.article__list--author {
+.article__tag {
   margin-bottom: 4px;
+}
+
+.article__tag--text {
+  text-transform: lowercase;
+  text-transform: capitalize;
+  font-size: 16px;
+  margin-right: 4px;
+  display: inline-block;
+}
+
+.article__tag--icon {
+  margin-right: 1px;
 }
 
 .post__list--title .link {
@@ -914,9 +933,6 @@ div.nav__overlay {
 @media (min-width: 900px) {
   .article__list {
     display: flex;
-  }
-  .article__list .article__main {
-    max-width: 20em;
   }
 
   .article__out {

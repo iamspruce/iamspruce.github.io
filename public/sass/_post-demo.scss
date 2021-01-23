@@ -1,0 +1,105 @@
+/* mark text */
+.mark-text {
+    display: inline;
+    background: linear-gradient(180deg, rgba(225,225,225,0) 50%, #00bb00 50%);
+        }
+
+/* add lines to both side */
+    .lines {
+    text-align: center;
+    background-image: linear-gradient(#ddd,#ddd);
+    background-size: 100% .1em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 2em 0;
+        margin-top: 2em;
+}
+.lines .btn
+ {
+ display:inline-block;
+ box-shadow:0 0 0 1em #fff
+}
+
+/* css wavy line */
+.wavy-line {
+    position: relative;
+    width: 100vw;
+    height: 50px;
+}
+.wavy-line::before, .wavy-line::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100vw; /*same width as container*/
+    height: 26px; 
+}
+.wavy-line::after {
+    background: linear-gradient(45deg, transparent, transparent 49%, green 49%, transparent 51%);
+}
+.wavy-line::before {
+    background: linear-gradient(-45deg, transparent, transparent 49%, green 49%, transparent 51%);
+}
+.wavy-line::before, .wavy-line::after {
+    background-size: 50px 50px;
+}
+
+/* animate line */
+
+.line-animate {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 26px;
+    color: green;
+    position: relative;
+}
+.line-animate:hover.line-animate::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    top: 100%;
+    background-image: linear-gradient(#ddd,#ddd);
+    background-size: 100% .1em;
+    animation: animate .5s linear;
+
+}
+
+@keyframes animate {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 100%;
+    }
+    0% {
+        width: 0;
+    }
+}
+
+/* line before */
+
+
+.line-before__inner {
+ position:relative;
+ display:block;
+ width:100%;
+ color:#333;
+ background-position:center 72%;
+
+ font-size:1em;
+ z-index:2;
+ padding-left:calc(100px + 1em);
+ 
+}
+
+.line-before__inner::before {
+ content:'';
+ position:absolute;
+ display:block;
+ width:100px;
+ height:1px;
+ background-color:currentColor;
+ left:0;
+ top:50%
+}

@@ -5,6 +5,9 @@
         grid-gap: 18px;
     }
 }
+.article__wrapper {
+    padding: 1em 0;
+}
 .article__list {
     border-bottom: 1px solid var(--border);
     margin-bottom: .5em;
@@ -53,7 +56,12 @@
     margin-right: 1rem;
 }
 .article__heading {
-    margin-top: 1rem;
+    margin-bottom: .4rem;
+    margin-top: .6rem;
+}
+.article__heading {
+    font-size: 2em;
+    max-width: 16em;
 }
 .article__hero-image {
     width: 100%;
@@ -70,7 +78,7 @@
         margin-top: 16px;
         margin-bottom: 1em;
 
-        img {
+        img,video {
             display: block;
             box-shadow: 0 3px 8px rgba(0, 0, 0, 0.07);
             border: 1px solid #e0e0e0;

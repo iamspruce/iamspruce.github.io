@@ -900,6 +900,10 @@ div.nav__overlay {
     grid-gap: 18px;
   }
 }
+.article__wrapper {
+  padding: 1em 0;
+}
+
 .article__list {
   border-bottom: 1px solid var(--border);
   margin-bottom: 0.5em;
@@ -954,7 +958,13 @@ div.nav__overlay {
 }
 
 .article__heading {
-  margin-top: 1rem;
+  margin-bottom: 0.4rem;
+  margin-top: 0.6rem;
+}
+
+.article__heading {
+  font-size: 2em;
+  max-width: 16em;
 }
 
 .article__hero-image {
@@ -970,13 +980,13 @@ div.nav__overlay {
   margin-top: 16px;
   margin-bottom: 1em;
 }
-.article__body figure img {
+.article__body figure img, .article__body figure video {
   display: block;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.07);
   border: 1px solid #e0e0e0;
   border-radius: 4px;
 }
-.article__body figure img:hover {
+.article__body figure img:hover, .article__body figure video:hover {
   -webkit-filter: none;
   filter: none;
 }
@@ -1094,6 +1104,111 @@ div.nav__overlay {
   padding: 2px 4px;
   margin: 0 2px;
   font-size: 75%;
+}
+
+/* mark text */
+.mark-text {
+  display: inline;
+  background: linear-gradient(180deg, rgba(225, 225, 225, 0) 50%, #00bb00 50%);
+}
+
+/* add lines to both side */
+.lines {
+  text-align: center;
+  background-image: linear-gradient(#ddd, #ddd);
+  background-size: 100% 0.1em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: 2em 0;
+  margin-top: 2em;
+}
+
+.lines .btn {
+  display: inline-block;
+  box-shadow: 0 0 0 1em #fff;
+}
+
+/* css wavy line */
+.wavy-line {
+  position: relative;
+  width: 100vw;
+  height: 50px;
+}
+
+.wavy-line::before, .wavy-line::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100vw;
+  /*same width as container*/
+  height: 26px;
+}
+
+.wavy-line::after {
+  background: linear-gradient(45deg, transparent, transparent 49%, green 49%, transparent 51%);
+}
+
+.wavy-line::before {
+  background: linear-gradient(-45deg, transparent, transparent 49%, green 49%, transparent 51%);
+}
+
+.wavy-line::before, .wavy-line::after {
+  background-size: 50px 50px;
+}
+
+/* animate line */
+.line-animate {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 26px;
+  color: green;
+  position: relative;
+}
+
+.line-animate:hover.line-animate::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  top: 100%;
+  background-image: linear-gradient(#ddd, #ddd);
+  background-size: 100% 0.1em;
+  animation: animate 0.5s linear;
+}
+
+@keyframes animate {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+  0% {
+    width: 0;
+  }
+}
+/* line before */
+.line-before__inner {
+  position: relative;
+  display: block;
+  width: 100%;
+  color: #333;
+  background-position: center 72%;
+  font-size: 1em;
+  z-index: 2;
+  padding-left: calc(100px + 1em);
+}
+
+.line-before__inner::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100px;
+  height: 1px;
+  background-color: currentColor;
+  left: 0;
+  top: 50%;
 }
 
 /*# sourceMappingURL=style.css.map */

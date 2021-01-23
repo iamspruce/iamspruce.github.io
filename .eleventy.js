@@ -1,8 +1,10 @@
 const pluginDate = require("eleventy-plugin-date");
+const timeToRead = require("eleventy-plugin-time-to-read");
 module.exports = function(eleventyConfig) {
 
     eleventyConfig.setUseGitIgnore(false);
     eleventyConfig.addPlugin(pluginDate);
+    eleventyConfig.addPlugin(timeToRead);
     eleventyConfig.addWatchTarget("./src/sass/");
     eleventyConfig.addPassthroughCopy("./src/sass/");
     eleventyConfig.setTemplateFormats([
@@ -15,7 +17,6 @@ module.exports = function(eleventyConfig) {
         "webp",
         "mp4"
     ]);
-
     eleventyConfig.addShortcode("codepen", function(name, title,  hash) {
         return `<p data-height="370" data-theme-id="light" data-slug-hash="${hash}" data-default-tab="result" data-user="Spruce_khalifa" class="codepen">
             See the pen 

@@ -520,6 +520,7 @@ blockquote {
 
 .header__icon {
   color: var(--text);
+  padding: 0.6em;
 }
 
 /* navigation */
@@ -910,14 +911,18 @@ div.nav__overlay {
   border-bottom: none;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 900px) {
   .article__list {
     display: flex;
+  }
+  .article__list .article__main {
+    max-width: 20em;
   }
 
   .article__out {
     display: block;
     margin-right: 0.4em;
+    order: 2;
   }
   .article__out .link__items {
     list-style: none;

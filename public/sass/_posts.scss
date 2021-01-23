@@ -1,13 +1,28 @@
+.article__list {
+    border-bottom: 1px solid var(--border);
+    margin-bottom: .5em;
+    padding: .5em 0;
+}
 .article__out {
     display: none;
 }
-
+.article__list--author {
+    margin-bottom: 4px;
+}
+.post__list--title .link {
+    border-bottom: none;
+}
 @media (min-width: 600px) {
     .article__list {
         display: flex;
     }
     .article__out {
         display: block;
+        margin-right: .4em;
+
+        .link__items {
+            list-style: none;
+        }
     }
 }
 

@@ -344,6 +344,12 @@ blockquote {
   margin-right: auto;
 }
 
+.container__inner--inner {
+  max-width: 667px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* flex */
 .flex {
   display: flex;
@@ -845,7 +851,7 @@ div.nav__overlay {
 
 .section__hero {
   border-bottom: 1px solid var(--border);
-  padding: 0.5em 0 2em 0;
+  padding: 0em 0 0.5em 0;
 }
 
 .section--alt {
@@ -886,8 +892,22 @@ div.nav__overlay {
     text-align: center;
   }
 }
+.article__list {
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 0.5em;
+  padding: 0.5em 0;
+}
+
 .article__out {
   display: none;
+}
+
+.article__list--author {
+  margin-bottom: 4px;
+}
+
+.post__list--title .link {
+  border-bottom: none;
 }
 
 @media (min-width: 600px) {
@@ -897,6 +917,10 @@ div.nav__overlay {
 
   .article__out {
     display: block;
+    margin-right: 0.4em;
+  }
+  .article__out .link__items {
+    list-style: none;
   }
 }
 /* article read */

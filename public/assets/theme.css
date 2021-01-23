@@ -1,6 +1,4 @@
-
-
-[data-theme='default'] {
+:root {
     --text: #222126;
     --text-dark: #777;;
     --border: rgba(0,0,0,.1);
@@ -9,20 +7,32 @@
     --primary-dark: #382cf1;
     --bg: #ffffff;
     --bg-alt: #f8f8f8;
-}
+}  
 
-[data-theme='dark'] {
+
+ [data-theme="default"] {
+    --text: #222126;
+    --text-dark: #777;;
+    --border: rgba(0,0,0,.1);
+    --primary: #665df5;
+    --secondary: #6ad1e0;
+    --primary-dark: #382cf1;
+    --bg: #ffffff;
+    --bg-alt: #f8f8f8;
+ }
+
+ [data-theme="dark"] {
     --text: #fffffe;
     --text-dark: #a7a9be;
-    --border: rgba(0,0,0,.1);
+    --border: rgba(255,255,255,.1);
     --primary: #ff8906;
     --secondary: #e53170;
     --primary-dark: #f25f4c;
     --bg: #0f0e17;
     --bg-alt: #2e2f3e;
-}
+ }
 
-[data-theme='light'] {
+ [data-theme="light"] {
     --text: #020826;
     --text-dark: #716040;
     --border: rgba(0,0,0,.1);
@@ -31,9 +41,9 @@
     --primary-dark: #eaddcf;
     --bg: #f9f4ef;
     --bg-alt: #fffffe;
-}
+ }
 
-[data-theme='fame'] {
+ [data-theme="fame"] {
     --text: #0d0d0d;
     --text-dark: #2a2a2a;
     --border: rgba(0,0,0,.1);
@@ -42,7 +52,4 @@
     --primary-dark: #eaddcf;
     --bg: #eff0f3;
     --bg-alt: #ffffff;
-}
-
-
-   
+ }

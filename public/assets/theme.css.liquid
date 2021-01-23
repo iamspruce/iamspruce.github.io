@@ -1,9 +1,19 @@
 ---
-permalink: '/assets/theme.css'
+permalink: '/assets/theme.css' 
 ---
+:root {
+    --text: {{ themes[0].colors.text }};
+    --text-dark: {{ themes[0].colors.text-dark }};
+    --border: {{ themes[0].colors.border }};
+    --primary: {{ themes[0].colors.primary }};
+    --secondary: {{ themes[0].colors.secondary }};
+    --primary-dark: {{ themes[0].colors.primary-dark }};
+    --bg: {{ themes[0].colors.bg }};
+    --bg-alt: {{ themes[0].colors.bg-alt }};
+}  
 
 {% for theme in themes %}
-[data-theme='{{ theme.id }}'] {
+ [data-theme="{{ theme.id }}"] {
     --text: {{ theme.colors.text }};
     --text-dark: {{ theme.colors.text-dark }};
     --border: {{ theme.colors.border }};
@@ -12,7 +22,5 @@ permalink: '/assets/theme.css'
     --primary-dark: {{ theme.colors.primary-dark }};
     --bg: {{ theme.colors.bg }};
     --bg-alt: {{ theme.colors.bg-alt }};
-}
+ }
 {% endfor %}
-
-   

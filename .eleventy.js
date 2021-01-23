@@ -1,16 +1,14 @@
 const pluginDate = require("eleventy-plugin-date");
-const readingTime = require("eleventy-plugin-reading-time");
 module.exports = function(eleventyConfig) {
 
     eleventyConfig.setUseGitIgnore(false);
-    eleventyConfig.addPlugin(readingTime);
     eleventyConfig.addPlugin(pluginDate);
     eleventyConfig.addWatchTarget("./src/sass/");
     eleventyConfig.addPassthroughCopy("./src/sass/");
-    eleventyConfig.addPassthroughCopy("./src/assets/");
     eleventyConfig.setTemplateFormats([
         "md",
         "html",
+        "liquid",
         "css",
         "jpg",
         "png",
@@ -37,10 +35,11 @@ module.exports = function(eleventyConfig) {
     });
 
     return {
+        templateFormats: ["html","md","liquid"],        
         dir: {
             input: "src",
-            output: "public",
+            output: "public"
         },
-        templateFormats: ["html","md","liquid"]        
+        passthroughFileCopy: true
     };
 };

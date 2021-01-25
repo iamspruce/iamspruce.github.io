@@ -7,7 +7,9 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPlugin(timeToRead);
     eleventyConfig.addWatchTarget("./src/sass/");
     eleventyConfig.addPassthroughCopy("./src/sass/");
-    eleventyConfig.addPassthroughCopy("./src/assets/");
+    eleventyConfig.addPassthroughCopy("./src/assets/fonts/");
+    eleventyConfig.addPassthroughCopy("./src/assets/img/");
+    eleventyConfig.addPassthroughCopy("./src/assets/js/");
     eleventyConfig.setTemplateFormats([
         "md",
         "html",

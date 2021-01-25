@@ -32,7 +32,16 @@ themeTabs.forEach(btn => btn.addEventListener('click', switchTabs));
 
 class CustomTheme {
     constructor() {
-        this.islocalStorage = typeof Storage  !== 'undefined';
+        this.islocalStorage = function() {
+            try {
+                localStorage.setItem("test", "testing");
+                localStorage.removeItem("test");
+                return true;
+            } catch (error) {
+                return false
+            }
+           
+        };
 
         this.schemeBtns = document.querySelectorAll('.js-theme-color');
         this.schemeBtns.forEach((btn) => {
@@ -54,14 +63,14 @@ class CustomTheme {
 
     themeScheme(btnVal) {
         document.documentElement.setAttribute('data-theme', btnVal);
-        if (this.islocalStorage) {
+        if (this.islocalStorage == true) {
             localStorage.setItem('theme-name', btnVal);
         }
     };
     
     themeFont(btnVal,btnTag) {
         document.documentElement.style.setProperty('--font-size', `${btnVal}px`);
-        if (this.islocalStorage) {
+        if (this.islocalStorage == true) {
             localStorage.setItem('font-size', btnVal);
         }
         ;

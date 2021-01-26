@@ -1,4 +1,5 @@
 
+
 // On install, cache some stuff
 addEventListener('install', function (event) {
 	event.waitUntil(caches.open('spruce.com.ng-v1').then(function (cache) {
@@ -26,7 +27,7 @@ addEventListener('fetch', function (event) {
 
 	// HTML files
 	// Network-first
-	if (request.headers.get('Accept').includes('text/html')) {
+	if (request.headers.get('Accept').includes('*/*')) {
 		event.respondWith(
 			fetch(request).then(function (response) {
 

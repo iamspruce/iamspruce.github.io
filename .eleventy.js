@@ -18,7 +18,9 @@ module.exports = function(eleventyConfig) {
         "jpg",
         "png",
         "webp",
-        "mp4"
+        "mp4",
+        "xml",
+        "json"
     ]);
     eleventyConfig.addShortcode("codepen", function(name, title,  hash) {
         return `<p data-height="370" data-theme-id="light" data-slug-hash="${hash}" data-default-tab="result" data-user="Spruce_khalifa" class="codepen">

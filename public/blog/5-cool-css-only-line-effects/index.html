@@ -53,7 +53,6 @@
     <link rel="icon" type="image/png" href="/assets/img/favicon/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="/assets/img/favicon/favicon-16x16.png" sizes="16x16">
     <link rel="shortcut icon" href="/assets/img/favicon/favicon.ico">
-    <link rel="manifest" href="/assets/img/favicon/site.webmanifest">
     <meta name="theme-color" content="">
     
 <link rel="me" href="https://twitter.com/sprucekhalifa">
@@ -71,6 +70,7 @@
 
   gtag('config', 'G-4WLJKYZR1L');
 </script>
+<link rel="manifest" href="/manifest.json">
 </head>
 <body>
     <div class="nav__overlay fixed__right js-nav">
@@ -158,10 +158,9 @@
 <div class="container">
     <section class="section">
       <div class="article__wrapper">
-          <div class="article__header">
+          <div class="article__header" >
             <div class="article__meta">
               <span class="article__meta-published-date">January 1, 2021</span>
-              <span class="article__meta-read-time"> min read</span>
             </div>
             <h1 class="article__heading">How to create 5 Cool Css only line effect</h1>
             <div class="article__meta-authors"><svg width="16px" height="16px" class="article__tag--icon">
@@ -660,6 +659,20 @@ Thanks for reading
 </section>
 
 </body>
+<script>
+    // Initialize the service worker
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+        navigator.serviceWorker.register("/sw.js").then(registration => {
+            console.log(`Serviceworker registered ${registration.scope}`);
+        }), err => {
+            console.log(`Serviceworker failed ${err}`);
+
+        }
+
+        })
+    }
+</script>
 <script src="/assets/js/main.js"></script>
 <script src="/assets/js/theme.js"></script>
 <script>

@@ -12,3 +12,4 @@ closeBtn.addEventListener('click', function() {
     this.setAttribute("aria-expanded", "true");
     this.setAttribute("aria-label", "Close menu");
 });
+

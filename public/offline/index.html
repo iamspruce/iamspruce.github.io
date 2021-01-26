@@ -6,14 +6,14 @@
 <meta http-equiv='X-UA-Compatible' content='IE=edge'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
 <title>
-    Spruce | About Me
+    Spruce | Offline Mode
 </title>
 
 <meta name="description" content="" />
 <meta property="og:description" content="" />
 
 <meta name="author" content="Spruce" />
-<meta property="og:url" content="/about/">
+<meta property="og:url" content="/offline/">
 
 <meta property="og:image" content="/assets/img/spruce.png">
 <meta name="twitter:image" content="/assets/img/spruce.png">
@@ -25,7 +25,7 @@
     <meta property="og:locale" content="en_US">
     <meta name="twitter:site" content="@sprucekhalifa">
     <meta name="twitter:creator" content="@sprucekhalifa">
-    <meta name="twitter:title" content="About Me">
+    <meta name="twitter:title" content="Offline Mode">
     <meta property="og:image:width" content="637">
     <meta property="og:image:width" content="403">
     
@@ -152,64 +152,41 @@
     </div>
     </header><main id="main" class="">
     
-<section class="section section--light-green  text--center">
-<div class="page-title">
-<h1 class="page-title__heading">
-    About Me
-</h1>
-</div>
-<div class="about section__inner container flex">
-    <p class="text--medium">
-        I'm a frontend web designer and developer from Nigeria, I love writing about the web and my learning process as a practicing designer... 
-    </p>
-    <div class="img-overlay">
-        <img src="/assets/img/spruce.png" alt="">
-    </div>
-</div>
+<section class="section ">
+    <div class="container__inner section__hero"><div class="page-emoji" style="font-size: 48px;">
+            <span class="emoji">😥</span>
+          </div><h1 class="page-title__heading">
+        Offline
+      </h1><h3 class="page-title__heading--sub">
+      Oops you are not supposed to be here, but not all bad news
+    </h3></div>
+      </section>
+<section class="section--al">
+    <div class="container__inner section--pad">
+      
+<section>
+    <p>You can still visit some previous pages, while you wait for data connection to turn back on</p>
+    <h2>
+        Previous Pages
+    </h2>
+    <div data-offline></div>
 </section>
-<section class="section section--alt section--pad">
-    <div class="container__inner">
-        <h4>Writing</h4>
-        <p>
-            I love writing about the web on my <a href="/blog/">blog</a>, and have also written articles on the web too
-        </p>
 
-        <h4>Offline</h4>
-        <p>
-            When am not writing about the web, i read, practice, learn and watch movies 
-        </p>
-
-        <h4>Online</h4>
-        <p>
-            find me online on all my social media platforms
-        </p>
-        <ul class="link__items">
-            <li class="link__items--list">
-            <a href="/" class="link">
-          Facebook
-        </a>
-        </li>
-            <li class="link__items--list">
-            <a href="/about/" rel="about" class="link">
-                Twitter
-            </a>
-            </li>
-                <li class="link__items--list">
-                    <a href="/articles/" class="link">
-                    Instagram
-                </a>
-                </li>
-                <li class="link__items--list">
-                    <a href="/articles/" class="link">
-                    Github
-                </a>
-                </li>
-                <li class="link__items--list">
-                    <a href="/articles/" class="link">
-                   Freecodecamp
-                </a>
-                </li>
-                </ul>
+<script>
+    if (navigator && navigator.serviceWorker) {
+        caches.open('pages').then(function (cache) {
+            cache.keys().then(function (keys) {
+                var offline = document.querySelector('[data-offline]');
+                offline.innerHTML =
+                    '<ul class="link__items">' +
+                        keys.map(function(key) {
+                            return '<li class="link__items--list"><a class="link" href="' + key.url + '">' + key.url + '</a></li>';
+                        }).join('') +
+                    '</ul>';
+            });
+        });
+    }
+</script> 
     </div>
 </section>
 </main><footer class="footer">

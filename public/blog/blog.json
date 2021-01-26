@@ -1,0 +1,5 @@
+{
+    "layout": "layouts/posts.liquid",
+    "changefreq": "monthly",
+    "priority": "0.9"
+}

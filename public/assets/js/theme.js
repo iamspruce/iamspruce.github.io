@@ -63,14 +63,14 @@ class CustomTheme {
 
     themeScheme(btnVal) {
         document.documentElement.setAttribute('data-theme', btnVal);
-        if (this.islocalStorage == true) {
+        if (this.islocalStorage) {
             localStorage.setItem('theme-name', btnVal);
         }
     };
     
     themeFont(btnVal,btnTag) {
         document.documentElement.style.setProperty('--font-size', `${btnVal}px`);
-        if (this.islocalStorage == true) {
+        if (this.islocalStorage) {
             localStorage.setItem('font-size', btnVal);
         }
         ;

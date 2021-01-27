@@ -165,22 +165,27 @@
     <div class="container__inner section--pad">
       
 <section>
-    <p>You can still visit some previous pages, while you wait for data connection to turn back on</p>
+    <p>
+        You can still read some of your favourite articles or go back to <a href="/" class="link">Homepage</a>, while you wait for data connection to turn back on
+    </p>
     <h2>
-        Previous Pages
+        Previous Articles
     </h2>
     <div data-offline></div>
 </section>
 
 <script>
     if (navigator && navigator.serviceWorker) {
-        caches.open('pages').then(function (cache) {
+        caches.open('spruce.com.ng').then(function (cache) {
             cache.keys().then(function (keys) {
                 var offline = document.querySelector('[data-offline]');
                 offline.innerHTML =
                     '<ul class="link__items">' +
                         keys.map(function(key) {
+                            if (key.url.match(/blog/)  && !key.url.match('jpg') && !key.url.match('png') && !key.url.match('mp4') ) {
                             return '<li class="link__items--list"><a class="link" href="' + key.url + '">' + key.url + '</a></li>';
+                                
+                            }
                         }).join('') +
                     '</ul>';
             });
@@ -255,17 +260,6 @@
 </footer><section class="section-theme">
 <div class="section-theme__contain">
     <div class="theme__header flex">
-        <div class="theme-tabs">
-            <button class="theme-tab btn btn--tab active" id="tab-1">
-                Font
-            </button>
-            <button class="theme-tab btn btn--tab" id="tab-2">
-                Header
-            </button>
-            <button class="theme-tab btn btn--tab" id="tab-3">
-                Scheme 
-            </button>
-        </div>
         <h4 class="theme__title">
             Theme Settings
         </h4>
@@ -318,7 +312,6 @@
                     <div class="theme-color__secondary" style="background-color: #f8f8f8; margin-bottom: .5em;"></div>
         <span class="theme-color-text" style="background: linear-gradient(180deg, #222126 100%, #222126 100%); color: #222126"></span>
         <span class="theme-color-text" style="background: linear-gradient(180deg, #222126 100%, #222126 100%); color: #222126"></span> <br>
-        <span class="theme-color-text" style="background: linear-gradient(180deg, #222126 100%, #222126 100%); color: #222126"></span>
                    <div class="flex">
                     <span class="theme-color__name" style="color: #222126;">
                         default
@@ -335,7 +328,6 @@
                     <div class="theme-color__secondary" style="background-color: #2e2f3e; margin-bottom: .5em;"></div>
         <span class="theme-color-text" style="background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe"></span>
         <span class="theme-color-text" style="background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe"></span> <br>
-        <span class="theme-color-text" style="background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe"></span>
                    <div class="flex">
                     <span class="theme-color__name" style="color: #fffffe;">
                         dark
@@ -352,7 +344,6 @@
                     <div class="theme-color__secondary" style="background-color: #fffffe; margin-bottom: .5em;"></div>
         <span class="theme-color-text" style="background: linear-gradient(180deg, #020826 100%, #020826 100%); color: #020826"></span>
         <span class="theme-color-text" style="background: linear-gradient(180deg, #020826 100%, #020826 100%); color: #020826"></span> <br>
-        <span class="theme-color-text" style="background: linear-gradient(180deg, #020826 100%, #020826 100%); color: #020826"></span>
                    <div class="flex">
                     <span class="theme-color__name" style="color: #020826;">
                         light
@@ -369,7 +360,6 @@
                     <div class="theme-color__secondary" style="background-color: #ffffff; margin-bottom: .5em;"></div>
         <span class="theme-color-text" style="background: linear-gradient(180deg, #0d0d0d 100%, #0d0d0d 100%); color: #0d0d0d"></span>
         <span class="theme-color-text" style="background: linear-gradient(180deg, #0d0d0d 100%, #0d0d0d 100%); color: #0d0d0d"></span> <br>
-        <span class="theme-color-text" style="background: linear-gradient(180deg, #0d0d0d 100%, #0d0d0d 100%); color: #0d0d0d"></span>
                    <div class="flex">
                     <span class="theme-color__name" style="color: #0d0d0d;">
                         fame

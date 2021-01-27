@@ -629,38 +629,19 @@ div.nav__overlay {
   }
 }
 .section-theme.active {
-  bottom: 0;
-}
-.section-theme.active::before {
-  content: "";
-  position: fixed;
-  z-index: -99;
-  top: 0;
-  width: 100vw;
-  left: 0;
-  height: 100vh;
-  background: var(--overlay);
+  right: 0%;
 }
 
 .section-theme {
   background: var(--bg-alt);
-  border-top: 1px solid var(--border);
-  background-repeat: repeat;
-  background-attachment: scroll;
-  background-image: none;
-  background-size: auto;
   position: fixed;
-  z-index: 99;
-  width: 100%;
-  bottom: -999px;
-  transition: bottom 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-}
-.section-theme__contain {
-  padding: 6px 0;
-  width: 84%;
-  max-width: 1300px;
-  margin-left: auto;
-  margin-right: auto;
+  top: 0;
+  width: 320px;
+  height: 100vh;
+  overflow-y: auto;
+  z-index: 900;
+  right: -9999px;
+  transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 .section-theme__contain p {
   margin-bottom: 24px;
@@ -675,27 +656,20 @@ div.nav__overlay {
 }
 
 .theme__header {
-  margin-bottom: 18px;
+  padding: 40px 40px 8px 40px;
 }
 
-@media (min-width: 600px) {
-  .theme__top {
-    display: flex;
-    justify-content: space-between;
-  }
+.theme__top {
+  padding: 1px 40px 10px 40px;
 }
+
 .theme-top-col {
   border-bottom: 1px solid var(--border);
-  padding: 1em 0;
-}
-
-.theme-top-col.two {
-  padding: 1em 0;
-  margin-right: 20%;
+  padding: 0.9em 0;
 }
 
 .theme__bottom {
-  padding-top: 0.6em;
+  padding: 20px 0px 40px 40px;
 }
 
 .theme-color-wrapper {
@@ -717,7 +691,7 @@ div.nav__overlay {
   padding: 1.2em;
   border-radius: 11px;
   width: 200px;
-  min-width: 200px;
+  min-width: 150px;
   position: relative;
   z-index: 5;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 3px 4.5px rgba(0, 0, 0, 0.3);
@@ -748,6 +722,10 @@ div.nav__overlay {
   margin-left: -10px;
 }
 
+.js-font-btn {
+  margin-top: 8px;
+}
+
 .js-font-btn.active {
   background: var(--primary);
   color: var(--bg);
@@ -772,27 +750,6 @@ div.nav__overlay {
 }
 
 /* tabs */
-.theme-tabs {
-  display: none;
-}
-
-@media (max-width: 599px) {
-  .theme-tabs {
-    display: flex;
-  }
-
-  .theme__title {
-    display: none;
-  }
-
-  .js-tab-content {
-    display: none;
-  }
-
-  .js-tab-content.show {
-    display: block;
-  }
-}
 .btn {
   display: inline-block;
   text-align: center;

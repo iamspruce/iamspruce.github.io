@@ -17,11 +17,13 @@ self.addEventListener('install', (e) => {
 	)
 });
 
-self.addEventListener('install', (e) => {
+self.addEventListener('activate', (e) => {
+	let cacheKeepList = ['spruce.com.ng'];
+	
 	e.waitUntil(
 		caches.keys().then((keyList) => {
 				return Promise.all(keyList.map((key) => {
-					if(cacheName.indexOf(key) === -1) {
+					if(cacheKeepList.indexOf(key) === -1) {
 						return caches.delete(key);
 					}
 				}));

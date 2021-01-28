@@ -11,25 +11,7 @@ themeClose.addEventListener('click', (e) => {
     themeWrapper.classList.remove('active')
 });
 
-    function switchTabs(e) {
-        removeActiveClass();
-        removeShow();
-        this.classList.add('active');
-        const tabContent = document.querySelector(`#${this.id}-content`);
-        tabContent.classList.add('show')
-    }
-
-    function removeActiveClass() {
-        themeTabs.forEach(btn => btn.classList.remove('active'))
-    }
-    function removeShow() {
-        themeTabContent.forEach(btn => btn.classList.remove('show'))
-    }
-
-const themeTabs = document.querySelectorAll('.theme-tab');
-const themeTabContent = document.querySelectorAll('.js-tab-content');
-themeTabs.forEach(btn => btn.addEventListener('click', switchTabs));
-
+   
 class CustomTheme {
     constructor() {
         this.islocalStorage = function() {

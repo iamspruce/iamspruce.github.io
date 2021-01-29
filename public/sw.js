@@ -1,4 +1,5 @@
 
+
 const cacheName = "spruce.com.ng";
 const cacheAssets = [
 	'/assets/theme.css',
@@ -18,12 +19,10 @@ self.addEventListener('install', (e) => {
 });
 
 self.addEventListener('activate', (e) => {
-	let cacheKeepList = ['spruce.com.ng'];
-	
 	e.waitUntil(
 		caches.keys().then((keyList) => {
 				return Promise.all(keyList.map((key) => {
-					if(cacheKeepList.indexOf(key) === -1) {
+					if(cacheName.indexOf(key) === -1) {
 						return caches.delete(key);
 					}
 				}));

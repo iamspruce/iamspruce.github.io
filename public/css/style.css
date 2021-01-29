@@ -634,6 +634,7 @@ div.nav__overlay {
 
 .section-theme {
   background: var(--bg-alt);
+  border-left: 1px solid var(--border);
   position: fixed;
   top: 0;
   width: 320px;
@@ -691,7 +692,7 @@ div.nav__overlay {
   padding: 1.2em;
   border-radius: 11px;
   width: 200px;
-  min-width: 150px;
+  min-width: 200px;
   position: relative;
   z-index: 5;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 3px 4.5px rgba(0, 0, 0, 0.3);

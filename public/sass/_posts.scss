@@ -2,7 +2,7 @@
     .grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-gap: 18px;
+        grid-gap: var(--font-size);
     }
 }
 .article__wrapper {
@@ -12,6 +12,21 @@
     border-bottom: 1px solid var(--border);
     margin-bottom: .5em;
     padding: .9em 0;
+}
+.article__list:hover {
+ z-index:2
+}
+.article__list::before {
+ display:block;
+ width:calc(100% + 60px);
+ height:calc(100%);
+ content:'';
+ position:absolute;
+ left:-30px;
+ top:-30px;
+ transition:background-color .1s ease-out;
+ background-color:transparent;
+ padding:30px
 }
 .article__out {
     display: none;

@@ -2,7 +2,7 @@
     .grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-gap: var(--font-size);
+        grid-gap: 20px;
     }
 }
 .article__wrapper {
@@ -12,22 +12,13 @@
     border-bottom: 1px solid var(--border);
     margin-bottom: .5em;
     padding: .9em 0;
+
+    &:hover {
+        background-color: var(bg-alt);
+        border-radius: 11px;
+    }
 }
-.article__list:hover {
- z-index:2
-}
-.article__list::before {
- display:block;
- width:calc(100% + 60px);
- height:calc(100%);
- content:'';
- position:absolute;
- left:-30px;
- top:-30px;
- transition:background-color .1s ease-out;
- background-color:transparent;
- padding:30px
-}
+
 .article__out {
     display: none;
 }

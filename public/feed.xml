@@ -1,0 +1,1682 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Spruce.com.ng</title>
+  <subtitle>Spruce personal online and portfolio</subtitle>
+  <link href="https://spruce.com.ng/feed.xml" rel="self"/>
+  <link href="https://spruce.com.ng/"/>
+  <updated>2021-01-01T00:00:00Z</updated>
+  <id>https://spruce.com.ng/</id>
+  <author>
+    <name>Spruce Emmanuel</name>
+    <email>sprucekhalifa3@gmail.com</email>
+  </author>
+  
+  <entry>
+    <title>Welcome to my personal blog and online journal</title>
+    <link href="https://spruce.com.ng/blog/welcome-to-my-personal-blog/"/>
+    <updated>2020-12-18T00:00:00Z</updated>
+    <id>https://spruce.com.ng/blog/welcome-to-my-personal-blog/</id>
+    <content type="html"> &lt;p class=&quot;p-article__lead&quot;&gt;
+Hey there welcome to my personal blog where i write about my learning process as a supposed web designer.
+&lt;/p&gt;
+ &lt;figure class=&quot;p-article__img&quot;&gt;
+  &lt;img src=&quot;https://spruce.com.ng/assets/img/spruce.png&quot; alt=&quot;website cover image&quot; /&gt;
+ &lt;/figure&gt;
+&lt;p&gt;
+This site (My personal blog) Which was &lt;strong&gt;lunched&lt;/strong&gt; on the &lt;b&gt; 18th of November &lt;/b&gt; is my own personal online journal where i blog about everything web design.
+&lt;/p&gt;
+  &lt;p&gt;
+  This site is built with Jekyll and hosted on Github. And as u might have guessed this site was built and designed be &lt;a href=&quot;https://facebook.com/spruce.emma&quot;&gt;Me (Spruce) &lt;/a&gt;
+  &lt;/p&gt;
+&lt;h2 class=&quot;p-article__heading&quot;&gt;What i blog about&lt;/h2&gt;
+&lt;p&gt;
+Ehn things i blog about are just a view minimal things:
+&lt;/p&gt;
+&lt;ol class=&quot;p-article__items&quot;&gt;
+&lt;li&gt;
+HTML
+&lt;/li&gt;
+&lt;li&gt;
+CSS
+&lt;/li&gt;
+&lt;li&gt;
+JAVASCRIPT
+&lt;/li&gt;
+&lt;li&gt;
+JEKYLL
+&lt;/li&gt;
+&lt;li&gt;
+and some DESIGN TIPS
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Once again welcome aboard... &lt;/p&gt;
+&lt;pre class=&quot;language-css&quot;&gt;
+&lt;code class=&quot;language-css&quot;&gt;
+  #hey {
+    welcome: dear reader;
+  }
+&lt;/code&gt;
+&lt;/pre&gt;</content>
+  </entry>
+  
+  <entry>
+    <title>Create A Blog On Your Mobile Phone With Jekyll On Github</title>
+    <link href="https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/"/>
+    <updated>2020-12-20T00:00:00Z</updated>
+    <id>https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/</id>
+    <content type="html">&lt;p class=&quot;p-article__lead&quot;&gt;
+Welcome to the series &lt;b&gt;&quot;How to create a blog on your mobile phone with Jekyll on Github&quot;&lt;/b&gt;
+&lt;/p&gt;
+&lt;p&gt;
+Yep i said it... You can create a free blog from your mobile phone, so get ready to start your journey as a blogger...  
+&lt;/p&gt;
+&lt;p&gt;
+a lot of people do ask:
+&lt;/p&gt;&lt;ol class=&quot;p-article__items&quot;&gt;
+&lt;li&gt;
+How can i create a website with my phone?
+&lt;/li&gt;
+&lt;li&gt;
+Can we blog from mobile?
+&lt;/li&gt;
+&lt;li&gt;
+what is the best phone for blogging?
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;
+Yes, Yes and Yes you can create a website with your phone, you can blog from your mobile phone and you dont need a special phone for  blogging. 
+&lt;/p&gt;
+&lt;h1&gt;
+What is moblie bloging?
+&lt;/h1&gt;
+&lt;p&gt;
+Mobile blogging is a method of &lt;b&gt;publishing to a website or blog from a mobile phone or other handheld device.&lt;/b&gt; A mobile blogs help habitual bloggers to post write-ups directly from their phones even when on the move.
+&lt;/p&gt;
+&lt;p&gt;
+Well i hope from the defination you understand what a mobile blog is and what we are trying to do here...
+well as you might have guessed we are trying to create a free website or blog which you can update, design and post to directly from your mobile phone. 
+&lt;/p&gt;
+&lt;h2&gt;
+Requirements:
+&lt;/h2&gt;
+&lt;ol class=&quot;p-article__items&quot;&gt;
+&lt;li&gt;
+HTML
+&lt;/li&gt;
+&lt;li&gt;
+CSS
+&lt;/li&gt;
+&lt;li&gt;
+JAVASCRIPT (optional)
+&lt;/li&gt;
+&lt;li&gt;
+Github account
+&lt;/li&gt;
+&lt;li&gt;
+SPCK Editor
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+Before you beging this series with me, it is required you just have a basic knowledge of Html, Css, and javascript is optional for now, well if you dont have a basic knowledge and you are just hearing about all this for the first time, dont worry this articles &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web&quot;&gt; Getting Started With The Web &lt;/a&gt;, &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Learn/HTML&quot;&gt;Structuring the web with HTML &lt;/a&gt; should basically get you started. 
+&lt;/p&gt;
+&lt;p&gt;
+Other requirements are the github account: Github is a subsidiary of Microsoft which provides hosting for software development and version control using Git. &lt;br /&gt;
+Now dont worry about the defination, you probably will never need it anyway. All you need is to Create an Account(which is totally free), head over to &lt;a href=&quot;https://github.com/&quot;&gt;Github.com&lt;/a&gt; and create an account. 
+&lt;/p&gt;
+&lt;p&gt;
+Then &lt;a href=&quot;https://spck.io/&quot;&gt;Spck Editor&lt;/a&gt;, this is just a really cool code editor and js sandbox, this is the closest thing that is close to vscode on a mobile phone. &lt;br /&gt;
+Head over to play store search for &quot;Spck editor&quot; and install it. This editor is what we&#39;ll use to write to our blog...
+&lt;/p&gt;
+ &lt;div class=&quot;info info--note&quot;&gt;
+   &lt;div class=&quot;info__content&quot;&gt;
+       &lt;strong&gt;Note:&lt;/strong&gt; It is required that you create a github account, and have downloaded and installed the app before you continue. &lt;br /&gt;
+       Please don&#39;t use Opera Mini, use a modern browser like Chrome or Firefox
+                &lt;/div&gt;
+          &lt;/div&gt;
+&lt;h3&gt;
+Getting Started
+&lt;/h3&gt;
+&lt;p&gt;
+Now make sure you have created your Github account by signing up &lt;br /&gt;
+Now Click below link (Open in a different tab) &lt;br /&gt;
+&lt;a href=&quot;https://github.com/barryclark/jekyll-now&quot;&gt;Jekyll now starter theme
+&lt;/a&gt;
+&lt;/p&gt;
+&lt;figure class=&quot;p-article__img&quot;&gt;
+  &lt;img src=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/jekyll-theme.png&quot; alt=&quot;Jekyll now starter theme&quot; /&gt;
+  &lt;figcaption&gt;
+    You should see a page that looks like this
+  &lt;/figcaption&gt;
+ &lt;/figure&gt;
+ &lt;p&gt;
+  Now its time to &lt;b&gt;Fork&lt;/b&gt; the starter theme &lt;br /&gt;
+  click on the &lt;b&gt;Forks icon&lt;/b&gt; 
+ &lt;/p&gt;
+ &lt;figure class=&quot;p-article__img&quot;&gt;
+  &lt;img src=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/click-forks.png&quot; alt=&quot;Jekyll now fork icon&quot; /&gt;
+  &lt;figcaption&gt;
+    Click on the forks icon
+  &lt;/figcaption&gt;
+ &lt;/figure&gt;
+&lt;p&gt;
+The page would reload and you would see a desktop view of the page, just look at the right side of the page at the header (top of the webpage) and click on &lt;b&gt;fork&lt;/b&gt;
+&lt;/p&gt;
+&lt;figure class=&quot;p-article__img&quot;&gt;
+  &lt;img src=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/fork-theme.png&quot; alt=&quot;Jekyll now starter theme&quot; /&gt;
+  &lt;figcaption&gt;
+    Click the fork icon there
+  &lt;/figcaption&gt;
+ &lt;/figure&gt;
+ &lt;p&gt;
+After doing that the next page you are going to see would ask you to change your &lt;b&gt;Forked theme name&lt;/b&gt; &lt;br /&gt;
+Now change the name of the website to: &quot;github-username.github.io&quot;
+ &lt;/p&gt;
+ &lt;figure class=&quot;p-article__img&quot;&gt;
+  &lt;img src=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/rename-theme.png&quot; alt=&quot;Jekyll now starter theme&quot; /&gt;
+  &lt;figcaption&gt;
+   Old one looks like this
+  &lt;/figcaption&gt;
+ &lt;/figure&gt;
+ &lt;figure class=&quot;p-article__img&quot;&gt;
+  &lt;img src=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/rename-theme-me.png&quot; alt=&quot;rename Jekyll now starter theme&quot; /&gt;
+  &lt;figcaption&gt;
+   Change it to something like this &quot;with your own github username&quot;
+  &lt;/figcaption&gt;
+ &lt;/figure&gt;
+ &lt;p&gt;
+Now its time to create a github token for the spck editor app you downloaded earlier... &lt;br /&gt;
+click on the dropdown menu at the top of the page
+ &lt;/p&gt;
+ &lt;figure class=&quot;p-article__img&quot;&gt;
+  &lt;img src=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/click-settings.png&quot; alt=&quot;Click on settings&quot; /&gt;
+  &lt;figcaption&gt;
+  Dropdown menu
+  &lt;/figcaption&gt;
+ &lt;/figure&gt;
+ &lt;p&gt;
+ &lt;/p&gt;&lt;ol&gt;
+ from the dropdown: 
+ &lt;br /&gt;
+&lt;li&gt; Click on settings &lt;/li&gt;
+&lt;li&gt; developer settings &lt;/li&gt;
+&lt;li&gt; personal access tokens &lt;/li&gt;
+&lt;li&gt; Generate New Token &lt;/li&gt;
+&lt;li&gt; You may be asked for password, just enter your github password and continue &lt;/li&gt; 
+ &lt;ol&gt;
+&lt;li&gt; Give it a note: Spck editor &lt;/li&gt;
+&lt;li&gt;click on the repo box (select everything under it) &lt;/li&gt;
+&lt;li&gt;Scroll select &lt;b&gt;write:packages&lt;/b&gt; and &lt;b&gt; admin:org&lt;/b&gt; &lt;/li&gt;
+&lt;li&gt;Click &quot;Generate Token&quot;&lt;/li&gt;
+ &lt;/ol&gt;
+ &lt;/ol&gt;
+ &lt;p&gt;&lt;/p&gt;
+ &lt;figure class=&quot;p-article__img&quot;&gt;
+  &lt;img src=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/spck-token.png&quot; alt=&quot;Set up github personal token&quot; /&gt;
+  &lt;figcaption&gt;
+ Select the repo box
+  &lt;/figcaption&gt;
+ &lt;/figure&gt;
+ &lt;p&gt;
+After you have generated your token ensure you copy it to your phone clipboard because you wont see again unless you re-generate it.
+ &lt;/p&gt;
+  &lt;figure class=&quot;p-article__img&quot;&gt;
+  &lt;img src=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/spck-token-sucess.png&quot; alt=&quot;copy the github personal token&quot; /&gt;
+  &lt;figcaption&gt;
+ Ensure you copy the token
+  &lt;/figcaption&gt;
+ &lt;/figure&gt;
+ &lt;p&gt;
+If you have followed this guide perfectly, you are just a few steps away from your newly phone managed blog or website.
+ &lt;/p&gt;
+ &lt;p&gt;
+Moving on, Do you remember the &quot;Spck editor&quot; you downloaded earlier? Yep i guess you do &lt;br /&gt;
+Now open it up &lt;br /&gt;
+And you should see something that looks like this image below
+ &lt;/p&gt;
+ &lt;figure class=&quot;p-article__img&quot;&gt;
+  &lt;img src=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/spck-editor.png&quot; alt=&quot;Open Spck editor&quot; /&gt;
+  &lt;figcaption&gt;
+ Yep. Click on the first tab and you should see this
+  &lt;/figcaption&gt;
+ &lt;/figure&gt;
+ &lt;p&gt;
+Next step is to look at the &lt;b&gt;PROJECTS&lt;/b&gt; tab &lt;br /&gt;
+Click on the third icon (The fork icon)
+ &lt;/p&gt;
+ &lt;figure class=&quot;p-article__img&quot;&gt;
+  &lt;img src=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/spck-editor-fork.png&quot; alt=&quot;Open Spck editor fork icon&quot; /&gt;
+  &lt;figcaption&gt;
+ On the projects tab, click the fork icon (the third icon)
+  &lt;/figcaption&gt;
+ &lt;/figure&gt;
+ &lt;p&gt;
+When you click on fork icon &lt;br /&gt;
+Select credentials &lt;br /&gt; 
+Set up your Credentials as follows: &lt;br /&gt; 
+name: Github username &lt;br /&gt; 
+password/token: The token you Generated earlier (The one you copied) &lt;br /&gt; 
+email: for email (The one used in opening your github account) &lt;br /&gt;
+Then just Click on &quot;OK&quot;
+ &lt;/p&gt;
+ &lt;p&gt;
+Now its time to clone your website to your mobile phone &lt;br /&gt;
+Click on the Fork icon again &lt;br /&gt;
+Just enter your Url like this &lt;/p&gt; 
+&lt;figure class=&quot;p-article__img&quot;&gt;
+  &lt;img src=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/spck-clone.png&quot; alt=&quot;clone website on Spck editor&quot; /&gt;
+  &lt;figcaption&gt;
+ Enter your repo link 
+  &lt;/figcaption&gt;
+ &lt;/figure&gt;
+ &lt;p&gt;
+ url: https://github.com/github-username/github-username.github.io 
+ &lt;br /&gt;
+just change &quot;github-username&quot; to your own github username &lt;br /&gt;
+then just Click on &quot;OK&quot; &lt;br /&gt;
+and wait for your website to clone (Speed depends on your internet connection, mine took a few seconds)
+ &lt;/p&gt;
+ &lt;figure class=&quot;p-article__img&quot;&gt;
+  &lt;img src=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/spck-editor-success.png&quot; alt=&quot;Successfully clone website on Spck editor&quot; /&gt;
+  &lt;figcaption&gt;
+ After you have finished cloning you should see something like this
+  &lt;/figcaption&gt;
+ &lt;/figure&gt;
+ &lt;p&gt;
+Yep, You guessed it, that&#39;s all. If you followed the steps correctly then i congratulate you(yeah you can feel proud). You have created a free website, and you can now manage, edit and design it on your mob ile phone.   
+ &lt;/p&gt;
+ &lt;p&gt;
+To view your website &lt;br /&gt;
+go to your browser &lt;br /&gt;
+type in your website url &lt;br /&gt;
+&quot;github-username.github.io&quot; &lt;br /&gt;
+in my case &quot;sprucestatic.github.io&quot;
+ &lt;/p&gt;
+ &lt;figure class=&quot;p-article__img&quot;&gt;
+  &lt;img src=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/theme-preview.png&quot; alt=&quot;Free website created with jekyll on github&quot; /&gt;
+  &lt;figcaption&gt;
+Your new site should look like this
+  &lt;/figcaption&gt;
+ &lt;/figure&gt;
+ &lt;p&gt;
+Honestly you should be proud now. Welcome to the bloggers and website owners association of the world. &lt;br /&gt;
+Now you can go and tell your family members, friends, share it on facebook and twitter, about your new website...  
+ &lt;/p&gt;
+&lt;p&gt;
+Though not really much now, Before the end of this series you will learn how to create and update a fully functional blog from your mobile phone...
+&lt;/p&gt;
+ &lt;p&gt;
+  Next step is Customizing your new website, and introducing you to &lt;b&gt;GIT&lt;/b&gt; on your mobile phone... Thanks for reading.
+ &lt;/p&gt;
+&lt;h6&gt;
+Next part of this series
+&lt;/h6&gt;
+&lt;p&gt;
+&lt;a href=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone-part-2/&quot;&gt;Create a blog on your mobile phone part 2&lt;/a&gt;
+&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Create A Blog On Your Mobile Phone Part 2</title>
+    <link href="https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone-part-2/"/>
+    <updated>2020-12-21T00:00:00Z</updated>
+    <id>https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone-part-2/</id>
+    <content type="html">&lt;p&gt;
+Hello dear reader and welcome to the second part of this web series on how to create a website or blog right from your mobile phone.  
+&lt;/p&gt;
+&lt;h1&gt;
+Quick Recap
+&lt;/h1&gt;
+&lt;p&gt;
+Like i said this is the second part of this series, incase you missed the first part you can always go back and read it here: &lt;br /&gt; &lt;br /&gt;
+&lt;a href=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/&quot;&gt;Create a blog on your mobile phone part 1&lt;/a&gt;. &lt;br /&gt;
+Talking about reading the other article, You should really read that article up as this one is just building on what we learned in the orther article &lt;br /&gt;
+&lt;/p&gt;&lt;ol&gt;
+We learn&#39;t a few and very essentials things though:
+&lt;p&gt;&lt;/p&gt;
+&lt;li&gt;
+concept of mobile blogging
+&lt;/li&gt;
+&lt;li&gt;
+how to create a free website/blog
+&lt;/li&gt;
+&lt;li&gt;
+how to clone your website/blog to your mobile phone
+&lt;/li&gt;
+&lt;li&gt;
+and quit a all lot of other things
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;br /&gt;
+Don&#39;t just take my word for it, you should read it up yourself.
+&lt;p&gt;&lt;/p&gt;
+&lt;h2&gt;
+Requirements
+&lt;/h2&gt;
+&lt;p&gt;
+Before you continue on this tutorial you should have at least a basic knowledge of the things listed below
+&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+HTML
+&lt;/li&gt;
+&lt;li&gt;
+How the web works (refer to part 1)
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+Yep thats all you will be needing for this part of the series...
+&lt;/p&gt;
+&lt;h3&gt;
+Welcome to jekyll
+&lt;/h3&gt;
+&lt;p&gt;
+If you are the curious type like me, you would have asked yourself, what is &lt;b&gt;JEKYLL&lt;/b&gt;
+&lt;/p&gt;
+&lt;h4&gt;
+What really is Jekyll?
+&lt;/h4&gt;
+&lt;blockqoute&gt;
+&lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; is a static site generator. it takes text written in your favorite markup language and uses layouts to create a static website. You can &lt;b&gt;tweak the sites&#39;s look and feel&lt;/b&gt;, URLs, the data displayed on the page and more 
+&lt;/blockqoute&gt;
+&lt;p&gt;
+From the defination you get the idea... Jekyll is just plain html text that are converted to static website&#39;s. &lt;br /&gt;
+Well &lt;b&gt;static&lt;/b&gt; is the opposite of &lt;b&gt;Dynamic&lt;/b&gt;, think of jekyll as the opposite of Dynamic websites built on WordPress and other dynamic websites... &lt;br /&gt;
+of course being static is one of the features i like about jekyll, being static means your pages load super fast, no third party content(You own your contents and codes), and easy set up and customization, like you create a website with just Html, Css and js, Jeez how super fast is that...
+&lt;/p&gt;
+&lt;p&gt;
+In addition to all its other cools features and plugins, it also uses the &lt;b&gt;Shopify Liquid:&lt;/b&gt; &lt;br /&gt;
+&lt;b&gt;Lquid&lt;/b&gt; is an open-source template language created by shopify and written in Ruby. &lt;br /&gt;&lt;br /&gt;
+Did i also mention that jekyll and github are completely free? &lt;br /&gt;
+Yep they sure are.
+&lt;/p&gt;
+&lt;h5&gt;
+Resources to learn jekyll
+&lt;/h5&gt;
+&lt;p&gt;
+you can learn all about jekyll and liquid from the below links
+&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;a href=&quot;https://jekyllrb.com/docs/&quot;&gt;jekyll official documentation&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&quot;https://shopify.github.io/liquid/basics/introduction/&quot;&gt;liquid official documentation&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h6&gt;
+Intro to git 
+&lt;/h6&gt;
+&lt;p&gt;
+What is git? &lt;br /&gt;&lt;br /&gt;
+Git is a distributed version-control system for tracking changes in any set of files... and so on 
+&lt;/p&gt;
+&lt;p&gt;
+Basically git is just meant and used to &lt;b&gt;commit&lt;/b&gt;, pull and &lt;b&gt;push&lt;/b&gt; changes to your &lt;b&gt;remote repository&lt;/b&gt;
+&lt;/p&gt;
+&lt;p&gt;
+a
+A lot of terminologies used here, dont worry about that, you will soon see them in action very soon, but before then let me introduce you to what they are and how they are connected to creating a site on your mobile phone
+&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;strong&gt;COMMIT:&lt;/strong&gt; this command is used to save your changes to your local repository (the site you cloned to your mobile phone in the part 1 of this series)
+&lt;/li&gt;
+&lt;li&gt;
+&lt;strong&gt;PUSH:&lt;/strong&gt; this command is used to push(as the name implies) all the files you have commited to your remote repository
+&lt;/li&gt;
+&lt;li&gt;
+&lt;strong&gt;REMOTE REPO:&lt;/strong&gt; This is a common repository that all team members use to exchange their changes. This repository is stored on a code hosting service like Github(That&#39;s where github comes in)
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h6&gt;
+Conncecting the dots...
+&lt;/h6&gt;
+&lt;p&gt;
+You may be wondering, how does this have to do with blogging from mobile phone... &lt;br /&gt;
+well from the explanations above, you only need two things
+&lt;/p&gt;&lt;ol&gt;
+&lt;li&gt;
+Remote Repository
+&lt;/li&gt;
+&lt;li&gt;
+A place to run Git commands from
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;
+you already have a remote repo, so you shouldn&#39;t worry about that, what i will introduce to you is &lt;b&gt;how you can execute git commands on your mobile phone&lt;/b&gt;
+&lt;/p&gt;
+&lt;h6&gt;
+I guess we are done talking...
+&lt;/h6&gt;
+&lt;p&gt;
+Too much talk and explanations (I really hope you get the idea), now lets stop talking and start showing how things work
+&lt;/p&gt;
+&lt;p&gt;
+Go ahead and lunch your spck editor, &lt;a href=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone-with-jekyll-on-github.html&quot;&gt;[The one you downloaded on the previous post]&lt;/a&gt;
+&lt;/p&gt;
+&lt;figure class=&quot;p-article__img&quot;&gt;
+  &lt;img src=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone-part-2/img/project-preview.png&quot; alt=&quot;Jekyll project on spck editor&quot; /&gt;
+  &lt;figcaption&gt;
+    Your cloned project should look like this
+  &lt;/figcaption&gt;
+ &lt;/figure&gt;
+ &lt;p&gt;
+Now its time to upload your own contents &lt;br /&gt; &lt;br /&gt;
+Scroll down to the images folder and select it
+ &lt;/p&gt;
+ &lt;figure class=&quot;p-article__img&quot;&gt;
+  &lt;img src=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone-part-2/img/project-img.png&quot; alt=&quot;Jekyll image folder in spck editor&quot; /&gt;
+  &lt;figcaption&gt;
+   Image folder looks like this
+  &lt;/figcaption&gt;
+ &lt;/figure&gt;
+ &lt;p&gt;
+Click on the three dots(menu of the image folder),and click on Upload File
+ &lt;/p&gt;
+ &lt;figure class=&quot;p-article__img&quot;&gt;
+  &lt;img src=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone-part-2/img/project-img-upload.png&quot; alt=&quot;Jekyll upload image in Spck editor&quot; /&gt;
+  &lt;figcaption&gt;
+    Click on upload file
+  &lt;/figcaption&gt;
+ &lt;/figure&gt;
+ &lt;p&gt;
+Now upload a loving photo of your self, or your website logo.. &lt;br /&gt;
+Now its time to edit the config file and customize the site to display your own info
+ &lt;/p&gt;
+ &lt;p&gt;
+Now close your image folder and look for and open the file called &lt;br /&gt;
+&lt;b&gt;_config.yml&lt;/b&gt; &lt;br /&gt;
+when you open it, you should see something like this below
+ &lt;/p&gt;
+ &lt;figure class=&quot;p-article__img&quot;&gt;
+  &lt;img src=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone-part-2/img/project-config.png&quot; alt=&quot;Jekyll Config file in spck editor&quot; /&gt;
+  &lt;figcaption&gt;
+    Your config file looks like this
+  &lt;/figcaption&gt;
+ &lt;/figure&gt;
+ &lt;p&gt;
+basically anything you edit here affects your site drastically, so be careful of what you touch in here
+ &lt;/p&gt;
+ &lt;p&gt;
+First thing you should change is name, in your config file change your name
+ &lt;/p&gt;
+ &lt;pre class=&quot;language-yml&quot;&gt;
+&lt;code class=&quot;language-yml&quot;&gt;
+name: your name
+#Change it to the name you want to use
+#name: Spruce
+&lt;/code&gt;
+ &lt;/pre&gt;
+ &lt;p&gt;
+Change the description too
+ &lt;/p&gt;
+ &lt;pre class=&quot;language-yml&quot;&gt;
+&lt;code class=&quot;language-yml&quot;&gt;
+description: web developer from somewhere
+#Change it to anything you want, just dont make it too look (seo issues)
+#description: web developer based in Edo, Nigeria
+&lt;/code&gt;
+ &lt;/pre&gt;
+&lt;p&gt;
+Do you remember the image you uploaded? yep you do, its time to use it. From the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web&quot;&gt; Getting Started With The Web &lt;/a&gt; you read in the first part of this series i assume you now know how the web work...
+ &lt;/p&gt;
+ &lt;pre class=&quot;language-yml&quot;&gt;
+&lt;code class=&quot;language-yml&quot;&gt;
+avatar: https://....
+#Change it to the file you uploaded earlier
+avatar: /images/spruce.jpg #in my case
+&lt;/code&gt;
+ &lt;/pre&gt;
+ &lt;p&gt;
+Edit your footer links, add your social media liks to the footer links
+ &lt;/p&gt;
+ &lt;pre class=&quot;language-yml&quot;&gt;
+&lt;code class=&quot;language-yml&quot;&gt;
+footer-links:
+  dribble: dribble username
+  email:
+  facebook:
+  ..... etc
+&lt;/code&gt;
+ &lt;/pre&gt;
+ &lt;p&gt;
+Change your url to your site url
+ &lt;/p&gt;
+ &lt;pre class=&quot;language-yml&quot;&gt;
+&lt;code class=&quot;language-yml&quot;&gt;
+url: github-username.github.io
+#where github username is changed to your username
+url: sprucestatic.github.io #in my case 
+&lt;/code&gt;
+ &lt;/pre&gt;
+ &lt;div class=&quot;info info--note&quot;&gt;
+   &lt;div class=&quot;info__content&quot;&gt;
+       &lt;strong&gt;Note:&lt;/strong&gt; Leave the baseurl feed empty if your site is &quot;github-username.github.io&quot;, but if your site is &quot;github-username/static-site-name&quot; add &quot;/static-site-name&quot; to the baseurl &lt;br /&gt;
+       but if you have followed this series from the beginning please leave baseurl empty...
+                &lt;/div&gt;
+          &lt;/div&gt;
+&lt;p&gt;
+Now its time to use the Git commands we explained before now &lt;br /&gt;
+in the &lt;b&gt;spck editor&lt;/b&gt; &lt;br /&gt; &lt;br /&gt;
+Click on the last fork icon at the bottom of the editor
+&lt;/p&gt;
+&lt;figure class=&quot;p-article__img&quot;&gt;
+  &lt;img src=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone-part-2/img/project-fork.png&quot; alt=&quot;fork icon in spck editor&quot; /&gt;
+  &lt;figcaption&gt;
+    Click on the last fork icon to your right
+  &lt;/figcaption&gt;
+ &lt;/figure&gt;
+ &lt;p&gt;
+Once you have click on the fork icon, you should see something that looks like the one below 
+ &lt;/p&gt;
+ &lt;figure class=&quot;p-article__img&quot;&gt;
+  &lt;img src=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone-part-2/img/project-commit.png&quot; alt=&quot;Spck editor commit&quot; /&gt;
+  &lt;figcaption&gt;
+    Click on the commit all
+  &lt;/figcaption&gt;
+ &lt;/figure&gt;
+ &lt;p&gt;
+the next steps are easy
+ &lt;/p&gt;
+ &lt;ol&gt;
+&lt;li&gt;
+Click on Commit All
+&lt;/li&gt;
+&lt;li&gt;
+Enter commit Message
+&lt;/li&gt;
+&lt;p&gt;
+You can enter anything in your commit message, but that dosen&#39;t mean you should just write a bunch of anything you think of, a commit message should briefly explain the changes you made to your project.
+&lt;/p&gt;
+ &lt;/ol&gt;
+ &lt;p&gt;
+Remember from our defination of commit, it just save the changes to your local computer, in our case your mobile phone, that is the changes wont reflect on the web just yet, Now that is where &lt;b&gt;GIT PUSH&lt;/b&gt; comes in the picture... Push as the name implies pushes your saved commit to your remote repo (the one hosted on github) so that people can view it on the web. 
+ &lt;/p&gt;
+ &lt;p&gt;
+As you might have noticed, editing, uploading and committing to your cloned project dosen&#39;t require any data Connection. But when pushing your changes, you need a data connection, So go ahead and switch on your data connection and follow the below steps
+ &lt;/p&gt;
+ &lt;ol&gt;
+To push your changes follow this steps: &lt;br /&gt;&lt;br /&gt;
+&lt;li&gt;
+Click on the last fork icon again
+&lt;/li&gt;
+&lt;li&gt;
+Click on push
+&lt;/li&gt;
+&lt;li&gt;
+Click Ok
+&lt;/li&gt;
+ &lt;/ol&gt;
+ &lt;figure class=&quot;p-article__img&quot;&gt;
+  &lt;img src=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone-part-2/img/project-pushing.png&quot; alt=&quot;Spck editor Git push on mobile&quot; /&gt;
+  &lt;figcaption&gt;
+   Wait for it to push your changes
+  &lt;/figcaption&gt;
+ &lt;/figure&gt;
+ &lt;p&gt;
+Boom and there you go, your websites should be live with your changes on the web in a minute... &lt;br /&gt;
+Go ahead and preview your website
+ &lt;/p&gt;
+ &lt;figure class=&quot;p-article__img&quot;&gt;
+  &lt;img src=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone-part-2/img/preview-mobile.png&quot; alt=&quot;Mobile Preview of your free website&quot; /&gt;
+  &lt;figcaption&gt;
+    On mobile phone your site looks like this
+  &lt;/figcaption&gt;
+ &lt;/figure&gt;
+ &lt;p&gt;
+ &lt;/p&gt;
+ &lt;figure class=&quot;p-article__img&quot;&gt;
+  &lt;img src=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone-part-2/img/preview-web.png&quot; alt=&quot;Web Preview of your free website&quot; /&gt;
+  &lt;figcaption&gt;
+    On a pc your site looks like this
+  &lt;/figcaption&gt;
+ &lt;/figure&gt;
+ &lt;p&gt;
+Well thats the end of this part of the series... Next stop is &lt;b&gt;Blogging&lt;/b&gt;, Thanks for reading...
+ &lt;/p&gt;
+ &lt;h6&gt;
+Previous parts of this series
+ &lt;/h6&gt;
+ &lt;p&gt;
+&lt;a href=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/&quot;&gt;Create a blog on your mobile phone part 1&lt;/a&gt;
+ &lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Create A Blog On Your Mobile Phone Part 3</title>
+    <link href="https://spruce.com.ng/blog/create-a-mobile-blog-on-your-mobile-phone-part-3/"/>
+    <updated>2020-12-21T00:00:00Z</updated>
+    <id>https://spruce.com.ng/blog/create-a-mobile-blog-on-your-mobile-phone-part-3/</id>
+    <content type="html">&lt;p class=&quot;lead&quot;&gt;
+Sad to announce the end of this &quot;how to create a blog on your mobile phone series&quot;, well i know we have learned a lot of new things in this web series
+&lt;/p&gt;
+&lt;h6&gt;
+Some things we have learned so far
+&lt;/h6&gt;
+&lt;ol&gt;
+&lt;li&gt;
+what mobile blogging is
+&lt;/li&gt;
+&lt;li&gt;
+how to create a free website on github with jekyll
+&lt;/li&gt;
+&lt;li&gt;
+how to clone your website to your mobile phone
+&lt;/li&gt;
+&lt;li&gt;
+how to run some basic Git Commands in your mobile phone
+&lt;/li&gt;
+&lt;li&gt;
+and so many other things
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+incase you missed the other series, don&#39;t worry you can always go back and read them up
+&lt;/p&gt;
+&lt;h6&gt;
+Link to previous series
+&lt;/h6&gt;
+&lt;p&gt;
+&lt;a href=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone&quot;&gt;Create a blog on your mobile phone part 1&lt;/a&gt;
+ &lt;/p&gt;
+ &lt;p&gt;
+&lt;a href=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone-part-2&quot;&gt;Create a blog on your mobile phone part 2&lt;/a&gt;
+ &lt;/p&gt;
+ &lt;p&gt;
+Now lets go back to what we are really here for, blogging from your mobile phone
+ &lt;/p&gt;
+ &lt;h1&gt;
+What is blogging
+ &lt;/h1&gt;
+ &lt;p&gt;
+ &lt;b&gt;Blogging&lt;/b&gt; refers to writing, photography, and other media that is self-published online.
+ &lt;/p&gt;
+ &lt;p&gt;
+So basically you know what blogging is all about, its a way for a lot of people to express their feelings and share there ideas online.
+ &lt;/p&gt;
+ &lt;h2&gt;
+Blogging with jekyll
+ &lt;/h2&gt;
+ &lt;p&gt;
+your blog posts live in a directory called &lt;b&gt;_posts&lt;/b&gt; in the root of your site, so basically thats where you will add all your blog posts
+ &lt;/p&gt;
+ &lt;p&gt;
+Your blog file names begin with &quot;year-month-date-your-title.md&quot; &lt;br /&gt;
+so when creating your post, always follow the order &lt;b&gt;Year&lt;/b&gt;-&lt;b&gt;month&lt;/b&gt;-&lt;b&gt;date&lt;/b&gt;-&lt;b&gt;title&lt;/b&gt;.md 
+ &lt;/p&gt;
+ &lt;p&gt;
+for a detailed on how to write blog posts on jekyll please refer to this jekyll guide below &lt;br /&gt; &lt;br /&gt;
+&lt;a href=&quot;https://jekyllrb.com/docs/blog&quot;&gt;Learn more about jekyll post&lt;/a&gt;
+ &lt;/p&gt;
+ &lt;h3&gt;
+Publishing your first post
+ &lt;/h3&gt;
+ &lt;p&gt;&lt;/p&gt;
+The first step is to open your spck editor, &lt;a href=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone.html&quot;&gt;The editor you downloaded in the first part of this series&lt;/a&gt;, open it and navigate to your _posts folder
+ &lt;p&gt;&lt;/p&gt;
+ &lt;figure class=&quot;p-article__img&quot;&gt;
+  &lt;img src=&quot;https://spruce.com.ng/blog/create-a-mobile-blog-on-your-mobile-phone-part-3/img/spck-preview.png&quot; alt=&quot;Jekyll  _posts folder in spck editor&quot; /&gt;
+  &lt;figcaption&gt;
+   _Posts folder looks like this
+  &lt;/figcaption&gt;
+ &lt;/figure&gt;
+ &lt;p&gt;
+Go ahead and delete the post found there and create another one with &lt;br /&gt; &lt;br /&gt;
+YEAR-MONTH-DAY-TITLE.md format
+ &lt;/p&gt;
+ &lt;figure class=&quot;p-article__img&quot;&gt;
+  &lt;img src=&quot;https://spruce.com.ng/blog/create-a-mobile-blog-on-your-mobile-phone-part-3/img/spck-post.png&quot; alt=&quot;new post in jekyll spck editor&quot; /&gt;
+  &lt;figcaption&gt;
+  Add new file
+  &lt;/figcaption&gt;
+ &lt;/figure&gt;
+ &lt;p&gt;
+After you created the post &lt;br /&gt;
+add your layout and title like this
+ &lt;/p&gt;
+ &lt;figure class=&quot;p-article__img&quot;&gt;
+  &lt;img src=&quot;https://spruce.com.ng/blog/create-a-mobile-blog-on-your-mobile-phone-part-3/img/spck-edited.png&quot; alt=&quot;Edit jekyll config file in spck editor&quot; /&gt;
+  &lt;figcaption&gt;
+  Modify jekyll site on spck editor
+  &lt;/figcaption&gt;
+ &lt;/figure&gt;
+ &lt;p&gt;
+Now you can add anything to your blog post, after all you are now a blogger, after you are done with writting your post, just go ahead and commit your changes and then push them online like we learned in our &lt;a href=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone-part-2.html&quot;&gt;previous post&lt;/a&gt;
+ &lt;/p&gt;
+ &lt;p&gt;
+and there you have it, you just created your first post, go ahead and preview your new post online
+ &lt;/p&gt;
+ &lt;figure class=&quot;p-article__img&quot;&gt;
+  &lt;img src=&quot;https://spruce.com.ng/blog/create-a-mobile-blog-on-your-mobile-phone-part-3/img/preview-mobile.png&quot; alt=&quot;Jekyll image folder in spck editor&quot; /&gt;
+  &lt;figcaption&gt;
+  this is what your new website look like in a mobile view
+  &lt;/figcaption&gt;
+ &lt;/figure&gt;
+ &lt;p&gt;&lt;/p&gt;
+ &lt;p&gt;&lt;/p&gt;
+ &lt;figure class=&quot;p-article__img&quot;&gt;
+  &lt;img src=&quot;https://spruce.com.ng/blog/create-a-mobile-blog-on-your-mobile-phone-part-3/img/preview-web.png&quot; alt=&quot;Jekyll image folder in spck editor&quot; /&gt;
+  &lt;figcaption&gt;
+  this is what your new website look like in a pc view
+  &lt;/figcaption&gt;
+ &lt;/figure&gt;
+ &lt;h4&gt;
+ Previous posts from this series
+ &lt;/h4&gt;
+ &lt;p&gt;
+&lt;a href=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone.html&quot;&gt;Create a blog on your mobile phone part 1&lt;/a&gt;
+ &lt;/p&gt;
+  &lt;p&gt;
+    [create a blog on rour mobile phone with jekyll part 2](/blog/create-a-blog-on-your-mobile-phone-part-2)
+ &lt;/p&gt;
+ &lt;h5&gt;
+Other resources to learn from
+ &lt;/h5&gt;
+  &lt;p&gt;
+&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web&quot;&gt; Getting Started With The Web &lt;/a&gt;
+ &lt;/p&gt;
+  &lt;p&gt;
+&lt;a href=&quot;https://jekyllrb.com/tutorials/home/&quot;&gt;Jekyll tutorials home&lt;/a&gt;
+ &lt;/p&gt;
+  &lt;p&gt;
+&lt;a href=&quot;https://jekyllrb.com/docs/step-by-step/08-blogging/&quot;&gt;Blogging in jekyll&lt;/a&gt;
+ &lt;/p&gt;
+ &lt;p&gt;
+thanks for reading.... 
+ &lt;/p&gt;</content>
+  </entry>
+  
+  <entry>
+    <title>Css flexbox and some use cases</title>
+    <link href="https://spruce.com.ng/blog/css-flexbox-and-some-use-cases/"/>
+    <updated>2020-12-25T00:00:00Z</updated>
+    <id>https://spruce.com.ng/blog/css-flexbox-and-some-use-cases/</id>
+    <content type="html">&lt;p class=&quot;lead&quot;&gt;
+In this quick article, we are going to learn what and how to use css flexbox with some use cases of flexbox 
+&lt;/p&gt;
+&lt;h1&gt;
+What is Css Flexbox?
+&lt;/h1&gt;
+&lt;p&gt;
+&lt;blockqoute&gt;
+In the flex layout model, the children of a flex container can be laid in any direction, and can &lt;b&gt;&quot;flex&quot;&lt;/b&gt; their sizes, either growing to fill unused space or shrinking to avoid overflowing the parent. Both horizontal and vertical alignment of the childern can be easily manipulated.
+&lt;/blockqoute&gt;
+- well thats according to the spec...
+&lt;/p&gt;
+&lt;p&gt;
+from the css flexbox specification above, you see that flexbox is a layout model which can be used to lay out the children of a container easily... 
+&lt;/p&gt;
+&lt;h2&gt;
+Flex Container
+&lt;/h2&gt;
+&lt;p&gt;
+The flex container takes the css property and value&lt;strong&gt; display: flex&lt;/strong&gt; or&lt;strong&gt; display: inline-flex&lt;/strong&gt;  and it is the box generated by an element with a computed &lt;b&gt;display&lt;/b&gt; of &lt;b&gt;flex&lt;/b&gt;, children of this container are called &lt;b&gt;flex items&lt;/b&gt;
+&lt;/p&gt;
+&lt;p&gt;
+Flex containers are not block containers ( containers that have &quot;display: block&quot; set on them), therefore some properties like: &lt;br /&gt;
+&lt;/p&gt;&lt;ol&gt;
+&lt;li&gt;
+float, and clear
+&lt;/li&gt;
+&lt;li&gt;
+vertical-align
+&lt;/li&gt;
+&lt;li&gt;
+::first-line and ::first-letter
+&lt;/li&gt;
+&lt;/ol&gt;
+will not have any effect on flex-items (you won&#39;t even know they are there)
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;
+Floats and vertical-align css properties do not have any effect on &lt;b&gt;flex items&lt;/b&gt;, 
+&lt;/p&gt;
+&lt;pre class=&quot;language-css&quot;&gt;
+&lt;code class=&quot;language-css&quot;&gt;
+&amp;lt;!-- html code --&amp;gt;
+&amp;lt;ul class=&quot;flex-container&quot;&amp;gt;
+&amp;lt;li class=&quot;flex-item&quot;&amp;gt;
+Item 1
+&amp;lt;/li&amp;gt;
+&amp;lt;li class=&quot;flex-item&quot;&amp;gt;
+Item 2
+&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&lt;p&gt;&amp;lt;!-- css codes --&amp;gt;
+.flex-container {
+display: flex;&lt;/p&gt;
+&lt;p&gt;}
+.flex-item {
+float: left; // this will have no effect
+vertical-align: middle; // this will have no effect too
+}
+&lt;/p&gt;&lt;/code&gt;
+&lt;/pre&gt;&lt;p&gt;&lt;/p&gt;
+&lt;h3&gt;
+Flex items
+&lt;/h3&gt;
+&lt;pre class=&quot;language-html&quot;&gt;
+&lt;code class=&quot;language-html&quot;&gt;
+&lt;p&gt;&amp;lt;!-- html code --&amp;gt;
+&amp;lt;ul class=&amp;quot;flex-container&amp;quot;&amp;gt;
+hello i am a flex item too
+&amp;lt;li class=&amp;quot;flex-item&amp;quot;&amp;gt;
+Item 1
+&amp;lt;/li&amp;gt;
+&amp;lt;li class=&amp;quot;flex-item&amp;quot;&amp;gt;
+Item 2
+&amp;lt;/li&amp;gt;
+&amp;lt;li class=&amp;quot;flex-item&amp;quot;&amp;gt;
+Item 3
+&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&lt;/p&gt;&lt;/code&gt;
+&lt;/pre&gt;&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;
+How many flex items do we have from the above code? Well you might say THREE, but its actually FOUR. Plain text that are not wrapped in any html tag are also regarded as flex items
+&lt;/p&gt;
+&lt;figure class=&quot;p-article__img&quot;&gt;
+  &lt;img src=&quot;https://spruce.com.ng/blog/css-flexbox-and-some-use-cases/img/flex-items.png&quot; alt=&quot;Flip items with flexbox&quot; /&gt;
+ &lt;figcaption&gt;
+Plain texts are flex items too
+ &lt;/figcaption&gt;
+ &lt;/figure&gt;
+ &lt;p&gt;
+From the preview(when display: flex; is added to the flex-container) above you see that Four items are laid out side by side, that means anything placed in a flex-container as a direct child is a flex item...
+ &lt;/p&gt;
+ &lt;pre class=&quot;language-html&quot;&gt;
+&lt;code class=&quot;language-html&quot;&gt;
+&amp;lt;!-- html code --&amp;gt;
+&amp;lt;ul class=&quot;flex-container&quot;&amp;gt;
+&amp;lt;!-- anything placed here as a direct child is a flex item --&amp;gt;
+&amp;lt;/ul&amp;gt;
+
+&amp;lt;!-- css codes --&amp;gt;
+.flex-container {
+  display: flex;
+  
+}
+&lt;/code&gt;
+&lt;/pre&gt;
+&lt;h4&gt;
+Some Flexbox Use Cases
+&lt;/h4&gt;
+&lt;h6&gt;
+Flexbox reponsive header
+&lt;/h6&gt;
+&lt;p&gt;
+Flexbox can be used to solve many design problems both complex and simple design problems with a few lines of css, one of this is a responsive website header &lt;br /&gt;&lt;br /&gt;
+take a look at the responsive website header below 
+&lt;/p&gt;
+&lt;div class=&quot;codepen&quot;&gt;
+&lt;p data-height=&quot;370&quot; data-theme-id=&quot;light&quot; data-slug-hash=&quot;ExgbxeP&quot; data-default-tab=&quot;result&quot; data-user=&quot;Spruce_khalifa&quot; class=&quot;codepen&quot;&gt;
+            See the pen 
+            &lt;a href=&quot;https://codepen.io/Spruce_khalifa/pen/ExgbxeP/&quot;&gt;
+        Responsive header with flexbox
+        &lt;/a&gt;, by @Spruce_khalifa on &lt;a href=&quot;https://codepen.io/&quot;&gt;Codepen&lt;/a&gt;
+        &lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;h6&gt;
+Flexbox Card component
+&lt;/h6&gt;
+&lt;p&gt;
+Lets say you are creating a card component... 
+&lt;/p&gt;
+&lt;pre class=&quot;language-html&quot;&gt;
+&lt;code class=&quot;language-html&quot;&gt;
+&amp;lt;!-- html code --&amp;gt;
+&amp;lt;article class=&quot;flex-container&quot;&amp;gt;
+&amp;lt;header&amp;gt;
+&amp;lt;!-- card header --&amp;gt;
+&amp;lt;/header&amp;gt;
+&amp;lt;p&amp;gt;
+&amp;lt;!-- article content goes in here --&amp;gt;
+&amp;lt;/p&amp;gt;
+&amp;lt;footer&amp;gt;
+&amp;lt;h2&amp;gt;
+&amp;lt;!-- card footer items goes here --&amp;gt;
+&amp;lt;/h2&amp;gt;
+&amp;lt;/footer&amp;gt;
+&amp;lt;/article&amp;gt;
+&lt;/code&gt;
+&lt;/pre&gt;
+&lt;p&gt;
+...and you always want the footer to stay at the bottom, no matter the length of your text... Yep css flexbox can do just that with a single line of code
+&lt;/p&gt;
+&lt;pre class=&quot;language-html&quot;&gt;
+&lt;code class=&quot;language-html&quot;&gt;
+&amp;lt;!-- html code --&amp;gt;
+&amp;lt;article&amp;gt;
+&amp;lt;header&amp;gt;
+&amp;lt;!-- card header --&amp;gt;
+&amp;lt;/header&amp;gt;
+&amp;lt;p&amp;gt;
+&amp;lt;!-- article content goes in here --&amp;gt;
+&amp;lt;/p&amp;gt;
+&amp;lt;footer&amp;gt;
+&amp;lt;h2&amp;gt;
+&amp;lt;!-- card footer items goes here --&amp;gt;
+&amp;lt;/h2&amp;gt;
+&amp;lt;/footer&amp;gt;
+&amp;lt;/article&amp;gt;
+&lt;p&gt;&amp;lt;!-- css codes --&amp;gt;
+article {
+display: flex;
+flex-direction: column;
+}
+// styles for the header and footer
+p {
+flex-grow: 1;
+}&lt;/p&gt;
+&lt;/code&gt;
+&lt;/pre&gt;
+&lt;p&gt;
+Check it out on codepen...
+&lt;br /&gt;
+you just need to add the flex-grow: 1; to the card content and it will always grow to fill the available spaces
+&lt;/p&gt;
+&lt;div class=&quot;codepen&quot;&gt;
+&lt;p data-height=&quot;370&quot; data-theme-id=&quot;light&quot; data-slug-hash=&quot;GRjOgZX&quot; data-default-tab=&quot;result&quot; data-user=&quot;Spruce_khalifa&quot; class=&quot;codepen&quot;&gt;
+            See the pen 
+            &lt;a href=&quot;https://codepen.io/Spruce_khalifa/pen/GRjOgZX/&quot;&gt;
+        Flex grow
+        &lt;/a&gt;, by @Spruce_khalifa on &lt;a href=&quot;https://codepen.io/&quot;&gt;Codepen&lt;/a&gt;
+        &lt;/p&gt;
+&lt;/div&gt;
+&lt;h6&gt;
+Ordering Elements
+&lt;/h6&gt;
+&lt;p&gt;
+Say you want to flip a component, like the Card component we created ealier, you want the footer part to come first and the header to go last, yep flexbox can do that...
+&lt;/p&gt;
+&lt;pre class=&quot;language-html&quot;&gt;
+&lt;code class=&quot;language-html&quot;&gt;
+&amp;lt;!-- html code --&amp;gt;
+&amp;lt;article&amp;gt;
+&amp;lt;header&amp;gt;
+&amp;lt;!-- card header --&amp;gt;
+&amp;lt;/header&amp;gt;
+&amp;lt;p&amp;gt;
+&amp;lt;!-- article content goes in here --&amp;gt;
+&amp;lt;/p&amp;gt;
+&amp;lt;footer&amp;gt;
+&amp;lt;h2&amp;gt;
+&amp;lt;!-- card footer items goes here --&amp;gt;
+&amp;lt;/h2&amp;gt;
+&amp;lt;/footer&amp;gt;
+&amp;lt;/article&amp;gt;
+
+&amp;lt;!-- css codes --&amp;gt;
+
+// styles for the component
+ footer {
+  order: -1; // make the footer come first
+   }
+ header {
+   order: 2; // make the header go last
+   }
+    
+&lt;/code&gt;
+&lt;/pre&gt;
+&lt;p&gt;
+the main thing here is the order property here, the preview should look like this one below
+&lt;/p&gt;
+&lt;figure class=&quot;p-article__img&quot;&gt;
+  &lt;img src=&quot;https://spruce.com.ng/blog/css-flexbox-and-some-use-cases/img/switch-items.png&quot; alt=&quot;Flip items with flexbox&quot; /&gt;
+ &lt;figcaption&gt;
+yep, flexbox can be used to flip elements around
+ &lt;/figcaption&gt;
+ &lt;/figure&gt;
+&lt;p&gt;&lt;/p&gt;
+ &lt;h6&gt;
+Center An Element
+&lt;/h6&gt;
+&lt;p&gt;
+One of the cool things about css flexbox is that you can center an element with ease 
+&lt;/p&gt;
+&lt;pre class=&quot;language-html&quot;&gt;
+&lt;code class=&quot;language-html&quot;&gt;
+&amp;lt;!-- html code --&amp;gt;
+&amp;lt;div class=&quot;c-card&quot;&amp;gt;
+&amp;lt;article&amp;gt;
+&amp;lt;header&amp;gt;
+&amp;lt;!-- card header --&amp;gt;
+&amp;lt;/header&amp;gt;
+&amp;lt;p&amp;gt;
+&amp;lt;!-- article content goes in here --&amp;gt;
+&amp;lt;/p&amp;gt;
+&amp;lt;footer&amp;gt;
+&amp;lt;h2&amp;gt;
+&amp;lt;!-- card footer items goes here --&amp;gt;
+&amp;lt;/h2&amp;gt;
+&amp;lt;/footer&amp;gt;
+&amp;lt;/article&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;!-- css codes --&amp;gt;
+&lt;p&gt;// styles for the component
+.c-card {
+// some css
+display: flex;
+align-items: center; // center item vertically
+justify-content: center; // center item horizontally
+}&lt;/p&gt;
+&lt;/code&gt;
+&lt;/pre&gt;
+&lt;p&gt;
+and boom that should do the trick...
+&lt;/p&gt;
+&lt;figure class=&quot;p-article__img&quot;&gt;
+  &lt;img src=&quot;https://spruce.com.ng/blog/css-flexbox-and-some-use-cases/img/center-items.png&quot; alt=&quot;Center items with flexbox&quot; /&gt;
+ &lt;figcaption&gt;
+yep, flexbox can be used to center an element
+ &lt;/figcaption&gt;
+ &lt;/figure&gt;
+ &lt;h5&gt;
+Browser Support
+ &lt;/h5&gt;
+ &lt;p&gt;
+If you want to support older browsers, you should check the browser support level from caniuse.com
+ &lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;&lt;p class=&quot;ciu_embed&quot; data-feature=&quot;flexbox&quot; data-periods=&quot;future_1,current,past_1,past_2&quot; data-accessible-colours=&quot;false&quot;&gt;
+        &lt;picture&gt;
+            &lt;source type=&quot;image/webp&quot; srcset=&quot;https://caniuse.bitsofco.de/image/flexbox.webp&quot; /&gt;
+            &lt;source type=&quot;image/png&quot; srcset=&quot;https://caniuse.bitsofco.de/image/flexbox.png&quot; /&gt;
+            &lt;img src=&quot;https://caniuse.bitsofco.de/image/flexbox.jpg&quot; alt=&quot;Data on support for the flexbox feature across the major browsers from caniuse.com&quot; /&gt;
+        &lt;/picture&gt;
+    &lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;h6&gt;
+Other Resources
+&lt;/h6&gt;
+&lt;p&gt;
+&lt;a href=&quot;https://w3.org/TR/css-flexbox-1/&quot;&gt;
+Css flexbox W3c
+&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&quot;https://css-tricks.com/snippets/css/a-guide-to-flexbox/&quot;&gt;
+Complete guide to css flexbox
+&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+again thanks for reading...
+&lt;/p&gt;</content>
+  </entry>
+  
+  <entry>
+    <title>Top 5 Css Methodologies In 2021</title>
+    <link href="https://spruce.com.ng/blog/top-5-css-methodologies-in-2021/"/>
+    <updated>2020-12-26T00:00:00Z</updated>
+    <id>https://spruce.com.ng/blog/top-5-css-methodologies-in-2021/</id>
+    <content type="html">&lt;p&gt;Css is very difficult to manage when you are dealing with a large system, this is because Everything in css is &lt;b&gt;Global&lt;/b&gt;&lt;/p&gt;
+&lt;pre class=&quot;language-css&quot;&gt;
+  &lt;code class=&quot;language-css&quot;&gt;
+
+&amp;lt;button class=&quot;button button-action&quot;&amp;gt;
+    Load More
+  &amp;lt;/button&amp;gt;
+
+  &amp;lt;!-- css --&amp;gt;
+
+  .button {
+    background: blue;
+  }
+  .button-action {
+    background: pink;
+  }
+
+  // then maybe after 3 months on line 1299...
+  // another developer wants a call to action button
+  // and he declares another class with button-action with background color red
+
+  .button-action {
+    background: red;
+  }
+
+  &lt;/code&gt;
+&lt;/pre&gt;
+&lt;p&gt;
+  you might be wondering what will be the background color of the button, well like i said earlier everything in css is Global, what will happen is that all three background properties will move to the top of the &lt;b&gt;Scope&lt;/b&gt; like this...
+&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+background: blue;
+&lt;/li&gt;
+&lt;li&gt;
+background: pink;
+&lt;/li&gt;
+&lt;li&gt;
+background: red;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;
+Then the browser will go through the code and apply all of them. Yeah all of them, and then decide to use the last one
+&lt;/p&gt;
+&lt;pre class=&quot;language-css&quot;&gt;
+  &lt;code class=&quot;language-css&quot;&gt;
+&lt;p&gt;// the browser will read the code like this from top to bottom&lt;/p&gt;
+&lt;p&gt;&amp;lt;!-- css --&amp;gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;color: yellow;&quot;&gt;background: blue&lt;/span&gt;; // oh here is a background with color of blue, use this.&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;color: yellow;&quot;&gt;background: pink&lt;/span&gt;; // wait, don&#39;t use that, here is another background with color pink, definately use this.&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;color: yellow;&quot;&gt;background: red;&lt;/span&gt; // what&#39;s wrong with this developer, here is another background with color red, jeez, is there another one?. nope, then use this.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;amp;lt;!-- Html --&amp;amp;gt;
+
+&amp;amp;lt;button class=&amp;quot;button button-action&amp;quot;&amp;amp;gt;
+Load More
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&amp;gt;/button&amp;gt;&lt;/p&gt;
+  &lt;/code&gt;
+&lt;/pre&gt;
+&lt;figure class=&quot;p-article__img&quot;&gt;
+  &lt;img src=&quot;https://spruce.com.ng/blog/top-5-css-methodologies-in-2021/img/red-button.png&quot; alt=&quot;Css red background&quot; /&gt;
+ &lt;figcaption&gt;
+Browser will use the red background
+ &lt;/figcaption&gt;
+ &lt;/figure&gt;
+&lt;p&gt;
+The problem of managing css is what every developer must face one way or the other, not to mention (one of the hardest thing in css) naming classes, along the line you are going to run out of class names, that&#39;s where css methodologies comes in play(sticking to a particular naming convention)... 
+&lt;/p&gt;
+&lt;h1&gt;
+What are css methodologies?
+&lt;/h1&gt;
+&lt;p&gt;
+css methodologies are systems that are formaly documented down that help us to auhor/write css as isolated modules, rather than just some long indivisible code.
+&lt;/p&gt;
+&lt;h2&gt;
+Top 5 Css Methodologies in 2021
+&lt;/h2&gt;
+&lt;h4&gt;
+&lt;a href=&quot;https://acss.io/&quot;&gt;1. Atomic Css&lt;/a&gt;
+&lt;/h4&gt;
+&lt;p&gt;
+Atomic Css is a collection of single purpose styling units that fits well with components in templated framewoks...
+&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;h6&gt;
+Benefits of using Atomic Css
+&lt;/h6&gt;
+&lt;ol&gt;
+&lt;li&gt;
+Moves specifity out of the way
+&lt;/li&gt;
+&lt;li&gt;
+Improves performance
+&lt;/li&gt;
+&lt;li&gt;
+Allows to share content and assets easily
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;h6&gt;
+Further reading 
+&lt;/h6&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;a href=&quot;https://acss.io/frequently-asked-questions.html&quot;&gt;Atomic css frequently asked questions&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&quot;https://acss.io/quick-start.html&quot;&gt;Atomic Css Quick Start&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;h4&gt;
+&lt;a href=&quot;https://getbem.com/&quot;&gt;2. BEM&lt;/a&gt;
+&lt;/h4&gt;
+&lt;p&gt;
+BEM stands for - &lt;b&gt;BLOCKS, ELEMENTS and MODIFIERS&lt;/b&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;b&gt;Block:&lt;/b&gt;&lt;br /&gt;
+This are standalone entity that is meaningful on its own &lt;br /&gt;&lt;br /&gt;
+&lt;b&gt;Element:&lt;/b&gt;&lt;br /&gt;
+A part of a block that has no standalone meaning (it must be used within a block)  &lt;br /&gt;&lt;br /&gt;
+&lt;b&gt;Modifier:&lt;/b&gt;&lt;br /&gt;
+A flag on a block or element, basically we use this to change the appearance or state of an element.
+&lt;/p&gt;
+&lt;h6&gt;
+Benefits of using BEM
+&lt;/h6&gt;
+&lt;ol&gt;
+&lt;li&gt;
+Modularity
+&lt;/li&gt;
+&lt;li&gt;
+Reusability
+&lt;/li&gt;
+&lt;li&gt;
+Structure
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;h6&gt;
+Further reading 
+&lt;/h6&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;a href=&quot;https://getbem.com/introduction/&quot;&gt;Intro to BEM&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&quot;https://www.integralist.co.uk/posts/bem.html&quot;&gt;BEM&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&quot;https://getbem.com/naming/&quot;&gt;BEM naming convention&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;h4&gt;
+&lt;a href=&quot;https://getbem.com/&quot;&gt;3. ITCSS&lt;/a&gt;
+&lt;/h4&gt;
+&lt;p&gt;
+ITCSS - stands for &lt;b&gt;INVERTED TRIANGLE CSS&lt;/b&gt;
+&lt;/p&gt;
+&lt;p&gt;
+This is a methodolgy for structuring your css files in the best and stress free way as possible.
+&lt;/p&gt;
+&lt;h6&gt;
+Benefits of using ITCSS
+&lt;/h6&gt;
+&lt;ol&gt;
+&lt;li&gt;
+Less thinking on naming things
+&lt;/li&gt;
+&lt;li&gt;
+Reusability
+&lt;/li&gt;
+&lt;li&gt;
+Flexibility
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;h6&gt;
+Further reading 
+&lt;/h6&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;a href=&quot;https://xfive.co/blog/itcss-scalable-maintainable-css-architecture&quot;&gt;ITCSS: Scalable and Maintainable Css Architecture&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&quot;https://hongkiat.com/blog/inverted-triangle-css-web-development/&quot;&gt;Intro to ITCSS for web developers&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;h4&gt;
+&lt;a href=&quot;https://smacss.com/&quot;&gt;4. SMACSS&lt;/a&gt;
+&lt;/h4&gt;
+&lt;p&gt;
+SMACSS stands for - &lt;b&gt;SCALABLE and MODULAR ARCHITECTURE for CSS&lt;/b&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;&lt;h6&gt;
+Benefits of using SMACSS
+&lt;/h6&gt;
+&lt;ol&gt;
+&lt;li&gt;
+Scalable
+&lt;/li&gt;
+&lt;li&gt;
+Ease of Reading
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;h6&gt;
+Further reading 
+&lt;/h6&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;a href=&quot;https://smacss.com/&quot;&gt;Smacss guide&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;h4&gt;
+&lt;a href=&quot;https://oocss.org/&quot;&gt;5. OOCSS&lt;/a&gt;
+&lt;/h4&gt;
+&lt;p&gt;
+OOCSS stands for - &lt;b&gt;OBJECT ORIENTED CSS&lt;/b&gt;
+&lt;/p&gt;
+&lt;h6&gt;
+Two main principles of OOCSS
+&lt;/h6&gt;
+&lt;ol&gt;
+&lt;li&gt;
+Separating Structure From Skin
+&lt;/li&gt;
+&lt;li&gt;
+Separating Container And Content
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;h6&gt;
+Benefits of using OOCSS
+&lt;/h6&gt;
+&lt;ol&gt;
+&lt;li&gt;
+Maintainable stylesheets
+&lt;/li&gt;
+&lt;li&gt;
+Faster websites
+&lt;/li&gt;
+&lt;li&gt;
+Easier to modify common styles
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;h6&gt;
+Further reading 
+&lt;/h6&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;a href=&quot;https://oocss.org/&quot;&gt;Object oriented Css&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&quot;https://www.smashingmagazine.com/2011/12/an-introduction-to-object-oriented-css-oocss&quot;&gt;Intro to object oriented css on smashingmagazine&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;
+This list is based on the survey from &lt;a href=&quot;https://2020.stateofcss.com/en-US/technologies/methodologies/&quot;&gt;The state of css 2020&lt;/a&gt;, and it is intended to show you the css methodologies that would probably be used in 2021 
+&lt;/p&gt;
+&lt;p&gt;
+Another css methodology that is currently on a fast rise is the &lt;a href=&quot;https://piccalil.li/blog/cube-css/&quot;&gt;Cube Css&lt;/a&gt;
+&lt;/p&gt;
+&lt;div class=&quot;info info--note&quot;&gt;
+   &lt;div class=&quot;info__content&quot;&gt;
+       &lt;strong&gt;Note:&lt;/strong&gt; There is no best css methodology, the one you decide to use depends on you and the type of your project...
+                &lt;/div&gt;
+          &lt;/div&gt;
+&lt;p&gt;
+Thanks for reading
+&lt;/p&gt;</content>
+  </entry>
+  
+  <entry>
+    <title>How to create 5 Cool Css only line effect</title>
+    <link href="https://spruce.com.ng/blog/5-cool-css-only-line-effects/"/>
+    <updated>2021-01-01T00:00:00Z</updated>
+    <id>https://spruce.com.ng/blog/5-cool-css-only-line-effects/</id>
+    <content type="html">&lt;p class=&quot;lead&quot;&gt;
+When we talk about css lines we shouldn&#39;t always think about ordinary &quot;one way straight lines&quot;
+&lt;/p&gt;
+&lt;p&gt; 
+Lines can be used to style up our web pages in a lot of ways. That is, just &lt;b&gt;5 effects&lt;/b&gt; are just a few things you could do with Lines
+&lt;/p&gt;
+&lt;p&gt;
+What would make this effects fun is that you only get to use &lt;b&gt;CSS&lt;/b&gt;, no images are used here
+&lt;/p&gt;
+&lt;p class=&quot;mark-text&quot;&gt;
+Note: Some of this effect can be achieved using images too
+&lt;/p&gt;
+&lt;h1&gt;
+Css only Line effects
+&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;
+ &lt;a href=&quot;https://spruce.com.ng/blog/5-cool-css-only-line-effects/#highlight-text&quot;&gt;
+Highlight Text
+&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+ &lt;a href=&quot;https://spruce.com.ng/blog/5-cool-css-only-line-effects/#line-both-side&quot;&gt;
+Lines on both side of an Element
+&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+ &lt;a href=&quot;https://spruce.com.ng/blog/5-cool-css-only-line-effects/#wavy-line&quot;&gt;
+Css Wavy line
+&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+ &lt;a href=&quot;https://spruce.com.ng/blog/5-cool-css-only-line-effects/#line-hover&quot;&gt;
+Line Hover Effect
+&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+ &lt;a href=&quot;https://spruce.com.ng/blog/5-cool-css-only-line-effects/#line-one-side&quot;&gt;
+Add line in the middle of a word
+&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;
+Let&#39;s jump right into actually creating this stuff
+&lt;/p&gt;
+&lt;h3 id=&quot;highlight-text&quot;&gt;
+Highlight Text
+&lt;/h3&gt;
+&lt;p&gt;
+Now you might be surprised how easy it is to highlight a whole paragraph of text with one line of css...
+&lt;/p&gt;
+&lt;pre class=&quot;language-html&quot;&gt;
+&lt;code class=&quot;language-html&quot;&gt;
+ // HTML code
+ &amp;lt;p class=&quot;highlight-text&quot;&amp;gt;
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. At nam dignissimos nemo nihil iure illo nisi nobis voluptatum sit architecto reprehenderit, quibusdam molestiae, sunt, distinctio ea vero? Error, minus excepturi?
+ &amp;lt;p&amp;gt;
+&lt;p&gt;// Css
+// Only trick here is to make sure the element is &lt;b&gt;inline&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;.highlight-text {
+display: inline; // enforce inline
+background: linear-gradient(180deg, rgba(225,225,225,0) 50%, #00bb00 50%);
+}
+&lt;/p&gt;&lt;/code&gt;
+&lt;/pre&gt;&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;
+And that&#39;s it, preview should look like this
+&lt;/p&gt;
+&lt;p class=&quot;mark-text&quot;&gt;
+ Lorem ipsum dolor sit amet consectetur adipisicing elit. At nam dignissimos nemo nihil iure illo nisi nobis voluptatum sit architecto reprehenderit, quibusdam molestiae, sunt, distinctio ea vero? Error, minus excepturi? 
+&lt;/p&gt;
+&lt;h3 id=&quot;line-both-side&quot;&gt;
+Lines on both side of an Element
+&lt;/h3&gt;
+&lt;p&gt;
+You might be wondering, how do I place lines on both side of an Element in the most less messy way. It&#39;s actually kind of a breeze with css &lt;b&gt;LINEAR-GRADIENT&lt;/b&gt;
+&lt;/p&gt;
+&lt;pre class=&quot;language-html&quot;&gt;
+&lt;code class=&quot;language-html&quot;&gt;
+ // HTML code
+  &amp;lt;div class=&quot;lines&quot;&amp;gt;
+    &amp;lt;input type=&quot;submit&quot; class=&quot;btn btn--small btn--primary&quot; value=&quot;button&quot;&amp;gt;
+    &amp;lt;/div&amp;gt;
+
+// Css 
+
+ .lines {
+    text-align: center;
+    background-image: linear-gradient(#ddd,#ddd);
+    background-size: 100% .1em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 2em 0;
+}
+.llines .btn
+ {
+ display:inline-block;
+ box-shadow:0 0 0 1em #fff;
+} 
+&lt;/code&gt;
+&lt;/pre&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt; that&#39;s it, the preview should look like this
+&lt;/p&gt;
+&lt;div&gt;
+ &lt;div class=&quot;lines&quot;&gt;
+        &lt;input type=&quot;submit&quot; class=&quot;btn btn--small btn--primary&quot; value=&quot;button&quot; /&gt;
+    &lt;/div&gt; 
+&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;h3 id=&quot;wavy-line&quot;&gt;
+Css Wavy lines
+&lt;/h3&gt;
+&lt;p&gt;
+With just a single &lt;b&gt;div&lt;/b&gt; you can create a Wavy effect with pure css
+&lt;/p&gt;
+ &lt;pre class=&quot;language-html&quot;&gt;
+&lt;code class=&quot;language-html&quot;&gt;
+ // HTML code
+ &amp;lt;div class=&quot;wavy-line&quot;&amp;gt;&amp;lt;div&amp;gt;
+
+// Css
+
+.wavy-line {
+    position: relative;
+    width: 100vw;
+    height: 50px;
+}
+.wavy-line::before, .line::after {
+    content: &quot;&quot;;
+    display: block;
+    position: absolute;
+    width: 100vw; /*same width as container*/
+    height: 26px;
+}
+.wavy-line::after {
+    background: linear-gradient(45deg, transparent, transparent 49%, green 49%, transparent 51%);
+}
+.wavy-line::before {
+    background: linear-gradient(-45deg, transparent, transparent 49%, green 49%, transparent 51%);
+}
+.wavy-line::before, .line::after {
+    background-size: 50px 50px;
+}
+
+&lt;/code&gt;
+&lt;/pre&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;
+There you go, and the preview should look like the one below
+&lt;/p&gt;
+&lt;div&gt;
+ &lt;div class=&quot;wavy-line&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt; 
+&lt;h3 id=&quot;line-hover&quot;&gt;
+Animate line on hover
+&lt;/h3&gt;
+&lt;p&gt;
+Another cool thing you can do with css lines is animating them....
+&lt;/p&gt;
+ &lt;pre class=&quot;language-html&quot;&gt;
+&lt;code class=&quot;language-html&quot;&gt;
+ // HTML code
+     &amp;lt;a href=&quot;#0&quot; class=&quot;line-animate&quot;&amp;gt;
+        hover me
+    &amp;lt;/a&amp;gt;
+
+// Css
+
+.line-animate {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 26px;
+    color: green;
+    position: relative;
+}
+.line-animate:hover.line-animate::after {
+    content: &quot;&quot;;
+    display: block;
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    top: 100%;
+    background-image: linear-gradient(#ddd,#ddd);
+    background-size: 100% .1em;
+    animation: animate .5s linear;
+
+}
+
+@keyframes animate {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 100%;
+    }
+    0% {
+        width: 0;
+    }
+}
+
+&lt;/code&gt;
+&lt;/pre&gt;
+&lt;p&gt;&lt;/p&gt;
+ &lt;div&gt;
+ &lt;a href=&quot;https://spruce.com.ng/blog/5-cool-css-only-line-effects/#0&quot; class=&quot;line-animate&quot;&gt;
+        hover me
+    &lt;/a&gt; 
+    &lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;
+And there you have it, a cool hover line effect created with css
+&lt;/p&gt;
+&lt;h3 id=&quot;line-one-side&quot;&gt;
+Add line in the middle of a word
+&lt;/h3&gt;
+&lt;p&gt;
+Have you ever wanted create a header text like the one below?
+&lt;/p&gt;
+ &lt;figure class=&quot;p-article__img&quot;&gt;
+  &lt;img src=&quot;https://spruce.com.ng/blog/5-cool-css-only-line-effects/img/line-article.jpg&quot; alt=&quot;image of header text with Line from smashingmagazine&quot; /&gt;
+&lt;figcaption&gt;
+Image of header text with line from smashingmagazine
+&lt;/figcaption&gt;
+ &lt;/figure&gt;
+&lt;p&gt;
+What if I told you it is quite easy to do with CSS 
+&lt;/p&gt;
+ &lt;pre class=&quot;language-html&quot;&gt;
+&lt;code class=&quot;language-html&quot;&gt;
+ // HTML code
+   &amp;lt;div class=&quot;line-before&quot;&amp;gt;
+     &amp;lt;span class=&quot;line-before__inner&quot;&amp;gt;
+     Latest posts
+    &amp;lt;/span&amp;gt;
+    &amp;lt;/div&amp;gt;
+
+// Css 
+.line-before__inner {
+ position:relative;
+ display:block;
+ width:100%;
+ color:#333;
+ background-position:center;
+ z-index:2;
+ padding-left:calc(100px + 1em);
+}
+
+.line-before__inner::before {
+ content:&#39;&#39;;
+ position:absolute;
+ display:block;
+ width:100px;
+ height:1px;
+ background-color:currentColor;
+ left:0;
+ top:50%
+} 
+
+&lt;/code&gt;
+&lt;/pre&gt;
+&lt;p&gt;&lt;/p&gt; 
+ &lt;div&gt;
+ &lt;div class=&quot;line-before&quot;&gt;
+        &lt;span class=&quot;line-before__inner&quot;&gt;
+   Latest posts
+    &lt;/span&gt;
+    &lt;/div&gt; 
+    &lt;/div&gt; 
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;
+The CSS above is self explanatory, so that&#39;s how to add a line in the middle of a text item
+&lt;/p&gt;
+&lt;p&gt;
+Thanks for reading
+&lt;/p&gt;
+</content>
+  </entry>
+</feed>

@@ -33,7 +33,7 @@
  }
 
  [data-theme="green"] {
-    --text: #001e1d;
+    --text: #fffffe;
     --text-dark: #001e1d;
     --border: rgba(0,0,0,.1);
     --primary: #f9bc60;

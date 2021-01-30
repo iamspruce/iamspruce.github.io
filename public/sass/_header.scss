@@ -30,9 +30,9 @@ div.nav__overlay {
     width: 320px;
     height: 100vh;
     overflow-y: auto;
-    background-color: #222126;
+    background-color: var(--bg-alt);
     z-index: 900;
-    color: var(--white);
+    color: var(-text);
     right: -9999px;
     transition: all .3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 
@@ -58,13 +58,13 @@ div.nav__overlay {
     }
 }
 .nav {
-    padding: 40px;
+    padding: 30px;
 
     .nav__header {
-        margin-bottom: 64px;
+        margin-bottom: 54px;
 
         .nav__icon,.header__logo {
-            color: var(--white);
+            color: var(--text);
         }
     }
 }

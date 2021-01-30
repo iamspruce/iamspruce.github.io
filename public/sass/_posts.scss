@@ -11,7 +11,7 @@
 .article__list {
     border-bottom: 1px solid var(--border);
     margin-bottom: .5em;
-    padding: .5em 0;
+    padding: .9em 0;
 }
 .article__out {
     display: none;
@@ -29,6 +29,9 @@
 }
 .article__tag--icon {
     margin-right: 1px;
+}
+.post__list--title {
+    margin-bottom: 8px;
 }
 .post__list--title .link {
     border-bottom: none;

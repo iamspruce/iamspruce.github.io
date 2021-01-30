@@ -1,7 +1,6 @@
 .section-theme.active {
     right: 0%;
- 
-    
+    overflow-y: auto;
 }
 
 .section-theme {
@@ -20,6 +19,7 @@
 
     &__contain {
 
+
         p {
         margin-bottom: 24px;
         font-size: var(--font-size);
@@ -33,12 +33,12 @@
     margin-bottom: 5px;
 }
 .theme__header {
-    padding: 40px 40px 8px 40px;
+    padding: 30px 30px 8px 30px;
 
 }
 
     .theme__top {
-        padding:1px 40px 10px 40px;
+        padding:1px 30px 10px 30px;
 
     }
 
@@ -49,7 +49,7 @@
 
 
 .theme__bottom {
-    padding:20px 0px 40px  40px;
+    padding:20px 0px 30px  30px;
 
 }
 .theme-color-wrapper {

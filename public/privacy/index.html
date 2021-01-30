@@ -8,6 +8,11 @@
 <title>
     Spruce | Privacy & Policy
 </title>
+<script>
+    const scheme = localStorage.getItem('theme-name');
+      document.documentElement.setAttribute('data-theme', scheme);
+  </script>
+  <link rel="stylesheet" href="/assets/theme.css">
 
 <meta name="description" content="" />
 <meta property="og:description" content="" />
@@ -81,7 +86,7 @@
                 <span class="header__logo--text">Spruce</span>
             </a>
             <button class="nav__icon js-nav-close" aria-expanded="false" aria-controls="nav-menu" aria-label="close menu">
-                <svg class="icon icon--small icon--btn" width="26px" height="26px">
+                <svg class="icon icon--small icon--btn" width="18px" height="18px">
                     <title>Close Navigation</title>
                     <use xlink:href="#icon-close"></use>
                 </svg>
@@ -106,6 +111,11 @@
                     <li class="link__items--list">
                         <a href="/articles/" class="link">
                         Articles
+                    </a>
+                    </li>
+                    <li class="link__items--list">
+                        <a href="/privacy/" class="link">
+                        Privacy
                     </a>
                     </li>
                     </ul>
@@ -152,15 +162,15 @@
     </div>
     </header><main id="main" class="">
     
-<section class="section ">
-    <div class="container__inner section__hero"><div class="page-emoji">
+<section class="section">
+    <div class="container section__hero"><div class="page-emoji">
           <span class="emoji" style="font-size: 48px;">😉</span>
         </div><h1 class="page-title__heading">
         Privacy & Policy
       </h1></div>
       </section>
 <section class="section--al">
-    <div class="container__inner section--pad">
+    <div class="container section--pad">
       
 <p>Effective date: 2020-11-18</p> 
 <p>1. <b>Introduction</b></p>
@@ -447,10 +457,10 @@
             
         <button type="button" class="theme-color js-theme-color" style="background-color: #004643; border: 1px solid #abd1c6" value="green">
                     <div class="theme-color__secondary" style="background-color: #abd1c6; margin-bottom: .5em;"></div>
-        <span class="theme-color-text" style="background: linear-gradient(180deg, #001e1d 100%, #001e1d 100%); color: #001e1d"></span>
-        <span class="theme-color-text" style="background: linear-gradient(180deg, #001e1d 100%, #001e1d 100%); color: #001e1d"></span> <br>
+        <span class="theme-color-text" style="background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe"></span>
+        <span class="theme-color-text" style="background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe"></span> <br>
                    <div class="flex">
-                    <span class="theme-color__name" style="color: #001e1d;">
+                    <span class="theme-color__name" style="color: #fffffe;">
                         green
                     </span>
                     <span class="theme-span-wrapper" style="margin-top: .5em;">
@@ -531,38 +541,6 @@
 </script>
 <script src="/assets/js/main.js"></script>
 <script src="/assets/js/theme.js"></script>
-<script>
-  const scheme = localStorage.getItem('theme-name');
-    document.documentElement.setAttribute('data-theme', scheme);
-
-
-    const fontSize = localStorage.getItem('font-size');
-    document.documentElement.style.setProperty('--font-size',  `${fontSize}px`);
-    const fontBtns = document.querySelectorAll('.js-font-btn');
-        fontBtns.forEach((btn) => {
-            const btnVal = btn.value;
-            const btnTag = btn;
-            if (btnVal == fontSize) {
-                btnTag.classList.add('active');
-        }
-        });
-
-    const position = localStorage.getItem('position');
-    const switchBtn = document.querySelector('.js-theme-toggle');
-    
-    if (position == 'fixed') {
-        switchBtn.setAttribute('aria-checked', 'true');
-        document.documentElement.style.setProperty('--position', 'fixed');
-        document.documentElement.style.setProperty('--top-margin', '96px');
-
-    } else {
-        switchBtn.setAttribute('aria-checked', 'false')
-        document.documentElement.style.setProperty('--position', 'static');
-        document.documentElement.style.setProperty('--top-margin', '0px');
-
-    }
-</script>
-<link rel="stylesheet" href="/assets/theme.css">
 
 
 

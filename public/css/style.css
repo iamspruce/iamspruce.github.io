@@ -101,6 +101,7 @@
  */
 html {
   box-sizing: border-box;
+  transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
 *, *:before, *:after {
@@ -331,21 +332,8 @@ blockquote {
 }
 
 .container {
-  width: 84%;
+  width: 87%;
   max-width: 1400px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.container__inner {
-  width: 84%;
-  max-width: 767px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.container__inner--inner {
-  max-width: 667px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -426,6 +414,10 @@ blockquote {
 
 .text--left {
   text-align: left;
+}
+
+.text--compact {
+  max-width: 30em;
 }
 
 .img-overlay {
@@ -529,9 +521,9 @@ div.nav__overlay {
   width: 320px;
   height: 100vh;
   overflow-y: auto;
-  background-color: #222126;
+  background-color: var(--bg-alt);
   z-index: 900;
-  color: var(--white);
+  color: var(-text);
   right: -9999px;
   transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
@@ -556,13 +548,13 @@ div.nav__overlay {
   }
 }
 .nav {
-  padding: 40px;
+  padding: 30px;
 }
 .nav .nav__header {
-  margin-bottom: 64px;
+  margin-bottom: 54px;
 }
 .nav .nav__header .nav__icon, .nav .nav__header .header__logo {
-  color: var(--white);
+  color: var(--text);
 }
 
 .link__items {
@@ -630,6 +622,7 @@ div.nav__overlay {
 }
 .section-theme.active {
   right: 0%;
+  overflow-y: auto;
 }
 
 .section-theme {
@@ -657,11 +650,11 @@ div.nav__overlay {
 }
 
 .theme__header {
-  padding: 40px 40px 8px 40px;
+  padding: 30px 30px 8px 30px;
 }
 
 .theme__top {
-  padding: 1px 40px 10px 40px;
+  padding: 1px 30px 10px 30px;
 }
 
 .theme-top-col {
@@ -670,7 +663,7 @@ div.nav__overlay {
 }
 
 .theme__bottom {
-  padding: 20px 0px 40px 40px;
+  padding: 20px 0px 30px 30px;
 }
 
 .theme-color-wrapper {
@@ -810,7 +803,7 @@ div.nav__overlay {
 
 .section__hero {
   border-bottom: 1px solid var(--border);
-  padding: 0em 0 0.5em 0;
+  padding: 0em 0 0em 0;
 }
 
 .section--alt {
@@ -865,7 +858,7 @@ div.nav__overlay {
 .article__list {
   border-bottom: 1px solid var(--border);
   margin-bottom: 0.5em;
-  padding: 0.5em 0;
+  padding: 0.9em 0;
 }
 
 .article__out {
@@ -886,6 +879,10 @@ div.nav__overlay {
 
 .article__tag--icon {
   margin-right: 1px;
+}
+
+.post__list--title {
+  margin-bottom: 8px;
 }
 
 .post__list--title .link {

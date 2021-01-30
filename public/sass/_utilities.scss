@@ -12,23 +12,11 @@
    }
    
 .container {
-    width: 84%;
+    width: 87%;
     max-width: 1400px;
     margin-left: auto;
     margin-right: auto;
 }
-.container__inner {
-    width: 84%;
-    max-width: 767px;
-    margin-left: auto;
-    margin-right: auto;
-}
-.container__inner--inner {
-    max-width: 667px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 /* flex */
 .flex {
     display: flex;
@@ -103,7 +91,9 @@
    .text--left {
        text-align: left;
    }
-
+   .text--compact {
+    max-width: 30em;
+   }
    .img-overlay {
     position: relative;
     z-index: 2;

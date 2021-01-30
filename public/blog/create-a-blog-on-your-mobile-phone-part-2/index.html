@@ -78,7 +78,158 @@
 <link rel="manifest" href="/manifest.json">
 </head>
 <body>
-    <div class="nav__overlay fixed__right js-nav">
+    <section class="section-theme">
+<div class="section-theme__contain">
+    <div class="theme__header flex">
+        <h4 class="theme__title">
+            Theme Settings
+        </h4>
+        <button class="header__icon js-close-theme" aria-expanded="false" aria-controls="nav-menu" aria-label="toggle menu">
+            <svg class="icon icon--small icon--btn" width="26px" height="26px">
+                <title>Close Theme Switcher</title>
+                <use xlink:href="#icon-close"></use>
+            </svg>
+        </button>
+    </div>
+   
+    <div class=" theme__top">
+        <div class="js-tab-content theme-top-col show" id="tab-1-content">
+            <h5 class="theme-title">
+                Fonts
+            </h5>
+            <p>Choose default font size for articles</p>
+    
+            <div class="theme-btn-wrapper js-btn-wrapper">
+                <button class="btn btn--small btn--border js-font-btn" value="16">16px</button>
+                <button class="btn btn--small btn--border js-font-btn" value="18">18px</button>
+                <button class="btn btn--small btn--border js-font-btn" value="20">20px</button>
+                <button class="btn btn--small btn--border js-font-btn" value="22">22px</button>
+            </div>
+        </div>
+        <div class="js-tab-content theme-top-col two" id="tab-2-content">
+            <h5 class="theme-title">
+                Fixed Header
+            </h5>
+            <p>Static or Fixed Header? your choice</p>
+
+            <div class="check-wrapper">
+                <span id="btn-label" class="sr-only">Fixed or static header</span>
+               <button role="switch" type="button" aria-checked="true" aria-labelledby="btn-label" class="js-theme-toggle btn btn--border btn--rounded btn--toggle">
+                   <span>On</span>
+                   <span>Off</span>
+               </button>
+            </div>
+        </div>
+    </div>
+    <div class="js-tab-content theme__bottom" id="tab-3-content">
+        <h5 class="theme-title">
+            Choose Color Scheme
+        </h5>
+        <p>Pick a color scheme of your choice</p>
+
+        <div class="theme-color-wrapper js-theme-scheme">
+            
+        <button type="button" class="theme-color js-theme-color" style="background-color: #ffffff; border: 1px solid #f8f8f8" value="default">
+                    <div class="theme-color__secondary" style="background-color: #f8f8f8; margin-bottom: .5em;"></div>
+        <span class="theme-color-text" style="background: linear-gradient(180deg, #222126 100%, #222126 100%); color: #222126"></span>
+        <span class="theme-color-text" style="background: linear-gradient(180deg, #222126 100%, #222126 100%); color: #222126"></span> <br>
+                   <div class="flex">
+                    <span class="theme-color__name" style="color: #222126;">
+                        default
+                    </span>
+                    <span class="theme-span-wrapper" style="margin-top: .5em;">
+                        <span style="background-color: #665df5;"></span>
+                        <span style="background-color: #6ad1e0;"></span>
+                        <span style="background-color: #382cf1;"></span>
+                    </span>
+                   </div>
+                </button>
+            
+        <button type="button" class="theme-color js-theme-color" style="background-color: #16161a; border: 1px solid #242629" value="dark">
+                    <div class="theme-color__secondary" style="background-color: #242629; margin-bottom: .5em;"></div>
+        <span class="theme-color-text" style="background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe"></span>
+        <span class="theme-color-text" style="background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe"></span> <br>
+                   <div class="flex">
+                    <span class="theme-color__name" style="color: #fffffe;">
+                        dark
+                    </span>
+                    <span class="theme-span-wrapper" style="margin-top: .5em;">
+                        <span style="background-color: #ff8906;"></span>
+                        <span style="background-color: #2cb67d;"></span>
+                        <span style="background-color: #75757e;"></span>
+                    </span>
+                   </div>
+                </button>
+            
+        <button type="button" class="theme-color js-theme-color" style="background-color: #004643; border: 1px solid #abd1c6" value="green">
+                    <div class="theme-color__secondary" style="background-color: #abd1c6; margin-bottom: .5em;"></div>
+        <span class="theme-color-text" style="background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe"></span>
+        <span class="theme-color-text" style="background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe"></span> <br>
+                   <div class="flex">
+                    <span class="theme-color__name" style="color: #fffffe;">
+                        green
+                    </span>
+                    <span class="theme-span-wrapper" style="margin-top: .5em;">
+                        <span style="background-color: #f9bc60;"></span>
+                        <span style="background-color: #e16162;"></span>
+                        <span style="background-color: #abd1c6;"></span>
+                    </span>
+                   </div>
+                </button>
+            
+        <button type="button" class="theme-color js-theme-color" style="background-color: #eff0f3; border: 1px solid #fffffe" value="fame">
+                    <div class="theme-color__secondary" style="background-color: #fffffe; margin-bottom: .5em;"></div>
+        <span class="theme-color-text" style="background: linear-gradient(180deg, #0d0d0d 100%, #0d0d0d 100%); color: #0d0d0d"></span>
+        <span class="theme-color-text" style="background: linear-gradient(180deg, #0d0d0d 100%, #0d0d0d 100%); color: #0d0d0d"></span> <br>
+                   <div class="flex">
+                    <span class="theme-color__name" style="color: #0d0d0d;">
+                        fame
+                    </span>
+                    <span class="theme-span-wrapper" style="margin-top: .5em;">
+                        <span style="background-color: #ff8e3c;"></span>
+                        <span style="background-color: #d9376e;"></span>
+                        <span style="background-color: #eaddcf;"></span>
+                    </span>
+                   </div>
+                </button>
+            
+        <button type="button" class="theme-color js-theme-color" style="background-color: #232946; border: 1px solid #d4d8f0" value="dark-blue">
+                    <div class="theme-color__secondary" style="background-color: #d4d8f0; margin-bottom: .5em;"></div>
+        <span class="theme-color-text" style="background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe"></span>
+        <span class="theme-color-text" style="background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe"></span> <br>
+                   <div class="flex">
+                    <span class="theme-color__name" style="color: #fffffe;">
+                        dark-blue
+                    </span>
+                    <span class="theme-span-wrapper" style="margin-top: .5em;">
+                        <span style="background-color: #eebbc3;"></span>
+                        <span style="background-color: #b8c1ec;"></span>
+                        <span style="background-color: #eaddcf;"></span>
+                    </span>
+                   </div>
+                </button>
+            
+        <button type="button" class="theme-color js-theme-color" style="background-color: #55423d; border: 1px solid #271c19" value="brown">
+                    <div class="theme-color__secondary" style="background-color: #271c19; margin-bottom: .5em;"></div>
+        <span class="theme-color-text" style="background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe"></span>
+        <span class="theme-color-text" style="background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe"></span> <br>
+                   <div class="flex">
+                    <span class="theme-color__name" style="color: #fffffe;">
+                        brown
+                    </span>
+                    <span class="theme-span-wrapper" style="margin-top: .5em;">
+                        <span style="background-color: #ffc0ad;"></span>
+                        <span style="background-color: #e78fb3;"></span>
+                        <span style="background-color: #9656a1;"></span>
+                    </span>
+                   </div>
+                </button>
+            
+        </div>
+    </div>
+</div>
+</section>
+<div class="nav__overlay fixed__right js-nav">
     <nav class="nav">
         <div class="nav__header flex">
             <a class="header__logo flex" href="/" rel="home" aria-label="Go To Homepage">
@@ -568,158 +719,7 @@ Previous parts of this series
                          
         </div>
     </div>
-</footer><section class="section-theme">
-<div class="section-theme__contain">
-    <div class="theme__header flex">
-        <h4 class="theme__title">
-            Theme Settings
-        </h4>
-        <button class="header__icon js-close-theme" aria-expanded="false" aria-controls="nav-menu" aria-label="toggle menu">
-            <svg class="icon icon--small icon--btn" width="26px" height="26px">
-                <title>Close Theme Switcher</title>
-                <use xlink:href="#icon-close"></use>
-            </svg>
-        </button>
-    </div>
-   
-    <div class=" theme__top">
-        <div class="js-tab-content theme-top-col show" id="tab-1-content">
-            <h5 class="theme-title">
-                Fonts
-            </h5>
-            <p>Choose default font size for articles</p>
-    
-            <div class="theme-btn-wrapper js-btn-wrapper">
-                <button class="btn btn--small btn--border js-font-btn" value="16">16px</button>
-                <button class="btn btn--small btn--border js-font-btn" value="18">18px</button>
-                <button class="btn btn--small btn--border js-font-btn" value="20">20px</button>
-                <button class="btn btn--small btn--border js-font-btn" value="22">22px</button>
-            </div>
-        </div>
-        <div class="js-tab-content theme-top-col two" id="tab-2-content">
-            <h5 class="theme-title">
-                Fixed Header
-            </h5>
-            <p>Static or Fixed Header? your choice</p>
-
-            <div class="check-wrapper">
-                <span id="btn-label" class="sr-only">Fixed or static header</span>
-               <button role="switch" type="button" aria-checked="true" aria-labelledby="btn-label" class="js-theme-toggle btn btn--border btn--rounded btn--toggle">
-                   <span>On</span>
-                   <span>Off</span>
-               </button>
-            </div>
-        </div>
-    </div>
-    <div class="js-tab-content theme__bottom" id="tab-3-content">
-        <h5 class="theme-title">
-            Choose Color Scheme
-        </h5>
-        <p>Pick a color scheme of your choice</p>
-
-        <div class="theme-color-wrapper js-theme-scheme">
-            
-        <button type="button" class="theme-color js-theme-color" style="background-color: #ffffff; border: 1px solid #f8f8f8" value="default">
-                    <div class="theme-color__secondary" style="background-color: #f8f8f8; margin-bottom: .5em;"></div>
-        <span class="theme-color-text" style="background: linear-gradient(180deg, #222126 100%, #222126 100%); color: #222126"></span>
-        <span class="theme-color-text" style="background: linear-gradient(180deg, #222126 100%, #222126 100%); color: #222126"></span> <br>
-                   <div class="flex">
-                    <span class="theme-color__name" style="color: #222126;">
-                        default
-                    </span>
-                    <span class="theme-span-wrapper" style="margin-top: .5em;">
-                        <span style="background-color: #665df5;"></span>
-                        <span style="background-color: #6ad1e0;"></span>
-                        <span style="background-color: #382cf1;"></span>
-                    </span>
-                   </div>
-                </button>
-            
-        <button type="button" class="theme-color js-theme-color" style="background-color: #16161a; border: 1px solid #242629" value="dark">
-                    <div class="theme-color__secondary" style="background-color: #242629; margin-bottom: .5em;"></div>
-        <span class="theme-color-text" style="background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe"></span>
-        <span class="theme-color-text" style="background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe"></span> <br>
-                   <div class="flex">
-                    <span class="theme-color__name" style="color: #fffffe;">
-                        dark
-                    </span>
-                    <span class="theme-span-wrapper" style="margin-top: .5em;">
-                        <span style="background-color: #ff8906;"></span>
-                        <span style="background-color: #2cb67d;"></span>
-                        <span style="background-color: #75757e;"></span>
-                    </span>
-                   </div>
-                </button>
-            
-        <button type="button" class="theme-color js-theme-color" style="background-color: #004643; border: 1px solid #abd1c6" value="green">
-                    <div class="theme-color__secondary" style="background-color: #abd1c6; margin-bottom: .5em;"></div>
-        <span class="theme-color-text" style="background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe"></span>
-        <span class="theme-color-text" style="background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe"></span> <br>
-                   <div class="flex">
-                    <span class="theme-color__name" style="color: #fffffe;">
-                        green
-                    </span>
-                    <span class="theme-span-wrapper" style="margin-top: .5em;">
-                        <span style="background-color: #f9bc60;"></span>
-                        <span style="background-color: #e16162;"></span>
-                        <span style="background-color: #abd1c6;"></span>
-                    </span>
-                   </div>
-                </button>
-            
-        <button type="button" class="theme-color js-theme-color" style="background-color: #eff0f3; border: 1px solid #fffffe" value="fame">
-                    <div class="theme-color__secondary" style="background-color: #fffffe; margin-bottom: .5em;"></div>
-        <span class="theme-color-text" style="background: linear-gradient(180deg, #0d0d0d 100%, #0d0d0d 100%); color: #0d0d0d"></span>
-        <span class="theme-color-text" style="background: linear-gradient(180deg, #0d0d0d 100%, #0d0d0d 100%); color: #0d0d0d"></span> <br>
-                   <div class="flex">
-                    <span class="theme-color__name" style="color: #0d0d0d;">
-                        fame
-                    </span>
-                    <span class="theme-span-wrapper" style="margin-top: .5em;">
-                        <span style="background-color: #ff8e3c;"></span>
-                        <span style="background-color: #d9376e;"></span>
-                        <span style="background-color: #eaddcf;"></span>
-                    </span>
-                   </div>
-                </button>
-            
-        <button type="button" class="theme-color js-theme-color" style="background-color: #232946; border: 1px solid #d4d8f0" value="dark-blue">
-                    <div class="theme-color__secondary" style="background-color: #d4d8f0; margin-bottom: .5em;"></div>
-        <span class="theme-color-text" style="background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe"></span>
-        <span class="theme-color-text" style="background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe"></span> <br>
-                   <div class="flex">
-                    <span class="theme-color__name" style="color: #fffffe;">
-                        dark-blue
-                    </span>
-                    <span class="theme-span-wrapper" style="margin-top: .5em;">
-                        <span style="background-color: #eebbc3;"></span>
-                        <span style="background-color: #b8c1ec;"></span>
-                        <span style="background-color: #eaddcf;"></span>
-                    </span>
-                   </div>
-                </button>
-            
-        <button type="button" class="theme-color js-theme-color" style="background-color: #55423d; border: 1px solid #271c19" value="brown">
-                    <div class="theme-color__secondary" style="background-color: #271c19; margin-bottom: .5em;"></div>
-        <span class="theme-color-text" style="background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe"></span>
-        <span class="theme-color-text" style="background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe"></span> <br>
-                   <div class="flex">
-                    <span class="theme-color__name" style="color: #fffffe;">
-                        brown
-                    </span>
-                    <span class="theme-span-wrapper" style="margin-top: .5em;">
-                        <span style="background-color: #ffc0ad;"></span>
-                        <span style="background-color: #e78fb3;"></span>
-                        <span style="background-color: #9656a1;"></span>
-                    </span>
-                   </div>
-                </button>
-            
-        </div>
-    </div>
-</div>
-</section>
-
+</footer>
 </body>
 <script>
     // Initialize the service worker

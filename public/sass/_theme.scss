@@ -1,6 +1,5 @@
 .section-theme.active {
     right: 0%;
-    overflow-y: auto;
 }
 
 .section-theme {
@@ -10,14 +9,15 @@
     top: 0;
     width: 320px;
     height: 100vh;
-    overflow-y: auto;
+    overflow-y: scroll;
     z-index: 900;
     right: -9999px;
-    transition: all .3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    transition: all .35s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 
     
 
     &__contain {
+        padding-bottom: 30px;
 
         p {
         margin-bottom: 24px;
@@ -48,7 +48,7 @@
 
 
 .theme__bottom {
-    padding:20px 0px 30px  30px;
+    padding:20px 0px 0px  30px;
 
 }
 .theme-color-wrapper {

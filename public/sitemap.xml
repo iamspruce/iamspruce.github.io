@@ -25,11 +25,6 @@
             <changefreq>monthly</changefreq>
             <priority>0.9</priority>
         </url><url>
-            <loc>https://spruce.com.ng/blog/on-designing-a-themeable-static-website/</loc>
-            <lastmod>December 25, 2020</lastmod>
-            <changefreq>monthly</changefreq>
-            <priority>0.9</priority>
-        </url><url>
             <loc>https://spruce.com.ng/blog/top-5-css-methodologies-in-2021/</loc>
             <lastmod>December 26, 2020</lastmod>
             <changefreq>monthly</changefreq>
@@ -54,4 +49,9 @@
             <lastmod>January 19, 2021</lastmod>
             <changefreq></changefreq>
             <priority></priority>
+        </url><url>
+            <loc>https://spruce.com.ng/blog/on-designing-a-themeable-static-website/</loc>
+            <lastmod>June 7, 2021</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.9</priority>
         </url></urlset> 

@@ -4,7 +4,7 @@
   <subtitle>Spruce personal online and portfolio</subtitle>
   <link href="https://spruce.com.ng/feed.xml" rel="self"/>
   <link href="https://spruce.com.ng/"/>
-  <updated>2021-01-01T00:00:00Z</updated>
+  <updated>2021-06-07T00:00:00Z</updated>
   <id>https://spruce.com.ng/</id>
   <author>
     <name>Spruce Emmanuel</name>
@@ -1110,395 +1110,6 @@ again thanks for reading...
   </entry>
   
   <entry>
-    <title>On Designing: A Themeable Static Website</title>
-    <link href="https://spruce.com.ng/blog/on-designing-a-themeable-static-website/"/>
-    <updated>2020-12-25T00:00:00Z</updated>
-    <id>https://spruce.com.ng/blog/on-designing-a-themeable-static-website/</id>
-    <content type="html">&lt;p&gt;A while ago i wanted to create a dark theme for my &lt;a href=&quot;https://spruce.com.ng/&quot;&gt;personal site&lt;/a&gt; so i did some clicking around to find out the most suitable and &lt;b&gt;clean&lt;/b&gt; way to do this, so i read &lt;a href=&quot;https://mxb.dev/blog/color-theme-switcher&quot;&gt;Max Bock&#39;s article on creating a custom theme&lt;/a&gt;, and he explained how to create a custom theme, and he really went super pro(with TEN(10) different color schemes).&lt;/p&gt;
-&lt;p&gt;
-    But for my case i wanted more, i wanted users to be able to change the color scheme to the different color schemes provided, i also wanted users to change the font size, i had a fixed header on my site which was kind of great but on small mobile devices the header was taking quiet a lot of space which is not too good for design i hope you agree, So i also gave users the ability to turn off the fixed header.... 
-&lt;/p&gt;
-&lt;figure class=&quot;p-article__img&quot;&gt;
-    &lt;img src=&quot;https://spruce.com.ng/blog/on-designing-a-themeable-static-website/img/spruce-theme.png&quot; alt=&quot;Preview of spruce theme-able website&quot; /&gt;
-  &lt;figcaption&gt;
-  Preview of spruce&#39;s theme-able website
-  &lt;/figcaption&gt;
-   &lt;/figure&gt;
-   &lt;p&gt;
-       Live preview of this can be found in my personal site &lt;a href=&quot;https://spruce.com.ng/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;&lt;/a&gt;, you can also copy the source codes here &lt;a href=&quot;https://spruce.com.ng/blog/on-designing-a-themeable-static-website/#copy-code&quot;&gt;here&lt;/a&gt; to save you a few read time...
-   &lt;/p&gt;
-   &lt;h2&gt;What i wanted to do&lt;/h2&gt;
-   &lt;ol&gt;
-       &lt;li&gt;
-           Asked users their preferred color scheme, font size and header type(Fixed or Static)
-       &lt;/li&gt;
-       &lt;li&gt;
-           Collect user choices
-       &lt;/li&gt;
-       &lt;li&gt;
-           Save them in localStorage
-       &lt;/li&gt;
-       &lt;li&gt;
-           Get them from localStorage and show them to the user immediately, on page reload, when they switch tab and come back, when they close their browser and come back after a week or month
-       &lt;/li&gt;
-   &lt;/ol&gt;
-   &lt;h2&gt;Creating the theme&lt;/h2&gt;
-   &lt;p&gt;
-    In 11ty(the static site am using) you can create a json file in the &lt;b&gt;_data&lt;/b&gt; folder and you can access the data globally in  your template, &lt;b&gt;jekyll&lt;/b&gt; does that too and probably your prefarred static site generator(SSG) can also do the same also.
-   &lt;/p&gt;
-   &lt;pre class=&quot;language-json&quot;&gt;
-    &lt;code class=&quot;language-json&quot;&gt;
-&lt;span&gt;_data/themes.json file&lt;/span&gt;
-[
-    {
-        &quot;id&quot;: &quot;default&quot;,
-        &quot;colors&quot;: {
-            &quot;text&quot;: &quot;#222126&quot;,
-            &quot;text-dark&quot;: &quot;#777;&quot;,
-            &quot;border&quot;: &quot;rgba(0,0,0,.1)&quot;,
-            &quot;primary&quot;: &quot;#665df5&quot;,
-            &quot;secondary&quot;: &quot;#6ad1e0&quot;,
-            &quot;primary-dark&quot;: &quot;#382cf1&quot;,
-            &quot;bg&quot;: &quot;#ffffff&quot;,
-            &quot;bg-alt&quot;: &quot;#f8f8f8&quot;,
-            &quot;overlay&quot;: &quot;rgba(255, 255, 255, .4)&quot;
-        }
-                }, 
-    ... other color schemes
-]
-    &lt;/code&gt;
-   &lt;/pre&gt;
-   &lt;h2&gt;
-       Generating the css
-   &lt;/h2&gt;
-   &lt;p&gt;
-       And then to use the data file, create a &lt;b&gt;theme.css.liquid&lt;/b&gt; file and give it a permalink of where you want the css file output to.
-   &lt;/p&gt;
-   &lt;pre class=&quot;language-liquid&quot;&gt;
-    &lt;code class=&quot;language-liquid&quot;&gt;
-&lt;span&gt;css/theme.css.liquid file&lt;/span&gt;
----
-permalink: /css/theme.css
----
-// when no theme is selected
-// use default theme
-:root {
-    --text: #222126;
-    --text-dark: #777;;
-    --border: rgba(0,0,0,.1);
-    --primary: #665df5;
-    --secondary: #6ad1e0;
-    --primary-dark: #382cf1;
-    --bg: #ffffff;
-    --bg-alt: #f8f8f8;
-}  
-// if user preferred color scheme is dark
-// use the dark theme
-&lt;p&gt;@media(prefers-color-scheme: dark) {
-:root {
---text: #fffffe;
---text-dark: #94a1b2;
---border: rgba(255,255,255,.1);
---primary: #ff8906;
---secondary: #2cb67d;
---primary-dark: #75757e;
---bg: #16161a;
---bg-alt: #242629;
-}
-}
-// generate the theme css from the data file
-// here we use a for loop
-// to iterate over all the themes in our _data/themes.json
-// and output them as plain css&lt;/p&gt;
-&lt;p&gt;{% for theme in themes %}
-[data-theme=&amp;quot;{{ theme.id }}&amp;quot;] {
---text: {{ theme.colors.text }};
---text-dark: {{ theme.colors.text-dark }};
---border: {{ theme.colors.border }};
---primary: {{ theme.colors.primary }};
---secondary: {{ theme.colors.secondary }};
---primary-dark: {{ theme.colors.primary-dark }};
---bg: {{ theme.colors.bg }};
---bg-alt: {{ theme.colors.bg-alt }};
-}
-{% endfor %}&lt;/p&gt;
-&lt;p&gt;nnn
-&lt;/p&gt;&lt;/code&gt;
-&lt;/pre&gt;&lt;p&gt;&lt;/p&gt;
-   &lt;p&gt;
-       Notice am using &lt;b&gt;themes[0].colors.text&lt;/b&gt;, that&#39;s because my default theme is the first one on the list and it has an index of 0, so also my dark theme has an index of 1.
-   &lt;/p&gt;
-   &lt;p&gt;
-       In &lt;b&gt;Jekyll&lt;/b&gt; you can output liquid in a css by just adding empty front matter at the top of the file.  
-   &lt;/p&gt;
-   &lt;pre class=&quot;language-css&quot;&gt;
-       &lt;code class=&quot;language-css&quot;&gt;
-&lt;span&gt;css/theme.css file&lt;/span&gt;
----
----
-&lt;p&gt;// your liquid in css goes here
-&lt;/p&gt;&lt;/code&gt;
-&lt;/pre&gt;&lt;p&gt;&lt;/p&gt;
-   &lt;p&gt;
-       I&#39;m sure your favourite static site generator provides a similar way to output liquid in a css file. You can also handcode all this if you are just writing plain html and css without a SSG.
-   &lt;/p&gt;
-   &lt;h2&gt;
-      Using the Css in your site
-   &lt;/h2&gt;
-   &lt;p&gt;
-       If you are reading this i assume that you already know how to work with css custom properties so i would rather not go in depth
-   &lt;/p&gt;
-   &lt;pre class=&quot;language-css&quot;&gt;
-       &lt;code class=&quot;language-css&quot;&gt;
-// css custom properties are declared using the keyword &lt;b&gt;var&lt;/b&gt;
-// color: var(--text);
-&lt;p&gt;body {
-background: var(--bg);
-color: var(--text);
-}
-h1,h2 {
-color: var(--text-dark)
-}
-// i also had default font-size and margin-top properties set
-// i added this to the :root in css
-:root {
---font-size: 18px;
---position: fixed;
---top-margin: 96px;
-}
-&lt;/p&gt;&lt;/code&gt;
-&lt;/pre&gt;
-&lt;p&gt;&lt;/p&gt;
-You just have to change every bit of color on your site to the custom properties you have generated.
-&lt;p&gt;&lt;/p&gt;&lt;br /&gt;
-&lt;h2&gt;
-Generating the html
-&lt;/h2&gt;
-&lt;p&gt;
-Now let&#39;s provide a UI to allow users change the font size, header type and color scheme of our site, though mine is a little bit simple you can take yours more further, am just explaining the concept here.
-&lt;/p&gt;
-&lt;pre class=&quot;language-html&quot;&gt;
-&lt;code class=&quot;language-html&quot;&gt;
-&lt;span&gt;theme.html file&lt;/span&gt;
-// create the font buttons
-// I gave each button a value
-// I want to get the value and save it in local storage&lt;p&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;section class=&amp;quot;theme-section&amp;quot;&amp;gt;
-    &amp;lt;div class=&amp;quot;theme-btn-wrapper&amp;quot;&amp;gt;
-        &amp;lt;button class=&amp;quot;btn btn--small btn--border js-font-btn&amp;quot; value=&amp;quot;16&amp;quot;&amp;gt;16px&amp;lt;/button&amp;gt;
-        &amp;lt;button class=&amp;quot;btn btn--small btn--border js-font-btn&amp;quot; value=&amp;quot;18&amp;quot;&amp;gt;18px&amp;lt;/button&amp;gt;
-        &amp;lt;button class=&amp;quot;btn btn--small btn--border js-font-btn&amp;quot; value=&amp;quot;20&amp;quot;&amp;gt;20px&amp;lt;/button&amp;gt;
-        &amp;lt;button class=&amp;quot;btn btn--small btn--border js-font-btn&amp;quot; value=&amp;quot;22&amp;quot;&amp;gt;22px&amp;lt;/button&amp;gt;
-    &amp;lt;/div&amp;gt;
-&amp;lt;/section&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;// Create the toggle button
-// To turn On &amp;amp; Off
-// The fixed header
-// The &lt;b&gt;sr-only&lt;/b&gt; is used to hide the text visually
-// while keeping accessibilty in mind
-// note the &lt;b&gt;role=&amp;quot;switch&amp;quot;&lt;/b&gt; nd aria-checked
-// they are what turns the button to a On and Off switch&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;div class=&amp;quot;check-wrapper&amp;quot;&amp;gt;
-    &amp;lt;span id=&amp;quot;btn-label&amp;quot; class=&amp;quot;sr-only&amp;quot;&amp;gt;Fixed or static header&amp;lt;/span&amp;gt;
-   &amp;lt;button role=&amp;quot;switch&amp;quot; type=&amp;quot;button&amp;quot; aria-checked=&amp;quot;true&amp;quot; aria-labelledby=&amp;quot;btn-label&amp;quot; class=&amp;quot;js-theme-toggle btn btn--border btn--rounded btn--toggle&amp;quot;&amp;gt;
-       &amp;lt;span&amp;gt;On&amp;lt;/span&amp;gt;
-       &amp;lt;span&amp;gt;Off&amp;lt;/span&amp;gt;
-   &amp;lt;/button&amp;gt;
-&amp;lt;/div&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;nnn
-&lt;/p&gt;&lt;/code&gt;
-&lt;/pre&gt;
-&lt;p&gt;
-thats pretty much the html for my use case, again you can do more if you want and there are some css styling involved which would be left out in our case
-&lt;/p&gt;
-&lt;h2&gt;
-The fun part: Creating the Javascript
-&lt;/h2&gt;
-&lt;pre class=&quot;language-js&quot;&gt;
-&lt;code class=&quot;language-js&quot;&gt;
-&lt;span&gt;/assets/js/theme.js file&lt;/span&gt;&lt;p&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;class CustomTheme {
-    constructor() {
-        // part A: check if localStorage works
-        this.islocalStorage = function() {
-            try {
-                localStorage.setItem(&amp;quot;test&amp;quot;, &amp;quot;testing&amp;quot;);
-                localStorage.removeItem(&amp;quot;test&amp;quot;);
-                return true;
-            } catch (error) {
-                return false
-            }
-           
-        };
-        // part B: Get the value from the buttons
-        this.schemeBtns = document.querySelectorAll(&#39;.js-theme-color&#39;);
-        this.schemeBtns.forEach((btn) =&amp;gt; {
-            const btnVal = btn.value;
-            btn.addEventListener(&#39;click&#39;, () =&amp;gt; this.themeScheme(btnVal))
-        });
-
-        this.fontBtns = document.querySelectorAll(&#39;.js-font-btn&#39;);
-        this.fontBtns.forEach((btn) =&amp;gt; {
-            const btnVal = btn.value;
-            const btnTag = btn;
-            btn.addEventListener(&#39;click&#39;, () =&amp;gt; this.themeFont(btnVal, btnTag))
-        });
-
-        // part C: get the html button element
-        this.switchBtn = document.querySelector(&#39;.js-theme-toggle&#39;);
-        const clicked = this.switchBtn;
-        this.switchBtn.addEventListener(&#39;click&#39;, () =&amp;gt; this.themePosition(clicked))
-    }
-
-    // part D: Save the data in localStorage
-    themeScheme(btnVal) {
-        document.documentElement.setAttribute(&#39;data-theme&#39;, btnVal);
-        if (this.islocalStorage) {
-            localStorage.setItem(&#39;theme-name&#39;, btnVal);
-        }
-    };
-    
-    themeFont(btnVal,btnTag) {
-        document.documentElement.style.setProperty(&#39;--font-size&#39;, `${btnVal}px`);
-        if (this.islocalStorage) {
-            localStorage.setItem(&#39;font-size&#39;, btnVal);
-        }
-        ;
-        if (btnVal == localStorage.getItem(&#39;font-size&#39;)) {
-            removeActive();
-            btnTag.classList.add(&#39;active&#39;);
-    }
-};
-
-    themePosition(clicked) {
-    if (clicked.getAttribute(&#39;aria-checked&#39;) == &#39;true&#39;) {
-        clicked.setAttribute(&#39;aria-checked&#39;, &#39;false&#39;);
-        document.documentElement.style.setProperty(&#39;--position&#39;, &#39;static&#39;);
-        document.documentElement.style.setProperty(&#39;--top-margin&#39;, &#39;0px&#39;);
-        if (this.islocalStorage) {
-            localStorage.setItem(&#39;position&#39;, &#39;static&#39;);
-        }
-
-    } else {
-        clicked.setAttribute(&#39;aria-checked&#39;, &#39;true&#39;);
-        document.documentElement.style.setProperty(&#39;--position&#39;, &#39;fixed&#39;);
-        document.documentElement.style.setProperty(&#39;--top-margin&#39;, &#39;96px&#39;);
-        if (this.islocalStorage) {
-            localStorage.setItem(&#39;position&#39;, &#39;fixed&#39;);
-        }
-    }
-
-    }
-}
-
-function removeActive() {
-    const btns = document.querySelectorAll(&#39;.js-font-btn&#39;);
-    btns.forEach((btn) =&amp;gt; {
-        btn.classList.remove(&#39;active&#39;);
-    })
-}
-
-// part E: Only use our class if css custom properties are supported
-if (window.CSS &amp;amp;&amp;amp; CSS.supports(&#39;color&#39;, &#39;var(--i-support&#39;)) {
-    new CustomTheme()
-};
-
-// part E: Add an active class to selected font size button
-
-window.addEventListener(&#39;load&#39;, () =&amp;gt; {
-    const fontBtns = document.querySelectorAll(&#39;.js-font-btn&#39;);
-    fontBtns.forEach((btn) =&amp;gt; {
-        const btnVal = btn.value;
-        const btnTag = btn;
-        if (btnVal == localStorage.getItem(&#39;font-size&#39;)) {
-            btnTag.classList.add(&#39;active&#39;);
-    }
-    });   
-})
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;nnn
-&lt;/p&gt;&lt;/code&gt;
-&lt;/pre&gt;
-&lt;p&gt;
-I know thats a long javascript chunk of code, but it basically does only a few things, it collects and check if localStorage is supported and then save the data in localStorage... &lt;br /&gt;
-also notice i used &lt;b&gt;Javascript Classes&lt;/b&gt; you could use functions as well.
-&lt;/p&gt;
-&lt;p&gt;
-A lot of browsers support localStorage this days, but why do we need to still check? Some users may be browsing your site on &lt;b&gt;icgnito mode(private browsing mode)&lt;/b&gt; and sometimes localStorage is turned off by default so as to not save anything on the users device, don&#39;t blame them lol, they are just doing their work. So instead of saving it direct and sometimes get an error on browsers that don&#39;t support it, we check if a browser does, if it does great and if it dosen&#39;t we are also cool.
-&lt;/p&gt;
-&lt;p&gt;
-Now if you notice everything seems to work just fine, but if you change the theme or font size and you reload your browser, everything is going to revert to default, that&#39;s because we haven&#39;t used the data we stored in &lt;b&gt;localStorage&lt;/b&gt;&lt;br /&gt;
-&lt;/p&gt;
-&lt;p&gt;
-So go ahead and add this piece of code to top of your head file before any css file, this is done to eliminate the flash you get when you reload your browser
-&lt;/p&gt;
-&lt;pre class=&quot;language-js&quot;&gt;
-&lt;code class=&quot;language-js&quot;&gt;&lt;p&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;script&amp;gt;
-    const scheme = localStorage.getItem(&#39;theme-name&#39;);
-      document.documentElement.setAttribute(&#39;data-theme&#39;, scheme);
-
-      const fontSize = localStorage.getItem(&#39;font-size&#39;);
-    document.documentElement.style.setProperty(&#39;--font-size&#39;,  `${fontSize}px`);
-    
-
-    const position = localStorage.getItem(&#39;position&#39;);
-    if (position == &#39;fixed&#39;) {
-        document.documentElement.style.setProperty(&#39;--position&#39;, &#39;fixed&#39;);
-        document.documentElement.style.setProperty(&#39;--top-margin&#39;, &#39;96px&#39;);
-
-    } else {
-        document.documentElement.style.setProperty(&#39;--position&#39;, &#39;static&#39;);
-        document.documentElement.style.setProperty(&#39;--top-margin&#39;, &#39;0px&#39;);
-
-    }    
-    
-  &amp;lt;/script&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;nn
-&lt;/p&gt;&lt;/code&gt;
-&lt;/pre&gt;
-&lt;h2&gt;
-Wrapping up
-&lt;/h2&gt;
-&lt;p&gt;
-And that&#39;s it a simple customizable static site, the main purpose of this guide is to show you the endless possibilities of creating a user customizable website. So go ahead and develop what you want, I mean there are a lot of things to be done...
-&lt;/p&gt;
-&lt;h2&gt;
-Things you could do
-&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;
-Show users specific content based on user choices
-&lt;/li&gt;
-&lt;li&gt;
-Display notification messages based on user visit
-&lt;/li&gt;
-&lt;li&gt;
-You could also display ads in the list most annoying ads by showing users ads based on user choices
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;
-This and a lot more we could do with our SSG&#39;s, Just iamgine the endless possibilities.
-&lt;/p&gt;
-&lt;h2&gt;
-Other Resources
-&lt;/h2&gt;
-&lt;p&gt;
-&lt;a href=&quot;https://mxb.dev/blog/color-theme-switcher&quot;&gt;Max Bock&#39;s article on creating a custom theme&lt;/a&gt;
-&lt;/p&gt;
-&lt;p&gt;
-&lt;a href=&quot;http://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;&lt;/a&gt;
-&lt;/p&gt;
-&lt;p id=&quot;copy-code&quot;&gt;
-Not much of a tutorial person? you can copy the complete source code &lt;a target=&quot;_blank&quot; href=&quot;https://spruce.com.ng/blog/on-designing-a-themeable-static-website&quot;&gt;here&lt;/a&gt;.
-&lt;/p&gt;&lt;p&gt;&lt;/p&gt;
-</content>
-  </entry>
-  
-  <entry>
     <title>Top 5 Css Methodologies In 2021</title>
     <link href="https://spruce.com.ng/blog/top-5-css-methodologies-in-2021/"/>
     <updated>2020-12-26T00:00:00Z</updated>
@@ -2066,6 +1677,280 @@ The CSS above is self explanatory, so that&#39;s how to add a line in the middle
 &lt;p&gt;
 Thanks for reading
 &lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>On Designing: A Themeable Static Website</title>
+    <link href="https://spruce.com.ng/blog/on-designing-a-themeable-static-website/"/>
+    <updated>2021-06-07T00:00:00Z</updated>
+    <id>https://spruce.com.ng/blog/on-designing-a-themeable-static-website/</id>
+    <content type="html">   &lt;pre class=&quot;language-json&quot;&gt;
+    &lt;code class=&quot;language-json&quot;&gt;
+_data/themes.json file
+[
+    {
+        &quot;id&quot;: &quot;default&quot;,
+        &quot;colors&quot;: {
+            &quot;text&quot;: &quot;#222126&quot;,
+            &quot;text-dark&quot;: &quot;#777;&quot;,
+            &quot;border&quot;: &quot;rgba(0,0,0,.1)&quot;,
+            &quot;primary&quot;: &quot;#665df5&quot;,
+            &quot;secondary&quot;: &quot;#6ad1e0&quot;,
+            &quot;primary-dark&quot;: &quot;#382cf1&quot;,
+            &quot;bg&quot;: &quot;#ffffff&quot;,
+            &quot;bg-alt&quot;: &quot;#f8f8f8&quot;,
+            &quot;overlay&quot;: &quot;rgba(255, 255, 255, .4)&quot;
+        }
+                }, 
+    ... other color schemes
+]
+    &lt;/code&gt;
+   &lt;/pre&gt;
+&lt;h2&gt;&lt;pre class=&quot;language-liquid&quot;&gt;
+&lt;code class=&quot;language-liquid&quot;&gt;
+css/theme.css.liquid file&lt;/code&gt;&lt;/pre&gt;&lt;/h2&gt;
+&lt;h2&gt;permalink: /css/theme.css&lt;/h2&gt;
+&lt;p&gt;// when no theme is selected
+// use default theme
+:root {
+--text: #222126;
+--text-dark: #777;;
+--border: rgba(0,0,0,.1);
+--primary: #665df5;
+--secondary: #6ad1e0;
+--primary-dark: #382cf1;
+--bg: #ffffff;
+--bg-alt: #f8f8f8;
+}&lt;br /&gt;
+// if user preferred color scheme is dark
+// use the dark theme&lt;/p&gt;
+&lt;p&gt;@media(prefers-color-scheme: dark) {
+:root {
+--text: #fffffe;
+--text-dark: #94a1b2;
+--border: rgba(255,255,255,.1);
+--primary: #ff8906;
+--secondary: #2cb67d;
+--primary-dark: #75757e;
+--bg: #16161a;
+--bg-alt: #242629;
+}
+}
+// generate the theme css from the data file
+// here we use a for loop
+// to iterate over all the themes in our _data/themes.json
+// and output them as plain css&lt;/p&gt;
+&lt;p&gt;{% for theme in themes %}
+[data-theme=&amp;quot;{{ theme.id }}&amp;quot;] {
+--text: {{ theme.colors.text }};
+--text-dark: {{ theme.colors.text-dark }};
+--border: {{ theme.colors.border }};
+--primary: {{ theme.colors.primary }};
+--secondary: {{ theme.colors.secondary }};
+--primary-dark: {{ theme.colors.primary-dark }};
+--bg: {{ theme.colors.bg }};
+--bg-alt: {{ theme.colors.bg-alt }};
+}
+{% endfor %}&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;/code&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+   
+&lt;h2&gt;&lt;pre class=&quot;language-css&quot;&gt;
+&lt;code class=&quot;language-css&quot;&gt;
+css/theme.css file&lt;/code&gt;&lt;/pre&gt;&lt;/h2&gt;
+&lt;hr /&gt;
+&lt;p&gt;// your liquid in css goes here
+
+&lt;/p&gt;
+   &lt;pre class=&quot;language-css&quot;&gt;
+       &lt;code class=&quot;language-css&quot;&gt;
+// css custom properties are declared using the keyword &lt;b&gt;var&lt;/b&gt;
+// color: var(--text);
+
+body {
+    background: var(--bg);
+    color: var(--text);
+}
+h1,h2 {
+    color: var(--text-dark)
+}
+// i also had default font-size and margin-top properties set
+// i added this to the :root in css
+:root {
+    --font-size: 18px;
+    --position: fixed;
+    --top-margin: 96px;
+}
+       &lt;/code&gt;
+   &lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;pre class=&amp;quot;language-html&amp;quot;&amp;gt;
+    &amp;lt;code class=&amp;quot;language-html&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;theme.html file
+// create the font buttons
+// I gave each button a value
+// I want to get the value and save it in local storage&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;section class=&amp;quot;theme-section&amp;quot;&amp;gt;
+    &amp;lt;div class=&amp;quot;theme-btn-wrapper&amp;quot;&amp;gt;
+        &amp;lt;button class=&amp;quot;btn btn--small btn--border js-font-btn&amp;quot; value=&amp;quot;16&amp;quot;&amp;gt;16px&amp;lt;/button&amp;gt;
+        &amp;lt;button class=&amp;quot;btn btn--small btn--border js-font-btn&amp;quot; value=&amp;quot;18&amp;quot;&amp;gt;18px&amp;lt;/button&amp;gt;
+        &amp;lt;button class=&amp;quot;btn btn--small btn--border js-font-btn&amp;quot; value=&amp;quot;20&amp;quot;&amp;gt;20px&amp;lt;/button&amp;gt;
+        &amp;lt;button class=&amp;quot;btn btn--small btn--border js-font-btn&amp;quot; value=&amp;quot;22&amp;quot;&amp;gt;22px&amp;lt;/button&amp;gt;
+    &amp;lt;/div&amp;gt;
+&amp;lt;/section&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;// Create the toggle button
+// To turn On &amp;amp; Off
+// The fixed header
+// The &lt;b&gt;sr-only&lt;/b&gt; is used to hide the text visually
+// while keeping accessibilty in mind
+// note the &lt;b&gt;role=&amp;quot;switch&amp;quot;&lt;/b&gt; nd aria-checked
+// they are what turns the button to a On and Off switch&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;div class=&amp;quot;check-wrapper&amp;quot;&amp;gt;
+    &amp;lt;span id=&amp;quot;btn-label&amp;quot; class=&amp;quot;sr-only&amp;quot;&amp;gt;Fixed or static header&amp;lt;/span&amp;gt;
+   &amp;lt;button role=&amp;quot;switch&amp;quot; type=&amp;quot;button&amp;quot; aria-checked=&amp;quot;true&amp;quot; aria-labelledby=&amp;quot;btn-label&amp;quot; class=&amp;quot;js-theme-toggle btn btn--border btn--rounded btn--toggle&amp;quot;&amp;gt;
+       &amp;lt;span&amp;gt;On&amp;lt;/span&amp;gt;
+       &amp;lt;span&amp;gt;Off&amp;lt;/span&amp;gt;
+   &amp;lt;/button&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;nnn
+
+&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;pre class=&amp;quot;language-js&amp;quot;&amp;gt;
+    &amp;lt;code class=&amp;quot;language-js&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;/assets/js/theme.js file&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;class CustomTheme {
+    constructor() {
+        // part A: check if localStorage works
+        this.islocalStorage = function() {
+            try {
+                localStorage.setItem(&amp;quot;test&amp;quot;, &amp;quot;testing&amp;quot;);
+                localStorage.removeItem(&amp;quot;test&amp;quot;);
+                return true;
+            } catch (error) {
+                return false
+            }
+           
+        };
+        // part B: Get the value from the buttons
+        this.schemeBtns = document.querySelectorAll(&#39;.js-theme-color&#39;);
+        this.schemeBtns.forEach((btn) =&amp;gt; {
+            const btnVal = btn.value;
+            btn.addEventListener(&#39;click&#39;, () =&amp;gt; this.themeScheme(btnVal))
+        });
+
+        this.fontBtns = document.querySelectorAll(&#39;.js-font-btn&#39;);
+        this.fontBtns.forEach((btn) =&amp;gt; {
+            const btnVal = btn.value;
+            const btnTag = btn;
+            btn.addEventListener(&#39;click&#39;, () =&amp;gt; this.themeFont(btnVal, btnTag))
+        });
+
+        // part C: get the html button element
+        this.switchBtn = document.querySelector(&#39;.js-theme-toggle&#39;);
+        const clicked = this.switchBtn;
+        this.switchBtn.addEventListener(&#39;click&#39;, () =&amp;gt; this.themePosition(clicked))
+    }
+
+    // part D: Save the data in localStorage
+    themeScheme(btnVal) {
+        document.documentElement.setAttribute(&#39;data-theme&#39;, btnVal);
+        if (this.islocalStorage) {
+            localStorage.setItem(&#39;theme-name&#39;, btnVal);
+        }
+    };
+    
+    themeFont(btnVal,btnTag) {
+        document.documentElement.style.setProperty(&#39;--font-size&#39;, `${btnVal}px`);
+        if (this.islocalStorage) {
+            localStorage.setItem(&#39;font-size&#39;, btnVal);
+        }
+        ;
+        if (btnVal == localStorage.getItem(&#39;font-size&#39;)) {
+            removeActive();
+            btnTag.classList.add(&#39;active&#39;);
+    }
+};
+
+    themePosition(clicked) {
+    if (clicked.getAttribute(&#39;aria-checked&#39;) == &#39;true&#39;) {
+        clicked.setAttribute(&#39;aria-checked&#39;, &#39;false&#39;);
+        document.documentElement.style.setProperty(&#39;--position&#39;, &#39;static&#39;);
+        document.documentElement.style.setProperty(&#39;--top-margin&#39;, &#39;0px&#39;);
+        if (this.islocalStorage) {
+            localStorage.setItem(&#39;position&#39;, &#39;static&#39;);
+        }
+
+    } else {
+        clicked.setAttribute(&#39;aria-checked&#39;, &#39;true&#39;);
+        document.documentElement.style.setProperty(&#39;--position&#39;, &#39;fixed&#39;);
+        document.documentElement.style.setProperty(&#39;--top-margin&#39;, &#39;96px&#39;);
+        if (this.islocalStorage) {
+            localStorage.setItem(&#39;position&#39;, &#39;fixed&#39;);
+        }
+    }
+
+    }
+}
+
+function removeActive() {
+    const btns = document.querySelectorAll(&#39;.js-font-btn&#39;);
+    btns.forEach((btn) =&amp;gt; {
+        btn.classList.remove(&#39;active&#39;);
+    })
+}
+
+// part E: Only use our class if css custom properties are supported
+if (window.CSS &amp;amp;&amp;amp; CSS.supports(&#39;color&#39;, &#39;var(--i-support&#39;)) {
+    new CustomTheme()
+};
+
+// part E: Add an active class to selected font size button
+
+window.addEventListener(&#39;load&#39;, () =&amp;gt; {
+    const fontBtns = document.querySelectorAll(&#39;.js-font-btn&#39;);
+    fontBtns.forEach((btn) =&amp;gt; {
+        const btnVal = btn.value;
+        const btnTag = btn;
+        if (btnVal == localStorage.getItem(&#39;font-size&#39;)) {
+            btnTag.classList.add(&#39;active&#39;);
+    }
+    });   
+})
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;    &amp;lt;/code&amp;gt;
+&amp;lt;/pre&amp;gt;
+
+&amp;lt;pre class=&amp;quot;language-js&amp;quot;&amp;gt;
+    &amp;lt;code class=&amp;quot;language-js&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;script&amp;gt;
+    const scheme = localStorage.getItem(&#39;theme-name&#39;);
+      document.documentElement.setAttribute(&#39;data-theme&#39;, scheme);
+
+      const fontSize = localStorage.getItem(&#39;font-size&#39;);
+    document.documentElement.style.setProperty(&#39;--font-size&#39;,  `${fontSize}px`);
+    
+
+    const position = localStorage.getItem(&#39;position&#39;);
+    if (position == &#39;fixed&#39;) {
+        document.documentElement.style.setProperty(&#39;--position&#39;, &#39;fixed&#39;);
+        document.documentElement.style.setProperty(&#39;--top-margin&#39;, &#39;96px&#39;);
+
+    } else {
+        document.documentElement.style.setProperty(&#39;--position&#39;, &#39;static&#39;);
+        document.documentElement.style.setProperty(&#39;--top-margin&#39;, &#39;0px&#39;);
+
+    }    
+    
+  &amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;    &amp;lt;/code&amp;gt;
+&amp;lt;/pre&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
 </content>
   </entry>
 </feed>

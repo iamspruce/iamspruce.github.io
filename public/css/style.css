@@ -522,6 +522,7 @@ div.nav__overlay {
   z-index: 900;
   color: var(-text);
   right: -9999px;
+  box-shadow: 4px 2px 8px rgba(0, 0, 0, 0.2);
   transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
@@ -631,6 +632,7 @@ div.nav__overlay {
   overflow-y: scroll;
   z-index: 900;
   right: -9999px;
+  box-shadow: 4px 2px 8px rgba(0, 0, 0, 0.2);
   transition: all 0.35s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 .section-theme__contain {
@@ -642,6 +644,11 @@ div.nav__overlay {
   color: var(--text-dark);
 }
 
+@media (max-width: 320px) {
+  .section-theme {
+    width: calc(100% - 2px);
+  }
+}
 .theme-title {
   font-weight: 400;
   font-size: 18px;

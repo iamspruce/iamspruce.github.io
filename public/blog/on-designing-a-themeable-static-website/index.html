@@ -6,7 +6,7 @@
 <meta http-equiv='X-UA-Compatible' content='IE=edge'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
 <title>
-    Spruce | Offline Mode
+    Spruce | On Designing: A Themeable Static Website
 </title>
 <script>
     const scheme = localStorage.getItem('theme-name');
@@ -34,7 +34,7 @@
 <meta property="og:description" content="" />
 
 <meta name="author" content="Spruce" />
-<meta property="og:url" content="/offline/">
+<meta property="og:url" content="/blog/on-designing-a-themeable-static-website/">
 
 <meta property="og:image" content="/assets/img/spruce.png">
 <meta name="twitter:image" content="/assets/img/spruce.png">
@@ -46,7 +46,7 @@
     <meta property="og:locale" content="en_US">
     <meta name="twitter:site" content="@sprucekhalifa">
     <meta name="twitter:creator" content="@sprucekhalifa">
-    <meta name="twitter:title" content="Offline Mode">
+    <meta name="twitter:title" content="On Designing: A Themeable Static Website">
     <meta property="og:image:width" content="637">
     <meta property="og:image:width" content="403">
     
@@ -328,49 +328,410 @@
         </button>
     </div>
     </header><main id="main" class="">
-    
-<section class="section">
-    <div class="container section__hero"><div class="page-emoji" style="font-size: 48px;">
-            <span class="emoji">😥</span>
-          </div><h1 class="page-title__heading">
-        Offline
-      </h1><h3 class="page-title__heading--sub text--compact">
-      Oops you are not supposed to be here, but not all bad news
-    </h3></div>
-      </section>
-<section class="section--al">
-    <div class="container section--pad">
-      
-<section>
-    <p>
-        You can still read some of your favourite articles or go back to <a href="/" class="link">Homepage</a>, while you wait for data connection to turn back on
-    </p>
-    <h2>
-        Previous Articles
-    </h2>
-    <div data-offline></div>
+    <head>
+  <script src="https://cdn.jsdelivr.net/gh/ireade/caniuse-embed/public/caniuse-embed.min.js"></script>
+  <script async src="https://static.codepen.io/assets/embed/ei.js"></script>  
+ </head> 
+<div class="container">
+    <section class="section">
+      <div class="article__wrapper">
+          <div class="article__header" >
+            <div class="article__meta">
+              <span class="article__meta-published-date">December 25, 2020</span>
+            </div>
+            <h1 class="article__heading">On Designing: A Themeable Static Website</h1>
+            <p class="article__meta-authors">
+            </p>
+          </div>
+  </div>
 </section>
-
-<script>
-    if (navigator && navigator.serviceWorker) {
-        caches.open('spruce.com.ng').then(function (cache) {
-            cache.keys().then(function (keys) {
-                var offline = document.querySelector('[data-offline]');
-                offline.innerHTML =
-                    '<ul class="link__items">' +
-                        keys.map(function(key) {
-                            if (key.url.match(/blog/) && !key.url.match('%')  && !key.url.match('jpg') && !key.url.match('png') && !key.url.match('mp4') ) {
-                            return '<li class="link__items--list"><a class="link" href="' + key.url + '">' + key.url + '</a></li>';
-                                
-                            }
-                        }).join('') +
-                    '</ul>';
-            });
+    <section class="section section--pad__btm section--full">
+  <img class="image article__hero-image" src="/blog/on-designing-a-themeable-static-website/img/preview.png" alt="On Designing: A Themeable Static Website"></section>
+    <section class="section article__body">
+<p>A while ago i wanted to create a dark theme for my <a href="https://spruce.com.ng">personal site</a> so i did some clicking around to find out the most suitable and <b>clean</b> way to do this, so i read <a href="https://mxb.dev/blog/color-theme-switcher">Max Bock's article on creating a custom theme</a>, and he explained how to create a custom theme, and he really went super pro(with TEN(10) different color schemes).</p>
+<p>
+    But for my case i wanted more, i wanted users to be able to change the color scheme to the different color schemes provided, i also wanted users to change the font size, i had a fixed header on my site which was kind of great but on small mobile devices the header was taking quiet a lot of space which is not too good for design i hope you agree, So i also gave users the ability to turn off the fixed header.... 
+</p>
+<figure class="p-article__img">
+    <img src="img/spruce-theme.png" alt="Preview of spruce theme-able website" />
+  <figcaption>
+  Preview of spruce's theme-able website
+  </figcaption>
+   </figure>
+   <p>
+       Live preview of this can be found in my personal site <a href="https://spruce.com.ng" target="_blank" rel="noopener noreferrer"></a>, you can also copy the source codes here <a href="#copy-code">here</a> to save you a few read time...
+   </p>
+   <h2>What i wanted to do</h2>
+   <ol>
+       <li>
+           Asked users their preferred color scheme, font size and header type(Fixed or Static)
+       </li>
+       <li>
+           Collect user choices
+       </li>
+       <li>
+           Save them in localStorage
+       </li>
+       <li>
+           Get them from localStorage and show them to the user immediately, on page reload, when they switch tab and come back, when they close their browser and come back after a week or month
+       </li>
+   </ol>
+   <h2>Creating the theme</h2>
+   <p>
+    In 11ty(the static site am using) you can create a json file in the <b>_data</b> folder and you can access the data globally in  your template, <b>jekyll</b> does that too and probably your prefarred static site generator(SSG) can also do the same also.
+   </p>
+   <pre class="language-json">
+    <code class="language-json">
+<span>_data/themes.json file</span>
+[
+    {
+        "id": "default",
+        "colors": {
+            "text": "#222126",
+            "text-dark": "#777;",
+            "border": "rgba(0,0,0,.1)",
+            "primary": "#665df5",
+            "secondary": "#6ad1e0",
+            "primary-dark": "#382cf1",
+            "bg": "#ffffff",
+            "bg-alt": "#f8f8f8",
+            "overlay": "rgba(255, 255, 255, .4)"
+        }
+                }, 
+    ... other color schemes
+]
+    </code>
+   </pre>
+   <h2>
+       Generating the css
+   </h2>
+   <p>
+       And then to use the data file, create a <b>theme.css.liquid</b> file and give it a permalink of where you want the css file output to.
+   </p>
+   <pre class="language-liquid">
+    <code class="language-liquid">
+<span>css/theme.css.liquid file</span>
+---
+permalink: /css/theme.css
+---
+// when no theme is selected
+// use default theme
+:root {
+    --text: #222126;
+    --text-dark: #777;;
+    --border: rgba(0,0,0,.1);
+    --primary: #665df5;
+    --secondary: #6ad1e0;
+    --primary-dark: #382cf1;
+    --bg: #ffffff;
+    --bg-alt: #f8f8f8;
+}  
+// if user preferred color scheme is dark
+// use the dark theme
+<p>@media(prefers-color-scheme: dark) {
+:root {
+--text: #fffffe;
+--text-dark: #94a1b2;
+--border: rgba(255,255,255,.1);
+--primary: #ff8906;
+--secondary: #2cb67d;
+--primary-dark: #75757e;
+--bg: #16161a;
+--bg-alt: #242629;
+}
+}
+// generate the theme css from the data file
+// here we use a for loop
+// to iterate over all the themes in our _data/themes.json
+// and output them as plain css</p>
+<p>{% for theme in themes %}
+[data-theme=&quot;{{ theme.id }}&quot;] {
+--text: {{ theme.colors.text }};
+--text-dark: {{ theme.colors.text-dark }};
+--border: {{ theme.colors.border }};
+--primary: {{ theme.colors.primary }};
+--secondary: {{ theme.colors.secondary }};
+--primary-dark: {{ theme.colors.primary-dark }};
+--bg: {{ theme.colors.bg }};
+--bg-alt: {{ theme.colors.bg-alt }};
+}
+{% endfor %}</p>
+<p>nnn
+</code>
+</pre></p>
+   <p>
+       Notice am using <b>themes[0].colors.text</b>, that's because my default theme is the first one on the list and it has an index of 0, so also my dark theme has an index of 1.
+   </p>
+   <p>
+       In <b>Jekyll</b> you can output liquid in a css by just adding empty front matter at the top of the file.  
+   </p>
+   <pre class="language-css">
+       <code class="language-css">
+<span>css/theme.css file</span>
+---
+---
+<p>// your liquid in css goes here
+</code>
+</pre></p>
+   <p>
+       I'm sure your favourite static site generator provides a similar way to output liquid in a css file. You can also handcode all this if you are just writing plain html and css without a SSG.
+   </p>
+   <h2>
+      Using the Css in your site
+   </h2>
+   <p>
+       If you are reading this i assume that you already know how to work with css custom properties so i would rather not go in depth
+   </p>
+   <pre class="language-css">
+       <code class="language-css">
+// css custom properties are declared using the keyword <b>var</b>
+// color: var(--text);
+<p>body {
+background: var(--bg);
+color: var(--text);
+}
+h1,h2 {
+color: var(--text-dark)
+}
+// i also had default font-size and margin-top properties set
+// i added this to the :root in css
+:root {
+--font-size: 18px;
+--position: fixed;
+--top-margin: 96px;
+}
+</code>
+</pre>
+</p>
+You just have to change every bit of color on your site to the custom properties you have generated.
+</p><br>
+<h2>
+Generating the html
+</h2>
+<p>
+Now let's provide a UI to allow users change the font size, header type and color scheme of our site, though mine is a little bit simple you can take yours more further, am just explaining the concept here.
+</p>
+<pre class="language-html">
+<code class="language-html">
+<span>theme.html file</span>
+// create the font buttons
+// I gave each button a value
+// I want to get the value and save it in local storage</p>
+<pre><code>&lt;section class=&quot;theme-section&quot;&gt;
+    &lt;div class=&quot;theme-btn-wrapper&quot;&gt;
+        &lt;button class=&quot;btn btn--small btn--border js-font-btn&quot; value=&quot;16&quot;&gt;16px&lt;/button&gt;
+        &lt;button class=&quot;btn btn--small btn--border js-font-btn&quot; value=&quot;18&quot;&gt;18px&lt;/button&gt;
+        &lt;button class=&quot;btn btn--small btn--border js-font-btn&quot; value=&quot;20&quot;&gt;20px&lt;/button&gt;
+        &lt;button class=&quot;btn btn--small btn--border js-font-btn&quot; value=&quot;22&quot;&gt;22px&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+</code></pre>
+<p>// Create the toggle button
+// To turn On &amp; Off
+// The fixed header
+// The <b>sr-only</b> is used to hide the text visually
+// while keeping accessibilty in mind
+// note the <b>role=&quot;switch&quot;</b> nd aria-checked
+// they are what turns the button to a On and Off switch</p>
+<pre><code>&lt;div class=&quot;check-wrapper&quot;&gt;
+    &lt;span id=&quot;btn-label&quot; class=&quot;sr-only&quot;&gt;Fixed or static header&lt;/span&gt;
+   &lt;button role=&quot;switch&quot; type=&quot;button&quot; aria-checked=&quot;true&quot; aria-labelledby=&quot;btn-label&quot; class=&quot;js-theme-toggle btn btn--border btn--rounded btn--toggle&quot;&gt;
+       &lt;span&gt;On&lt;/span&gt;
+       &lt;span&gt;Off&lt;/span&gt;
+   &lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+<p>nnn
+</code>
+</pre>
+<p>
+thats pretty much the html for my use case, again you can do more if you want and there are some css styling involved which would be left out in our case
+</p>
+<h2>
+The fun part: Creating the Javascript
+</h2>
+<pre class="language-js">
+<code class="language-js">
+<span>/assets/js/theme.js file</span></p>
+<pre><code>class CustomTheme {
+    constructor() {
+        // part A: check if localStorage works
+        this.islocalStorage = function() {
+            try {
+                localStorage.setItem(&quot;test&quot;, &quot;testing&quot;);
+                localStorage.removeItem(&quot;test&quot;);
+                return true;
+            } catch (error) {
+                return false
+            }
+           
+        };
+        // part B: Get the value from the buttons
+        this.schemeBtns = document.querySelectorAll('.js-theme-color');
+        this.schemeBtns.forEach((btn) =&gt; {
+            const btnVal = btn.value;
+            btn.addEventListener('click', () =&gt; this.themeScheme(btnVal))
         });
+
+        this.fontBtns = document.querySelectorAll('.js-font-btn');
+        this.fontBtns.forEach((btn) =&gt; {
+            const btnVal = btn.value;
+            const btnTag = btn;
+            btn.addEventListener('click', () =&gt; this.themeFont(btnVal, btnTag))
+        });
+
+        // part C: get the html button element
+        this.switchBtn = document.querySelector('.js-theme-toggle');
+        const clicked = this.switchBtn;
+        this.switchBtn.addEventListener('click', () =&gt; this.themePosition(clicked))
     }
-</script> 
-    </div>
+
+    // part D: Save the data in localStorage
+    themeScheme(btnVal) {
+        document.documentElement.setAttribute('data-theme', btnVal);
+        if (this.islocalStorage) {
+            localStorage.setItem('theme-name', btnVal);
+        }
+    };
+    
+    themeFont(btnVal,btnTag) {
+        document.documentElement.style.setProperty('--font-size', `${btnVal}px`);
+        if (this.islocalStorage) {
+            localStorage.setItem('font-size', btnVal);
+        }
+        ;
+        if (btnVal == localStorage.getItem('font-size')) {
+            removeActive();
+            btnTag.classList.add('active');
+    }
+};
+
+    themePosition(clicked) {
+    if (clicked.getAttribute('aria-checked') == 'true') {
+        clicked.setAttribute('aria-checked', 'false');
+        document.documentElement.style.setProperty('--position', 'static');
+        document.documentElement.style.setProperty('--top-margin', '0px');
+        if (this.islocalStorage) {
+            localStorage.setItem('position', 'static');
+        }
+
+    } else {
+        clicked.setAttribute('aria-checked', 'true');
+        document.documentElement.style.setProperty('--position', 'fixed');
+        document.documentElement.style.setProperty('--top-margin', '96px');
+        if (this.islocalStorage) {
+            localStorage.setItem('position', 'fixed');
+        }
+    }
+
+    }
+}
+
+function removeActive() {
+    const btns = document.querySelectorAll('.js-font-btn');
+    btns.forEach((btn) =&gt; {
+        btn.classList.remove('active');
+    })
+}
+
+// part E: Only use our class if css custom properties are supported
+if (window.CSS &amp;&amp; CSS.supports('color', 'var(--i-support')) {
+    new CustomTheme()
+};
+
+// part E: Add an active class to selected font size button
+
+window.addEventListener('load', () =&gt; {
+    const fontBtns = document.querySelectorAll('.js-font-btn');
+    fontBtns.forEach((btn) =&gt; {
+        const btnVal = btn.value;
+        const btnTag = btn;
+        if (btnVal == localStorage.getItem('font-size')) {
+            btnTag.classList.add('active');
+    }
+    });   
+})
+</code></pre>
+<p>nnn
+</code>
+</pre>
+<p>
+I know thats a long javascript chunk of code, but it basically does only a few things, it collects and check if localStorage is supported and then save the data in localStorage... <br>
+also notice i used <b>Javascript Classes</b> you could use functions as well.
+</p>
+<p>
+A lot of browsers support localStorage this days, but why do we need to still check? Some users may be browsing your site on <b>icgnito mode(private browsing mode)</b> and sometimes localStorage is turned off by default so as to not save anything on the users device, don't blame them lol, they are just doing their work. So instead of saving it direct and sometimes get an error on browsers that don't support it, we check if a browser does, if it does great and if it dosen't we are also cool.
+</p>
+<p>
+Now if you notice everything seems to work just fine, but if you change the theme or font size and you reload your browser, everything is going to revert to default, that's because we haven't used the data we stored in <b>localStorage</b><br>
+</p>
+<p>
+So go ahead and add this piece of code to top of your head file before any css file, this is done to eliminate the flash you get when you reload your browser
+</p>
+<pre class="language-js">
+<code class="language-js"></p>
+<pre><code>&lt;script&gt;
+    const scheme = localStorage.getItem('theme-name');
+      document.documentElement.setAttribute('data-theme', scheme);
+
+      const fontSize = localStorage.getItem('font-size');
+    document.documentElement.style.setProperty('--font-size',  `${fontSize}px`);
+    
+
+    const position = localStorage.getItem('position');
+    if (position == 'fixed') {
+        document.documentElement.style.setProperty('--position', 'fixed');
+        document.documentElement.style.setProperty('--top-margin', '96px');
+
+    } else {
+        document.documentElement.style.setProperty('--position', 'static');
+        document.documentElement.style.setProperty('--top-margin', '0px');
+
+    }    
+    
+  &lt;/script&gt;
+</code></pre>
+<p>nn
+</code>
+</pre>
+<h2>
+Wrapping up
+</h2>
+<p>
+And that's it a simple customizable static site, the main purpose of this guide is to show you the endless possibilities of creating a user customizable website. So go ahead and develop what you want, I mean there are a lot of things to be done...
+</p>
+<h2>
+Things you could do
+</h2>
+<ol>
+<li>
+Show users specific content based on user choices
+</li>
+<li>
+Display notification messages based on user visit
+</li>
+<li>
+You could also display ads in the list most annoying ads by showing users ads based on user choices
+</li>
+</ol>
+<p>
+This and a lot more we could do with our SSG's, Just iamgine the endless possibilities.
+</p>
+<h2>
+Other Resources
+</h2>
+<p>
+<a href="https://mxb.dev/blog/color-theme-switcher">Max Bock's article on creating a custom theme</a>
+</p>
+<p>
+<a href="http://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties" target="_blank" rel="noopener noreferrer"></a>
+</p>
+<p id="copy-code">
+Not much of a tutorial person? you can copy the complete source code <a target="_blank" href="https://spruce.com.ng/blog/on-designing-a-themeable-static-website">here</a>.
+</p></p>
+
 </section>
+</div>
 </main><footer class="footer">
     <div class="footer__inner container">
         <div class="footer__intro">

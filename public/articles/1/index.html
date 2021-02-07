@@ -11,6 +11,22 @@
 <script>
     const scheme = localStorage.getItem('theme-name');
       document.documentElement.setAttribute('data-theme', scheme);
+
+      const fontSize = localStorage.getItem('font-size');
+    document.documentElement.style.setProperty('--font-size',  `${fontSize}px`);
+    
+
+    const position = localStorage.getItem('position');
+    if (position == 'fixed') {
+        document.documentElement.style.setProperty('--position', 'fixed');
+        document.documentElement.style.setProperty('--top-margin', '96px');
+
+    } else {
+        document.documentElement.style.setProperty('--position', 'static');
+        document.documentElement.style.setProperty('--top-margin', '0px');
+
+    }    
+    
   </script>
   <link rel="stylesheet" href="/assets/theme.css">
 
@@ -324,6 +340,24 @@
     <div class="container section--pad">
       
 <div class="grid"><article class="article__list">
+  <div class="article__main">
+  <p class="article__tag">
+    Published On <time>December 20, 2020</time> 
+  </p>
+  <h2 class="post__list--title">
+    <a href="/blog/create-a-blog-on-your-mobile-phone/" class="article__link">
+      Create A Blog On Your Mobile Phone With Jekyll On Github 
+    </a>
+  </h2>
+  <p class="article__List--content">
+    <span>Have you ever wanted to own your own blog? Well if you have, this series will get you started immediately
+</span>
+  </p>
+  <a href="/blog/create-a-blog-on-your-mobile-phone/" class="article__list--more">
+    Read More
+  </a>
+  </div>
+  </article><article class="article__list">
   <div class="article__main">
   <p class="article__tag">
     Published On <time>December 18, 2020</time> 

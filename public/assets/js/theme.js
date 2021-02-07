@@ -96,30 +96,15 @@ if (window.CSS && CSS.supports('color', 'var(--i-support')) {
 
     
 window.addEventListener('load', () => {
-    const fontSize = localStorage.getItem('font-size');
-    document.documentElement.style.setProperty('--font-size',  `${fontSize}px`);
     const fontBtns = document.querySelectorAll('.js-font-btn');
-        fontBtns.forEach((btn) => {
-            const btnVal = btn.value;
-            const btnTag = btn;
-            if (btnVal == fontSize) {
-                btnTag.classList.add('active');
-        }
-        });
-
-    const position = localStorage.getItem('position');
-    const switchBtn = document.querySelector('.js-theme-toggle');
-    
-    if (position == 'fixed') {
-        switchBtn.setAttribute('aria-checked', 'true');
-        document.documentElement.style.setProperty('--position', 'fixed');
-        document.documentElement.style.setProperty('--top-margin', '96px');
-
-    } else {
-        switchBtn.setAttribute('aria-checked', 'false')
-        document.documentElement.style.setProperty('--position', 'static');
-        document.documentElement.style.setProperty('--top-margin', '0px');
-
+    fontBtns.forEach((btn) => {
+        const btnVal = btn.value;
+        const btnTag = btn;
+        if (btnVal == localStorage.getItem('font-size')) {
+            btnTag.classList.add('active');
     }
+    });
+
+    
 })
 

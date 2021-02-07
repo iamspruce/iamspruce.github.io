@@ -8,6 +8,18 @@
     --bg: #ffffff;
     --bg-alt: #f8f8f8;
 }  
+@media(prefers-color-scheme: dark) {
+    :root {
+    --text: #fffffe;
+    --text-dark: #94a1b2;
+    --border: rgba(255,255,255,.1);
+    --primary: #ff8906;
+    --secondary: #2cb67d;
+    --primary-dark: #75757e;
+    --bg: #16161a;
+    --bg-alt: #242629;
+    }
+}
 
 
  [data-theme="default"] {

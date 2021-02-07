@@ -12,6 +12,7 @@
     overflow-y: scroll;
     z-index: 900;
     right: -9999px;
+    box-shadow: 4px 2px 8px rgba(0,0,0,.2);
     transition: all .35s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 
     
@@ -24,6 +25,11 @@
         font-size: var(--font-size);
         color: var(--text-dark);
     }
+    }
+}
+@media (max-width: 320px) {
+    .section-theme {
+        width: calc(100% - 2px)
     }
 }
 .theme-title {

@@ -830,37 +830,32 @@ window.addEventListener('load', () => {
 })
 </code>
 </pre>
-<pre><code>&lt;p&gt;
-    Add this one to the head part in your html file before any other css file&lt;/p&gt;
-&lt;pre class=&quot;language-js&quot;&gt;
-    &lt;code class=&quot;language-js&quot;&gt;
-</code></pre>
-<p>&lt;script&gt;
+<p>
+    Add this one to the head part in your html file before any other css file
+</p>
+<pre class="language-js">
+<code class="language-js">
+&lt;script&gt;
 const scheme = localStorage.getItem('theme-name');
-document.documentElement.setAttribute('data-theme', scheme);</p>
-<pre><code>  const fontSize = localStorage.getItem('font-size');
-document.documentElement.style.setProperty('--font-size',  `${fontSize}px`);
-
-
-const position = localStorage.getItem('position');
-if (position == 'fixed') {
-    document.documentElement.style.setProperty('--position', 'fixed');
-    document.documentElement.style.setProperty('--top-margin', '96px');
-
-} else {
-    document.documentElement.style.setProperty('--position', 'static');
-    document.documentElement.style.setProperty('--top-margin', '0px');
-
-}    
+    document.documentElement.setAttribute('data-theme', scheme);
+<pre><code>const fontSize = localStorage.getItem('font-size');
 </code></pre>
+<p>document.documentElement.style.setProperty('--font-size',  <code>${fontSize}px</code>);</p>
+<p>const position = localStorage.getItem('position');
+if (position == 'fixed') {
+document.documentElement.style.setProperty('--position', 'fixed');
+document.documentElement.style.setProperty('--top-margin', '96px');</p>
+<p>} else {
+document.documentElement.style.setProperty('--position', 'static');
+document.documentElement.style.setProperty('--top-margin', '0px');</p>
+<p>}</p>
 <p>&lt;/script&gt;
 </code>
 </pre></p>
-<pre><code>&lt;p&gt;
-    If you copied this code and would want to know how all this work, read the guide &lt;a href=&quot;https://freecodecamp.org/news/design-a-themeable-static-website/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;here&lt;/a&gt;
-&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;</code></pre>
-
+<p>
+If you copied this code and would want to know how all this work, read the guide <a href="https://freecodecamp.org/news/design-a-themeable-static-website/" target="_blank" rel="noopener noreferrer">here</a>
+</p>
+<p></p>
 </section>
 </div>
 </main><footer class="footer">

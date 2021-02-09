@@ -636,37 +636,32 @@ window.addEventListener(&#39;load&#39;, () =&gt; {
 })
 &lt;/code&gt;
 &lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;p&amp;gt;
-    Add this one to the head part in your html file before any other css file&amp;lt;/p&amp;gt;
-&amp;lt;pre class=&amp;quot;language-js&amp;quot;&amp;gt;
-    &amp;lt;code class=&amp;quot;language-js&amp;quot;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&amp;lt;script&amp;gt;
-const scheme = localStorage.getItem(&#39;theme-name&#39;);
-document.documentElement.setAttribute(&#39;data-theme&#39;, scheme);&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;  const fontSize = localStorage.getItem(&#39;font-size&#39;);
-document.documentElement.style.setProperty(&#39;--font-size&#39;,  `${fontSize}px`);
-
-
-const position = localStorage.getItem(&#39;position&#39;);
-if (position == &#39;fixed&#39;) {
-    document.documentElement.style.setProperty(&#39;--position&#39;, &#39;fixed&#39;);
-    document.documentElement.style.setProperty(&#39;--top-margin&#39;, &#39;96px&#39;);
-
-} else {
-    document.documentElement.style.setProperty(&#39;--position&#39;, &#39;static&#39;);
-    document.documentElement.style.setProperty(&#39;--top-margin&#39;, &#39;0px&#39;);
-
-}    
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&amp;lt;/script&amp;gt;
-
+&lt;p&gt;
+    Add this one to the head part in your html file before any other css file
 &lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;p&amp;gt;
-    If you copied this code and would want to know how all this work, read the guide &amp;lt;a href=&amp;quot;https://freecodecamp.org/news/design-a-themeable-static-website/&amp;quot; target=&amp;quot;_blank&amp;quot; rel=&amp;quot;noopener noreferrer&amp;quot;&amp;gt;here&amp;lt;/a&amp;gt;
-&amp;lt;/p&amp;gt;
-&amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-</content>
+&lt;pre class=&quot;language-js&quot;&gt;
+&lt;code class=&quot;language-js&quot;&gt;
+&amp;lt;script&amp;gt;
+const scheme = localStorage.getItem(&#39;theme-name&#39;);
+    document.documentElement.setAttribute(&#39;data-theme&#39;, scheme);
+&lt;pre&gt;&lt;code&gt;const fontSize = localStorage.getItem(&#39;font-size&#39;);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;document.documentElement.style.setProperty(&#39;--font-size&#39;,  &lt;code&gt;${fontSize}px&lt;/code&gt;);&lt;/p&gt;
+&lt;p&gt;const position = localStorage.getItem(&#39;position&#39;);
+if (position == &#39;fixed&#39;) {
+document.documentElement.style.setProperty(&#39;--position&#39;, &#39;fixed&#39;);
+document.documentElement.style.setProperty(&#39;--top-margin&#39;, &#39;96px&#39;);&lt;/p&gt;
+&lt;p&gt;} else {
+document.documentElement.style.setProperty(&#39;--position&#39;, &#39;static&#39;);
+document.documentElement.style.setProperty(&#39;--top-margin&#39;, &#39;0px&#39;);&lt;/p&gt;
+&lt;p&gt;}&lt;/p&gt;
+&lt;p&gt;&amp;lt;/script&amp;gt;
+&lt;/p&gt;&lt;/code&gt;
+&lt;/pre&gt;&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;
+If you copied this code and would want to know how all this work, read the guide &lt;a href=&quot;https://freecodecamp.org/news/design-a-themeable-static-website/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;here&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;</content>
   </entry>
   
   <entry>

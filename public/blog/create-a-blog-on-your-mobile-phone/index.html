@@ -84,17 +84,12 @@
 <link rel="me" href="https://twitter.com/sprucekhalifa">
 <meta charset="UTF-8">
     <link rel="stylesheet" href="/css/style.css">
-  <!-- <link rel="alternate" type="application/rss+xml" title=" - " href="/feed.xml" />
- -->
+  <link rel="alternate" type="application/rss+xml" title="Spruce.com.ng - Have you ever wanted to own your own blog? Well if you have, this series will get you started immediately
+" href="/feed.xml" />
+ 
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4WLJKYZR1L"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-4WLJKYZR1L');
-</script>
 <link rel="manifest" href="/manifest.json">
 </head>
 <body>
@@ -675,9 +670,9 @@ Next part of this series
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
         navigator.serviceWorker.register("/sw.js").then(registration => {
-            console.log(`Serviceworker registered ${registration.scope}`);
+            
         }), err => {
-            console.log(`Serviceworker failed ${err}`);
+            
 
         }
 

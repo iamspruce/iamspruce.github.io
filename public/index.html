@@ -81,17 +81,11 @@
 <link rel="me" href="https://twitter.com/sprucekhalifa">
 <meta charset="UTF-8">
     <link rel="stylesheet" href="/css/style.css">
-  <!-- <link rel="alternate" type="application/rss+xml" title=" - " href="/feed.xml" />
- -->
+  <link rel="alternate" type="application/rss+xml" title="Spruce.com.ng - I'm Spruce Emmanuel a frontend developer and designer from Nigeria, who loves writing about the web on my <a href='/articles/'>blog</a>, i also have a whole <a href='/about/'>about me</a> page if you want to know me more" href="/feed.xml" />
+ 
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4WLJKYZR1L"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-4WLJKYZR1L');
-</script>
 <link rel="manifest" href="/manifest.json">
 </head>
 <body>
@@ -529,9 +523,9 @@ Recent Posts
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
         navigator.serviceWorker.register("/sw.js").then(registration => {
-            console.log(`Serviceworker registered ${registration.scope}`);
+            
         }), err => {
-            console.log(`Serviceworker failed ${err}`);
+            
 
         }
 

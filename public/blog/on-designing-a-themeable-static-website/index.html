@@ -6,7 +6,7 @@
 <meta http-equiv='X-UA-Compatible' content='IE=edge'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
 <title>
-    Spruce | Welcome to my personal blog and online journal
+    Spruce | How To Create A Themeable Static Website
 </title>
 <script>
     const scheme = localStorage.getItem('theme-name');
@@ -34,10 +34,10 @@
 <meta property="og:description" content="" />
 
 <meta name="author" content="Spruce Emmanuel" />
-<meta property="og:url" content="/blog/welcome-to-my-personal-blog/">
+<meta property="og:url" content="/blog/on-designing-a-themeable-static-website/">
 
-<meta property="og:image" content="/blog/welcome-to-my-personal-blog/img/preview.mp4">
-<meta name="twitter:image" content="/blog/welcome-to-my-personal-blog/img/preview.mp4">
+<meta property="og:image" content="/blog/on-designing-a-themeable-static-website/img/preview.png">
+<meta name="twitter:image" content="/blog/on-designing-a-themeable-static-website/img/preview.png">
 <meta name="twitter:card" content="summary_large_image">
 
 
@@ -46,7 +46,7 @@
     <meta property="og:locale" content="en_US">
     <meta name="twitter:site" content="@sprucekhalifa">
     <meta name="twitter:creator" content="@sprucekhalifa">
-    <meta name="twitter:title" content="Welcome to my personal blog and online journal">
+    <meta name="twitter:title" content="How To Create A Themeable Static Website">
     <meta property="og:image:width" content="637">
     <meta property="og:image:width" content="403">
     
@@ -61,7 +61,7 @@
             "@type":"WebSite",
             "url":"https://spruce.com.ng",
             
-            "image":"/blog/welcome-to-my-personal-blog/img/preview.mp4",
+            "image":"/blog/on-designing-a-themeable-static-website/img/preview.png",
             
             "headline":"Spruce Emmanuel",
             "sameAs":[
@@ -338,60 +338,538 @@
       <div class="article__wrapper">
           <div class="article__header" >
             <div class="article__meta">
-              <span class="article__meta-published-date">December 18, 2020</span>
+              <span class="article__meta-published-date">February 8, 2021</span>
             </div>
-            <h1 class="article__heading">Welcome to my personal blog and online journal</h1>
+            <h1 class="article__heading">How To Create A Themeable Static Website</h1>
             <p class="article__meta-authors">
             </p>
           </div>
   </div>
 </section>
-    <section class="section section--pad__btm section--full"><video class="story-card__image" width="100%" height="auto" autoplay>
-          <source src="/blog/welcome-to-my-personal-blog/img/preview.mp4" type="video/mp4">
-      </video>
-  </section>
+    <section class="section section--pad__btm section--full">
+  <img class="image article__hero-image" src="/blog/on-designing-a-themeable-static-website/img/preview.png" alt="How To Create A Themeable Static Website"></section>
     <section class="section article__body">
- <p class="p-article__lead">
-Hey there welcome to my personal blog where i write about my learning process as a supposed web designer.
-</p>
- <figure class="p-article__img">
-  <img src="/assets/img/spruce.png" alt="website cover image" />
- </figure>
 <p>
-This site (My personal blog) Which was <strong>lunched</strong> on the <b> 18th of November </b> is my own personal online journal where i blog about everything web design.
+    This post was originally written at <a href="https://freecodecamp.org/news/design-a-themeable-static-website/" target="_blank" rel="noopener noreferrer">Freecodecamp</a> if you are a tutorial person you can go ahead and read the guide up
 </p>
-  <p>
-  This site is built with Jekyll and hosted on Github. And as u might have guessed this site was built and designed be <a href="https://facebook.com/spruce.emma">Me (Spruce) </a>
-  </p>
-<h2 class='p-article__heading'>What i blog about</h2>
 <p>
-Ehn things i blog about are just a view minimal things:
+    But if you are not, you can just copy this codes accodingly and you are good to go...
 </p>
-<ol class='p-article__items'>
-<li>
-HTML
-</li>
-<li>
-CSS
-</li>
-<li>
-JAVASCRIPT
-</li>
-<li>
-JEKYLL
-</li>
-<li>
-and some DESIGN TIPS
-</li>
-</ol>
-<p>Once again welcome aboard... </p>
-<pre class="language-css">
-<code class="language-css">
-  #hey {
-    welcome: dear reader;
-  }
-</code>
-</pre>
+<h4>Copy codes accondingly</h4>
+   <pre class="language-json">
+    <code class="language-json">
+_data/themes.json file
+[
+    {
+        "id": "default",
+        "colors": {
+            "text": "#222126",
+            "text-dark": "#777;",
+            "border": "rgba(0,0,0,.1)",
+            "primary": "#665df5",
+            "secondary": "#6ad1e0",
+            "primary-dark": "#382cf1",
+            "bg": "#ffffff",
+            "bg-alt": "#f8f8f8",
+            "overlay": "rgba(255, 255, 255, .4)"
+        }
+                }, 
+    ... other color schemes
+]
+    </code>
+   </pre>
+<h2><pre class="language-liquid">
+<code class="language-liquid">
+css/theme.css.liquid file</h2>
+<h2>permalink: /css/theme.css</h2>
+<p>// when no theme is selected
+// use default theme
+:root {
+--text: #2b2c34;
+--text-dark: #777;;
+--border: rgba(0,0,0,.1);
+--primary: #6246ea;
+--secondary: #e45858;
+--primary-dark: #d1d1e9;
+--bg: #ffffff;
+--bg-alt: #f8f8f8;
+}<br>
+// if user preferred color scheme is dark
+// use the dark theme</p>
+<p>@media(prefers-color-scheme: dark) {
+:root {
+--text: #fffffe;
+--text-dark: #94a1b2;
+--border: rgba(255,255,255,.1);
+--primary: #ff8906;
+--secondary: #2cb67d;
+--primary-dark: #75757e;
+--bg: #16161a;
+--bg-alt: #242629;
+}
+}
+// generate the theme css from the data file
+// here we use a for loop
+// to iterate over all the themes in our _data/themes.json
+// and output them as plain css</p>
+<p>{% for theme in themes %}
+[data-theme=&quot;{{ theme.id }}&quot;] {
+--text: {{ theme.colors.text }};
+--text-dark: {{ theme.colors.text-dark }};
+--border: {{ theme.colors.border }};
+--primary: {{ theme.colors.primary }};
+--secondary: {{ theme.colors.secondary }};
+--primary-dark: {{ theme.colors.primary-dark }};
+--bg: {{ theme.colors.bg }};
+--bg-alt: {{ theme.colors.bg-alt }};
+}
+{% endfor %}</p>
+<pre><code>&lt;/code&gt;
+</code></pre>
+   </pre>
+   <pre class="language-css">
+       <code class="language-css">
+// the css
+
+body {
+    background: var(--bg);
+    color: var(--text);
+}
+h1,h2 {
+    color: var(--text-dark)
+}
+// i also had default font-size and margin-top properties set
+// i added this to the :root in css
+:root {
+    --font-size: 18px;
+    --position: fixed;
+    --top-margin: 96px;
+}
+.section-theme {
+    background: var(--bg-alt);
+    border-left: 1px solid var(--border);
+    height: 100vh;
+    overflow-y: scroll;
+    z-index: 900;
+    right: -9999px;
+    box-shadow: 4px 2px 8px rgba(0,0,0,.2);
+    transition: all .35s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+
+    
+
+    &__contain {
+        padding-bottom: 30px;
+
+        p {
+        margin-bottom: 24px;
+        font-size: var(--font-size);
+        color: var(--text-dark);
+    }
+    }
+}
+@media (max-width: 320px) {
+    .section-theme {
+        width: calc(100% - 2px)
+    }
+}
+.theme-title {
+    font-weight: 400;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.theme__header {
+    padding: 30px 30px 8px 30px;
+
+}
+
+    .theme__top {
+        padding:1px 30px 10px 30px;
+
+    }
+
+.theme-top-col {
+    border-bottom: 1px solid var(--border);
+    padding: .9em 0;
+}
+
+
+.theme__bottom {
+    padding:20px 0px 30px  30px;
+
+}
+.theme-color-wrapper {
+    display: flex;
+    overflow-x: auto;
+    padding: .5em 0;
+
+    .theme-color {
+        transition: all .3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    }
+    .theme-color:not(:first-child) {
+        margin-left: -30px;
+    }
+    .theme-color:hover ~ .theme-color {
+            margin-left: 0;
+    }
+}
+.theme-color {
+    padding: 1.2em;
+    border-radius: 11px;
+    width: 200px;
+    min-width: 200px;
+    position: relative;
+    z-index: 5;
+    box-shadow: 0 2px 4px rgba(0,0,0,.2),
+                0 3px 4.5px rgba(0,0,0,.3);
+    
+
+    &__secondary {
+        width: 34px;
+        height: 24px;
+        border-radius: 6px;
+        box-shadow: 0 2px 4px rgba(0,0,0,.2);
+
+    }
+    &-text {
+        display: inline-block;
+        width: 80px;
+        height: 6px;
+        margin-top: .4em;
+        border-radius: 40em;
+    }
+   
+}
+.theme-span-wrapper {
+    display: flex;
+
+    span {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+    }
+    span:not(:first-child) {
+        margin-left: -10px;
+    }
+}
+.js-font-btn {
+    margin-top: 8px;
+}
+.js-font-btn.active {
+    background: var(--primary);
+    color: var(--bg);
+}
+/* styling the checkboxes */
+[role="switch"][aria-checked="true"] :first-child,
+[role="switch"][aria-checked="false"] :last-child {
+    border-radius: .4em;
+    background: var(--primary);
+    color: var(--bg);
+    
+}
+
+.btn[role="switch"] span:not(:first-child) {
+    margin-left: .6em;
+
+}
+.btn[role="switch"] span {
+    display: inline-block;
+    padding: .6em;
+    pointer-events: none;
+}
+
+       </code>
+   </pre>
+<pre class="language-html">
+<code class="language-html">
+theme.html file
+// The html
+``
+<section class="section-theme">
+    <div class="section-theme__contain">
+        <div class="theme__header flex">
+            <h4 class="theme__title">
+                Theme Settings
+            </h4>
+            <button class="header__icon js-close-theme" aria-expanded="false" aria-controls="nav-menu" aria-label="toggle menu">
+                <svg class="icon icon--small icon--btn" width="26px" height="26px">
+                    <title>Close Theme Switcher</title>
+                    <use xlink:href="#icon-close"></use>
+                </svg>
+            </button>
+        </div>
+       
+        <div class=" theme__top">
+            <div class="js-tab-content theme-top-col show" id="tab-1-content">
+                <h5 class="theme-title">
+                    Fonts
+                </h5>
+                <p>Choose default font size for articles</p>
+        
+                <div class="theme-btn-wrapper js-btn-wrapper">
+                    <button class="btn btn--small btn--border js-font-btn" value="16">16px</button>
+                    <button class="btn btn--small btn--border js-font-btn" value="18">18px</button>
+                    <button class="btn btn--small btn--border js-font-btn" value="20">20px</button>
+                    <button class="btn btn--small btn--border js-font-btn" value="22">22px</button>
+                </div>
+            </div>
+            <div class="js-tab-content theme-top-col two" id="tab-2-content">
+                <h5 class="theme-title">
+                    Fixed Header
+                </h5>
+                <p>Static or Fixed Header? your choice</p>
+    
+                <div class="check-wrapper">
+                    <span id="btn-label" class="sr-only">Fixed or static header</span>
+                   <button role="switch" type="button" aria-checked="true" aria-labelledby="btn-label" class="js-theme-toggle btn btn--border btn--rounded btn--toggle">
+                       <span>On</span>
+                       <span>Off</span>
+                   </button>
+                </div>
+            </div>
+        </div>
+        <div class="js-tab-content theme__bottom" id="tab-3-content">
+            <h5 class="theme-title">
+                Choose Color Scheme
+            </h5>
+            <p>Pick a color scheme of your choice</p>
+    
+            <div class="theme-color-wrapper js-theme-scheme">
+                
+            <button type="button" class="theme-color js-theme-color" style="background-color: #ffffff; border: 1px solid #f8f8f8" value="default">
+                        <div class="theme-color__secondary" style="background-color: #f8f8f8; margin-bottom: .5em;"></div>
+            <span class="theme-color-text" style="background: linear-gradient(180deg, #2b2c34 100%, #2b2c34 100%); color: #2b2c34"></span>
+            <span class="theme-color-text" style="background: linear-gradient(180deg, #2b2c34 100%, #2b2c34 100%); color: #2b2c34"></span> <br>
+                       <div class="flex">
+                        <span class="theme-color__name" style="color: #2b2c34;">
+                            default
+                        </span>
+                        <span class="theme-span-wrapper" style="margin-top: .5em;">
+                            <span style="background-color: #6246ea;"></span>
+                            <span style="background-color: #e45858;"></span>
+                            <span style="background-color: #d1d1e9;"></span>
+                        </span>
+                       </div>
+                    </button>
+                
+            <button type="button" class="theme-color js-theme-color" style="background-color: #16161a; border: 1px solid #242629" value="dark">
+                        <div class="theme-color__secondary" style="background-color: #242629; margin-bottom: .5em;"></div>
+            <span class="theme-color-text" style="background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe"></span>
+            <span class="theme-color-text" style="background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe"></span> <br>
+                       <div class="flex">
+                        <span class="theme-color__name" style="color: #fffffe;">
+                            dark
+                        </span>
+                        <span class="theme-span-wrapper" style="margin-top: .5em;">
+                            <span style="background-color: #ff8906;"></span>
+                            <span style="background-color: #2cb67d;"></span>
+                            <span style="background-color: #75757e;"></span>
+                        </span>
+                       </div>
+                    </button>
+                
+            <button type="button" class="theme-color js-theme-color" style="background-color: #004643; border: 1px solid #abd1c6" value="green">
+                        <div class="theme-color__secondary" style="background-color: #abd1c6; margin-bottom: .5em;"></div>
+            <span class="theme-color-text" style="background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe"></span>
+            <span class="theme-color-text" style="background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe"></span> <br>
+                       <div class="flex">
+                        <span class="theme-color__name" style="color: #fffffe;">
+                            green
+                        </span>
+                        <span class="theme-span-wrapper" style="margin-top: .5em;">
+                            <span style="background-color: #f9bc60;"></span>
+                            <span style="background-color: #e16162;"></span>
+                            <span style="background-color: #abd1c6;"></span>
+                        </span>
+                       </div>
+                    </button>
+                
+            <button type="button" class="theme-color js-theme-color" style="background-color: #eff0f3; border: 1px solid #fffffe" value="fame">
+                        <div class="theme-color__secondary" style="background-color: #fffffe; margin-bottom: .5em;"></div>
+            <span class="theme-color-text" style="background: linear-gradient(180deg, #0d0d0d 100%, #0d0d0d 100%); color: #0d0d0d"></span>
+            <span class="theme-color-text" style="background: linear-gradient(180deg, #0d0d0d 100%, #0d0d0d 100%); color: #0d0d0d"></span> <br>
+                       <div class="flex">
+                        <span class="theme-color__name" style="color: #0d0d0d;">
+                            fame
+                        </span>
+                        <span class="theme-span-wrapper" style="margin-top: .5em;">
+                            <span style="background-color: #ff8e3c;"></span>
+                            <span style="background-color: #d9376e;"></span>
+                            <span style="background-color: #eaddcf;"></span>
+                        </span>
+                       </div>
+                    </button>
+                
+            <button type="button" class="theme-color js-theme-color" style="background-color: #232946; border: 1px solid #d4d8f0" value="dark-blue">
+                        <div class="theme-color__secondary" style="background-color: #d4d8f0; margin-bottom: .5em;"></div>
+            <span class="theme-color-text" style="background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe"></span>
+            <span class="theme-color-text" style="background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe"></span> <br>
+                       <div class="flex">
+                        <span class="theme-color__name" style="color: #fffffe;">
+                            dark-blue
+                        </span>
+                        <span class="theme-span-wrapper" style="margin-top: .5em;">
+                            <span style="background-color: #eebbc3;"></span>
+                            <span style="background-color: #b8c1ec;"></span>
+                            <span style="background-color: #eaddcf;"></span>
+                        </span>
+                       </div>
+                    </button>
+                
+            <button type="button" class="theme-color js-theme-color" style="background-color: #55423d; border: 1px solid #271c19" value="brown">
+                        <div class="theme-color__secondary" style="background-color: #271c19; margin-bottom: .5em;"></div>
+            <span class="theme-color-text" style="background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe"></span>
+            <span class="theme-color-text" style="background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe"></span> <br>
+                       <div class="flex">
+                        <span class="theme-color__name" style="color: #fffffe;">
+                            brown
+                        </span>
+                        <span class="theme-span-wrapper" style="margin-top: .5em;">
+                            <span style="background-color: #ffc0ad;"></span>
+                            <span style="background-color: #e78fb3;"></span>
+                            <span style="background-color: #9656a1;"></span>
+                        </span>
+                       </div>
+                    </button>
+                
+            </div>
+        </div>
+    </div>
+    </section>
+    ``
+        </code>
+    </pre>
+<pre><code>&lt;pre class=&quot;language-js&quot;&gt;
+    &lt;code class=&quot;language-js&quot;&gt;
+</code></pre>
+<p>/assets/js/theme.js file
+// the javascript</p>
+<p>class CustomTheme {
+constructor() {
+// part A: check if localStorage works
+this.islocalStorage = function() {
+try {
+localStorage.setItem(&quot;test&quot;, &quot;testing&quot;);
+localStorage.removeItem(&quot;test&quot;);
+return true;
+} catch (error) {
+return false
+}</p>
+<pre><code>    };
+    // part B: Get the value from the buttons
+    this.schemeBtns = document.querySelectorAll('.js-theme-color');
+    this.schemeBtns.forEach((btn) =&gt; {
+        const btnVal = btn.value;
+        btn.addEventListener('click', () =&gt; this.themeScheme(btnVal))
+    });
+
+    this.fontBtns = document.querySelectorAll('.js-font-btn');
+    this.fontBtns.forEach((btn) =&gt; {
+        const btnVal = btn.value;
+        const btnTag = btn;
+        btn.addEventListener('click', () =&gt; this.themeFont(btnVal, btnTag))
+    });
+
+    // part C: get the html button element
+    this.switchBtn = document.querySelector('.js-theme-toggle');
+    const clicked = this.switchBtn;
+    this.switchBtn.addEventListener('click', () =&gt; this.themePosition(clicked))
+}
+
+// part D: Save the data in localStorage
+themeScheme(btnVal) {
+    document.documentElement.setAttribute('data-theme', btnVal);
+    if (this.islocalStorage) {
+        localStorage.setItem('theme-name', btnVal);
+    }
+};
+
+themeFont(btnVal,btnTag) {
+    document.documentElement.style.setProperty('--font-size', `${btnVal}px`);
+    if (this.islocalStorage) {
+        localStorage.setItem('font-size', btnVal);
+    }
+    ;
+    if (btnVal == localStorage.getItem('font-size')) {
+        removeActive();
+        btnTag.classList.add('active');
+}
+</code></pre>
+<p>};</p>
+<pre><code>themePosition(clicked) {
+if (clicked.getAttribute('aria-checked') == 'true') {
+    clicked.setAttribute('aria-checked', 'false');
+    document.documentElement.style.setProperty('--position', 'static');
+    document.documentElement.style.setProperty('--top-margin', '0px');
+    if (this.islocalStorage) {
+        localStorage.setItem('position', 'static');
+    }
+
+} else {
+    clicked.setAttribute('aria-checked', 'true');
+    document.documentElement.style.setProperty('--position', 'fixed');
+    document.documentElement.style.setProperty('--top-margin', '96px');
+    if (this.islocalStorage) {
+        localStorage.setItem('position', 'fixed');
+    }
+}
+
+}
+</code></pre>
+<p>}</p>
+<p>function removeActive() {
+const btns = document.querySelectorAll('.js-font-btn');
+btns.forEach((btn) =&gt; {
+btn.classList.remove('active');
+})
+}</p>
+<p>// part E: Only use our class if css custom properties are supported
+if (window.CSS &amp;&amp; CSS.supports('color', 'var(--i-support')) {
+new CustomTheme()
+};</p>
+<p>// part E: Add an active class to selected font size button</p>
+<p>window.addEventListener('load', () =&gt; {
+const fontBtns = document.querySelectorAll('.js-font-btn');
+fontBtns.forEach((btn) =&gt; {
+const btnVal = btn.value;
+const btnTag = btn;
+if (btnVal == localStorage.getItem('font-size')) {
+btnTag.classList.add('active');
+}
+});<br>
+})</p>
+<pre><code>    &lt;/code&gt;
+&lt;/pre&gt;
+&lt;p&gt;Add this one to the head part in your html file before any other css file&lt;/p&gt;
+&lt;pre class=&quot;language-js&quot;&gt;
+    &lt;code class=&quot;language-js&quot;&gt;
+</code></pre>
+<p>``<script>
+const scheme = localStorage.getItem('theme-name');
+document.documentElement.setAttribute('data-theme', scheme);</p>
+<pre><code>  const fontSize = localStorage.getItem('font-size');
+document.documentElement.style.setProperty('--font-size',  `${fontSize}px`);
+
+
+const position = localStorage.getItem('position');
+if (position == 'fixed') {
+    document.documentElement.style.setProperty('--position', 'fixed');
+    document.documentElement.style.setProperty('--top-margin', '96px');
+
+} else {
+    document.documentElement.style.setProperty('--position', 'static');
+    document.documentElement.style.setProperty('--top-margin', '0px');
+
+}    
+</code></pre>
+<p></script>``</p>
+<pre><code>    &lt;/code&gt;
+&lt;/pre&gt;
+
+&lt;p&gt;
+    If you copied this code and would want to know how all this work, read the guide &lt;a href=&quot;https://freecodecamp.org/news/design-a-themeable-static-website/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;</code></pre>
+
 </section>
 </div>
 </main><footer class="footer">

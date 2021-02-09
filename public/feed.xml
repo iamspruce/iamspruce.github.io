@@ -10,7 +10,149 @@
     <name>Spruce Emmanuel</name>
     <email>sprucekhalifa3@gmail.com</email>
   </author>
-   
+  
+  <entry>
+    <title>15 Ways To Use Google Like A Pro</title>
+    <link href="https://spruce.com.ng/blog/15-ways-to-use-google-like-a-pro/"/>
+    <updated>2021-02-09T00:00:00Z</updated>
+    <id>https://spruce.com.ng/blog/15-ways-to-use-google-like-a-pro/</id>
+    <content type="html">&lt;p&gt;
+    Googling is an Essential skill every web related person must have. In this guide i put together 15 ways to get better in Searching for content on the web
+&lt;/p&gt;
+&lt;h2&gt;
+    01. Google advanced search
+&lt;/h2&gt; 
+&lt;p&gt;
+    Google advanced search is one of the best google feature, you can narrow your results down to &lt;b&gt;region&lt;/b&gt; and when it was &lt;b&gt;updated&lt;/b&gt;
+&lt;/p&gt;
+&lt;ol&gt;
+    &lt;h6&gt;Try out The:&lt;/h6&gt;
+    &lt;li&gt;
+        &lt;a href=&quot;https://google.com/advanced_search&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Google&#39;s advanced search for website and files&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href=&quot;https://google.com/advanced_image_search&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Google&#39;s advanced search for images&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href=&quot;https://google.com/advanced_video_search&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Google&#39;s advanced search for videos&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href=&quot;https://google.com/advanced_book_search&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Google&#39;s advanced search for books&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&quot;p-article__img&quot;&gt;
+    &lt;img src=&quot;https://spruce.com.ng/blog/15-ways-to-use-google-like-a-pro/img/advanced-search.png&quot; alt=&quot;Google advanced search preview&quot; /&gt;
+  &lt;figcaption&gt;
+    Google advanced search preview
+  &lt;/figcaption&gt;
+   &lt;/figure&gt;
+&lt;h2&gt;
+    02. Finding Quick Definations
+&lt;/h2&gt;
+&lt;p&gt;
+    Google does a great job in finding answers to your search word or phrases, like &lt;b&gt;what is css&lt;/b&gt;, but you can find the meaning of any word in google by adding &lt;b&gt;Define&lt;/b&gt; at the begining of the word &lt;br /&gt; 
+    &lt;span style=&quot;color: var(--primary);&quot;&gt;Define&lt;/span&gt; Css
+&lt;/p&gt;
+&lt;h2&gt;
+    03. Perform Calculations
+&lt;/h2&gt;
+&lt;p&gt;
+    You can also perform calculations in google as well by entering any maths equation like so &lt;br /&gt;
+    &lt;span style=&quot;color: var(--primary);&quot;&gt;30*800&lt;/span&gt;
+&lt;/p&gt;
+&lt;h2&gt;
+    04. Unit conversion
+&lt;/h2&gt;
+&lt;p&gt;
+    Google also performs unit conversion just by entering any unit conversion in the search box &lt;br /&gt;
+    &lt;span style=&quot;color: var(--primary);&quot;&gt;200m to mm&lt;/span&gt;&lt;br /&gt;
+    &lt;span style=&quot;color: var(--primary);&quot;&gt;100 dollers to naira&lt;/span&gt;
+&lt;/p&gt;
+&lt;h2&gt;
+    05. Searching for an exact image size
+&lt;/h2&gt;
+&lt;p&gt;
+    Very useful when working with logos and when you need an image of specific file size, just add &lt;b&gt;imagesize:500x400&lt;/b&gt; at the begining of a word or phrase &lt;br /&gt;
+    &lt;span style=&quot;color: var(--primary);&quot;&gt;imagesize:500x400 spongeBob&lt;/span&gt;
+&lt;/p&gt;
+&lt;figure class=&quot;p-article__img&quot;&gt;
+    &lt;img src=&quot;https://spruce.com.ng/blog/15-ways-to-use-google-like-a-pro/img/image-size.png&quot; alt=&quot;Exact 500x400 spongebob image&quot; /&gt;
+  &lt;figcaption&gt;
+  Image of header text with line from smashingmagazine
+  &lt;/figcaption&gt;
+   &lt;/figure&gt;
+&lt;h2&gt;
+    06. Search Social Media
+&lt;/h2&gt;
+&lt;p&gt;
+    It is very easy to narrow a search to only social media in google, you can search only social media for a particular user or word in google by just adding &lt;b&gt;@&lt;/b&gt; at the begining of the word like &lt;br /&gt;
+    &lt;span style=&quot;color: var(--primary);&quot;&gt;@SpruceEmmanuel&lt;/span&gt;
+&lt;/p&gt;
+&lt;h2&gt;
+    07. Search For Hashtags
+&lt;/h2&gt;
+&lt;p&gt;
+    You can also search for your favourite hashtags by just adding &lt;b&gt;#&lt;/b&gt; at the begining of the hashtag &lt;br /&gt;
+    &lt;span style=&quot;color: var(--primary);&quot;&gt;#100daysOfCode&lt;/span&gt;
+&lt;/p&gt;
+&lt;h2&gt;
+    08. Search for Items with a specific prize
+&lt;/h2&gt;
+&lt;p&gt;
+    Finding items that falls withing your budget is one of the coolest thing i like in Google, this can be acheived by simply adding the &lt;b&gt;$&lt;/b&gt; to the begining of the price &lt;br /&gt;
+    &lt;span style=&quot;color: var(--primary);&quot;&gt;Intro to python books $100&lt;/span&gt;
+&lt;/p&gt;
+&lt;h2&gt;
+    09. Exclude certain words from your search result
+&lt;/h2&gt;
+&lt;p&gt;
+    This is done by adding an &lt;b&gt;-&lt;/b&gt; at the begining of the woed you want to exclude &lt;br /&gt;
+&lt;span style=&quot;color: var(--primary);&quot;&gt;Create a blog with only html -css&lt;/span&gt;
+&lt;/p&gt;
+&lt;h2&gt;
+    10. Searching for an exact match
+&lt;/h2&gt;
+&lt;p&gt;
+    You can search for an exact match of a word or phrase by puting the word or phrase in qoute &lt;br /&gt;
+    &lt;span style=&quot;color: var(--primary);&quot;&gt;&quot;What is Javascript&quot;&lt;/span&gt;
+&lt;/p&gt;
+&lt;h2&gt;
+    11. Search within a range of numbers
+&lt;/h2&gt;
+&lt;p&gt;This is extremely useful when you have a minimum and maximum budget, you can Search for items price that are sold for &lt;b&gt;$40 t0 200$&lt;/b&gt; by adding &lt;b&gt;...&lt;/b&gt; between two numbers &lt;br /&gt;
+    &lt;span style=&quot;color: var(--primary);&quot;&gt;Javascript Cookbook $50...$100&lt;/span&gt;
+&lt;/p&gt;
+&lt;h2&gt;
+    12. Combining Search
+&lt;/h2&gt;
+&lt;p&gt;
+    Add &lt;b&gt;OR&lt;/b&gt; between two search query to search for two items at at time. You can combine this with other search parameters to get more accurate search result, also notice that the &quot;OR&quot; is in uppercase &lt;br /&gt;
+    &lt;span style=&quot;color: var(--primary);&quot;&gt;Javascript Cookbook $50...$100 OR Python offline guide $40&lt;/span&gt;
+&lt;/p&gt;
+&lt;h2&gt;
+    13. Search a particular site
+&lt;/h2&gt;
+&lt;p&gt;
+    You can search a specific site by adding &lt;b&gt;site:&lt;/b&gt; at the begining of a site or domain &lt;br /&gt;
+    &lt;span style=&quot;color: var(--primary);&quot;&gt;site:spruce.com.ng&lt;/span&gt;&lt;br /&gt;
+    &lt;span style=&quot;color: var(--primary);&quot;&gt;site:.dev&lt;/span&gt; 
+&lt;/p&gt;
+&lt;h2&gt;
+    14. Search for a related site
+&lt;/h2&gt;
+&lt;p&gt;
+    Check similar sites is possible in google by adding &lt;b&gt;related:&lt;/b&gt; at the begining of a site &lt;br /&gt;
+    &lt;span style=&quot;color: var(--primary);&quot;&gt;related:spruce.com.ng&lt;/span&gt; 
+&lt;/p&gt;
+&lt;h2&gt;
+    15. Google cached version of a site
+&lt;/h2&gt;
+&lt;p&gt;
+    Can&#39;t find an article you once read on a site? you can always check the cache version of a site in google by adding &lt;b&gt;cache&lt;/b&gt; at the begining of a site &lt;br /&gt;
+    &lt;span style=&quot;color: var(--primary);&quot;&gt;cache:spruce.com.ng&lt;/span&gt; 
+&lt;/p&gt;</content>
+  </entry>
+  
   <entry>
     <title>How to create 5 Cool Css only line effect</title>
     <link href="https://spruce.com.ng/blog/5-cool-css-only-line-effects/"/>

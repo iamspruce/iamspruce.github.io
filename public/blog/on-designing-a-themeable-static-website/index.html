@@ -30,8 +30,10 @@
   </script>
   <link rel="stylesheet" href="/assets/theme.css">
 
-<meta name="description" content="" />
-<meta property="og:description" content="" />
+<meta name="description" content="Having a dark and light theme is cool, have you tried six or more schemes, with a user customizable font size?  
+">
+<meta property="og:description" content="Having a dark and light theme is cool, have you tried six or more schemes, with a user customizable font size?  
+" />
 
 <meta name="author" content="Spruce Emmanuel" />
 <meta property="og:url" content="/blog/on-designing-a-themeable-static-website/">
@@ -53,7 +55,8 @@
     <script type="application/ld+json">
         {
             "name":"Spruce Emmanuel",
-            "description":"",
+            "description":"Having a dark and light theme is cool, have you tried six or more schemes, with a user customizable font size?  
+",
             "author": {
                 "@type":"Person",
                 "name":"Spruce Emmanuel"
@@ -376,26 +379,29 @@ _data/themes.json file
                 }, 
     ... other color schemes
 ]
-    </code>
-   </pre>
-<h2><pre class="language-liquid">
-<code class="language-liquid">
-css/theme.css.liquid file</h2>
-<h2>permalink: /css/theme.css</h2>
-<p>// when no theme is selected
+            </code>
+        </pre>
+<br>
+# theme.css.liquid file
+   <pre class="language-liquid">
+    <code class="language-liquid">
+#---
+permalink: /css/theme.css
+---
+// when no theme is selected
 // use default theme
 :root {
---text: #2b2c34;
---text-dark: #777;;
---border: rgba(0,0,0,.1);
---primary: #6246ea;
---secondary: #e45858;
---primary-dark: #d1d1e9;
---bg: #ffffff;
---bg-alt: #f8f8f8;
-}<br>
+    --text: #2b2c34;
+    --text-dark: #777;;
+    --border: rgba(0,0,0,.1);
+    --primary: #6246ea;
+    --secondary: #e45858;
+    --primary-dark: #d1d1e9;
+    --bg: #ffffff;
+    --bg-alt: #f8f8f8;
+}  
 // if user preferred color scheme is dark
-// use the dark theme</p>
+// use the dark theme
 <p>@media(prefers-color-scheme: dark) {
 :root {
 --text: #fffffe;
@@ -424,13 +430,12 @@ css/theme.css.liquid file</h2>
 --bg-alt: {{ theme.colors.bg-alt }};
 }
 {% endfor %}</p>
-<pre><code>&lt;/code&gt;
-</code></pre>
-   </pre>
+</code>
+</pre>
+<br>
+# The CSS 
    <pre class="language-css">
        <code class="language-css">
-// the css
-
 body {
     background: var(--bg);
     color: var(--text);
@@ -454,396 +459,383 @@ h1,h2 {
     right: -9999px;
     box-shadow: 4px 2px 8px rgba(0,0,0,.2);
     transition: all .35s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+<pre><code>&amp;__contain {
+    padding-bottom: 30px;
 
-    
-
-    &__contain {
-        padding-bottom: 30px;
-
-        p {
-        margin-bottom: 24px;
-        font-size: var(--font-size);
-        color: var(--text-dark);
-    }
-    }
+    p {
+    margin-bottom: 24px;
+    font-size: var(--font-size);
+    color: var(--text-dark);
 }
+}
+</code></pre>
+<p>}
 @media (max-width: 320px) {
-    .section-theme {
-        width: calc(100% - 2px)
-    }
+.section-theme {
+width: calc(100% - 2px)
+}
 }
 .theme-title {
-    font-weight: 400;
-    font-size: 18px;
-    margin-bottom: 5px;
+font-weight: 400;
+font-size: 18px;
+margin-bottom: 5px;
 }
 .theme__header {
-    padding: 30px 30px 8px 30px;
+padding: 30px 30px 8px 30px;</p>
+<p>}</p>
+<pre><code>.theme__top {
+    padding:1px 30px 10px 30px;
 
 }
-
-    .theme__top {
-        padding:1px 30px 10px 30px;
-
-    }
-
-.theme-top-col {
-    border-bottom: 1px solid var(--border);
-    padding: .9em 0;
-}
-
-
-.theme__bottom {
-    padding:20px 0px 30px  30px;
-
-}
+</code></pre>
+<p>.theme-top-col {
+border-bottom: 1px solid var(--border);
+padding: .9em 0;
+}</p>
+<p>.theme__bottom {
+padding:20px 0px 30px  30px;</p>
+<p>}
 .theme-color-wrapper {
-    display: flex;
-    overflow-x: auto;
-    padding: .5em 0;
-
-    .theme-color {
-        transition: all .3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-    }
-    .theme-color:not(:first-child) {
-        margin-left: -30px;
-    }
-    .theme-color:hover ~ .theme-color {
-            margin-left: 0;
-    }
+display: flex;
+overflow-x: auto;
+padding: .5em 0;</p>
+<pre><code>.theme-color {
+    transition: all .3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
+.theme-color:not(:first-child) {
+    margin-left: -30px;
+}
+.theme-color:hover ~ .theme-color {
+        margin-left: 0;
+}
+</code></pre>
+<p>}
 .theme-color {
-    padding: 1.2em;
-    border-radius: 11px;
-    width: 200px;
-    min-width: 200px;
-    position: relative;
-    z-index: 5;
-    box-shadow: 0 2px 4px rgba(0,0,0,.2),
-                0 3px 4.5px rgba(0,0,0,.3);
-    
+padding: 1.2em;
+border-radius: 11px;
+width: 200px;
+min-width: 200px;
+position: relative;
+z-index: 5;
+box-shadow: 0 2px 4px rgba(0,0,0,.2),
+0 3px 4.5px rgba(0,0,0,.3);</p>
+<pre><code>&amp;__secondary {
+    width: 34px;
+    height: 24px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.2);
 
-    &__secondary {
-        width: 34px;
-        height: 24px;
-        border-radius: 6px;
-        box-shadow: 0 2px 4px rgba(0,0,0,.2);
-
-    }
-    &-text {
-        display: inline-block;
-        width: 80px;
-        height: 6px;
-        margin-top: .4em;
-        border-radius: 40em;
-    }
-   
 }
+&amp;-text {
+    display: inline-block;
+    width: 80px;
+    height: 6px;
+    margin-top: .4em;
+    border-radius: 40em;
+}
+</code></pre>
+<p>}
 .theme-span-wrapper {
-    display: flex;
-
-    span {
-        width: 24px;
-        height: 24px;
-        border-radius: 50%;
-    }
-    span:not(:first-child) {
-        margin-left: -10px;
-    }
+display: flex;</p>
+<pre><code>span {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
 }
+span:not(:first-child) {
+    margin-left: -10px;
+}
+</code></pre>
+<p>}
 .js-font-btn {
-    margin-top: 8px;
+margin-top: 8px;
 }
 .js-font-btn.active {
-    background: var(--primary);
-    color: var(--bg);
+background: var(--primary);
+color: var(--bg);
 }
 /* styling the checkboxes */
-[role="switch"][aria-checked="true"] :first-child,
-[role="switch"][aria-checked="false"] :last-child {
-    border-radius: .4em;
-    background: var(--primary);
-    color: var(--bg);
-    
+[role=&quot;switch&quot;][aria-checked=&quot;true&quot;] :first-child,
+[role=&quot;switch&quot;][aria-checked=&quot;false&quot;] :last-child {
+border-radius: .4em;
+background: var(--primary);
+color: var(--bg);</p>
+<p>}</p>
+<p>.btn[role=&quot;switch&quot;] span:not(:first-child) {
+margin-left: .6em;</p>
+<p>}
+.btn[role=&quot;switch&quot;] span {
+display: inline-block;
+padding: .6em;
+pointer-events: none;
 }
-
-.btn[role="switch"] span:not(:first-child) {
-    margin-left: .6em;
-
-}
-.btn[role="switch"] span {
-    display: inline-block;
-    padding: .6em;
-    pointer-events: none;
-}
-
-       </code>
-   </pre>
+</code>
+</pre>
+<br></p>
+<h1>The html</h1>
 <pre class="language-html">
 <code class="language-html">
 theme.html file
-// The html
-``
-<section class="section-theme">
-    <div class="section-theme__contain">
-        <div class="theme__header flex">
-            <h4 class="theme__title">
-                Theme Settings
-            </h4>
-            <button class="header__icon js-close-theme" aria-expanded="false" aria-controls="nav-menu" aria-label="toggle menu">
-                <svg class="icon icon--small icon--btn" width="26px" height="26px">
-                    <title>Close Theme Switcher</title>
-                    <use xlink:href="#icon-close"></use>
-                </svg>
-            </button>
-        </div>
+&lt;section class="section-theme"&gt;
+&lt;div class="section-theme__contain"&gt;
+&lt;div class="theme__header flex"&gt;
+&lt;h4 class="theme__title"&gt;
+    Theme Settings
+&lt;/h4&gt;
+&lt;button class="header__icon js-close-theme" aria-expanded="false" aria-controls="nav-menu" aria-label="toggle menu"&gt;
+&lt;svg class="icon icon--small icon--btn" width="26px" height="26px"&gt;
+&lt;title&gt;Close Theme Switcher&lt;/title&gt;
+&lt;use xlink:href="#icon-close"&gt;&lt;/use&gt;
+&lt;/svg&gt;
+&lt;/button&gt;
+&lt;/div&gt;
        
-        <div class=" theme__top">
-            <div class="js-tab-content theme-top-col show" id="tab-1-content">
-                <h5 class="theme-title">
-                    Fonts
-                </h5>
-                <p>Choose default font size for articles</p>
-        
-                <div class="theme-btn-wrapper js-btn-wrapper">
-                    <button class="btn btn--small btn--border js-font-btn" value="16">16px</button>
-                    <button class="btn btn--small btn--border js-font-btn" value="18">18px</button>
-                    <button class="btn btn--small btn--border js-font-btn" value="20">20px</button>
-                    <button class="btn btn--small btn--border js-font-btn" value="22">22px</button>
-                </div>
-            </div>
-            <div class="js-tab-content theme-top-col two" id="tab-2-content">
-                <h5 class="theme-title">
-                    Fixed Header
-                </h5>
-                <p>Static or Fixed Header? your choice</p>
-    
-                <div class="check-wrapper">
-                    <span id="btn-label" class="sr-only">Fixed or static header</span>
-                   <button role="switch" type="button" aria-checked="true" aria-labelledby="btn-label" class="js-theme-toggle btn btn--border btn--rounded btn--toggle">
-                       <span>On</span>
-                       <span>Off</span>
-                   </button>
-                </div>
-            </div>
-        </div>
-        <div class="js-tab-content theme__bottom" id="tab-3-content">
-            <h5 class="theme-title">
-                Choose Color Scheme
-            </h5>
-            <p>Pick a color scheme of your choice</p>
-    
-            <div class="theme-color-wrapper js-theme-scheme">
-                
-            <button type="button" class="theme-color js-theme-color" style="background-color: #ffffff; border: 1px solid #f8f8f8" value="default">
-                        <div class="theme-color__secondary" style="background-color: #f8f8f8; margin-bottom: .5em;"></div>
-            <span class="theme-color-text" style="background: linear-gradient(180deg, #2b2c34 100%, #2b2c34 100%); color: #2b2c34"></span>
-            <span class="theme-color-text" style="background: linear-gradient(180deg, #2b2c34 100%, #2b2c34 100%); color: #2b2c34"></span> <br>
-                       <div class="flex">
-                        <span class="theme-color__name" style="color: #2b2c34;">
-                            default
-                        </span>
-                        <span class="theme-span-wrapper" style="margin-top: .5em;">
-                            <span style="background-color: #6246ea;"></span>
-                            <span style="background-color: #e45858;"></span>
-                            <span style="background-color: #d1d1e9;"></span>
-                        </span>
-                       </div>
-                    </button>
-                
-            <button type="button" class="theme-color js-theme-color" style="background-color: #16161a; border: 1px solid #242629" value="dark">
-                        <div class="theme-color__secondary" style="background-color: #242629; margin-bottom: .5em;"></div>
-            <span class="theme-color-text" style="background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe"></span>
-            <span class="theme-color-text" style="background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe"></span> <br>
-                       <div class="flex">
-                        <span class="theme-color__name" style="color: #fffffe;">
-                            dark
-                        </span>
-                        <span class="theme-span-wrapper" style="margin-top: .5em;">
-                            <span style="background-color: #ff8906;"></span>
-                            <span style="background-color: #2cb67d;"></span>
-                            <span style="background-color: #75757e;"></span>
-                        </span>
-                       </div>
-                    </button>
-                
-            <button type="button" class="theme-color js-theme-color" style="background-color: #004643; border: 1px solid #abd1c6" value="green">
-                        <div class="theme-color__secondary" style="background-color: #abd1c6; margin-bottom: .5em;"></div>
-            <span class="theme-color-text" style="background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe"></span>
-            <span class="theme-color-text" style="background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe"></span> <br>
-                       <div class="flex">
-                        <span class="theme-color__name" style="color: #fffffe;">
-                            green
-                        </span>
-                        <span class="theme-span-wrapper" style="margin-top: .5em;">
-                            <span style="background-color: #f9bc60;"></span>
-                            <span style="background-color: #e16162;"></span>
-                            <span style="background-color: #abd1c6;"></span>
-                        </span>
-                       </div>
-                    </button>
-                
-            <button type="button" class="theme-color js-theme-color" style="background-color: #eff0f3; border: 1px solid #fffffe" value="fame">
-                        <div class="theme-color__secondary" style="background-color: #fffffe; margin-bottom: .5em;"></div>
-            <span class="theme-color-text" style="background: linear-gradient(180deg, #0d0d0d 100%, #0d0d0d 100%); color: #0d0d0d"></span>
-            <span class="theme-color-text" style="background: linear-gradient(180deg, #0d0d0d 100%, #0d0d0d 100%); color: #0d0d0d"></span> <br>
-                       <div class="flex">
-                        <span class="theme-color__name" style="color: #0d0d0d;">
-                            fame
-                        </span>
-                        <span class="theme-span-wrapper" style="margin-top: .5em;">
-                            <span style="background-color: #ff8e3c;"></span>
-                            <span style="background-color: #d9376e;"></span>
-                            <span style="background-color: #eaddcf;"></span>
-                        </span>
-                       </div>
-                    </button>
-                
-            <button type="button" class="theme-color js-theme-color" style="background-color: #232946; border: 1px solid #d4d8f0" value="dark-blue">
-                        <div class="theme-color__secondary" style="background-color: #d4d8f0; margin-bottom: .5em;"></div>
-            <span class="theme-color-text" style="background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe"></span>
-            <span class="theme-color-text" style="background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe"></span> <br>
-                       <div class="flex">
-                        <span class="theme-color__name" style="color: #fffffe;">
-                            dark-blue
-                        </span>
-                        <span class="theme-span-wrapper" style="margin-top: .5em;">
-                            <span style="background-color: #eebbc3;"></span>
-                            <span style="background-color: #b8c1ec;"></span>
-                            <span style="background-color: #eaddcf;"></span>
-                        </span>
-                       </div>
-                    </button>
-                
-            <button type="button" class="theme-color js-theme-color" style="background-color: #55423d; border: 1px solid #271c19" value="brown">
-                        <div class="theme-color__secondary" style="background-color: #271c19; margin-bottom: .5em;"></div>
-            <span class="theme-color-text" style="background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe"></span>
-            <span class="theme-color-text" style="background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe"></span> <br>
-                       <div class="flex">
-                        <span class="theme-color__name" style="color: #fffffe;">
-                            brown
-                        </span>
-                        <span class="theme-span-wrapper" style="margin-top: .5em;">
-                            <span style="background-color: #ffc0ad;"></span>
-                            <span style="background-color: #e78fb3;"></span>
-                            <span style="background-color: #9656a1;"></span>
-                        </span>
-                       </div>
-                    </button>
-                
-            </div>
-        </div>
-    </div>
-    </section>
-    ``
+&lt;div class=" theme__top"&gt;
+&lt;div class="js-tab-content theme-top-col show" id="tab-1-content"&gt;
+&lt;h5 class="theme-title"&gt;
+    Fonts
+&lt;/h5&gt;
+&lt;p&gt;Choose default font size for articles&lt;/p&gt; 
+&lt;div class="theme-btn-wrapper js-btn-wrapper"&gt;
+&lt;button class="btn btn--small btn--border js-font-btn" value="16"&gt;16px&lt;/button&gt;
+&lt;button class="btn btn--small btn--border js-font-btn" value="18"&gt;18px&lt;/button&gt;
+&lt;button class="btn btn--small btn--border js-font-btn" value="20"&gt;20px&lt;/button&gt;
+&lt;button class="btn btn--small btn--border js-font-btn" value="22"&gt;22px&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="js-tab-content theme-top-col two" id="tab-2-content"&gt;
+&lt;h5 class="theme-title"&gt;
+Fixed Header
+&lt;/h5&gt;
+&lt;p&gt;Static or Fixed Header? your choice&lt;/p&gt;
+&lt;div class="check-wrapper"&gt;
+&lt;span id="btn-label" class="sr-only"&gt;Fixed or static header&lt;/span&gt;
+&lt;button role="switch" type="button" aria-checked="true" aria-labelledby="btn-label" class="js-theme-toggle btn btn--border btn--rounded btn--toggle"&gt;
+    &lt;span&gt;On&lt;/span&gt;
+    &lt;span&gt;Off&lt;/span&gt;
+&lt;/button&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="js-tab-content theme__bottom" id="tab-3-content"&gt;
+&lt;h5 class="theme-title"&gt;
+Choose Color Scheme
+&lt;/h5&gt;
+&lt;p&gt;Pick a color scheme of your choice&lt;/p&gt;
+&lt;div class="theme-color-wrapper js-theme-scheme"&gt;
+
+&lt;button type="button" class="theme-color js-theme-color" style="background-color: #ffffff; border: 1px solid #f8f8f8" value="default"&gt;
+    &lt;div class="theme-color__secondary" style="background-color: #f8f8f8; margin-bottom: .5em;"&gt;&lt;/div&gt;
+&lt;span class="theme-color-text" style="background: linear-gradient(180deg, #2b2c34 100%, #2b2c34 100%); color: #2b2c34"&gt;&lt;/span&gt;
+&lt;span class="theme-color-text" style="background: linear-gradient(180deg, #2b2c34 100%, #2b2c34 100%); color: #2b2c34"&gt;&lt;/span&gt;&lt;br&gt;
+    &lt;div class="flex"&gt;
+    &lt;span class="theme-color__name" style="color: #2b2c34;"&gt;
+    default
+    &lt;/span&gt;
+    &lt;span class="theme-span-wrapper" style="margin-top: .5em;"&gt;
+        &lt;span style="background-color: #6246ea;"&gt;&lt;/span&gt;
+        &lt;span style="background-color: #e45858;"&gt;&lt;/span&gt;
+        &lt;span style="background-color: #d1d1e9;"&gt;&lt;/span&gt;
+    &lt;/span&gt;
+    &lt;/div&gt;
+&lt;/button&gt;
+
+&lt;button type="button" class="theme-color js-theme-color" style="background-color: #16161a; border: 1px solid #242629" value="dark"&gt;
+    &lt;div class="theme-color__secondary" style="background-color: #242629; margin-bottom: .5em;"&gt;&lt;/div&gt;
+&lt;span class="theme-color-text" style="background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe"&gt;&lt;/span&gt;
+&lt;span class="theme-color-text" style="background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe"&gt;&lt;/span&gt;&lt;br&gt;
+    &lt;div class="flex"&gt;
+    &lt;span class="theme-color__name" style="color: #fffffe;"&gt;
+    dark
+    &lt;/span&gt;
+    &lt;span class="theme-span-wrapper" style="margin-top: .5em;"&gt;
+        &lt;span style="background-color: #ff8906;"&gt;&lt;/span&gt;
+        &lt;span style="background-color: #2cb67d;"&gt;&lt;/span&gt;
+        &lt;span style="background-color: #75757e;"&gt;&lt;/span&gt;
+    &lt;/span&gt;
+    &lt;/div&gt;
+&lt;/button&gt;
+
+&lt;button type="button" class="theme-color js-theme-color" style="background-color: #004643; border: 1px solid #abd1c6" value="green"&gt;
+    &lt;div class="theme-color__secondary" style="background-color: #abd1c6; margin-bottom: .5em;"&gt;&lt;/div&gt;
+&lt;span class="theme-color-text" style="background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe"&gt;&lt;/span&gt;
+&lt;span class="theme-color-text" style="background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe"&gt;&lt;/span&gt;&lt;br&gt;
+    &lt;div class="flex"&gt;
+    &lt;span class="theme-color__name" style="color: #fffffe;"&gt;
+    green
+    &lt;/span&gt;
+    &lt;span class="theme-span-wrapper" style="margin-top: .5em;"&gt;
+        &lt;span style="background-color: #f9bc60;"&gt;&lt;/span&gt;
+        &lt;span style="background-color: #e16162;"&gt;&lt;/span&gt;
+        &lt;span style="background-color: #abd1c6;"&gt;&lt;/span&gt;
+    &lt;/span&gt;
+    &lt;/div&gt;
+&lt;/button&gt;
+
+&lt;button type="button" class="theme-color js-theme-color" style="background-color: #eff0f3; border: 1px solid #fffffe" value="fame"&gt;
+    &lt;div class="theme-color__secondary" style="background-color: #fffffe; margin-bottom: .5em;"&gt;&lt;/div&gt;
+&lt;span class="theme-color-text" style="background: linear-gradient(180deg, #0d0d0d 100%, #0d0d0d 100%); color: #0d0d0d"&gt;&lt;/span&gt;
+&lt;span class="theme-color-text" style="background: linear-gradient(180deg, #0d0d0d 100%, #0d0d0d 100%); color: #0d0d0d"&gt;&lt;/span&gt;&lt;br&gt;
+    &lt;div class="flex"&gt;
+    &lt;span class="theme-color__name" style="color: #0d0d0d;"&gt;
+    fame
+    &lt;/span&gt;
+    &lt;span class="theme-span-wrapper" style="margin-top: .5em;"&gt;
+        &lt;span style="background-color: #ff8e3c;"&gt;&lt;/span&gt;
+        &lt;span style="background-color: #d9376e;"&gt;&lt;/span&gt;
+        &lt;span style="background-color: #eaddcf;"&gt;&lt;/span&gt;
+    &lt;/span&gt;
+    &lt;/div&gt;
+&lt;/button&gt;
+
+&lt;button type="button" class="theme-color js-theme-color" style="background-color: #232946; border: 1px solid #d4d8f0" value="dark-blue"&gt;
+    &lt;div class="theme-color__secondary" style="background-color: #d4d8f0; margin-bottom: .5em;"&gt;&lt;/div&gt;
+&lt;span class="theme-color-text" style="background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe"&gt;&lt;/span&gt;
+&lt;span class="theme-color-text" style="background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe"&gt;&lt;/span&gt;&lt;br&gt;
+    &lt;div class="flex"&gt;
+    &lt;span class="theme-color__name" style="color: #fffffe;"&gt;
+    dark-blue
+    &lt;/span&gt;
+    &lt;span class="theme-span-wrapper" style="margin-top: .5em;"&gt;
+        &lt;span style="background-color: #eebbc3;"&gt;&lt;/span&gt;
+        &lt;span style="background-color: #b8c1ec;"&gt;&lt;/span&gt;
+        &lt;span style="background-color: #eaddcf;"&gt;&lt;/span&gt;
+    &lt;/span&gt;
+    &lt;/div&gt;
+&lt;/button&gt;
+
+&lt;button type="button" class="theme-color js-theme-color" style="background-color: #55423d; border: 1px solid #271c19" value="brown"&gt;
+    &lt;div class="theme-color__secondary" style="background-color: #271c19; margin-bottom: .5em;"&gt;&lt;/div&gt;
+&lt;span class="theme-color-text" style="background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe"&gt;&lt;/span&gt;
+&lt;span class="theme-color-text" style="background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe"&gt;&lt;/span&gt;&lt;br&gt;
+    &lt;div class="flex"&gt;
+    &lt;span class="theme-color__name" style="color: #fffffe;"&gt;
+    brown
+    &lt;/span&gt;
+    &lt;span class="theme-span-wrapper" style="margin-top: .5em;"&gt;
+        &lt;span style="background-color: #ffc0ad;"&gt;&lt;/span&gt;
+        &lt;span style="background-color: #e78fb3;"&gt;&lt;/span&gt;
+        &lt;span style="background-color: #9656a1;"&gt;&lt;/span&gt;
+    &lt;/span&gt;
+    &lt;/div&gt;
+&lt;/button&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/section&gt;
         </code>
     </pre>
-<pre><code>&lt;pre class=&quot;language-js&quot;&gt;
-    &lt;code class=&quot;language-js&quot;&gt;
-</code></pre>
-<p>/assets/js/theme.js file
-// the javascript</p>
-<p>class CustomTheme {
-constructor() {
-// part A: check if localStorage works
-this.islocalStorage = function() {
-try {
-localStorage.setItem(&quot;test&quot;, &quot;testing&quot;);
-localStorage.removeItem(&quot;test&quot;);
-return true;
-} catch (error) {
-return false
-}</p>
-<pre><code>    };
-    // part B: Get the value from the buttons
-    this.schemeBtns = document.querySelectorAll('.js-theme-color');
-    this.schemeBtns.forEach((btn) =&gt; {
-        const btnVal = btn.value;
-        btn.addEventListener('click', () =&gt; this.themeScheme(btnVal))
-    });
+<br>
+#The javascript
+<pre class="language-js">
+<code class="language-js">
+/assets/js/theme.js file
+class CustomTheme {
+    constructor() {
+        // part A: check if localStorage works
+        this.islocalStorage = function() {
+            try {
+                localStorage.setItem("test", "testing");
+                localStorage.removeItem("test");
+                return true;
+            } catch (error) {
+                return false
+            }
+           
+        };
+        // part B: Get the value from the buttons
+        this.schemeBtns = document.querySelectorAll('.js-theme-color');
+        this.schemeBtns.forEach((btn) => {
+            const btnVal = btn.value;
+            btn.addEventListener('click', () => this.themeScheme(btnVal))
+        });
 
-    this.fontBtns = document.querySelectorAll('.js-font-btn');
-    this.fontBtns.forEach((btn) =&gt; {
-        const btnVal = btn.value;
-        const btnTag = btn;
-        btn.addEventListener('click', () =&gt; this.themeFont(btnVal, btnTag))
-    });
+        this.fontBtns = document.querySelectorAll('.js-font-btn');
+        this.fontBtns.forEach((btn) => {
+            const btnVal = btn.value;
+            const btnTag = btn;
+            btn.addEventListener('click', () => this.themeFont(btnVal, btnTag))
+        });
 
-    // part C: get the html button element
-    this.switchBtn = document.querySelector('.js-theme-toggle');
-    const clicked = this.switchBtn;
-    this.switchBtn.addEventListener('click', () =&gt; this.themePosition(clicked))
-}
+        // part C: get the html button element
+        this.switchBtn = document.querySelector('.js-theme-toggle');
+        const clicked = this.switchBtn;
+        this.switchBtn.addEventListener('click', () => this.themePosition(clicked))
+    }
 
-// part D: Save the data in localStorage
-themeScheme(btnVal) {
-    document.documentElement.setAttribute('data-theme', btnVal);
-    if (this.islocalStorage) {
-        localStorage.setItem('theme-name', btnVal);
+    // part D: Save the data in localStorage
+    themeScheme(btnVal) {
+        document.documentElement.setAttribute('data-theme', btnVal);
+        if (this.islocalStorage) {
+            localStorage.setItem('theme-name', btnVal);
+        }
+    };
+    
+    themeFont(btnVal,btnTag) {
+        document.documentElement.style.setProperty('--font-size', `${btnVal}px`);
+        if (this.islocalStorage) {
+            localStorage.setItem('font-size', btnVal);
+        }
+        ;
+        if (btnVal == localStorage.getItem('font-size')) {
+            removeActive();
+            btnTag.classList.add('active');
     }
 };
 
-themeFont(btnVal,btnTag) {
-    document.documentElement.style.setProperty('--font-size', `${btnVal}px`);
-    if (this.islocalStorage) {
-        localStorage.setItem('font-size', btnVal);
-    }
-    ;
-    if (btnVal == localStorage.getItem('font-size')) {
-        removeActive();
-        btnTag.classList.add('active');
-}
-</code></pre>
-<p>};</p>
-<pre><code>themePosition(clicked) {
-if (clicked.getAttribute('aria-checked') == 'true') {
-    clicked.setAttribute('aria-checked', 'false');
-    document.documentElement.style.setProperty('--position', 'static');
-    document.documentElement.style.setProperty('--top-margin', '0px');
-    if (this.islocalStorage) {
-        localStorage.setItem('position', 'static');
+    themePosition(clicked) {
+    if (clicked.getAttribute('aria-checked') == 'true') {
+        clicked.setAttribute('aria-checked', 'false');
+        document.documentElement.style.setProperty('--position', 'static');
+        document.documentElement.style.setProperty('--top-margin', '0px');
+        if (this.islocalStorage) {
+            localStorage.setItem('position', 'static');
+        }
+
+    } else {
+        clicked.setAttribute('aria-checked', 'true');
+        document.documentElement.style.setProperty('--position', 'fixed');
+        document.documentElement.style.setProperty('--top-margin', '96px');
+        if (this.islocalStorage) {
+            localStorage.setItem('position', 'fixed');
+        }
     }
 
-} else {
-    clicked.setAttribute('aria-checked', 'true');
-    document.documentElement.style.setProperty('--position', 'fixed');
-    document.documentElement.style.setProperty('--top-margin', '96px');
-    if (this.islocalStorage) {
-        localStorage.setItem('position', 'fixed');
     }
 }
 
+function removeActive() {
+    const btns = document.querySelectorAll('.js-font-btn');
+    btns.forEach((btn) => {
+        btn.classList.remove('active');
+    })
 }
-</code></pre>
-<p>}</p>
-<p>function removeActive() {
-const btns = document.querySelectorAll('.js-font-btn');
-btns.forEach((btn) =&gt; {
-btn.classList.remove('active');
+
+// part E: Only use our class if css custom properties are supported
+if (window.CSS && CSS.supports('color', 'var(--i-support')) {
+    new CustomTheme()
+};
+
+// part E: Add an active class to selected font size button
+
+window.addEventListener('load', () => {
+    const fontBtns = document.querySelectorAll('.js-font-btn');
+    fontBtns.forEach((btn) => {
+        const btnVal = btn.value;
+        const btnTag = btn;
+        if (btnVal == localStorage.getItem('font-size')) {
+            btnTag.classList.add('active');
+    }
+    });   
 })
-}</p>
-<p>// part E: Only use our class if css custom properties are supported
-if (window.CSS &amp;&amp; CSS.supports('color', 'var(--i-support')) {
-new CustomTheme()
-};</p>
-<p>// part E: Add an active class to selected font size button</p>
-<p>window.addEventListener('load', () =&gt; {
-const fontBtns = document.querySelectorAll('.js-font-btn');
-fontBtns.forEach((btn) =&gt; {
-const btnVal = btn.value;
-const btnTag = btn;
-if (btnVal == localStorage.getItem('font-size')) {
-btnTag.classList.add('active');
-}
-});<br>
-})</p>
-<pre><code>    &lt;/code&gt;
-&lt;/pre&gt;
-&lt;p&gt;Add this one to the head part in your html file before any other css file&lt;/p&gt;
+</code>
+</pre>
+<pre><code>&lt;p&gt;
+    Add this one to the head part in your html file before any other css file&lt;/p&gt;
 &lt;pre class=&quot;language-js&quot;&gt;
     &lt;code class=&quot;language-js&quot;&gt;
 </code></pre>
-<p>``<script>
+<p>&lt;script&gt;
 const scheme = localStorage.getItem('theme-name');
 document.documentElement.setAttribute('data-theme', scheme);</p>
 <pre><code>  const fontSize = localStorage.getItem('font-size');
@@ -861,12 +853,11 @@ if (position == 'fixed') {
 
 }    
 </code></pre>
-<p></script>``</p>
-<pre><code>    &lt;/code&gt;
-&lt;/pre&gt;
-
-&lt;p&gt;
-    If you copied this code and would want to know how all this work, read the guide &lt;a href=&quot;https://freecodecamp.org/news/design-a-themeable-static-website/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;&lt;/a&gt;
+<p>&lt;/script&gt;
+</code>
+</pre></p>
+<pre><code>&lt;p&gt;
+    If you copied this code and would want to know how all this work, read the guide &lt;a href=&quot;https://freecodecamp.org/news/design-a-themeable-static-website/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;here&lt;/a&gt;
 &lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;</code></pre>
 

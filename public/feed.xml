@@ -185,26 +185,29 @@ _data/themes.json file
                 }, 
     ... other color schemes
 ]
-    &lt;/code&gt;
-   &lt;/pre&gt;
-&lt;h2&gt;&lt;pre class=&quot;language-liquid&quot;&gt;
-&lt;code class=&quot;language-liquid&quot;&gt;
-css/theme.css.liquid file&lt;/code&gt;&lt;/pre&gt;&lt;/h2&gt;
-&lt;h2&gt;permalink: /css/theme.css&lt;/h2&gt;
-&lt;p&gt;// when no theme is selected
+            &lt;/code&gt;
+        &lt;/pre&gt;
+&lt;br /&gt;
+# theme.css.liquid file
+   &lt;pre class=&quot;language-liquid&quot;&gt;
+    &lt;code class=&quot;language-liquid&quot;&gt;
+#---
+permalink: /css/theme.css
+---
+// when no theme is selected
 // use default theme
 :root {
---text: #2b2c34;
---text-dark: #777;;
---border: rgba(0,0,0,.1);
---primary: #6246ea;
---secondary: #e45858;
---primary-dark: #d1d1e9;
---bg: #ffffff;
---bg-alt: #f8f8f8;
-}&lt;br /&gt;
+    --text: #2b2c34;
+    --text-dark: #777;;
+    --border: rgba(0,0,0,.1);
+    --primary: #6246ea;
+    --secondary: #e45858;
+    --primary-dark: #d1d1e9;
+    --bg: #ffffff;
+    --bg-alt: #f8f8f8;
+}  
 // if user preferred color scheme is dark
-// use the dark theme&lt;/p&gt;
+// use the dark theme
 &lt;p&gt;@media(prefers-color-scheme: dark) {
 :root {
 --text: #fffffe;
@@ -233,13 +236,12 @@ css/theme.css.liquid file&lt;/code&gt;&lt;/pre&gt;&lt;/h2&gt;
 --bg-alt: {{ theme.colors.bg-alt }};
 }
 {% endfor %}&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;/code&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-   
+&lt;/code&gt;
+&lt;/pre&gt;
+&lt;br /&gt;
+# The CSS 
    &lt;pre class=&quot;language-css&quot;&gt;
        &lt;code class=&quot;language-css&quot;&gt;
-// the css
-
 body {
     background: var(--bg);
     color: var(--text);
@@ -263,396 +265,383 @@ h1,h2 {
     right: -9999px;
     box-shadow: 4px 2px 8px rgba(0,0,0,.2);
     transition: all .35s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+&lt;pre&gt;&lt;code&gt;&amp;amp;__contain {
+    padding-bottom: 30px;
 
-    
-
-    &amp;__contain {
-        padding-bottom: 30px;
-
-        p {
-        margin-bottom: 24px;
-        font-size: var(--font-size);
-        color: var(--text-dark);
-    }
-    }
+    p {
+    margin-bottom: 24px;
+    font-size: var(--font-size);
+    color: var(--text-dark);
 }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;}
 @media (max-width: 320px) {
-    .section-theme {
-        width: calc(100% - 2px)
-    }
+.section-theme {
+width: calc(100% - 2px)
+}
 }
 .theme-title {
-    font-weight: 400;
-    font-size: 18px;
-    margin-bottom: 5px;
+font-weight: 400;
+font-size: 18px;
+margin-bottom: 5px;
 }
 .theme__header {
-    padding: 30px 30px 8px 30px;
+padding: 30px 30px 8px 30px;&lt;/p&gt;
+&lt;p&gt;}&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;.theme__top {
+    padding:1px 30px 10px 30px;
 
 }
-
-    .theme__top {
-        padding:1px 30px 10px 30px;
-
-    }
-
-.theme-top-col {
-    border-bottom: 1px solid var(--border);
-    padding: .9em 0;
-}
-
-
-.theme__bottom {
-    padding:20px 0px 30px  30px;
-
-}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;.theme-top-col {
+border-bottom: 1px solid var(--border);
+padding: .9em 0;
+}&lt;/p&gt;
+&lt;p&gt;.theme__bottom {
+padding:20px 0px 30px  30px;&lt;/p&gt;
+&lt;p&gt;}
 .theme-color-wrapper {
-    display: flex;
-    overflow-x: auto;
-    padding: .5em 0;
-
-    .theme-color {
-        transition: all .3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-    }
-    .theme-color:not(:first-child) {
-        margin-left: -30px;
-    }
-    .theme-color:hover ~ .theme-color {
-            margin-left: 0;
-    }
+display: flex;
+overflow-x: auto;
+padding: .5em 0;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;.theme-color {
+    transition: all .3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
+.theme-color:not(:first-child) {
+    margin-left: -30px;
+}
+.theme-color:hover ~ .theme-color {
+        margin-left: 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;}
 .theme-color {
-    padding: 1.2em;
-    border-radius: 11px;
-    width: 200px;
-    min-width: 200px;
-    position: relative;
-    z-index: 5;
-    box-shadow: 0 2px 4px rgba(0,0,0,.2),
-                0 3px 4.5px rgba(0,0,0,.3);
-    
+padding: 1.2em;
+border-radius: 11px;
+width: 200px;
+min-width: 200px;
+position: relative;
+z-index: 5;
+box-shadow: 0 2px 4px rgba(0,0,0,.2),
+0 3px 4.5px rgba(0,0,0,.3);&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;amp;__secondary {
+    width: 34px;
+    height: 24px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.2);
 
-    &amp;__secondary {
-        width: 34px;
-        height: 24px;
-        border-radius: 6px;
-        box-shadow: 0 2px 4px rgba(0,0,0,.2);
-
-    }
-    &amp;-text {
-        display: inline-block;
-        width: 80px;
-        height: 6px;
-        margin-top: .4em;
-        border-radius: 40em;
-    }
-   
 }
+&amp;amp;-text {
+    display: inline-block;
+    width: 80px;
+    height: 6px;
+    margin-top: .4em;
+    border-radius: 40em;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;}
 .theme-span-wrapper {
-    display: flex;
-
-    span {
-        width: 24px;
-        height: 24px;
-        border-radius: 50%;
-    }
-    span:not(:first-child) {
-        margin-left: -10px;
-    }
+display: flex;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;span {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
 }
+span:not(:first-child) {
+    margin-left: -10px;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;}
 .js-font-btn {
-    margin-top: 8px;
+margin-top: 8px;
 }
 .js-font-btn.active {
-    background: var(--primary);
-    color: var(--bg);
+background: var(--primary);
+color: var(--bg);
 }
 /* styling the checkboxes */
-[role=&quot;switch&quot;][aria-checked=&quot;true&quot;] :first-child,
-[role=&quot;switch&quot;][aria-checked=&quot;false&quot;] :last-child {
-    border-radius: .4em;
-    background: var(--primary);
-    color: var(--bg);
-    
+[role=&amp;quot;switch&amp;quot;][aria-checked=&amp;quot;true&amp;quot;] :first-child,
+[role=&amp;quot;switch&amp;quot;][aria-checked=&amp;quot;false&amp;quot;] :last-child {
+border-radius: .4em;
+background: var(--primary);
+color: var(--bg);&lt;/p&gt;
+&lt;p&gt;}&lt;/p&gt;
+&lt;p&gt;.btn[role=&amp;quot;switch&amp;quot;] span:not(:first-child) {
+margin-left: .6em;&lt;/p&gt;
+&lt;p&gt;}
+.btn[role=&amp;quot;switch&amp;quot;] span {
+display: inline-block;
+padding: .6em;
+pointer-events: none;
 }
-
-.btn[role=&quot;switch&quot;] span:not(:first-child) {
-    margin-left: .6em;
-
-}
-.btn[role=&quot;switch&quot;] span {
-    display: inline-block;
-    padding: .6em;
-    pointer-events: none;
-}
-
-       &lt;/code&gt;
-   &lt;/pre&gt;
+&lt;/p&gt;&lt;/code&gt;
+&lt;/pre&gt;
+&lt;br /&gt;&lt;p&gt;&lt;/p&gt;
+&lt;h1&gt;The html&lt;/h1&gt;
 &lt;pre class=&quot;language-html&quot;&gt;
 &lt;code class=&quot;language-html&quot;&gt;
 theme.html file
-// The html
-``
-&lt;section class=&quot;section-theme&quot;&gt;
-    &lt;div class=&quot;section-theme__contain&quot;&gt;
-        &lt;div class=&quot;theme__header flex&quot;&gt;
-            &lt;h4 class=&quot;theme__title&quot;&gt;
-                Theme Settings
-            &lt;/h4&gt;
-            &lt;button class=&quot;header__icon js-close-theme&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;nav-menu&quot; aria-label=&quot;toggle menu&quot;&gt;
-                &lt;svg class=&quot;icon icon--small icon--btn&quot; width=&quot;26px&quot; height=&quot;26px&quot;&gt;
-                    &lt;title&gt;Close Theme Switcher&lt;/title&gt;
-                    &lt;use xlink:href=&quot;#icon-close&quot;&gt;&lt;/use&gt;
-                &lt;/svg&gt;
-            &lt;/button&gt;
-        &lt;/div&gt;
+&amp;lt;section class=&quot;section-theme&quot;&amp;gt;
+&amp;lt;div class=&quot;section-theme__contain&quot;&amp;gt;
+&amp;lt;div class=&quot;theme__header flex&quot;&amp;gt;
+&amp;lt;h4 class=&quot;theme__title&quot;&amp;gt;
+    Theme Settings
+&amp;lt;/h4&amp;gt;
+&amp;lt;button class=&quot;header__icon js-close-theme&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;nav-menu&quot; aria-label=&quot;toggle menu&quot;&amp;gt;
+&amp;lt;svg class=&quot;icon icon--small icon--btn&quot; width=&quot;26px&quot; height=&quot;26px&quot;&amp;gt;
+&amp;lt;title&amp;gt;Close Theme Switcher&amp;lt;/title&amp;gt;
+&amp;lt;use xlink:href=&quot;#icon-close&quot;&amp;gt;&amp;lt;/use&amp;gt;
+&amp;lt;/svg&amp;gt;
+&amp;lt;/button&amp;gt;
+&amp;lt;/div&amp;gt;
        
-        &lt;div class=&quot; theme__top&quot;&gt;
-            &lt;div class=&quot;js-tab-content theme-top-col show&quot; id=&quot;tab-1-content&quot;&gt;
-                &lt;h5 class=&quot;theme-title&quot;&gt;
-                    Fonts
-                &lt;/h5&gt;
-                &lt;p&gt;Choose default font size for articles&lt;/p&gt;
-        
-                &lt;div class=&quot;theme-btn-wrapper js-btn-wrapper&quot;&gt;
-                    &lt;button class=&quot;btn btn--small btn--border js-font-btn&quot; value=&quot;16&quot;&gt;16px&lt;/button&gt;
-                    &lt;button class=&quot;btn btn--small btn--border js-font-btn&quot; value=&quot;18&quot;&gt;18px&lt;/button&gt;
-                    &lt;button class=&quot;btn btn--small btn--border js-font-btn&quot; value=&quot;20&quot;&gt;20px&lt;/button&gt;
-                    &lt;button class=&quot;btn btn--small btn--border js-font-btn&quot; value=&quot;22&quot;&gt;22px&lt;/button&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;js-tab-content theme-top-col two&quot; id=&quot;tab-2-content&quot;&gt;
-                &lt;h5 class=&quot;theme-title&quot;&gt;
-                    Fixed Header
-                &lt;/h5&gt;
-                &lt;p&gt;Static or Fixed Header? your choice&lt;/p&gt;
-    
-                &lt;div class=&quot;check-wrapper&quot;&gt;
-                    &lt;span id=&quot;btn-label&quot; class=&quot;sr-only&quot;&gt;Fixed or static header&lt;/span&gt;
-                   &lt;button role=&quot;switch&quot; type=&quot;button&quot; aria-checked=&quot;true&quot; aria-labelledby=&quot;btn-label&quot; class=&quot;js-theme-toggle btn btn--border btn--rounded btn--toggle&quot;&gt;
-                       &lt;span&gt;On&lt;/span&gt;
-                       &lt;span&gt;Off&lt;/span&gt;
-                   &lt;/button&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;js-tab-content theme__bottom&quot; id=&quot;tab-3-content&quot;&gt;
-            &lt;h5 class=&quot;theme-title&quot;&gt;
-                Choose Color Scheme
-            &lt;/h5&gt;
-            &lt;p&gt;Pick a color scheme of your choice&lt;/p&gt;
-    
-            &lt;div class=&quot;theme-color-wrapper js-theme-scheme&quot;&gt;
-                
-            &lt;button type=&quot;button&quot; class=&quot;theme-color js-theme-color&quot; style=&quot;background-color: #ffffff; border: 1px solid #f8f8f8&quot; value=&quot;default&quot;&gt;
-                        &lt;div class=&quot;theme-color__secondary&quot; style=&quot;background-color: #f8f8f8; margin-bottom: .5em;&quot;&gt;&lt;/div&gt;
-            &lt;span class=&quot;theme-color-text&quot; style=&quot;background: linear-gradient(180deg, #2b2c34 100%, #2b2c34 100%); color: #2b2c34&quot;&gt;&lt;/span&gt;
-            &lt;span class=&quot;theme-color-text&quot; style=&quot;background: linear-gradient(180deg, #2b2c34 100%, #2b2c34 100%); color: #2b2c34&quot;&gt;&lt;/span&gt; &lt;br /&gt;
-                       &lt;div class=&quot;flex&quot;&gt;
-                        &lt;span class=&quot;theme-color__name&quot; style=&quot;color: #2b2c34;&quot;&gt;
-                            default
-                        &lt;/span&gt;
-                        &lt;span class=&quot;theme-span-wrapper&quot; style=&quot;margin-top: .5em;&quot;&gt;
-                            &lt;span style=&quot;background-color: #6246ea;&quot;&gt;&lt;/span&gt;
-                            &lt;span style=&quot;background-color: #e45858;&quot;&gt;&lt;/span&gt;
-                            &lt;span style=&quot;background-color: #d1d1e9;&quot;&gt;&lt;/span&gt;
-                        &lt;/span&gt;
-                       &lt;/div&gt;
-                    &lt;/button&gt;
-                
-            &lt;button type=&quot;button&quot; class=&quot;theme-color js-theme-color&quot; style=&quot;background-color: #16161a; border: 1px solid #242629&quot; value=&quot;dark&quot;&gt;
-                        &lt;div class=&quot;theme-color__secondary&quot; style=&quot;background-color: #242629; margin-bottom: .5em;&quot;&gt;&lt;/div&gt;
-            &lt;span class=&quot;theme-color-text&quot; style=&quot;background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe&quot;&gt;&lt;/span&gt;
-            &lt;span class=&quot;theme-color-text&quot; style=&quot;background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe&quot;&gt;&lt;/span&gt; &lt;br /&gt;
-                       &lt;div class=&quot;flex&quot;&gt;
-                        &lt;span class=&quot;theme-color__name&quot; style=&quot;color: #fffffe;&quot;&gt;
-                            dark
-                        &lt;/span&gt;
-                        &lt;span class=&quot;theme-span-wrapper&quot; style=&quot;margin-top: .5em;&quot;&gt;
-                            &lt;span style=&quot;background-color: #ff8906;&quot;&gt;&lt;/span&gt;
-                            &lt;span style=&quot;background-color: #2cb67d;&quot;&gt;&lt;/span&gt;
-                            &lt;span style=&quot;background-color: #75757e;&quot;&gt;&lt;/span&gt;
-                        &lt;/span&gt;
-                       &lt;/div&gt;
-                    &lt;/button&gt;
-                
-            &lt;button type=&quot;button&quot; class=&quot;theme-color js-theme-color&quot; style=&quot;background-color: #004643; border: 1px solid #abd1c6&quot; value=&quot;green&quot;&gt;
-                        &lt;div class=&quot;theme-color__secondary&quot; style=&quot;background-color: #abd1c6; margin-bottom: .5em;&quot;&gt;&lt;/div&gt;
-            &lt;span class=&quot;theme-color-text&quot; style=&quot;background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe&quot;&gt;&lt;/span&gt;
-            &lt;span class=&quot;theme-color-text&quot; style=&quot;background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe&quot;&gt;&lt;/span&gt; &lt;br /&gt;
-                       &lt;div class=&quot;flex&quot;&gt;
-                        &lt;span class=&quot;theme-color__name&quot; style=&quot;color: #fffffe;&quot;&gt;
-                            green
-                        &lt;/span&gt;
-                        &lt;span class=&quot;theme-span-wrapper&quot; style=&quot;margin-top: .5em;&quot;&gt;
-                            &lt;span style=&quot;background-color: #f9bc60;&quot;&gt;&lt;/span&gt;
-                            &lt;span style=&quot;background-color: #e16162;&quot;&gt;&lt;/span&gt;
-                            &lt;span style=&quot;background-color: #abd1c6;&quot;&gt;&lt;/span&gt;
-                        &lt;/span&gt;
-                       &lt;/div&gt;
-                    &lt;/button&gt;
-                
-            &lt;button type=&quot;button&quot; class=&quot;theme-color js-theme-color&quot; style=&quot;background-color: #eff0f3; border: 1px solid #fffffe&quot; value=&quot;fame&quot;&gt;
-                        &lt;div class=&quot;theme-color__secondary&quot; style=&quot;background-color: #fffffe; margin-bottom: .5em;&quot;&gt;&lt;/div&gt;
-            &lt;span class=&quot;theme-color-text&quot; style=&quot;background: linear-gradient(180deg, #0d0d0d 100%, #0d0d0d 100%); color: #0d0d0d&quot;&gt;&lt;/span&gt;
-            &lt;span class=&quot;theme-color-text&quot; style=&quot;background: linear-gradient(180deg, #0d0d0d 100%, #0d0d0d 100%); color: #0d0d0d&quot;&gt;&lt;/span&gt; &lt;br /&gt;
-                       &lt;div class=&quot;flex&quot;&gt;
-                        &lt;span class=&quot;theme-color__name&quot; style=&quot;color: #0d0d0d;&quot;&gt;
-                            fame
-                        &lt;/span&gt;
-                        &lt;span class=&quot;theme-span-wrapper&quot; style=&quot;margin-top: .5em;&quot;&gt;
-                            &lt;span style=&quot;background-color: #ff8e3c;&quot;&gt;&lt;/span&gt;
-                            &lt;span style=&quot;background-color: #d9376e;&quot;&gt;&lt;/span&gt;
-                            &lt;span style=&quot;background-color: #eaddcf;&quot;&gt;&lt;/span&gt;
-                        &lt;/span&gt;
-                       &lt;/div&gt;
-                    &lt;/button&gt;
-                
-            &lt;button type=&quot;button&quot; class=&quot;theme-color js-theme-color&quot; style=&quot;background-color: #232946; border: 1px solid #d4d8f0&quot; value=&quot;dark-blue&quot;&gt;
-                        &lt;div class=&quot;theme-color__secondary&quot; style=&quot;background-color: #d4d8f0; margin-bottom: .5em;&quot;&gt;&lt;/div&gt;
-            &lt;span class=&quot;theme-color-text&quot; style=&quot;background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe&quot;&gt;&lt;/span&gt;
-            &lt;span class=&quot;theme-color-text&quot; style=&quot;background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe&quot;&gt;&lt;/span&gt; &lt;br /&gt;
-                       &lt;div class=&quot;flex&quot;&gt;
-                        &lt;span class=&quot;theme-color__name&quot; style=&quot;color: #fffffe;&quot;&gt;
-                            dark-blue
-                        &lt;/span&gt;
-                        &lt;span class=&quot;theme-span-wrapper&quot; style=&quot;margin-top: .5em;&quot;&gt;
-                            &lt;span style=&quot;background-color: #eebbc3;&quot;&gt;&lt;/span&gt;
-                            &lt;span style=&quot;background-color: #b8c1ec;&quot;&gt;&lt;/span&gt;
-                            &lt;span style=&quot;background-color: #eaddcf;&quot;&gt;&lt;/span&gt;
-                        &lt;/span&gt;
-                       &lt;/div&gt;
-                    &lt;/button&gt;
-                
-            &lt;button type=&quot;button&quot; class=&quot;theme-color js-theme-color&quot; style=&quot;background-color: #55423d; border: 1px solid #271c19&quot; value=&quot;brown&quot;&gt;
-                        &lt;div class=&quot;theme-color__secondary&quot; style=&quot;background-color: #271c19; margin-bottom: .5em;&quot;&gt;&lt;/div&gt;
-            &lt;span class=&quot;theme-color-text&quot; style=&quot;background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe&quot;&gt;&lt;/span&gt;
-            &lt;span class=&quot;theme-color-text&quot; style=&quot;background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe&quot;&gt;&lt;/span&gt; &lt;br /&gt;
-                       &lt;div class=&quot;flex&quot;&gt;
-                        &lt;span class=&quot;theme-color__name&quot; style=&quot;color: #fffffe;&quot;&gt;
-                            brown
-                        &lt;/span&gt;
-                        &lt;span class=&quot;theme-span-wrapper&quot; style=&quot;margin-top: .5em;&quot;&gt;
-                            &lt;span style=&quot;background-color: #ffc0ad;&quot;&gt;&lt;/span&gt;
-                            &lt;span style=&quot;background-color: #e78fb3;&quot;&gt;&lt;/span&gt;
-                            &lt;span style=&quot;background-color: #9656a1;&quot;&gt;&lt;/span&gt;
-                        &lt;/span&gt;
-                       &lt;/div&gt;
-                    &lt;/button&gt;
-                
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;/section&gt;
-    ``
+&amp;lt;div class=&quot; theme__top&quot;&amp;gt;
+&amp;lt;div class=&quot;js-tab-content theme-top-col show&quot; id=&quot;tab-1-content&quot;&amp;gt;
+&amp;lt;h5 class=&quot;theme-title&quot;&amp;gt;
+    Fonts
+&amp;lt;/h5&amp;gt;
+&amp;lt;p&amp;gt;Choose default font size for articles&amp;lt;/p&amp;gt; 
+&amp;lt;div class=&quot;theme-btn-wrapper js-btn-wrapper&quot;&amp;gt;
+&amp;lt;button class=&quot;btn btn--small btn--border js-font-btn&quot; value=&quot;16&quot;&amp;gt;16px&amp;lt;/button&amp;gt;
+&amp;lt;button class=&quot;btn btn--small btn--border js-font-btn&quot; value=&quot;18&quot;&amp;gt;18px&amp;lt;/button&amp;gt;
+&amp;lt;button class=&quot;btn btn--small btn--border js-font-btn&quot; value=&quot;20&quot;&amp;gt;20px&amp;lt;/button&amp;gt;
+&amp;lt;button class=&quot;btn btn--small btn--border js-font-btn&quot; value=&quot;22&quot;&amp;gt;22px&amp;lt;/button&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&quot;js-tab-content theme-top-col two&quot; id=&quot;tab-2-content&quot;&amp;gt;
+&amp;lt;h5 class=&quot;theme-title&quot;&amp;gt;
+Fixed Header
+&amp;lt;/h5&amp;gt;
+&amp;lt;p&amp;gt;Static or Fixed Header? your choice&amp;lt;/p&amp;gt;
+&amp;lt;div class=&quot;check-wrapper&quot;&amp;gt;
+&amp;lt;span id=&quot;btn-label&quot; class=&quot;sr-only&quot;&amp;gt;Fixed or static header&amp;lt;/span&amp;gt;
+&amp;lt;button role=&quot;switch&quot; type=&quot;button&quot; aria-checked=&quot;true&quot; aria-labelledby=&quot;btn-label&quot; class=&quot;js-theme-toggle btn btn--border btn--rounded btn--toggle&quot;&amp;gt;
+    &amp;lt;span&amp;gt;On&amp;lt;/span&amp;gt;
+    &amp;lt;span&amp;gt;Off&amp;lt;/span&amp;gt;
+&amp;lt;/button&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;div class=&quot;js-tab-content theme__bottom&quot; id=&quot;tab-3-content&quot;&amp;gt;
+&amp;lt;h5 class=&quot;theme-title&quot;&amp;gt;
+Choose Color Scheme
+&amp;lt;/h5&amp;gt;
+&amp;lt;p&amp;gt;Pick a color scheme of your choice&amp;lt;/p&amp;gt;
+&amp;lt;div class=&quot;theme-color-wrapper js-theme-scheme&quot;&amp;gt;
+
+&amp;lt;button type=&quot;button&quot; class=&quot;theme-color js-theme-color&quot; style=&quot;background-color: #ffffff; border: 1px solid #f8f8f8&quot; value=&quot;default&quot;&amp;gt;
+    &amp;lt;div class=&quot;theme-color__secondary&quot; style=&quot;background-color: #f8f8f8; margin-bottom: .5em;&quot;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;span class=&quot;theme-color-text&quot; style=&quot;background: linear-gradient(180deg, #2b2c34 100%, #2b2c34 100%); color: #2b2c34&quot;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;span class=&quot;theme-color-text&quot; style=&quot;background: linear-gradient(180deg, #2b2c34 100%, #2b2c34 100%); color: #2b2c34&quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;br&amp;gt;
+    &amp;lt;div class=&quot;flex&quot;&amp;gt;
+    &amp;lt;span class=&quot;theme-color__name&quot; style=&quot;color: #2b2c34;&quot;&amp;gt;
+    default
+    &amp;lt;/span&amp;gt;
+    &amp;lt;span class=&quot;theme-span-wrapper&quot; style=&quot;margin-top: .5em;&quot;&amp;gt;
+        &amp;lt;span style=&quot;background-color: #6246ea;&quot;&amp;gt;&amp;lt;/span&amp;gt;
+        &amp;lt;span style=&quot;background-color: #e45858;&quot;&amp;gt;&amp;lt;/span&amp;gt;
+        &amp;lt;span style=&quot;background-color: #d1d1e9;&quot;&amp;gt;&amp;lt;/span&amp;gt;
+    &amp;lt;/span&amp;gt;
+    &amp;lt;/div&amp;gt;
+&amp;lt;/button&amp;gt;
+
+&amp;lt;button type=&quot;button&quot; class=&quot;theme-color js-theme-color&quot; style=&quot;background-color: #16161a; border: 1px solid #242629&quot; value=&quot;dark&quot;&amp;gt;
+    &amp;lt;div class=&quot;theme-color__secondary&quot; style=&quot;background-color: #242629; margin-bottom: .5em;&quot;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;span class=&quot;theme-color-text&quot; style=&quot;background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe&quot;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;span class=&quot;theme-color-text&quot; style=&quot;background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe&quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;br&amp;gt;
+    &amp;lt;div class=&quot;flex&quot;&amp;gt;
+    &amp;lt;span class=&quot;theme-color__name&quot; style=&quot;color: #fffffe;&quot;&amp;gt;
+    dark
+    &amp;lt;/span&amp;gt;
+    &amp;lt;span class=&quot;theme-span-wrapper&quot; style=&quot;margin-top: .5em;&quot;&amp;gt;
+        &amp;lt;span style=&quot;background-color: #ff8906;&quot;&amp;gt;&amp;lt;/span&amp;gt;
+        &amp;lt;span style=&quot;background-color: #2cb67d;&quot;&amp;gt;&amp;lt;/span&amp;gt;
+        &amp;lt;span style=&quot;background-color: #75757e;&quot;&amp;gt;&amp;lt;/span&amp;gt;
+    &amp;lt;/span&amp;gt;
+    &amp;lt;/div&amp;gt;
+&amp;lt;/button&amp;gt;
+
+&amp;lt;button type=&quot;button&quot; class=&quot;theme-color js-theme-color&quot; style=&quot;background-color: #004643; border: 1px solid #abd1c6&quot; value=&quot;green&quot;&amp;gt;
+    &amp;lt;div class=&quot;theme-color__secondary&quot; style=&quot;background-color: #abd1c6; margin-bottom: .5em;&quot;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;span class=&quot;theme-color-text&quot; style=&quot;background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe&quot;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;span class=&quot;theme-color-text&quot; style=&quot;background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe&quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;br&amp;gt;
+    &amp;lt;div class=&quot;flex&quot;&amp;gt;
+    &amp;lt;span class=&quot;theme-color__name&quot; style=&quot;color: #fffffe;&quot;&amp;gt;
+    green
+    &amp;lt;/span&amp;gt;
+    &amp;lt;span class=&quot;theme-span-wrapper&quot; style=&quot;margin-top: .5em;&quot;&amp;gt;
+        &amp;lt;span style=&quot;background-color: #f9bc60;&quot;&amp;gt;&amp;lt;/span&amp;gt;
+        &amp;lt;span style=&quot;background-color: #e16162;&quot;&amp;gt;&amp;lt;/span&amp;gt;
+        &amp;lt;span style=&quot;background-color: #abd1c6;&quot;&amp;gt;&amp;lt;/span&amp;gt;
+    &amp;lt;/span&amp;gt;
+    &amp;lt;/div&amp;gt;
+&amp;lt;/button&amp;gt;
+
+&amp;lt;button type=&quot;button&quot; class=&quot;theme-color js-theme-color&quot; style=&quot;background-color: #eff0f3; border: 1px solid #fffffe&quot; value=&quot;fame&quot;&amp;gt;
+    &amp;lt;div class=&quot;theme-color__secondary&quot; style=&quot;background-color: #fffffe; margin-bottom: .5em;&quot;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;span class=&quot;theme-color-text&quot; style=&quot;background: linear-gradient(180deg, #0d0d0d 100%, #0d0d0d 100%); color: #0d0d0d&quot;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;span class=&quot;theme-color-text&quot; style=&quot;background: linear-gradient(180deg, #0d0d0d 100%, #0d0d0d 100%); color: #0d0d0d&quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;br&amp;gt;
+    &amp;lt;div class=&quot;flex&quot;&amp;gt;
+    &amp;lt;span class=&quot;theme-color__name&quot; style=&quot;color: #0d0d0d;&quot;&amp;gt;
+    fame
+    &amp;lt;/span&amp;gt;
+    &amp;lt;span class=&quot;theme-span-wrapper&quot; style=&quot;margin-top: .5em;&quot;&amp;gt;
+        &amp;lt;span style=&quot;background-color: #ff8e3c;&quot;&amp;gt;&amp;lt;/span&amp;gt;
+        &amp;lt;span style=&quot;background-color: #d9376e;&quot;&amp;gt;&amp;lt;/span&amp;gt;
+        &amp;lt;span style=&quot;background-color: #eaddcf;&quot;&amp;gt;&amp;lt;/span&amp;gt;
+    &amp;lt;/span&amp;gt;
+    &amp;lt;/div&amp;gt;
+&amp;lt;/button&amp;gt;
+
+&amp;lt;button type=&quot;button&quot; class=&quot;theme-color js-theme-color&quot; style=&quot;background-color: #232946; border: 1px solid #d4d8f0&quot; value=&quot;dark-blue&quot;&amp;gt;
+    &amp;lt;div class=&quot;theme-color__secondary&quot; style=&quot;background-color: #d4d8f0; margin-bottom: .5em;&quot;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;span class=&quot;theme-color-text&quot; style=&quot;background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe&quot;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;span class=&quot;theme-color-text&quot; style=&quot;background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe&quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;br&amp;gt;
+    &amp;lt;div class=&quot;flex&quot;&amp;gt;
+    &amp;lt;span class=&quot;theme-color__name&quot; style=&quot;color: #fffffe;&quot;&amp;gt;
+    dark-blue
+    &amp;lt;/span&amp;gt;
+    &amp;lt;span class=&quot;theme-span-wrapper&quot; style=&quot;margin-top: .5em;&quot;&amp;gt;
+        &amp;lt;span style=&quot;background-color: #eebbc3;&quot;&amp;gt;&amp;lt;/span&amp;gt;
+        &amp;lt;span style=&quot;background-color: #b8c1ec;&quot;&amp;gt;&amp;lt;/span&amp;gt;
+        &amp;lt;span style=&quot;background-color: #eaddcf;&quot;&amp;gt;&amp;lt;/span&amp;gt;
+    &amp;lt;/span&amp;gt;
+    &amp;lt;/div&amp;gt;
+&amp;lt;/button&amp;gt;
+
+&amp;lt;button type=&quot;button&quot; class=&quot;theme-color js-theme-color&quot; style=&quot;background-color: #55423d; border: 1px solid #271c19&quot; value=&quot;brown&quot;&amp;gt;
+    &amp;lt;div class=&quot;theme-color__secondary&quot; style=&quot;background-color: #271c19; margin-bottom: .5em;&quot;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;span class=&quot;theme-color-text&quot; style=&quot;background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe&quot;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;span class=&quot;theme-color-text&quot; style=&quot;background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe&quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;br&amp;gt;
+    &amp;lt;div class=&quot;flex&quot;&amp;gt;
+    &amp;lt;span class=&quot;theme-color__name&quot; style=&quot;color: #fffffe;&quot;&amp;gt;
+    brown
+    &amp;lt;/span&amp;gt;
+    &amp;lt;span class=&quot;theme-span-wrapper&quot; style=&quot;margin-top: .5em;&quot;&amp;gt;
+        &amp;lt;span style=&quot;background-color: #ffc0ad;&quot;&amp;gt;&amp;lt;/span&amp;gt;
+        &amp;lt;span style=&quot;background-color: #e78fb3;&quot;&amp;gt;&amp;lt;/span&amp;gt;
+        &amp;lt;span style=&quot;background-color: #9656a1;&quot;&amp;gt;&amp;lt;/span&amp;gt;
+    &amp;lt;/span&amp;gt;
+    &amp;lt;/div&amp;gt;
+&amp;lt;/button&amp;gt;
+
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/section&amp;gt;
         &lt;/code&gt;
     &lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;pre class=&amp;quot;language-js&amp;quot;&amp;gt;
-    &amp;lt;code class=&amp;quot;language-js&amp;quot;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;/assets/js/theme.js file
-// the javascript&lt;/p&gt;
-&lt;p&gt;class CustomTheme {
-constructor() {
-// part A: check if localStorage works
-this.islocalStorage = function() {
-try {
-localStorage.setItem(&amp;quot;test&amp;quot;, &amp;quot;testing&amp;quot;);
-localStorage.removeItem(&amp;quot;test&amp;quot;);
-return true;
-} catch (error) {
-return false
-}&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;    };
-    // part B: Get the value from the buttons
-    this.schemeBtns = document.querySelectorAll(&#39;.js-theme-color&#39;);
-    this.schemeBtns.forEach((btn) =&amp;gt; {
-        const btnVal = btn.value;
-        btn.addEventListener(&#39;click&#39;, () =&amp;gt; this.themeScheme(btnVal))
-    });
+&lt;br /&gt;
+#The javascript
+&lt;pre class=&quot;language-js&quot;&gt;
+&lt;code class=&quot;language-js&quot;&gt;
+/assets/js/theme.js file
+class CustomTheme {
+    constructor() {
+        // part A: check if localStorage works
+        this.islocalStorage = function() {
+            try {
+                localStorage.setItem(&quot;test&quot;, &quot;testing&quot;);
+                localStorage.removeItem(&quot;test&quot;);
+                return true;
+            } catch (error) {
+                return false
+            }
+           
+        };
+        // part B: Get the value from the buttons
+        this.schemeBtns = document.querySelectorAll(&#39;.js-theme-color&#39;);
+        this.schemeBtns.forEach((btn) =&gt; {
+            const btnVal = btn.value;
+            btn.addEventListener(&#39;click&#39;, () =&gt; this.themeScheme(btnVal))
+        });
 
-    this.fontBtns = document.querySelectorAll(&#39;.js-font-btn&#39;);
-    this.fontBtns.forEach((btn) =&amp;gt; {
-        const btnVal = btn.value;
-        const btnTag = btn;
-        btn.addEventListener(&#39;click&#39;, () =&amp;gt; this.themeFont(btnVal, btnTag))
-    });
+        this.fontBtns = document.querySelectorAll(&#39;.js-font-btn&#39;);
+        this.fontBtns.forEach((btn) =&gt; {
+            const btnVal = btn.value;
+            const btnTag = btn;
+            btn.addEventListener(&#39;click&#39;, () =&gt; this.themeFont(btnVal, btnTag))
+        });
 
-    // part C: get the html button element
-    this.switchBtn = document.querySelector(&#39;.js-theme-toggle&#39;);
-    const clicked = this.switchBtn;
-    this.switchBtn.addEventListener(&#39;click&#39;, () =&amp;gt; this.themePosition(clicked))
-}
+        // part C: get the html button element
+        this.switchBtn = document.querySelector(&#39;.js-theme-toggle&#39;);
+        const clicked = this.switchBtn;
+        this.switchBtn.addEventListener(&#39;click&#39;, () =&gt; this.themePosition(clicked))
+    }
 
-// part D: Save the data in localStorage
-themeScheme(btnVal) {
-    document.documentElement.setAttribute(&#39;data-theme&#39;, btnVal);
-    if (this.islocalStorage) {
-        localStorage.setItem(&#39;theme-name&#39;, btnVal);
+    // part D: Save the data in localStorage
+    themeScheme(btnVal) {
+        document.documentElement.setAttribute(&#39;data-theme&#39;, btnVal);
+        if (this.islocalStorage) {
+            localStorage.setItem(&#39;theme-name&#39;, btnVal);
+        }
+    };
+    
+    themeFont(btnVal,btnTag) {
+        document.documentElement.style.setProperty(&#39;--font-size&#39;, `${btnVal}px`);
+        if (this.islocalStorage) {
+            localStorage.setItem(&#39;font-size&#39;, btnVal);
+        }
+        ;
+        if (btnVal == localStorage.getItem(&#39;font-size&#39;)) {
+            removeActive();
+            btnTag.classList.add(&#39;active&#39;);
     }
 };
 
-themeFont(btnVal,btnTag) {
-    document.documentElement.style.setProperty(&#39;--font-size&#39;, `${btnVal}px`);
-    if (this.islocalStorage) {
-        localStorage.setItem(&#39;font-size&#39;, btnVal);
-    }
-    ;
-    if (btnVal == localStorage.getItem(&#39;font-size&#39;)) {
-        removeActive();
-        btnTag.classList.add(&#39;active&#39;);
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;};&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;themePosition(clicked) {
-if (clicked.getAttribute(&#39;aria-checked&#39;) == &#39;true&#39;) {
-    clicked.setAttribute(&#39;aria-checked&#39;, &#39;false&#39;);
-    document.documentElement.style.setProperty(&#39;--position&#39;, &#39;static&#39;);
-    document.documentElement.style.setProperty(&#39;--top-margin&#39;, &#39;0px&#39;);
-    if (this.islocalStorage) {
-        localStorage.setItem(&#39;position&#39;, &#39;static&#39;);
+    themePosition(clicked) {
+    if (clicked.getAttribute(&#39;aria-checked&#39;) == &#39;true&#39;) {
+        clicked.setAttribute(&#39;aria-checked&#39;, &#39;false&#39;);
+        document.documentElement.style.setProperty(&#39;--position&#39;, &#39;static&#39;);
+        document.documentElement.style.setProperty(&#39;--top-margin&#39;, &#39;0px&#39;);
+        if (this.islocalStorage) {
+            localStorage.setItem(&#39;position&#39;, &#39;static&#39;);
+        }
+
+    } else {
+        clicked.setAttribute(&#39;aria-checked&#39;, &#39;true&#39;);
+        document.documentElement.style.setProperty(&#39;--position&#39;, &#39;fixed&#39;);
+        document.documentElement.style.setProperty(&#39;--top-margin&#39;, &#39;96px&#39;);
+        if (this.islocalStorage) {
+            localStorage.setItem(&#39;position&#39;, &#39;fixed&#39;);
+        }
     }
 
-} else {
-    clicked.setAttribute(&#39;aria-checked&#39;, &#39;true&#39;);
-    document.documentElement.style.setProperty(&#39;--position&#39;, &#39;fixed&#39;);
-    document.documentElement.style.setProperty(&#39;--top-margin&#39;, &#39;96px&#39;);
-    if (this.islocalStorage) {
-        localStorage.setItem(&#39;position&#39;, &#39;fixed&#39;);
     }
 }
 
+function removeActive() {
+    const btns = document.querySelectorAll(&#39;.js-font-btn&#39;);
+    btns.forEach((btn) =&gt; {
+        btn.classList.remove(&#39;active&#39;);
+    })
 }
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;}&lt;/p&gt;
-&lt;p&gt;function removeActive() {
-const btns = document.querySelectorAll(&#39;.js-font-btn&#39;);
-btns.forEach((btn) =&amp;gt; {
-btn.classList.remove(&#39;active&#39;);
+
+// part E: Only use our class if css custom properties are supported
+if (window.CSS &amp;&amp; CSS.supports(&#39;color&#39;, &#39;var(--i-support&#39;)) {
+    new CustomTheme()
+};
+
+// part E: Add an active class to selected font size button
+
+window.addEventListener(&#39;load&#39;, () =&gt; {
+    const fontBtns = document.querySelectorAll(&#39;.js-font-btn&#39;);
+    fontBtns.forEach((btn) =&gt; {
+        const btnVal = btn.value;
+        const btnTag = btn;
+        if (btnVal == localStorage.getItem(&#39;font-size&#39;)) {
+            btnTag.classList.add(&#39;active&#39;);
+    }
+    });   
 })
-}&lt;/p&gt;
-&lt;p&gt;// part E: Only use our class if css custom properties are supported
-if (window.CSS &amp;amp;&amp;amp; CSS.supports(&#39;color&#39;, &#39;var(--i-support&#39;)) {
-new CustomTheme()
-};&lt;/p&gt;
-&lt;p&gt;// part E: Add an active class to selected font size button&lt;/p&gt;
-&lt;p&gt;window.addEventListener(&#39;load&#39;, () =&amp;gt; {
-const fontBtns = document.querySelectorAll(&#39;.js-font-btn&#39;);
-fontBtns.forEach((btn) =&amp;gt; {
-const btnVal = btn.value;
-const btnTag = btn;
-if (btnVal == localStorage.getItem(&#39;font-size&#39;)) {
-btnTag.classList.add(&#39;active&#39;);
-}
-});&lt;br /&gt;
-})&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;    &amp;lt;/code&amp;gt;
-&amp;lt;/pre&amp;gt;
-&amp;lt;p&amp;gt;Add this one to the head part in your html file before any other css file&amp;lt;/p&amp;gt;
+&lt;/code&gt;
+&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;p&amp;gt;
+    Add this one to the head part in your html file before any other css file&amp;lt;/p&amp;gt;
 &amp;lt;pre class=&amp;quot;language-js&amp;quot;&amp;gt;
     &amp;lt;code class=&amp;quot;language-js&amp;quot;&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;``&lt;script&gt;
+&lt;p&gt;&amp;lt;script&amp;gt;
 const scheme = localStorage.getItem(&#39;theme-name&#39;);
 document.documentElement.setAttribute(&#39;data-theme&#39;, scheme);&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;  const fontSize = localStorage.getItem(&#39;font-size&#39;);
@@ -670,12 +659,11 @@ if (position == &#39;fixed&#39;) {
 
 }    
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;/script&gt;``&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;    &amp;lt;/code&amp;gt;
-&amp;lt;/pre&amp;gt;
+&lt;p&gt;&amp;lt;/script&amp;gt;
 
-&amp;lt;p&amp;gt;
-    If you copied this code and would want to know how all this work, read the guide &amp;lt;a href=&amp;quot;https://freecodecamp.org/news/design-a-themeable-static-website/&amp;quot; target=&amp;quot;_blank&amp;quot; rel=&amp;quot;noopener noreferrer&amp;quot;&amp;gt;&amp;lt;/a&amp;gt;
+&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;p&amp;gt;
+    If you copied this code and would want to know how all this work, read the guide &amp;lt;a href=&amp;quot;https://freecodecamp.org/news/design-a-themeable-static-website/&amp;quot; target=&amp;quot;_blank&amp;quot; rel=&amp;quot;noopener noreferrer&amp;quot;&amp;gt;here&amp;lt;/a&amp;gt;
 &amp;lt;/p&amp;gt;
 &amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 </content>

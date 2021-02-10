@@ -192,9 +192,11 @@ _data/themes.json file
 &lt;/code&gt;
 &lt;/pre&gt;
 &lt;br /&gt;
-&lt;div class=&quot;codetitle&quot;&gt;theme.css.liquid file&lt;/div&gt; 
-&lt;pre class=&quot;language-liquid&quot;&gt;
-&lt;code class=&quot;language-liquid&quot;&gt;
+&lt;div class=&quot;codetitle&quot;&gt;
+theme.css.liquid file
+&lt;/div&gt; 
+&lt;pre class=&quot;language-css&quot;&gt;
+&lt;code class=&quot;language-css&quot;&gt;
 ``` css        
 ---
 permalink: /css/theme.css
@@ -244,7 +246,9 @@ permalink: /css/theme.css
 &lt;pre&gt;&lt;code&gt;&amp;lt;/code&amp;gt;
 &amp;lt;/pre&amp;gt;
 &amp;lt;br&amp;gt;
-&amp;lt;div class=&amp;quot;codetitle&amp;quot;&amp;gt;The CSS&amp;lt;/div&amp;gt;  
+&amp;lt;div class=&amp;quot;codetitle&amp;quot;&amp;gt;
+The CSS
+&amp;lt;/div&amp;gt;  
 &amp;lt;pre class=&amp;quot;language-css&amp;quot;&amp;gt;
 &amp;lt;code class=&amp;quot;language-css&amp;quot;&amp;gt;
 ``` css
@@ -298,7 +302,6 @@ h1,h2 {
     padding: 30px 30px 8px 30px;
 
 }
-
     .theme__top {
         padding:1px 30px 10px 30px;
 
@@ -308,11 +311,8 @@ h1,h2 {
     border-bottom: 1px solid var(--border);
     padding: .9em 0;
 }
-
-
 .theme__bottom {
     padding:20px 0px 30px  30px;
-
 }
 .theme-color-wrapper {
     display: flex;
@@ -397,7 +397,9 @@ h1,h2 {
 &lt;/code&gt;
 &lt;/pre&gt;
 &lt;br /&gt;
-&lt;div class=&quot;codetitle&quot;&gt;The html&lt;/div&gt; 
+&lt;div class=&quot;codetitle&quot;&gt;
+The html
+&lt;/div&gt; 
 &lt;pre class=&quot;language-html&quot;&gt;
 &lt;code class=&quot;language-html&quot;&gt;
 ``` html
@@ -414,38 +416,38 @@ h1,h2 {
 &amp;lt;/svg&amp;gt;
 &amp;lt;/button&amp;gt;
 &amp;lt;/div&amp;gt;
-&lt;p&gt;&amp;lt;div class=&amp;quot; theme__top&amp;quot;&amp;gt;
-&amp;lt;div class=&amp;quot;js-tab-content theme-top-col show&amp;quot; id=&amp;quot;tab-1-content&amp;quot;&amp;gt;
-&amp;lt;h5 class=&amp;quot;theme-title&amp;quot;&amp;gt;
-Fonts
+&amp;lt;div class=&quot; theme__top&quot;&amp;gt;
+&amp;lt;div class=&quot;js-tab-content theme-top-col show&quot; id=&quot;tab-1-content&quot;&amp;gt;
+&amp;lt;h5 class=&quot;theme-title&quot;&amp;gt;
+    Fonts
 &amp;lt;/h5&amp;gt;
-&amp;lt;p&amp;gt;Choose default font size for articles&amp;lt;/p&amp;gt;
-&amp;lt;div class=&amp;quot;theme-btn-wrapper js-btn-wrapper&amp;quot;&amp;gt;
-&amp;lt;button class=&amp;quot;btn btn--small btn--border js-font-btn&amp;quot; value=&amp;quot;16&amp;quot;&amp;gt;16px&amp;lt;/button&amp;gt;
-&amp;lt;button class=&amp;quot;btn btn--small btn--border js-font-btn&amp;quot; value=&amp;quot;18&amp;quot;&amp;gt;18px&amp;lt;/button&amp;gt;
-&amp;lt;button class=&amp;quot;btn btn--small btn--border js-font-btn&amp;quot; value=&amp;quot;20&amp;quot;&amp;gt;20px&amp;lt;/button&amp;gt;
-&amp;lt;button class=&amp;quot;btn btn--small btn--border js-font-btn&amp;quot; value=&amp;quot;22&amp;quot;&amp;gt;22px&amp;lt;/button&amp;gt;
+&amp;lt;p&amp;gt;Choose default font size for articles&amp;lt;/p&amp;gt; 
+&amp;lt;div class=&quot;theme-btn-wrapper js-btn-wrapper&quot;&amp;gt;
+&amp;lt;button class=&quot;btn btn--small btn--border js-font-btn&quot; value=&quot;16&quot;&amp;gt;16px&amp;lt;/button&amp;gt;
+&amp;lt;button class=&quot;btn btn--small btn--border js-font-btn&quot; value=&quot;18&quot;&amp;gt;18px&amp;lt;/button&amp;gt;
+&amp;lt;button class=&quot;btn btn--small btn--border js-font-btn&quot; value=&quot;20&quot;&amp;gt;20px&amp;lt;/button&amp;gt;
+&amp;lt;button class=&quot;btn btn--small btn--border js-font-btn&quot; value=&quot;22&quot;&amp;gt;22px&amp;lt;/button&amp;gt;
 &amp;lt;/div&amp;gt;
 &amp;lt;/div&amp;gt;
-&amp;lt;div class=&amp;quot;js-tab-content theme-top-col two&amp;quot; id=&amp;quot;tab-2-content&amp;quot;&amp;gt;
-&amp;lt;h5 class=&amp;quot;theme-title&amp;quot;&amp;gt;
+&amp;lt;div class=&quot;js-tab-content theme-top-col two&quot; id=&quot;tab-2-content&quot;&amp;gt;
+&amp;lt;h5 class=&quot;theme-title&quot;&amp;gt;
 Fixed Header
 &amp;lt;/h5&amp;gt;
 &amp;lt;p&amp;gt;Static or Fixed Header? your choice&amp;lt;/p&amp;gt;
-&amp;lt;div class=&amp;quot;check-wrapper&amp;quot;&amp;gt;
-&amp;lt;span id=&amp;quot;btn-label&amp;quot; class=&amp;quot;sr-only&amp;quot;&amp;gt;Fixed or static header&amp;lt;/span&amp;gt;
-&amp;lt;button role=&amp;quot;switch&amp;quot; type=&amp;quot;button&amp;quot; aria-checked=&amp;quot;true&amp;quot; aria-labelledby=&amp;quot;btn-label&amp;quot; class=&amp;quot;js-theme-toggle btn btn--border btn--rounded btn--toggle&amp;quot;&amp;gt;
-&amp;lt;span&amp;gt;On&amp;lt;/span&amp;gt;
-&amp;lt;span&amp;gt;Off&amp;lt;/span&amp;gt;
+&amp;lt;div class=&quot;check-wrapper&quot;&amp;gt;
+&amp;lt;span id=&quot;btn-label&quot; class=&quot;sr-only&quot;&amp;gt;Fixed or static header&amp;lt;/span&amp;gt;
+&amp;lt;button role=&quot;switch&quot; type=&quot;button&quot; aria-checked=&quot;true&quot; aria-labelledby=&quot;btn-label&quot; class=&quot;js-theme-toggle btn btn--border btn--rounded btn--toggle&quot;&amp;gt;
+    &amp;lt;span&amp;gt;On&amp;lt;/span&amp;gt;
+    &amp;lt;span&amp;gt;Off&amp;lt;/span&amp;gt;
 &amp;lt;/button&amp;gt;&amp;lt;/div&amp;gt;
 &amp;lt;/div&amp;gt;
 &amp;lt;/div&amp;gt;
-&amp;lt;div class=&amp;quot;js-tab-content theme__bottom&amp;quot; id=&amp;quot;tab-3-content&amp;quot;&amp;gt;
-&amp;lt;h5 class=&amp;quot;theme-title&amp;quot;&amp;gt;
+&amp;lt;div class=&quot;js-tab-content theme__bottom&quot; id=&quot;tab-3-content&quot;&amp;gt;
+&amp;lt;h5 class=&quot;theme-title&quot;&amp;gt;
 Choose Color Scheme
 &amp;lt;/h5&amp;gt;
 &amp;lt;p&amp;gt;Pick a color scheme of your choice&amp;lt;/p&amp;gt;
-&amp;lt;div class=&amp;quot;theme-color-wrapper js-theme-scheme&amp;quot;&amp;gt;&lt;/p&gt;
+&amp;lt;div class=&quot;theme-color-wrapper js-theme-scheme&quot;&amp;gt;
 &lt;p&gt;&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;theme-color js-theme-color&amp;quot; style=&amp;quot;background-color: #ffffff; border: 1px solid #f8f8f8&amp;quot; value=&amp;quot;default&amp;quot;&amp;gt;
 &amp;lt;div class=&amp;quot;theme-color__secondary&amp;quot; style=&amp;quot;background-color: #f8f8f8; margin-bottom: .5em;&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
 &amp;lt;span class=&amp;quot;theme-color-text&amp;quot; style=&amp;quot;background: linear-gradient(180deg, #2b2c34 100%, #2b2c34 100%); color: #2b2c34&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
@@ -544,12 +546,11 @@ brown
 &amp;lt;/pre&amp;gt;
 &amp;lt;br&amp;gt;
 &amp;lt;div class=&amp;quot;codetitle&amp;quot;&amp;gt;
-    The javascript
+/assets/js/theme.js file
 &amp;lt;/div&amp;gt;
 &amp;lt;pre class=&amp;quot;language-js&amp;quot;&amp;gt;
 &amp;lt;code class=&amp;quot;language-js&amp;quot;&amp;gt;
 ``` js
-/assets/js/theme.js file
 class CustomTheme {
     constructor() {
         // part A: check if localStorage works

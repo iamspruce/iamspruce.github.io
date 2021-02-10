@@ -381,9 +381,11 @@ _data/themes.json file
 </code>
 </pre>
 <br>
-<div class="codetitle">theme.css.liquid file</div> 
-<pre class="language-liquid">
-<code class="language-liquid">
+<div class="codetitle">
+theme.css.liquid file
+</div> 
+<pre class="language-css">
+<code class="language-css">
 ``` css        
 ---
 permalink: /css/theme.css
@@ -433,7 +435,9 @@ permalink: /css/theme.css
 <pre><code>&lt;/code&gt;
 &lt;/pre&gt;
 &lt;br&gt;
-&lt;div class=&quot;codetitle&quot;&gt;The CSS&lt;/div&gt;  
+&lt;div class=&quot;codetitle&quot;&gt;
+The CSS
+&lt;/div&gt;  
 &lt;pre class=&quot;language-css&quot;&gt;
 &lt;code class=&quot;language-css&quot;&gt;
 ``` css
@@ -487,7 +491,6 @@ h1,h2 {
     padding: 30px 30px 8px 30px;
 
 }
-
     .theme__top {
         padding:1px 30px 10px 30px;
 
@@ -497,11 +500,8 @@ h1,h2 {
     border-bottom: 1px solid var(--border);
     padding: .9em 0;
 }
-
-
 .theme__bottom {
     padding:20px 0px 30px  30px;
-
 }
 .theme-color-wrapper {
     display: flex;
@@ -586,7 +586,9 @@ h1,h2 {
 </code>
 </pre>
 <br>
-<div class="codetitle">The html</div> 
+<div class="codetitle">
+The html
+</div> 
 <pre class="language-html">
 <code class="language-html">
 ``` html
@@ -603,38 +605,38 @@ h1,h2 {
 &lt;/svg&gt;
 &lt;/button&gt;
 &lt;/div&gt;
-<p>&lt;div class=&quot; theme__top&quot;&gt;
-&lt;div class=&quot;js-tab-content theme-top-col show&quot; id=&quot;tab-1-content&quot;&gt;
-&lt;h5 class=&quot;theme-title&quot;&gt;
-Fonts
+&lt;div class=" theme__top"&gt;
+&lt;div class="js-tab-content theme-top-col show" id="tab-1-content"&gt;
+&lt;h5 class="theme-title"&gt;
+    Fonts
 &lt;/h5&gt;
-&lt;p&gt;Choose default font size for articles&lt;/p&gt;
-&lt;div class=&quot;theme-btn-wrapper js-btn-wrapper&quot;&gt;
-&lt;button class=&quot;btn btn--small btn--border js-font-btn&quot; value=&quot;16&quot;&gt;16px&lt;/button&gt;
-&lt;button class=&quot;btn btn--small btn--border js-font-btn&quot; value=&quot;18&quot;&gt;18px&lt;/button&gt;
-&lt;button class=&quot;btn btn--small btn--border js-font-btn&quot; value=&quot;20&quot;&gt;20px&lt;/button&gt;
-&lt;button class=&quot;btn btn--small btn--border js-font-btn&quot; value=&quot;22&quot;&gt;22px&lt;/button&gt;
+&lt;p&gt;Choose default font size for articles&lt;/p&gt; 
+&lt;div class="theme-btn-wrapper js-btn-wrapper"&gt;
+&lt;button class="btn btn--small btn--border js-font-btn" value="16"&gt;16px&lt;/button&gt;
+&lt;button class="btn btn--small btn--border js-font-btn" value="18"&gt;18px&lt;/button&gt;
+&lt;button class="btn btn--small btn--border js-font-btn" value="20"&gt;20px&lt;/button&gt;
+&lt;button class="btn btn--small btn--border js-font-btn" value="22"&gt;22px&lt;/button&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class=&quot;js-tab-content theme-top-col two&quot; id=&quot;tab-2-content&quot;&gt;
-&lt;h5 class=&quot;theme-title&quot;&gt;
+&lt;div class="js-tab-content theme-top-col two" id="tab-2-content"&gt;
+&lt;h5 class="theme-title"&gt;
 Fixed Header
 &lt;/h5&gt;
 &lt;p&gt;Static or Fixed Header? your choice&lt;/p&gt;
-&lt;div class=&quot;check-wrapper&quot;&gt;
-&lt;span id=&quot;btn-label&quot; class=&quot;sr-only&quot;&gt;Fixed or static header&lt;/span&gt;
-&lt;button role=&quot;switch&quot; type=&quot;button&quot; aria-checked=&quot;true&quot; aria-labelledby=&quot;btn-label&quot; class=&quot;js-theme-toggle btn btn--border btn--rounded btn--toggle&quot;&gt;
-&lt;span&gt;On&lt;/span&gt;
-&lt;span&gt;Off&lt;/span&gt;
+&lt;div class="check-wrapper"&gt;
+&lt;span id="btn-label" class="sr-only"&gt;Fixed or static header&lt;/span&gt;
+&lt;button role="switch" type="button" aria-checked="true" aria-labelledby="btn-label" class="js-theme-toggle btn btn--border btn--rounded btn--toggle"&gt;
+    &lt;span&gt;On&lt;/span&gt;
+    &lt;span&gt;Off&lt;/span&gt;
 &lt;/button&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class=&quot;js-tab-content theme__bottom&quot; id=&quot;tab-3-content&quot;&gt;
-&lt;h5 class=&quot;theme-title&quot;&gt;
+&lt;div class="js-tab-content theme__bottom" id="tab-3-content"&gt;
+&lt;h5 class="theme-title"&gt;
 Choose Color Scheme
 &lt;/h5&gt;
 &lt;p&gt;Pick a color scheme of your choice&lt;/p&gt;
-&lt;div class=&quot;theme-color-wrapper js-theme-scheme&quot;&gt;</p>
+&lt;div class="theme-color-wrapper js-theme-scheme"&gt;
 <p>&lt;button type=&quot;button&quot; class=&quot;theme-color js-theme-color&quot; style=&quot;background-color: #ffffff; border: 1px solid #f8f8f8&quot; value=&quot;default&quot;&gt;
 &lt;div class=&quot;theme-color__secondary&quot; style=&quot;background-color: #f8f8f8; margin-bottom: .5em;&quot;&gt;&lt;/div&gt;
 &lt;span class=&quot;theme-color-text&quot; style=&quot;background: linear-gradient(180deg, #2b2c34 100%, #2b2c34 100%); color: #2b2c34&quot;&gt;&lt;/span&gt;
@@ -733,12 +735,11 @@ brown
 &lt;/pre&gt;
 &lt;br&gt;
 &lt;div class=&quot;codetitle&quot;&gt;
-    The javascript
+/assets/js/theme.js file
 &lt;/div&gt;
 &lt;pre class=&quot;language-js&quot;&gt;
 &lt;code class=&quot;language-js&quot;&gt;
 ``` js
-/assets/js/theme.js file
 class CustomTheme {
     constructor() {
         // part A: check if localStorage works

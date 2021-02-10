@@ -543,7 +543,9 @@ brown
 &lt;pre&gt;&lt;code&gt;&amp;lt;/code&amp;gt;
 &amp;lt;/pre&amp;gt;
 &amp;lt;br&amp;gt;
-&amp;lt;div class=&amp;quot;codetitle&amp;quot;&amp;gt;The javascript&amp;lt;/div&amp;gt;
+&amp;lt;div class=&amp;quot;codetitle&amp;quot;&amp;gt;
+    The javascript
+&amp;lt;/div&amp;gt;
 &amp;lt;pre class=&amp;quot;language-js&amp;quot;&amp;gt;
 &amp;lt;code class=&amp;quot;language-js&amp;quot;&amp;gt;
 ``` js
@@ -672,7 +674,6 @@ document.documentElement.style.setProperty(&#39;--top-margin&#39;, &#39;0px&#39;
 &lt;p&gt;&amp;lt;/script&amp;gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&amp;lt;/code&amp;gt;
 &amp;lt;/pre&amp;gt;
-    
 &amp;lt;p&amp;gt;
 If you copied this code and would want to know how all this work, read the guide &amp;lt;a href=&amp;quot;https://freecodecamp.org/news/design-a-themeable-static-website/&amp;quot; target=&amp;quot;_blank&amp;quot; rel=&amp;quot;noopener noreferrer&amp;quot;&amp;gt;here&amp;lt;/a&amp;gt;
 &amp;lt;/p&amp;gt;

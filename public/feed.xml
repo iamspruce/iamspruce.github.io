@@ -168,8 +168,8 @@
 &lt;div class=&quot;codetitle&quot;&gt;
 _data/themes.json file
 &lt;/div&gt;
-&lt;pre class=&quot;language-json&quot;&gt;
-&lt;code class=&quot;language-json&quot;&gt;
+&lt;pre class=&quot;prettyprint linenums&quot;&gt;
+&lt;code class=&quot;lang-json&quot;&gt;
 ``` json        
 [
     {
@@ -195,9 +195,9 @@ _data/themes.json file
 &lt;div class=&quot;codetitle&quot;&gt;
 theme.css.liquid file
 &lt;/div&gt; 
-&lt;pre class=&quot;language-css&quot;&gt;
-&lt;code class=&quot;language-css&quot;&gt;
-``` css        
+&lt;pre class=&quot;prettyprint linenums&quot;&gt;
+&lt;code class=&quot;lang&quot;&gt;
+```       
 ---
 permalink: /css/theme.css
 ---
@@ -243,16 +243,17 @@ permalink: /css/theme.css
 --bg-alt: {{ theme.colors.bg-alt }};
 }
 {% endfor %}&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;/code&amp;gt;
+&lt;pre&gt;&lt;code&gt;
+&amp;lt;/code&amp;gt;
 &amp;lt;/pre&amp;gt;
 
 &amp;lt;div class=&amp;quot;codetitle&amp;quot;&amp;gt;
 The CSS
-&amp;lt;/div&amp;gt;  
+&amp;lt;/div&amp;gt;
 
-&amp;lt;pre class=&amp;quot;language-css&amp;quot;&amp;gt;
-&amp;lt;code class=&amp;quot;language-css&amp;quot;&amp;gt;
-``` css
+&amp;lt;pre class=&amp;quot;prettyprint linenums&amp;quot;&amp;gt;
+&amp;lt;code class=&amp;quot;lang-css&amp;quot;&amp;gt;
+```
 body {
     background: var(--bg);
     color: var(--text);
@@ -277,7 +278,7 @@ h1,h2 {
     box-shadow: 4px 2px 8px rgba(0,0,0,.2);
     transition: all .35s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 
-    
+
 
     &amp;amp;__contain {
         padding-bottom: 30px;
@@ -339,7 +340,7 @@ h1,h2 {
     z-index: 5;
     box-shadow: 0 2px 4px rgba(0,0,0,.2),
                 0 3px 4.5px rgba(0,0,0,.3);
-    
+
 
     &amp;amp;__secondary {
         width: 34px;
@@ -355,7 +356,7 @@ h1,h2 {
         margin-top: .4em;
         border-radius: 40em;
     }
-   
+
 }
 .theme-span-wrapper {
     display: flex;
@@ -382,7 +383,7 @@ h1,h2 {
     border-radius: .4em;
     background: var(--primary);
     color: var(--bg);
-    
+
 }
 
 .btn[role=&amp;quot;switch&amp;quot;] span:not(:first-child) {
@@ -400,10 +401,10 @@ h1,h2 {
 &lt;br /&gt;
 &lt;div class=&quot;codetitle&quot;&gt;
 The html
-&lt;/div&gt; 
-&lt;pre class=&quot;language-html&quot;&gt;
-&lt;code class=&quot;language-html&quot;&gt;
-``` html
+&lt;/div&gt;
+&lt;pre class=&quot;prettyprint linenums&quot;&gt;
+&lt;code class=&quot;lang-html&quot;&gt;
+```
 &amp;lt;section class=&quot;section-theme&quot;&amp;gt;
 &amp;lt;div class=&quot;section-theme__contain&quot;&amp;gt;
 &amp;lt;div class=&quot;theme__header flex&quot;&amp;gt;
@@ -550,15 +551,16 @@ brown
 &amp;lt;/div&amp;gt;
 &amp;lt;/div&amp;gt;
 &amp;lt;/section&amp;gt;
-```
+
+````
 &lt;/code&gt;
 &lt;/pre&gt;
 &lt;div class=&quot;codetitle&quot;&gt;
 /assets/js/theme.js file
 &lt;/div&gt;
-&lt;pre class=&quot;language-js&quot;&gt;
-&lt;code class=&quot;language-js&quot;&gt;
-``` js
+&lt;pre class=&quot;prettyprint linenums&quot;&gt;
+&lt;code class=&quot;lang-js&quot;&gt;
+```
 class CustomTheme {
     constructor() {
         // part A: check if localStorage works
@@ -569,105 +571,100 @@ class CustomTheme {
                 return true;
             } catch (error) {
                 return false
-            }
-&lt;pre&gt;&lt;code&gt;    };
-    // part B: Get the value from the buttons
-    this.schemeBtns = document.querySelectorAll(&#39;.js-theme-color&#39;);
-    this.schemeBtns.forEach((btn) =&amp;gt; {
-        const btnVal = btn.value;
-        btn.addEventListener(&#39;click&#39;, () =&amp;gt; this.themeScheme(btnVal))
-    });
-
-    this.fontBtns = document.querySelectorAll(&#39;.js-font-btn&#39;);
-    this.fontBtns.forEach((btn) =&amp;gt; {
-        const btnVal = btn.value;
-        const btnTag = btn;
-        btn.addEventListener(&#39;click&#39;, () =&amp;gt; this.themeFont(btnVal, btnTag))
-    });
-
-    // part C: get the html button element
-    this.switchBtn = document.querySelector(&#39;.js-theme-toggle&#39;);
-    const clicked = this.switchBtn;
-    this.switchBtn.addEventListener(&#39;click&#39;, () =&amp;gt; this.themePosition(clicked))
-}
-
-// part D: Save the data in localStorage
-themeScheme(btnVal) {
-    document.documentElement.setAttribute(&#39;data-theme&#39;, btnVal);
-    if (this.islocalStorage) {
-        localStorage.setItem(&#39;theme-name&#39;, btnVal);
+            }   
+        };
+        // part B: Get the value from the buttons
+        this.schemeBtns = document.querySelectorAll(&#39;.js-theme-color&#39;);
+        this.schemeBtns.forEach((btn) =&gt; {
+            const btnVal = btn.value;
+            btn.addEventListener(&#39;click&#39;, () =&gt; this.themeScheme(btnVal))
+        });
+        this.fontBtns = document.querySelectorAll(&#39;.js-font-btn&#39;);
+        this.fontBtns.forEach((btn) =&gt; {
+            const btnVal = btn.value;
+            const btnTag = btn;
+            btn.addEventListener(&#39;click&#39;, () =&gt; this.themeFont(btnVal, btnTag))
+        });
+        // part C: get the html button element
+        this.switchBtn = document.querySelector(&#39;.js-theme-toggle&#39;);
+        const clicked = this.switchBtn;
+        this.switchBtn.addEventListener(&#39;click&#39;, () =&gt; this.themePosition(clicked))
+    }
+    // part D: Save the data in localStorage
+    themeScheme(btnVal) {
+        document.documentElement.setAttribute(&#39;data-theme&#39;, btnVal);
+        if (this.islocalStorage) {
+            localStorage.setItem(&#39;theme-name&#39;, btnVal);
+        }
+    };
+    themeFont(btnVal,btnTag) {
+        document.documentElement.style.setProperty(&#39;--font-size&#39;, `${btnVal}px`);
+        if (this.islocalStorage) {
+            localStorage.setItem(&#39;font-size&#39;, btnVal);
+        }
+        ;
+        if (btnVal == localStorage.getItem(&#39;font-size&#39;)) {
+            removeActive();
+            btnTag.classList.add(&#39;active&#39;);
     }
 };
-
-themeFont(btnVal,btnTag) {
-    document.documentElement.style.setProperty(&#39;--font-size&#39;, `${btnVal}px`);
-    if (this.islocalStorage) {
-        localStorage.setItem(&#39;font-size&#39;, btnVal);
+    themePosition(clicked) {
+    if (clicked.getAttribute(&#39;aria-checked&#39;) == &#39;true&#39;) {
+        clicked.setAttribute(&#39;aria-checked&#39;, &#39;false&#39;);
+        document.documentElement.style.setProperty(&#39;--position&#39;, &#39;static&#39;);
+        document.documentElement.style.setProperty(&#39;--top-margin&#39;, &#39;0px&#39;);
+        if (this.islocalStorage) {
+            localStorage.setItem(&#39;position&#39;, &#39;static&#39;);
+        }
+    } else {
+        clicked.setAttribute(&#39;aria-checked&#39;, &#39;true&#39;);
+        document.documentElement.style.setProperty(&#39;--position&#39;, &#39;fixed&#39;);
+        document.documentElement.style.setProperty(&#39;--top-margin&#39;, &#39;96px&#39;);
+        if (this.islocalStorage) {
+            localStorage.setItem(&#39;position&#39;, &#39;fixed&#39;);
+        }
     }
-    ;
-    if (btnVal == localStorage.getItem(&#39;font-size&#39;)) {
-        removeActive();
-        btnTag.classList.add(&#39;active&#39;);
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;};&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;themePosition(clicked) {
-if (clicked.getAttribute(&#39;aria-checked&#39;) == &#39;true&#39;) {
-    clicked.setAttribute(&#39;aria-checked&#39;, &#39;false&#39;);
-    document.documentElement.style.setProperty(&#39;--position&#39;, &#39;static&#39;);
-    document.documentElement.style.setProperty(&#39;--top-margin&#39;, &#39;0px&#39;);
-    if (this.islocalStorage) {
-        localStorage.setItem(&#39;position&#39;, &#39;static&#39;);
-    }
-
-} else {
-    clicked.setAttribute(&#39;aria-checked&#39;, &#39;true&#39;);
-    document.documentElement.style.setProperty(&#39;--position&#39;, &#39;fixed&#39;);
-    document.documentElement.style.setProperty(&#39;--top-margin&#39;, &#39;96px&#39;);
-    if (this.islocalStorage) {
-        localStorage.setItem(&#39;position&#39;, &#39;fixed&#39;);
     }
 }
-
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;}&lt;/p&gt;
-&lt;p&gt;function removeActive() {
+function removeActive() {
 const btns = document.querySelectorAll(&#39;.js-font-btn&#39;);
-btns.forEach((btn) =&amp;gt; {
+btns.forEach((btn) =&gt; {
 btn.classList.remove(&#39;active&#39;);
 })
-}&lt;/p&gt;
-&lt;p&gt;// part E: Only use our class if css custom properties are supported
-if (window.CSS &amp;amp;&amp;amp; CSS.supports(&#39;color&#39;, &#39;var(--i-support&#39;)) {
+}
+// part E: Only use our class if css custom properties are supported
+if (window.CSS &amp;&amp; CSS.supports(&#39;color&#39;, &#39;var(--i-support&#39;)) {
 new CustomTheme()
-};&lt;/p&gt;
-&lt;p&gt;// part E: Add an active class to selected font size button&lt;/p&gt;
-&lt;p&gt;window.addEventListener(&#39;load&#39;, () =&amp;gt; {
+};
+// part E: Add an active class to selected font size button
+window.addEventListener(&#39;load&#39;, () =&gt; {
 const fontBtns = document.querySelectorAll(&#39;.js-font-btn&#39;);
-fontBtns.forEach((btn) =&amp;gt; {
+fontBtns.forEach((btn) =&gt; {
 const btnVal = btn.value;
 const btnTag = btn;
 if (btnVal == localStorage.getItem(&#39;font-size&#39;)) {
 btnTag.classList.add(&#39;active&#39;);
 }
-});&lt;br /&gt;
-})&lt;/p&gt;
+});  
+})
 &lt;pre&gt;&lt;code&gt;&amp;lt;/code&amp;gt;
 &amp;lt;/pre&amp;gt;
+
+
 &amp;lt;p&amp;gt;
 Add this one to the head part in your html file before any other css file
 &amp;lt;/p&amp;gt;
-&amp;lt;pre class=&amp;quot;language-js&amp;quot;&amp;gt;
-&amp;lt;code class=&amp;quot;language-js&amp;quot;&amp;gt;
-``` js
-&amp;amp;lt;script&amp;amp;gt;
+
+&amp;lt;pre class=&amp;quot;prettyprint linenums&amp;quot;&amp;gt;
+&amp;lt;code class=&amp;quot;lang-js&amp;quot;&amp;gt;
+```
+&amp;lt;script&amp;gt;
 const scheme = localStorage.getItem(&#39;theme-name&#39;);
     document.documentElement.setAttribute(&#39;data-theme&#39;, scheme);
 
     const fontSize = localStorage.getItem(&#39;font-size&#39;);
 document.documentElement.style.setProperty(&#39;--font-size&#39;,  `${fontSize}px`);
-    
+
 
 const position = localStorage.getItem(&#39;position&#39;);
 if (position == &#39;fixed&#39;) {
@@ -678,16 +675,17 @@ if (position == &#39;fixed&#39;) {
     document.documentElement.style.setProperty(&#39;--position&#39;, &#39;static&#39;);
     document.documentElement.style.setProperty(&#39;--top-margin&#39;, &#39;0px&#39;);
 
-}    
-    
-&amp;amp;lt;/script&amp;amp;gt;
+}
+
+&amp;lt;/script&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/code&gt;
 &lt;/pre&gt;
 &lt;p&gt;
 If you copied this code and would want to know how all this work, read the guide &lt;a href=&quot;https://freecodecamp.org/news/design-a-themeable-static-website/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;here&lt;/a&gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;</content>
+&lt;p&gt;&lt;/p&gt;
+</content>
   </entry>
   
   <entry>

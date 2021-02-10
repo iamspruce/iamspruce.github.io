@@ -30,9 +30,9 @@
   </script>
   <link rel="stylesheet" href="/assets/theme.css">
 
-<meta name="description" content="Having a dark and light theme is cool, have you tried six or more schemes, with a user customizable font size?  
+<meta name="description" content="Having a dark and light theme is cool, have you tried six or more schemes, with a user customizable font size?
 ">
-<meta property="og:description" content="Having a dark and light theme is cool, have you tried six or more schemes, with a user customizable font size?  
+<meta property="og:description" content="Having a dark and light theme is cool, have you tried six or more schemes, with a user customizable font size?
 " />
 
 <meta name="author" content="Spruce Emmanuel" />
@@ -55,7 +55,7 @@
     <script type="application/ld+json">
         {
             "name":"Spruce Emmanuel",
-            "description":"Having a dark and light theme is cool, have you tried six or more schemes, with a user customizable font size?  
+            "description":"Having a dark and light theme is cool, have you tried six or more schemes, with a user customizable font size?
 ",
             "author": {
                 "@type":"Person",
@@ -82,9 +82,10 @@
     <meta name="theme-color" content="">
     
 <link rel="me" href="https://twitter.com/sprucekhalifa">
-<link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+<link type="text/css" href="/assets/google-code-prettify/prettify.css" rel="stylesheet">
+<script type="text/javascript" src="/assets/google-code-prettify/prettify.js"></script>
 <link rel="stylesheet" href="/css/style.css">
-<link rel="alternate" type="application/rss+xml" title="Spruce.com.ng - Having a dark and light theme is cool, have you tried six or more schemes, with a user customizable font size?  
+<link rel="alternate" type="application/rss+xml" title="Spruce.com.ng - Having a dark and light theme is cool, have you tried six or more schemes, with a user customizable font size?
 " href="/feed.xml" />
  
 
@@ -92,7 +93,7 @@
 
 <link rel="manifest" href="/manifest.json">
 </head>
-<body>
+<body onload="PR.prettyPrint()">
     <section class="section-theme">
 <div class="section-theme__contain">
     <div class="theme__header flex">
@@ -357,8 +358,8 @@
 <div class="codetitle">
 _data/themes.json file
 </div>
-<pre class="language-json">
-<code class="language-json">
+<pre class="prettyprint linenums">
+<code class="lang-json">
 ``` json        
 [
     {
@@ -384,9 +385,9 @@ _data/themes.json file
 <div class="codetitle">
 theme.css.liquid file
 </div> 
-<pre class="language-css">
-<code class="language-css">
-``` css        
+<pre class="prettyprint linenums">
+<code class="lang">
+```       
 ---
 permalink: /css/theme.css
 ---
@@ -432,16 +433,17 @@ permalink: /css/theme.css
 --bg-alt: {{ theme.colors.bg-alt }};
 }
 {% endfor %}</p>
-<pre><code>&lt;/code&gt;
+<pre><code>
+&lt;/code&gt;
 &lt;/pre&gt;
 
 &lt;div class=&quot;codetitle&quot;&gt;
 The CSS
-&lt;/div&gt;  
+&lt;/div&gt;
 
-&lt;pre class=&quot;language-css&quot;&gt;
-&lt;code class=&quot;language-css&quot;&gt;
-``` css
+&lt;pre class=&quot;prettyprint linenums&quot;&gt;
+&lt;code class=&quot;lang-css&quot;&gt;
+```
 body {
     background: var(--bg);
     color: var(--text);
@@ -466,7 +468,7 @@ h1,h2 {
     box-shadow: 4px 2px 8px rgba(0,0,0,.2);
     transition: all .35s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 
-    
+
 
     &amp;__contain {
         padding-bottom: 30px;
@@ -528,7 +530,7 @@ h1,h2 {
     z-index: 5;
     box-shadow: 0 2px 4px rgba(0,0,0,.2),
                 0 3px 4.5px rgba(0,0,0,.3);
-    
+
 
     &amp;__secondary {
         width: 34px;
@@ -544,7 +546,7 @@ h1,h2 {
         margin-top: .4em;
         border-radius: 40em;
     }
-   
+
 }
 .theme-span-wrapper {
     display: flex;
@@ -571,7 +573,7 @@ h1,h2 {
     border-radius: .4em;
     background: var(--primary);
     color: var(--bg);
-    
+
 }
 
 .btn[role=&quot;switch&quot;] span:not(:first-child) {
@@ -589,10 +591,10 @@ h1,h2 {
 <br>
 <div class="codetitle">
 The html
-</div> 
-<pre class="language-html">
-<code class="language-html">
-``` html
+</div>
+<pre class="prettyprint linenums">
+<code class="lang-html">
+```
 &lt;section class="section-theme"&gt;
 &lt;div class="section-theme__contain"&gt;
 &lt;div class="theme__header flex"&gt;
@@ -739,15 +741,16 @@ brown
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/section&gt;
-```
+
+````
 </code>
 </pre>
 <div class="codetitle">
 /assets/js/theme.js file
 </div>
-<pre class="language-js">
-<code class="language-js">
-``` js
+<pre class="prettyprint linenums">
+<code class="lang-js">
+```
 class CustomTheme {
     constructor() {
         // part A: check if localStorage works
@@ -758,105 +761,100 @@ class CustomTheme {
                 return true;
             } catch (error) {
                 return false
-            }
-<pre><code>    };
-    // part B: Get the value from the buttons
-    this.schemeBtns = document.querySelectorAll('.js-theme-color');
-    this.schemeBtns.forEach((btn) =&gt; {
-        const btnVal = btn.value;
-        btn.addEventListener('click', () =&gt; this.themeScheme(btnVal))
-    });
-
-    this.fontBtns = document.querySelectorAll('.js-font-btn');
-    this.fontBtns.forEach((btn) =&gt; {
-        const btnVal = btn.value;
-        const btnTag = btn;
-        btn.addEventListener('click', () =&gt; this.themeFont(btnVal, btnTag))
-    });
-
-    // part C: get the html button element
-    this.switchBtn = document.querySelector('.js-theme-toggle');
-    const clicked = this.switchBtn;
-    this.switchBtn.addEventListener('click', () =&gt; this.themePosition(clicked))
-}
-
-// part D: Save the data in localStorage
-themeScheme(btnVal) {
-    document.documentElement.setAttribute('data-theme', btnVal);
-    if (this.islocalStorage) {
-        localStorage.setItem('theme-name', btnVal);
+            }   
+        };
+        // part B: Get the value from the buttons
+        this.schemeBtns = document.querySelectorAll('.js-theme-color');
+        this.schemeBtns.forEach((btn) => {
+            const btnVal = btn.value;
+            btn.addEventListener('click', () => this.themeScheme(btnVal))
+        });
+        this.fontBtns = document.querySelectorAll('.js-font-btn');
+        this.fontBtns.forEach((btn) => {
+            const btnVal = btn.value;
+            const btnTag = btn;
+            btn.addEventListener('click', () => this.themeFont(btnVal, btnTag))
+        });
+        // part C: get the html button element
+        this.switchBtn = document.querySelector('.js-theme-toggle');
+        const clicked = this.switchBtn;
+        this.switchBtn.addEventListener('click', () => this.themePosition(clicked))
+    }
+    // part D: Save the data in localStorage
+    themeScheme(btnVal) {
+        document.documentElement.setAttribute('data-theme', btnVal);
+        if (this.islocalStorage) {
+            localStorage.setItem('theme-name', btnVal);
+        }
+    };
+    themeFont(btnVal,btnTag) {
+        document.documentElement.style.setProperty('--font-size', `${btnVal}px`);
+        if (this.islocalStorage) {
+            localStorage.setItem('font-size', btnVal);
+        }
+        ;
+        if (btnVal == localStorage.getItem('font-size')) {
+            removeActive();
+            btnTag.classList.add('active');
     }
 };
-
-themeFont(btnVal,btnTag) {
-    document.documentElement.style.setProperty('--font-size', `${btnVal}px`);
-    if (this.islocalStorage) {
-        localStorage.setItem('font-size', btnVal);
+    themePosition(clicked) {
+    if (clicked.getAttribute('aria-checked') == 'true') {
+        clicked.setAttribute('aria-checked', 'false');
+        document.documentElement.style.setProperty('--position', 'static');
+        document.documentElement.style.setProperty('--top-margin', '0px');
+        if (this.islocalStorage) {
+            localStorage.setItem('position', 'static');
+        }
+    } else {
+        clicked.setAttribute('aria-checked', 'true');
+        document.documentElement.style.setProperty('--position', 'fixed');
+        document.documentElement.style.setProperty('--top-margin', '96px');
+        if (this.islocalStorage) {
+            localStorage.setItem('position', 'fixed');
+        }
     }
-    ;
-    if (btnVal == localStorage.getItem('font-size')) {
-        removeActive();
-        btnTag.classList.add('active');
-}
-</code></pre>
-<p>};</p>
-<pre><code>themePosition(clicked) {
-if (clicked.getAttribute('aria-checked') == 'true') {
-    clicked.setAttribute('aria-checked', 'false');
-    document.documentElement.style.setProperty('--position', 'static');
-    document.documentElement.style.setProperty('--top-margin', '0px');
-    if (this.islocalStorage) {
-        localStorage.setItem('position', 'static');
-    }
-
-} else {
-    clicked.setAttribute('aria-checked', 'true');
-    document.documentElement.style.setProperty('--position', 'fixed');
-    document.documentElement.style.setProperty('--top-margin', '96px');
-    if (this.islocalStorage) {
-        localStorage.setItem('position', 'fixed');
     }
 }
-
-}
-</code></pre>
-<p>}</p>
-<p>function removeActive() {
+function removeActive() {
 const btns = document.querySelectorAll('.js-font-btn');
-btns.forEach((btn) =&gt; {
+btns.forEach((btn) => {
 btn.classList.remove('active');
 })
-}</p>
-<p>// part E: Only use our class if css custom properties are supported
-if (window.CSS &amp;&amp; CSS.supports('color', 'var(--i-support')) {
+}
+// part E: Only use our class if css custom properties are supported
+if (window.CSS && CSS.supports('color', 'var(--i-support')) {
 new CustomTheme()
-};</p>
-<p>// part E: Add an active class to selected font size button</p>
-<p>window.addEventListener('load', () =&gt; {
+};
+// part E: Add an active class to selected font size button
+window.addEventListener('load', () => {
 const fontBtns = document.querySelectorAll('.js-font-btn');
-fontBtns.forEach((btn) =&gt; {
+fontBtns.forEach((btn) => {
 const btnVal = btn.value;
 const btnTag = btn;
 if (btnVal == localStorage.getItem('font-size')) {
 btnTag.classList.add('active');
 }
-});<br>
-})</p>
+});  
+})
 <pre><code>&lt;/code&gt;
 &lt;/pre&gt;
+
+
 &lt;p&gt;
 Add this one to the head part in your html file before any other css file
 &lt;/p&gt;
-&lt;pre class=&quot;language-js&quot;&gt;
-&lt;code class=&quot;language-js&quot;&gt;
-``` js
-&amp;lt;script&amp;gt;
+
+&lt;pre class=&quot;prettyprint linenums&quot;&gt;
+&lt;code class=&quot;lang-js&quot;&gt;
+```
+&lt;script&gt;
 const scheme = localStorage.getItem('theme-name');
     document.documentElement.setAttribute('data-theme', scheme);
 
     const fontSize = localStorage.getItem('font-size');
 document.documentElement.style.setProperty('--font-size',  `${fontSize}px`);
-    
+
 
 const position = localStorage.getItem('position');
 if (position == 'fixed') {
@@ -867,9 +865,9 @@ if (position == 'fixed') {
     document.documentElement.style.setProperty('--position', 'static');
     document.documentElement.style.setProperty('--top-margin', '0px');
 
-}    
-    
-&amp;lt;/script&amp;gt;
+}
+
+&lt;/script&gt;
 </code></pre>
 </code>
 </pre>
@@ -877,6 +875,7 @@ if (position == 'fixed') {
 If you copied this code and would want to know how all this work, read the guide <a href="https://freecodecamp.org/news/design-a-themeable-static-website/" target="_blank" rel="noopener noreferrer">here</a>
 </p>
 <p></p>
+
 </section>
 </div>
 </main><footer class="footer">

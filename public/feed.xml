@@ -168,8 +168,8 @@
 &lt;div class=&quot;codetitle&quot;&gt;
 _data/themes.json file
 &lt;/div&gt;
-   &lt;pre class=&quot;language-json&quot;&gt;
-    &lt;code class=&quot;language-json&quot;&gt;
+&lt;pre class=&quot;language-json&quot;&gt;
+&lt;code class=&quot;language-json&quot;&gt;
 ``` json        
 [
     {
@@ -189,13 +189,13 @@ _data/themes.json file
     ... other color schemes
 ]
 ```
-            &lt;/code&gt;
-        &lt;/pre&gt;
+&lt;/code&gt;
+&lt;/pre&gt;
 &lt;br /&gt;
 &lt;div class=&quot;codetitle&quot;&gt;theme.css.liquid file&lt;/div&gt; 
-   &lt;pre class=&quot;language-liquid&quot;&gt;
-    &lt;code class=&quot;language-liquid&quot;&gt;
-``` text/1-2        
+&lt;pre class=&quot;language-liquid&quot;&gt;
+&lt;code class=&quot;language-liquid&quot;&gt;
+``` css        
 ---
 permalink: /css/theme.css
 ---
@@ -245,9 +245,9 @@ permalink: /css/theme.css
 &amp;lt;/pre&amp;gt;
 &amp;lt;br&amp;gt;
 &amp;lt;div class=&amp;quot;codetitle&amp;quot;&amp;gt;The CSS&amp;lt;/div&amp;gt;  
-   &amp;lt;pre class=&amp;quot;language-css&amp;quot;&amp;gt;
-       &amp;lt;code class=&amp;quot;language-css&amp;quot;&amp;gt;
-``` text/1-2
+&amp;lt;pre class=&amp;quot;language-css&amp;quot;&amp;gt;
+&amp;lt;code class=&amp;quot;language-css&amp;quot;&amp;gt;
+``` css
 body {
     background: var(--bg);
     color: var(--text);
@@ -394,13 +394,13 @@ h1,h2 {
     pointer-events: none;
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;    &amp;lt;/code&amp;gt;
-&amp;lt;/pre&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;
+&lt;/pre&gt;
 &lt;br /&gt;
 &lt;div class=&quot;codetitle&quot;&gt;The html&lt;/div&gt; 
 &lt;pre class=&quot;language-html&quot;&gt;
 &lt;code class=&quot;language-html&quot;&gt;
+``` html
 &amp;lt;section class=&quot;section-theme&quot;&amp;gt;
 &amp;lt;div class=&quot;section-theme__contain&quot;&amp;gt;
 &amp;lt;div class=&quot;theme__header flex&quot;&amp;gt;
@@ -540,10 +540,9 @@ brown
 &amp;lt;/div&amp;gt;
 &amp;lt;/div&amp;gt;
 &amp;lt;/section&amp;gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;        &amp;lt;/code&amp;gt;
-    &amp;lt;/pre&amp;gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;/code&amp;gt;
+&amp;lt;/pre&amp;gt;
 &amp;lt;br&amp;gt;
-
 &amp;lt;div class=&amp;quot;codetitle&amp;quot;&amp;gt;The javascript&amp;lt;/div&amp;gt;
 &amp;lt;pre class=&amp;quot;language-js&amp;quot;&amp;gt;
 &amp;lt;code class=&amp;quot;language-js&amp;quot;&amp;gt;
@@ -651,7 +650,7 @@ window.addEventListener(&#39;load&#39;, () =&amp;gt; {
 &lt;/code&gt;
 &lt;/pre&gt;
 &lt;p&gt;
-    Add this one to the head part in your html file before any other css file
+Add this one to the head part in your html file before any other css file
 &lt;/p&gt;
 &lt;pre class=&quot;language-js&quot;&gt;
 &lt;code class=&quot;language-js&quot;&gt;
@@ -678,7 +677,7 @@ document.documentElement.style.setProperty(&#39;--top-margin&#39;, &#39;0px&#39;
 If you copied this code and would want to know how all this work, read the guide &amp;lt;a href=&amp;quot;https://freecodecamp.org/news/design-a-themeable-static-website/&amp;quot; target=&amp;quot;_blank&amp;quot; rel=&amp;quot;noopener noreferrer&amp;quot;&amp;gt;here&amp;lt;/a&amp;gt;
 &amp;lt;/p&amp;gt;
 &amp;lt;p&amp;gt;&amp;lt;/p&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/code&gt;&lt;/pre&gt;</content>
+&lt;/code&gt;&lt;/pre&gt;</content>
   </entry>
   
   <entry>

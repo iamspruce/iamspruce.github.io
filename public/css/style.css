@@ -1004,6 +1004,12 @@ div.nav__overlay {
   font-size: var(--font-size);
   line-height: 1.7777777778;
 }
+.article__body .codetitle {
+  padding: 0.25em 0 0.25em 0.5em;
+  border-radius: 0.25em 0.25em 0 0;
+  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  font-size: 0.75em;
+}
 .article__body code[class*=language-],
 .article__body pre[class*=language-] {
   font-family: "Andale Mono", "Courier New", monospace;
@@ -1025,11 +1031,11 @@ div.nav__overlay {
 .article__body pre[class*=language-] {
   display: block;
   font-size: var(--font-size);
-  padding: 1.5rem;
+  padding: 0.75rem 1rem;
   overflow-x: auto;
 }
 .article__body pre[class*=language-] {
-  margin: 0.4rem calc(50% - 50vw);
+  margin: 0.1rem calc(50% - 50vw);
 }
 .article__body pre[class*=language-] > code {
   width: 100%;
@@ -1040,7 +1046,7 @@ div.nav__overlay {
 }
 @media (min-width: 940px) {
   .article__body pre[class*=language-] {
-    padding: 1rem 3rem;
+    padding: 0.75rem 3rem;
   }
 }
 @media screen and (min-width: 1040px) {

@@ -152,7 +152,12 @@
         font-size: var(--font-size);
         line-height: 1.7777777778;
     }
-
+    .codetitle {
+        padding: .25em 0 .25em .5em;
+        border-radius: .25em .25em 0 0;
+        font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;
+        font-size: .75em;
+    }
     code[class*=language-],
 pre[class*=language-] {
  font-family:"Andale Mono","Courier New",monospace;
@@ -175,11 +180,11 @@ pre[class*=language-] {
    pre[class*=language-] {
     display:block;
     font-size: var(--font-size);
-    padding: 1.5rem;
+    padding:.75rem 1rem;
     overflow-x:auto
    }
   pre[class*=language-] {
-    margin:.4rem calc(50% - 50vw)
+    margin:.1rem calc(50% - 50vw)
    }
   
  pre[class*=language-]>code {
@@ -191,7 +196,7 @@ pre[class*=language-] {
    }
    @media (min-width:940px) {
  pre[class*=language-] {
-     padding:1rem 3rem
+     padding:.75rem 3rem
     }
    }
    @media screen and (min-width:1040px) {

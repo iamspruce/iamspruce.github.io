@@ -1,12 +1,14 @@
 const pluginDate = require("eleventy-plugin-date");
 const timeToRead = require("eleventy-plugin-time-to-read");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 module.exports = function(eleventyConfig) {
 
     eleventyConfig.setUseGitIgnore(false);
     eleventyConfig.addPlugin(pluginDate);
     eleventyConfig.addPlugin(pluginRss);
     eleventyConfig.addPlugin(timeToRead);
+    eleventyConfig.addPlugin(syntaxHighlight);
     eleventyConfig.addWatchTarget("./src/sass/");
     eleventyConfig.addPassthroughCopy("./src/sass/");
     eleventyConfig.addPassthroughCopy("./src/assets/fonts/");

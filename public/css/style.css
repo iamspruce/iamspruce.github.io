@@ -377,7 +377,7 @@ blockquote {
 
 .title {
   font-size: 14px;
-  color: var(--text-dark);
+  color: var(--text);
   font-weight: var(--semi);
   text-transform: uppercase;
   margin-bottom: 16px;

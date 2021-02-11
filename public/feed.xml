@@ -168,8 +168,8 @@
 &lt;div class=&quot;codetitle&quot;&gt;
 _data/themes.json file
 &lt;/div&gt;
-&lt;pre class=&quot;prettyprint linenums&quot;&gt;
-&lt;code class=&quot;lang-json&quot;&gt;
+&lt;pre class=&quot;language-json&quot;&gt;
+&lt;code class=&quot;language-json&quot;&gt;
 ``` json        
 [
     {
@@ -195,8 +195,8 @@ _data/themes.json file
 &lt;div class=&quot;codetitle&quot;&gt;
 theme.css.liquid file
 &lt;/div&gt; 
-&lt;pre class=&quot;prettyprint linenums&quot;&gt;
-&lt;code class=&quot;lang&quot;&gt;
+&lt;pre class=&quot;language-css&quot;&gt;
+&lt;code class=&quot;language-css&quot;&gt;
 ```       
 ---
 permalink: /css/theme.css
@@ -251,8 +251,8 @@ permalink: /css/theme.css
 The CSS
 &amp;lt;/div&amp;gt;
 
-&amp;lt;pre class=&amp;quot;prettyprint linenums&amp;quot;&amp;gt;
-&amp;lt;code class=&amp;quot;lang-css&amp;quot;&amp;gt;
+&amp;lt;pre class=&amp;quot;language-css&amp;quot;&amp;gt;
+&amp;lt;code class=&amp;quot;language-css&amp;quot;&amp;gt;
 ```
 body {
     background: var(--bg);
@@ -402,8 +402,8 @@ h1,h2 {
 &lt;div class=&quot;codetitle&quot;&gt;
 The html
 &lt;/div&gt;
-&lt;pre class=&quot;prettyprint linenums&quot;&gt;
-&lt;code class=&quot;lang-html&quot;&gt;
+&lt;pre class=&quot;language-html&quot;&gt;
+&lt;code class=&quot;language-html&quot;&gt;
 ```
 &amp;lt;section class=&quot;section-theme&quot;&amp;gt;
 &amp;lt;div class=&quot;section-theme__contain&quot;&amp;gt;
@@ -558,8 +558,8 @@ brown
 &lt;div class=&quot;codetitle&quot;&gt;
 /assets/js/theme.js file
 &lt;/div&gt;
-&lt;pre class=&quot;prettyprint linenums&quot;&gt;
-&lt;code class=&quot;lang-js&quot;&gt;
+&lt;pre class=&quot;language-html&quot;&gt;
+&lt;code class=&quot;language-js&quot;&gt;
 ```
 class CustomTheme {
     constructor() {
@@ -655,8 +655,8 @@ btnTag.classList.add(&#39;active&#39;);
 Add this one to the head part in your html file before any other css file
 &amp;lt;/p&amp;gt;
 
-&amp;lt;pre class=&amp;quot;prettyprint linenums&amp;quot;&amp;gt;
-&amp;lt;code class=&amp;quot;lang-js&amp;quot;&amp;gt;
+&amp;lt;pre class=&amp;quot;language-js&amp;quot;&amp;gt;
+&amp;lt;code class=&amp;quot;language-js&amp;quot;&amp;gt;
 ```
 &amp;lt;script&amp;gt;
 const scheme = localStorage.getItem(&#39;theme-name&#39;);
@@ -1302,8 +1302,8 @@ will not have any effect on flex-items (you won&#39;t even know they are there)
 &lt;p&gt;
 Floats and vertical-align css properties do not have any effect on &lt;b&gt;flex items&lt;/b&gt;, 
 &lt;/p&gt;
-&lt;pre class=&quot;prettyprint linenums&quot;&gt;
-&lt;code class=&quot;lang&quot;&gt;
+&lt;pre class=&quot;language-html&quot;&gt;
+&lt;code class=&quot;language-html&quot;&gt;
 &amp;lt;!-- html code --&amp;gt;
 &amp;lt;ul class=&quot;flex-container&quot;&amp;gt;
 &amp;lt;li class=&quot;flex-item&quot;&amp;gt;
@@ -1326,8 +1326,8 @@ vertical-align: middle; // this will have no effect too
 &lt;h3&gt;
 Flex items
 &lt;/h3&gt;
-&lt;pre class=&quot;prettyprint linenums&quot;&gt;
-&lt;code class=&quot;lang&quot; &quot;=&quot;&quot;&gt;
+&lt;pre class=&quot;language-html&quot;&gt;
+&lt;code class=&quot;language-html&quot; &quot;=&quot;&quot;&gt;
 &lt;p&gt;&amp;lt;!-- html code --&amp;gt;
 &amp;lt;ul class=&amp;quot;flex-container&amp;quot;&amp;gt;
 hello i am a flex item too
@@ -1355,8 +1355,8 @@ Plain texts are flex items too
  &lt;p&gt;
 From the preview(when display: flex; is added to the flex-container) above you see that Four items are laid out side by side, that means anything placed in a flex-container as a direct child is a flex item...
  &lt;/p&gt;
- &lt;pre class=&quot;prettyprint linenums&quot;&gt;
-&lt;code class=&quot;lang&quot;&gt;
+ &lt;pre class=&quot;language-html&quot;&gt;
+&lt;code class=&quot;language-html&quot;&gt;
 &amp;lt;!-- html code --&amp;gt;
 &amp;lt;ul class=&quot;flex-container&quot;&amp;gt;
 &amp;lt;!-- anything placed here as a direct child is a flex item --&amp;gt;
@@ -1394,8 +1394,8 @@ Flexbox Card component
 &lt;p&gt;
 Lets say you are creating a card component... 
 &lt;/p&gt;
-&lt;pre class=&quot;prettyprint linenums&quot;&gt;
-&lt;code class=&quot;lang&quot;&gt;
+&lt;pre class=&quot;language-html&quot;&gt;
+&lt;code class=&quot;language-html&quot;&gt;
 &amp;lt;!-- html code --&amp;gt;
 &amp;lt;article class=&quot;flex-container&quot;&amp;gt;
 &amp;lt;header&amp;gt;
@@ -1415,8 +1415,8 @@ Lets say you are creating a card component...
 &lt;p&gt;
 ...and you always want the footer to stay at the bottom, no matter the length of your text... Yep css flexbox can do just that with a single line of code
 &lt;/p&gt;
-&lt;pre class=&quot;prettyprint linenums&quot;&gt;
-&lt;code class=&quot;lang&quot;&gt;
+&lt;pre class=&quot;language-html&quot;&gt;
+&lt;code class=&quot;language-html&quot;&gt;
 &amp;lt;!-- html code --&amp;gt;
 &amp;lt;article&amp;gt;
 &amp;lt;header&amp;gt;
@@ -1461,8 +1461,8 @@ Ordering Elements
 &lt;p&gt;
 Say you want to flip a component, like the Card component we created ealier, you want the footer part to come first and the header to go last, yep flexbox can do that...
 &lt;/p&gt;
-&lt;pre class=&quot;prettyprint linenums&quot;&gt;
-&lt;code class=&quot;lang&quot;&gt;
+&lt;pre class=&quot;language-html&quot;&gt;
+&lt;code class=&quot;language-html&quot;&gt;
 &amp;lt;!-- html code --&amp;gt;
 &amp;lt;article&amp;gt;
 &amp;lt;header&amp;gt;
@@ -1506,8 +1506,8 @@ Center An Element
 &lt;p&gt;
 One of the cool things about css flexbox is that you can center an element with ease 
 &lt;/p&gt;
-&lt;pre class=&quot;prettyprint linenums&quot;&gt;
-&lt;code class=&quot;lang&quot;&gt;
+&lt;pre class=&quot;language-html&quot;&gt;
+&lt;code class=&quot;language-html&quot;&gt;
 &amp;lt;!-- html code --&amp;gt;
 &amp;lt;div class=&quot;c-card&quot;&amp;gt;
 &amp;lt;article&amp;gt;

@@ -82,8 +82,6 @@
     <meta name="theme-color" content="">
     
 <link rel="me" href="https://twitter.com/sprucekhalifa">
-<link type="text/css" href="/assets/google-code-prettify/prettify.css" rel="stylesheet">
-<script type="text/javascript" src="/assets/google-code-prettify/prettify.js"></script>
 <link rel="stylesheet" href="/css/style.css">
 <link rel="alternate" type="application/rss+xml" title="Spruce.com.ng - Learn about css flex box and how to implement this layout model with some use cases  
 " href="/feed.xml" />
@@ -93,7 +91,7 @@
 
 <link rel="manifest" href="/manifest.json">
 </head>
-<body onload="PR.prettyPrint()">
+<body>
     <section class="section-theme">
 <div class="section-theme__contain">
     <div class="theme__header flex">
@@ -314,7 +312,7 @@
 </div><header class="header fixed fixed__top" role="banner">
     <div class="header__inner container flex">
         <a class="header__logo flex" href="/" rel="home" aria-label="Go To Homepage">
-            <img class="header__logo--avatar" src="/assets/img/spruce.png" alt="" width="38px" height="38px"> 
+            <img class="header__logo--avatar" src="/assets/img/spruce.webp" alt="" width="38px" height="38px"> 
             <span class="header__logo--text">Spruce</span>
         </a>
         <button style="margin-left: auto; font-size: 18px;" class="header__icon js-theme-btn" aria-expanded="false" aria-controls="nav-menu" aria-label="toggle menu">
@@ -387,8 +385,8 @@ will not have any effect on flex-items (you won't even know they are there)
 <p>
 Floats and vertical-align css properties do not have any effect on <b>flex items</b>, 
 </p>
-<pre class="prettyprint linenums">
-<code class="lang">
+<pre class="language-html">
+<code class="language-html">
 &lt;!-- html code --&gt;
 &lt;ul class="flex-container"&gt;
 &lt;li class="flex-item"&gt;
@@ -411,8 +409,8 @@ vertical-align: middle; // this will have no effect too
 <h3>
 Flex items
 </h3>
-<pre class="prettyprint linenums">
-<code class="lang"">
+<pre class="language-html">
+<code class="language-html"">
 <p>&lt;!-- html code --&gt;
 &lt;ul class=&quot;flex-container&quot;&gt;
 hello i am a flex item too
@@ -440,8 +438,8 @@ Plain texts are flex items too
  <p>
 From the preview(when display: flex; is added to the flex-container) above you see that Four items are laid out side by side, that means anything placed in a flex-container as a direct child is a flex item...
  </p>
- <pre class="prettyprint linenums">
-<code class="lang">
+ <pre class="language-html">
+<code class="language-html">
 &lt;!-- html code --&gt;
 &lt;ul class="flex-container"&gt;
 &lt;!-- anything placed here as a direct child is a flex item --&gt;
@@ -479,8 +477,8 @@ Flexbox Card component
 <p>
 Lets say you are creating a card component... 
 </p>
-<pre class="prettyprint linenums">
-<code class="lang">
+<pre class="language-html">
+<code class="language-html">
 &lt;!-- html code --&gt;
 &lt;article class="flex-container"&gt;
 &lt;header&gt;
@@ -500,8 +498,8 @@ Lets say you are creating a card component...
 <p>
 ...and you always want the footer to stay at the bottom, no matter the length of your text... Yep css flexbox can do just that with a single line of code
 </p>
-<pre class="prettyprint linenums">
-<code class="lang">
+<pre class="language-html">
+<code class="language-html">
 &lt;!-- html code --&gt;
 &lt;article&gt;
 &lt;header&gt;
@@ -546,8 +544,8 @@ Ordering Elements
 <p>
 Say you want to flip a component, like the Card component we created ealier, you want the footer part to come first and the header to go last, yep flexbox can do that...
 </p>
-<pre class="prettyprint linenums">
-<code class="lang">
+<pre class="language-html">
+<code class="language-html">
 &lt;!-- html code --&gt;
 &lt;article&gt;
 &lt;header&gt;
@@ -591,8 +589,8 @@ Center An Element
 <p>
 One of the cool things about css flexbox is that you can center an element with ease 
 </p>
-<pre class="prettyprint linenums">
-<code class="lang">
+<pre class="language-html">
+<code class="language-html">
 &lt;!-- html code --&gt;
 &lt;div class="c-card"&gt;
 &lt;article&gt;
@@ -667,7 +665,7 @@ again thanks for reading...
     <div class="footer__intro">
         <div class="footer__logo">
             <a class="footer__logo" href="/" rel="home" aria-label="Go To Homepage">
-                <img class="header__logo--avatar" src="/assets/img/spruce.png" alt="" width="32px" height="32px"> 
+                <img class="header__logo--avatar" src="/assets/img/spruce.webp" alt="" width="32px" height="32px"> 
             </a>
         </div>
             <p class="footer__text">

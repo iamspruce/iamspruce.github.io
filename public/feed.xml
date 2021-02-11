@@ -197,7 +197,7 @@ theme.css.liquid file
 &lt;/div&gt; 
 &lt;pre class=&quot;language-css&quot;&gt;
 &lt;code class=&quot;language-css&quot;&gt;
-```       
+``` liquid       
 ---
 permalink: /css/theme.css
 ---
@@ -243,17 +243,14 @@ permalink: /css/theme.css
 --bg-alt: {{ theme.colors.bg-alt }};
 }
 {% endfor %}&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;
-&amp;lt;/code&amp;gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;/code&amp;gt;
 &amp;lt;/pre&amp;gt;
-
 &amp;lt;div class=&amp;quot;codetitle&amp;quot;&amp;gt;
 The CSS
 &amp;lt;/div&amp;gt;
-
 &amp;lt;pre class=&amp;quot;language-css&amp;quot;&amp;gt;
 &amp;lt;code class=&amp;quot;language-css&amp;quot;&amp;gt;
-```
+``` css
 body {
     background: var(--bg);
     color: var(--text);
@@ -450,124 +447,115 @@ Choose Color Scheme
 &amp;lt;/h5&amp;gt;
 &amp;lt;p&amp;gt;Pick a color scheme of your choice&amp;lt;/p&amp;gt;
 &amp;lt;div class=&quot;theme-color-wrapper js-theme-scheme&quot;&amp;gt;
-
-&amp;lt;button type=&quot;button&quot; class=&quot;theme-color js-theme-color&quot; style=&quot;background-color: #ffffff; border: 1px solid #f8f8f8&quot; value=&quot;default&quot;&amp;gt;
-&amp;lt;div class=&quot;theme-color__secondary&quot; style=&quot;background-color: #f8f8f8; margin-bottom: .5em;&quot;&amp;gt;&amp;lt;/div&amp;gt;
-&amp;lt;span class=&quot;theme-color-text&quot; style=&quot;background: linear-gradient(180deg, #2b2c34 100%, #2b2c34 100%); color: #2b2c34&quot;&amp;gt;&amp;lt;/span&amp;gt;
-&amp;lt;span class=&quot;theme-color-text&quot; style=&quot;background: linear-gradient(180deg, #2b2c34 100%, #2b2c34 100%); color: #2b2c34&quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;br&amp;gt;
-&amp;lt;div class=&quot;flex&quot;&amp;gt;
-&amp;lt;span class=&quot;theme-color__name&quot; style=&quot;color: #2b2c34;&quot;&amp;gt;
+&lt;p&gt;&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;theme-color js-theme-color&amp;quot; style=&amp;quot;background-color: #ffffff; border: 1px solid #f8f8f8&amp;quot; value=&amp;quot;default&amp;quot;&amp;gt;
+&amp;lt;div class=&amp;quot;theme-color__secondary&amp;quot; style=&amp;quot;background-color: #f8f8f8; margin-bottom: .5em;&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;span class=&amp;quot;theme-color-text&amp;quot; style=&amp;quot;background: linear-gradient(180deg, #2b2c34 100%, #2b2c34 100%); color: #2b2c34&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;span class=&amp;quot;theme-color-text&amp;quot; style=&amp;quot;background: linear-gradient(180deg, #2b2c34 100%, #2b2c34 100%); color: #2b2c34&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;br&amp;gt;
+&amp;lt;div class=&amp;quot;flex&amp;quot;&amp;gt;
+&amp;lt;span class=&amp;quot;theme-color__name&amp;quot; style=&amp;quot;color: #2b2c34;&amp;quot;&amp;gt;
 default
 &amp;lt;/span&amp;gt;
-&amp;lt;span class=&quot;theme-span-wrapper&quot; style=&quot;margin-top: .5em;&quot;&amp;gt;
-&amp;lt;span style=&quot;background-color: #6246ea;&quot;&amp;gt;&amp;lt;/span&amp;gt;
-&amp;lt;span style=&quot;background-color: #e45858;&quot;&amp;gt;&amp;lt;/span&amp;gt;
-&amp;lt;span style=&quot;background-color: #d1d1e9;&quot;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;span class=&amp;quot;theme-span-wrapper&amp;quot; style=&amp;quot;margin-top: .5em;&amp;quot;&amp;gt;
+&amp;lt;span style=&amp;quot;background-color: #6246ea;&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;span style=&amp;quot;background-color: #e45858;&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;span style=&amp;quot;background-color: #d1d1e9;&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
 &amp;lt;/span&amp;gt;
 &amp;lt;/div&amp;gt;
-&amp;lt;/button&amp;gt;
-
-&amp;lt;button type=&quot;button&quot; class=&quot;theme-color js-theme-color&quot; style=&quot;background-color: #16161a; border: 1px solid #242629&quot; value=&quot;dark&quot;&amp;gt;
-&amp;lt;div class=&quot;theme-color__secondary&quot; style=&quot;background-color: #242629; margin-bottom: .5em;&quot;&amp;gt;&amp;lt;/div&amp;gt;
-&amp;lt;span class=&quot;theme-color-text&quot; style=&quot;background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe&quot;&amp;gt;&amp;lt;/span&amp;gt;
-&amp;lt;span class=&quot;theme-color-text&quot; style=&quot;background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe&quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;br&amp;gt;
-&amp;lt;div class=&quot;flex&quot;&amp;gt;
-&amp;lt;span class=&quot;theme-color__name&quot; style=&quot;color: #fffffe;&quot;&amp;gt;
+&amp;lt;/button&amp;gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;theme-color js-theme-color&amp;quot; style=&amp;quot;background-color: #16161a; border: 1px solid #242629&amp;quot; value=&amp;quot;dark&amp;quot;&amp;gt;
+&amp;lt;div class=&amp;quot;theme-color__secondary&amp;quot; style=&amp;quot;background-color: #242629; margin-bottom: .5em;&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;span class=&amp;quot;theme-color-text&amp;quot; style=&amp;quot;background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;span class=&amp;quot;theme-color-text&amp;quot; style=&amp;quot;background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;br&amp;gt;
+&amp;lt;div class=&amp;quot;flex&amp;quot;&amp;gt;
+&amp;lt;span class=&amp;quot;theme-color__name&amp;quot; style=&amp;quot;color: #fffffe;&amp;quot;&amp;gt;
 dark
 &amp;lt;/span&amp;gt;
-&amp;lt;span class=&quot;theme-span-wrapper&quot; style=&quot;margin-top: .5em;&quot;&amp;gt;
-&amp;lt;span style=&quot;background-color: #ff8906;&quot;&amp;gt;&amp;lt;/span&amp;gt;
-&amp;lt;span style=&quot;background-color: #2cb67d;&quot;&amp;gt;&amp;lt;/span&amp;gt;
-&amp;lt;span style=&quot;background-color: #75757e;&quot;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;span class=&amp;quot;theme-span-wrapper&amp;quot; style=&amp;quot;margin-top: .5em;&amp;quot;&amp;gt;
+&amp;lt;span style=&amp;quot;background-color: #ff8906;&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;span style=&amp;quot;background-color: #2cb67d;&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;span style=&amp;quot;background-color: #75757e;&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
 &amp;lt;/span&amp;gt;
 &amp;lt;/div&amp;gt;
-&amp;lt;/button&amp;gt;
-
-&amp;lt;button type=&quot;button&quot; class=&quot;theme-color js-theme-color&quot; style=&quot;background-color: #004643; border: 1px solid #abd1c6&quot; value=&quot;green&quot;&amp;gt;
-&amp;lt;div class=&quot;theme-color__secondary&quot; style=&quot;background-color: #abd1c6; margin-bottom: .5em;&quot;&amp;gt;&amp;lt;/div&amp;gt;
-&amp;lt;span class=&quot;theme-color-text&quot; style=&quot;background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe&quot;&amp;gt;&amp;lt;/span&amp;gt;
-&amp;lt;span class=&quot;theme-color-text&quot; style=&quot;background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe&quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;br&amp;gt;
-&amp;lt;div class=&quot;flex&quot;&amp;gt;
-&amp;lt;span class=&quot;theme-color__name&quot; style=&quot;color: #fffffe;&quot;&amp;gt;
+&amp;lt;/button&amp;gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;theme-color js-theme-color&amp;quot; style=&amp;quot;background-color: #004643; border: 1px solid #abd1c6&amp;quot; value=&amp;quot;green&amp;quot;&amp;gt;
+&amp;lt;div class=&amp;quot;theme-color__secondary&amp;quot; style=&amp;quot;background-color: #abd1c6; margin-bottom: .5em;&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;span class=&amp;quot;theme-color-text&amp;quot; style=&amp;quot;background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;span class=&amp;quot;theme-color-text&amp;quot; style=&amp;quot;background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;br&amp;gt;
+&amp;lt;div class=&amp;quot;flex&amp;quot;&amp;gt;
+&amp;lt;span class=&amp;quot;theme-color__name&amp;quot; style=&amp;quot;color: #fffffe;&amp;quot;&amp;gt;
 green
 &amp;lt;/span&amp;gt;
-&amp;lt;span class=&quot;theme-span-wrapper&quot; style=&quot;margin-top: .5em;&quot;&amp;gt;
-&amp;lt;span style=&quot;background-color: #f9bc60;&quot;&amp;gt;&amp;lt;/span&amp;gt;
-&amp;lt;span style=&quot;background-color: #e16162;&quot;&amp;gt;&amp;lt;/span&amp;gt;
-&amp;lt;span style=&quot;background-color: #abd1c6;&quot;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;span class=&amp;quot;theme-span-wrapper&amp;quot; style=&amp;quot;margin-top: .5em;&amp;quot;&amp;gt;
+&amp;lt;span style=&amp;quot;background-color: #f9bc60;&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;span style=&amp;quot;background-color: #e16162;&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;span style=&amp;quot;background-color: #abd1c6;&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
 &amp;lt;/span&amp;gt;
 &amp;lt;/div&amp;gt;
-&amp;lt;/button&amp;gt;
-
-&amp;lt;button type=&quot;button&quot; class=&quot;theme-color js-theme-color&quot; style=&quot;background-color: #eff0f3; border: 1px solid #fffffe&quot; value=&quot;fame&quot;&amp;gt;
-&amp;lt;div class=&quot;theme-color__secondary&quot; style=&quot;background-color: #fffffe; margin-bottom: .5em;&quot;&amp;gt;&amp;lt;/div&amp;gt;
-&amp;lt;span class=&quot;theme-color-text&quot; style=&quot;background: linear-gradient(180deg, #0d0d0d 100%, #0d0d0d 100%); color: #0d0d0d&quot;&amp;gt;&amp;lt;/span&amp;gt;
-&amp;lt;span class=&quot;theme-color-text&quot; style=&quot;background: linear-gradient(180deg, #0d0d0d 100%, #0d0d0d 100%); color: #0d0d0d&quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;br&amp;gt;
-&amp;lt;div class=&quot;flex&quot;&amp;gt;
-&amp;lt;span class=&quot;theme-color__name&quot; style=&quot;color: #0d0d0d;&quot;&amp;gt;
+&amp;lt;/button&amp;gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;theme-color js-theme-color&amp;quot; style=&amp;quot;background-color: #eff0f3; border: 1px solid #fffffe&amp;quot; value=&amp;quot;fame&amp;quot;&amp;gt;
+&amp;lt;div class=&amp;quot;theme-color__secondary&amp;quot; style=&amp;quot;background-color: #fffffe; margin-bottom: .5em;&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;span class=&amp;quot;theme-color-text&amp;quot; style=&amp;quot;background: linear-gradient(180deg, #0d0d0d 100%, #0d0d0d 100%); color: #0d0d0d&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;span class=&amp;quot;theme-color-text&amp;quot; style=&amp;quot;background: linear-gradient(180deg, #0d0d0d 100%, #0d0d0d 100%); color: #0d0d0d&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;br&amp;gt;
+&amp;lt;div class=&amp;quot;flex&amp;quot;&amp;gt;
+&amp;lt;span class=&amp;quot;theme-color__name&amp;quot; style=&amp;quot;color: #0d0d0d;&amp;quot;&amp;gt;
 fame
 &amp;lt;/span&amp;gt;
-&amp;lt;span class=&quot;theme-span-wrapper&quot; style=&quot;margin-top: .5em;&quot;&amp;gt;
-&amp;lt;span style=&quot;background-color: #ff8e3c;&quot;&amp;gt;&amp;lt;/span&amp;gt;
-&amp;lt;span style=&quot;background-color: #d9376e;&quot;&amp;gt;&amp;lt;/span&amp;gt;
-&amp;lt;span style=&quot;background-color: #eaddcf;&quot;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;span class=&amp;quot;theme-span-wrapper&amp;quot; style=&amp;quot;margin-top: .5em;&amp;quot;&amp;gt;
+&amp;lt;span style=&amp;quot;background-color: #ff8e3c;&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;span style=&amp;quot;background-color: #d9376e;&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;span style=&amp;quot;background-color: #eaddcf;&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
 &amp;lt;/span&amp;gt;
 &amp;lt;/div&amp;gt;
-&amp;lt;/button&amp;gt;
-
-&amp;lt;button type=&quot;button&quot; class=&quot;theme-color js-theme-color&quot; style=&quot;background-color: #232946; border: 1px solid #d4d8f0&quot; value=&quot;dark-blue&quot;&amp;gt;
-&amp;lt;div class=&quot;theme-color__secondary&quot; style=&quot;background-color: #d4d8f0; margin-bottom: .5em;&quot;&amp;gt;&amp;lt;/div&amp;gt;
-&amp;lt;span class=&quot;theme-color-text&quot; style=&quot;background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe&quot;&amp;gt;&amp;lt;/span&amp;gt;
-&amp;lt;span class=&quot;theme-color-text&quot; style=&quot;background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe&quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;br&amp;gt;
-&amp;lt;div class=&quot;flex&quot;&amp;gt;
-&amp;lt;span class=&quot;theme-color__name&quot; style=&quot;color: #fffffe;&quot;&amp;gt;
+&amp;lt;/button&amp;gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;theme-color js-theme-color&amp;quot; style=&amp;quot;background-color: #232946; border: 1px solid #d4d8f0&amp;quot; value=&amp;quot;dark-blue&amp;quot;&amp;gt;
+&amp;lt;div class=&amp;quot;theme-color__secondary&amp;quot; style=&amp;quot;background-color: #d4d8f0; margin-bottom: .5em;&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;span class=&amp;quot;theme-color-text&amp;quot; style=&amp;quot;background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;span class=&amp;quot;theme-color-text&amp;quot; style=&amp;quot;background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;br&amp;gt;
+&amp;lt;div class=&amp;quot;flex&amp;quot;&amp;gt;
+&amp;lt;span class=&amp;quot;theme-color__name&amp;quot; style=&amp;quot;color: #fffffe;&amp;quot;&amp;gt;
 dark-blue
 &amp;lt;/span&amp;gt;
-&amp;lt;span class=&quot;theme-span-wrapper&quot; style=&quot;margin-top: .5em;&quot;&amp;gt;
-&amp;lt;span style=&quot;background-color: #eebbc3;&quot;&amp;gt;&amp;lt;/span&amp;gt;
-&amp;lt;span style=&quot;background-color: #b8c1ec;&quot;&amp;gt;&amp;lt;/span&amp;gt;
-&amp;lt;span style=&quot;background-color: #eaddcf;&quot;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;span class=&amp;quot;theme-span-wrapper&amp;quot; style=&amp;quot;margin-top: .5em;&amp;quot;&amp;gt;
+&amp;lt;span style=&amp;quot;background-color: #eebbc3;&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;span style=&amp;quot;background-color: #b8c1ec;&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;span style=&amp;quot;background-color: #eaddcf;&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
 &amp;lt;/span&amp;gt;
 &amp;lt;/div&amp;gt;
-&amp;lt;/button&amp;gt;
-
-&amp;lt;button type=&quot;button&quot; class=&quot;theme-color js-theme-color&quot; style=&quot;background-color: #55423d; border: 1px solid #271c19&quot; value=&quot;brown&quot;&amp;gt;
-&amp;lt;div class=&quot;theme-color__secondary&quot; style=&quot;background-color: #271c19; margin-bottom: .5em;&quot;&amp;gt;&amp;lt;/div&amp;gt;
-&amp;lt;span class=&quot;theme-color-text&quot; style=&quot;background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe&quot;&amp;gt;&amp;lt;/span&amp;gt;
-&amp;lt;span class=&quot;theme-color-text&quot; style=&quot;background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe&quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;br&amp;gt;
-&amp;lt;div class=&quot;flex&quot;&amp;gt;
-&amp;lt;span class=&quot;theme-color__name&quot; style=&quot;color: #fffffe;&quot;&amp;gt;
+&amp;lt;/button&amp;gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;theme-color js-theme-color&amp;quot; style=&amp;quot;background-color: #55423d; border: 1px solid #271c19&amp;quot; value=&amp;quot;brown&amp;quot;&amp;gt;
+&amp;lt;div class=&amp;quot;theme-color__secondary&amp;quot; style=&amp;quot;background-color: #271c19; margin-bottom: .5em;&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;span class=&amp;quot;theme-color-text&amp;quot; style=&amp;quot;background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;span class=&amp;quot;theme-color-text&amp;quot; style=&amp;quot;background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;br&amp;gt;
+&amp;lt;div class=&amp;quot;flex&amp;quot;&amp;gt;
+&amp;lt;span class=&amp;quot;theme-color__name&amp;quot; style=&amp;quot;color: #fffffe;&amp;quot;&amp;gt;
 brown
 &amp;lt;/span&amp;gt;
-&amp;lt;span class=&quot;theme-span-wrapper&quot; style=&quot;margin-top: .5em;&quot;&amp;gt;
-&amp;lt;span style=&quot;background-color: #ffc0ad;&quot;&amp;gt;&amp;lt;/span&amp;gt;
-&amp;lt;span style=&quot;background-color: #e78fb3;&quot;&amp;gt;&amp;lt;/span&amp;gt;
-&amp;lt;span style=&quot;background-color: #9656a1;&quot;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;span class=&amp;quot;theme-span-wrapper&amp;quot; style=&amp;quot;margin-top: .5em;&amp;quot;&amp;gt;
+&amp;lt;span style=&amp;quot;background-color: #ffc0ad;&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;span style=&amp;quot;background-color: #e78fb3;&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;span style=&amp;quot;background-color: #9656a1;&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
 &amp;lt;/span&amp;gt;
 &amp;lt;/div&amp;gt;
-&amp;lt;/button&amp;gt;
-
+&amp;lt;/button&amp;gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;/div&amp;gt;
 &amp;lt;/div&amp;gt;
 &amp;lt;/div&amp;gt;
-&amp;lt;/div&amp;gt;
-&amp;lt;/section&amp;gt;
-
-````
-&lt;/code&gt;
-&lt;/pre&gt;
-&lt;div class=&quot;codetitle&quot;&gt;
+&amp;lt;/section&amp;gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;/code&amp;gt;
+&amp;lt;/pre&amp;gt;
+&amp;lt;div class=&amp;quot;codetitle&amp;quot;&amp;gt;
 /assets/js/theme.js file
-&lt;/div&gt;
-&lt;pre class=&quot;language-html&quot;&gt;
-&lt;code class=&quot;language-js&quot;&gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;pre class=&amp;quot;language-html&amp;quot;&amp;gt;
+&amp;lt;code class=&amp;quot;language-js&amp;quot;&amp;gt;
 ```
 class CustomTheme {
     constructor() {
         // part A: check if localStorage works
         this.islocalStorage = function() {
             try {
-                localStorage.setItem(&quot;test&quot;, &quot;testing&quot;);
-                localStorage.removeItem(&quot;test&quot;);
+                localStorage.setItem(&amp;quot;test&amp;quot;, &amp;quot;testing&amp;quot;);
+                localStorage.removeItem(&amp;quot;test&amp;quot;);
                 return true;
             } catch (error) {
                 return false
@@ -575,20 +563,20 @@ class CustomTheme {
         };
         // part B: Get the value from the buttons
         this.schemeBtns = document.querySelectorAll(&#39;.js-theme-color&#39;);
-        this.schemeBtns.forEach((btn) =&gt; {
+        this.schemeBtns.forEach((btn) =&amp;gt; {
             const btnVal = btn.value;
-            btn.addEventListener(&#39;click&#39;, () =&gt; this.themeScheme(btnVal))
+            btn.addEventListener(&#39;click&#39;, () =&amp;gt; this.themeScheme(btnVal))
         });
         this.fontBtns = document.querySelectorAll(&#39;.js-font-btn&#39;);
-        this.fontBtns.forEach((btn) =&gt; {
+        this.fontBtns.forEach((btn) =&amp;gt; {
             const btnVal = btn.value;
             const btnTag = btn;
-            btn.addEventListener(&#39;click&#39;, () =&gt; this.themeFont(btnVal, btnTag))
+            btn.addEventListener(&#39;click&#39;, () =&amp;gt; this.themeFont(btnVal, btnTag))
         });
         // part C: get the html button element
         this.switchBtn = document.querySelector(&#39;.js-theme-toggle&#39;);
         const clicked = this.switchBtn;
-        this.switchBtn.addEventListener(&#39;click&#39;, () =&gt; this.themePosition(clicked))
+        this.switchBtn.addEventListener(&#39;click&#39;, () =&amp;gt; this.themePosition(clicked))
     }
     // part D: Save the data in localStorage
     themeScheme(btnVal) {
@@ -628,18 +616,18 @@ class CustomTheme {
 }
 function removeActive() {
 const btns = document.querySelectorAll(&#39;.js-font-btn&#39;);
-btns.forEach((btn) =&gt; {
+btns.forEach((btn) =&amp;gt; {
 btn.classList.remove(&#39;active&#39;);
 })
 }
 // part E: Only use our class if css custom properties are supported
-if (window.CSS &amp;&amp; CSS.supports(&#39;color&#39;, &#39;var(--i-support&#39;)) {
+if (window.CSS &amp;amp;&amp;amp; CSS.supports(&#39;color&#39;, &#39;var(--i-support&#39;)) {
 new CustomTheme()
 };
 // part E: Add an active class to selected font size button
-window.addEventListener(&#39;load&#39;, () =&gt; {
+window.addEventListener(&#39;load&#39;, () =&amp;gt; {
 const fontBtns = document.querySelectorAll(&#39;.js-font-btn&#39;);
-fontBtns.forEach((btn) =&gt; {
+fontBtns.forEach((btn) =&amp;gt; {
 const btnVal = btn.value;
 const btnTag = btn;
 if (btnVal == localStorage.getItem(&#39;font-size&#39;)) {
@@ -647,10 +635,9 @@ btnTag.classList.add(&#39;active&#39;);
 }
 });  
 })
-&lt;pre&gt;&lt;code&gt;&amp;lt;/code&amp;gt;
+```
+&amp;lt;/code&amp;gt;
 &amp;lt;/pre&amp;gt;
-
-
 &amp;lt;p&amp;gt;
 Add this one to the head part in your html file before any other css file
 &amp;lt;/p&amp;gt;

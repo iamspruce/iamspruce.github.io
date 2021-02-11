@@ -25,7 +25,7 @@
 .article__tag {
     margin-bottom: 4px;
     font-size: 16px;
-    color: var(--text-dark);
+    color: var(--text);
 }
 
 .post__list--title {
@@ -187,7 +187,7 @@ pre[class*=language-] {
     margin:.1rem calc(50% - 50vw)
    }
   
- /* pre[class*=language-]>code {
+  pre[class*=language-]>code {
     width:100%;
     max-width:41rem;
     margin-left:auto;
@@ -216,6 +216,5 @@ pre[class*=language-] {
     margin:0 2px;
     font-size:75%
    }
-   */
+   
 }
- 

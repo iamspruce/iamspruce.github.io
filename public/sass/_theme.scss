@@ -22,8 +22,8 @@
 
         p {
         margin-bottom: 24px;
-        font-size: var(--font-size);
-        color: var(--text-dark);
+        font-size: calc( var(--font-size) - 2px);
+        color: var(--text);
     }
     }
 }

@@ -235,7 +235,7 @@ p {
  */
 a {
   text-decoration: none;
-  color: var(--secondary);
+  color: var(--primary);
 }
 
 button {
@@ -929,6 +929,57 @@ div.nav__overlay {
   object-position: center;
 }
 
+.article__body {
+  /*    code[class*=language-],
+  pre[class*=language-] {
+   font-family:"Andale Mono","Courier New",monospace;
+   font-size: var(--font-size);
+   line-height:1.85;
+   direction:ltr;
+   text-align:left;
+   word-spacing:normal;
+   -moz-tab-size:4;
+   -o-tab-size:4;
+   tab-size:4;
+   -webkit-hyphens:none;
+   -ms-hyphens:none;
+   hyphens:none;
+   white-space:pre;
+   background:var(--bg-alt);
+   color: var(--text)
+  }
+   */
+  /* pre[class*=language-]>code {
+     width:100%;
+     max-width:41rem;
+     margin-left:auto;
+     margin-right:auto;
+     display:block
+    }
+    @media (min-width:940px) {
+  pre[class*=language-] {
+      padding:.75rem 3rem
+     }
+    }
+    @media screen and (min-width:1040px) {
+      pre[class*=language-] {
+      margin-left:-180px;
+      margin-right:-180px;
+      border-radius:.5rem
+     }
+    }
+    :not(pre)>code {
+     display:inline-block;
+     font-family:"Andale Mono","Courier New",monospace;
+     background-color:var(--bg-alt);
+     border:1px solid var(--border);
+     border-radius:.25rem;
+     padding:2px 4px;
+     margin:0 2px;
+     font-size:75%
+    }
+    */
+}
 .article__body figure {
   background: transparent;
   border: 0;
@@ -1010,24 +1061,6 @@ div.nav__overlay {
   font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
   font-size: 0.75em;
 }
-.article__body code[class*=language-],
-.article__body pre[class*=language-] {
-  font-family: "Andale Mono", "Courier New", monospace;
-  font-size: var(--font-size);
-  line-height: 1.85;
-  direction: ltr;
-  text-align: left;
-  word-spacing: normal;
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-  tab-size: 4;
-  -webkit-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
-  white-space: pre;
-  background: var(--bg-alt);
-  color: var(--text);
-}
 .article__body pre[class*=language-] {
   display: block;
   font-size: var(--font-size);
@@ -1036,35 +1069,6 @@ div.nav__overlay {
 }
 .article__body pre[class*=language-] {
   margin: 0.1rem calc(50% - 50vw);
-}
-.article__body pre[class*=language-] > code {
-  width: 100%;
-  max-width: 41rem;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-}
-@media (min-width: 940px) {
-  .article__body pre[class*=language-] {
-    padding: 0.75rem 3rem;
-  }
-}
-@media screen and (min-width: 1040px) {
-  .article__body pre[class*=language-] {
-    margin-left: -180px;
-    margin-right: -180px;
-    border-radius: 0.5rem;
-  }
-}
-.article__body :not(pre) > code {
-  display: inline-block;
-  font-family: "Andale Mono", "Courier New", monospace;
-  background-color: var(--bg-alt);
-  border: 1px solid var(--border);
-  border-radius: 0.25rem;
-  padding: 2px 4px;
-  margin: 0 2px;
-  font-size: 75%;
 }
 
 /* mark text */

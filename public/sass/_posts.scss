@@ -158,7 +158,7 @@
         font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;
         font-size: .75em;
     }
-    code[class*=language-],
+ /*    code[class*=language-],
 pre[class*=language-] {
  font-family:"Andale Mono","Courier New",monospace;
  font-size: var(--font-size);
@@ -176,7 +176,7 @@ pre[class*=language-] {
  background:var(--bg-alt);
  color: var(--text)
 }
-
+ */
    pre[class*=language-] {
     display:block;
     font-size: var(--font-size);
@@ -187,7 +187,7 @@ pre[class*=language-] {
     margin:.1rem calc(50% - 50vw)
    }
   
- pre[class*=language-]>code {
+ /* pre[class*=language-]>code {
     width:100%;
     max-width:41rem;
     margin-left:auto;
@@ -216,4 +216,6 @@ pre[class*=language-] {
     margin:0 2px;
     font-size:75%
    }
+   */
 }
+ 

@@ -217,7 +217,7 @@ permalink: /css/theme.css
 // use the dark theme
 &lt;p&gt;@media(prefers-color-scheme: dark) {
 :root {
---text: #fffffe;
+--text: #ffffff;
 --text-dark: #94a1b2;
 --border: rgba(255,255,255,.1);
 --primary: #ff8906;
@@ -464,10 +464,10 @@ default
 &amp;lt;/button&amp;gt;&lt;/p&gt;
 &lt;p&gt;&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;theme-color js-theme-color&amp;quot; style=&amp;quot;background-color: #16161a; border: 1px solid #242629&amp;quot; value=&amp;quot;dark&amp;quot;&amp;gt;
 &amp;lt;div class=&amp;quot;theme-color__secondary&amp;quot; style=&amp;quot;background-color: #242629; margin-bottom: .5em;&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
-&amp;lt;span class=&amp;quot;theme-color-text&amp;quot; style=&amp;quot;background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
-&amp;lt;span class=&amp;quot;theme-color-text&amp;quot; style=&amp;quot;background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;br&amp;gt;
+&amp;lt;span class=&amp;quot;theme-color-text&amp;quot; style=&amp;quot;background: linear-gradient(180deg, #ffffff 100%, #ffffff 100%); color: #ffffff&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
+&amp;lt;span class=&amp;quot;theme-color-text&amp;quot; style=&amp;quot;background: linear-gradient(180deg, #ffffff 100%, #ffffff 100%); color: #ffffff&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;br&amp;gt;
 &amp;lt;div class=&amp;quot;flex&amp;quot;&amp;gt;
-&amp;lt;span class=&amp;quot;theme-color__name&amp;quot; style=&amp;quot;color: #fffffe;&amp;quot;&amp;gt;
+&amp;lt;span class=&amp;quot;theme-color__name&amp;quot; style=&amp;quot;color: #ffffff;&amp;quot;&amp;gt;
 dark
 &amp;lt;/span&amp;gt;
 &amp;lt;span class=&amp;quot;theme-span-wrapper&amp;quot; style=&amp;quot;margin-top: .5em;&amp;quot;&amp;gt;

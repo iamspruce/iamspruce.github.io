@@ -1,4 +1,20 @@
 @charset "UTF-8";
+@font-face {
+  font-family: "Gibson";
+  src: url("../assets/fonts/");
+  src: url("../assets/fonts/?#iefix") format("embedded-opentype"), url("../assets/fonts/Gibson-Bold.woff2") format("woff2"), url("../assets/fonts/Gibson-Bold.woff") format("woff"), url("../assets/fonts/Gibson-Bold.ttf") format("truetype"), url("../assets/fonts/Gibson-Bold.svg#Gibson-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: optional;
+}
+@font-face {
+  font-family: "Gibson";
+  src: url("../assets/fonts/Gibson-Regular.eot");
+  src: url("../assets/fonts/Gibson-Regular.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Gibson-Regular.woff2") format("woff2"), url("../assets/fonts/Gibson-Regular.woff") format("woff"), url("../assets/fonts/Gibson-Regular.ttf") format("truetype"), url("../assets/fonts/Gibson-Regular.svg#Gibson-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: optional;
+}
 @page {
   size: A4;
 }
@@ -576,7 +592,7 @@ div.nav__overlay {
 }
 .section-theme__contain p {
   margin-bottom: 24px;
-  font-size: calc( var(--font-size) - 2px);
+  font-size: calc(var(--font-size) - 2px);
   color: var(--text);
 }
 
@@ -1050,23 +1066,6 @@ div.nav__overlay {
   background-color: currentColor;
   left: 0;
   top: 50%;
-}
-
-@font-face {
-  font-family: "Gibson";
-  src: url("../assets/fonts/");
-  src: url("../assets/fonts/?#iefix") format("embedded-opentype"), url("../assets/fonts/Gibson-Bold.woff2") format("woff2"), url("../assets/fonts/Gibson-Bold.woff") format("woff"), url("../assets/fonts/Gibson-Bold.ttf") format("truetype"), url("../assets/fonts/Gibson-Bold.svg#Gibson-Bold") format("svg");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Gibson";
-  src: url("../assets/fonts/Gibson-Regular.eot");
-  src: url("../assets/fonts/Gibson-Regular.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Gibson-Regular.woff2") format("woff2"), url("../assets/fonts/Gibson-Regular.woff") format("woff"), url("../assets/fonts/Gibson-Regular.ttf") format("truetype"), url("../assets/fonts/Gibson-Regular.svg#Gibson-Regular") format("svg");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
 }
 
 /*# sourceMappingURL=style.css.map */

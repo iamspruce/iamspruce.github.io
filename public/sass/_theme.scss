@@ -1,140 +1,129 @@
 .section-theme.active {
-    right: 0%;
+  right: 0%;
 }
 
 .section-theme {
-    background: var(--bg-alt);
-    border-left: 1px solid var(--border);
-    position: fixed;
-    top: 0;
-    width: 320px;
-    height: 100vh;
-    overflow-y: scroll;
-    z-index: 900;
-    right: -9999px;
-    box-shadow: 1px 0px 2px 0 rgba(60,64,67,.3),2px 0 6px 2px rgba(60,64,67,.15);
-    transition: all .35s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  background: var(--bg-alt);
+  border-left: 1px solid var(--border);
+  position: fixed;
+  top: 0;
+  width: 320px;
+  height: 100vh;
+  overflow-y: scroll;
+  z-index: 900;
+  right: -9999px;
+  box-shadow: 1px 0px 2px 0 rgba(60, 64, 67, 0.3),
+    2px 0 6px 2px rgba(60, 64, 67, 0.15);
+  transition: all 0.35s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 
-    
+  &__contain {
+    padding-bottom: 30px;
 
-    &__contain {
-        padding-bottom: 30px;
-
-        p {
-        margin-bottom: 24px;
-        font-size: calc( var(--font-size) - 2px);
-        color: var(--text);
+    p {
+      margin-bottom: 24px;
+      font-size: calc(var(--font-size) - 2px);
+      color: var(--text);
     }
-    }
+  }
 }
 @media (max-width: 320px) {
-    .section-theme {
-        width: calc(100% - 2px)
-    }
+  .section-theme {
+    width: calc(100% - 2px);
+  }
 }
 .theme-title {
-    font-weight: 400;
-    font-size: 18px;
-    margin-bottom: 5px;
+  font-weight: 400;
+  font-size: 18px;
+  margin-bottom: 5px;
 }
 .theme__header {
-    padding: 30px 30px 8px 30px;
-
+  padding: 30px 30px 8px 30px;
 }
 
-    .theme__top {
-        padding:1px 30px 10px 30px;
-
-    }
+.theme__top {
+  padding: 1px 30px 10px 30px;
+}
 
 .theme-top-col {
-    border-bottom: 1px solid var(--border);
-    padding: .9em 0;
+  border-bottom: 1px solid var(--border);
+  padding: 0.9em 0;
 }
-
 
 .theme__bottom {
-    padding:20px 0px 30px  30px;
-
+  padding: 20px 0px 30px 30px;
 }
 .theme-color-wrapper {
-    display: flex;
-    overflow-x: auto;
-    padding: .5em 0;
+  display: flex;
+  overflow-x: auto;
+  padding: 0.5em 0;
 
-    .theme-color {
-        transition: all .3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-    }
-    .theme-color:not(:first-child) {
-        margin-left: -30px;
-    }
-    .theme-color:hover ~ .theme-color {
-            margin-left: 0;
-    }
+  .theme-color {
+    transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  }
+  .theme-color:not(:first-child) {
+    margin-left: -30px;
+  }
+  .theme-color:hover ~ .theme-color {
+    margin-left: 0;
+  }
 }
 .theme-color {
-    padding: 1.2em;
-    border-radius: 11px;
-    width: 200px;
-    min-width: 200px;
-    position: relative;
-    z-index: 5;
-    box-shadow: 0 2px 4px rgba(0,0,0,.2),
-                0 3px 4.5px rgba(0,0,0,.3);
-    
+  padding: 1.2em;
+  border-radius: 11px;
+  width: 200px;
+  min-width: 200px;
+  position: relative;
+  z-index: 5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 3px 4.5px rgba(0, 0, 0, 0.3);
 
-    &__secondary {
-        width: 34px;
-        height: 24px;
-        border-radius: 6px;
-        box-shadow: 0 2px 4px rgba(0,0,0,.2);
-
-    }
-    &-text {
-        display: inline-block;
-        width: 80px;
-        height: 6px;
-        margin-top: .4em;
-        border-radius: 40em;
-    }
-   
+  &__secondary {
+    width: 34px;
+    height: 24px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  &-text {
+    display: inline-block;
+    width: 80px;
+    height: 6px;
+    margin-top: 0.4em;
+    border-radius: 40em;
+  }
 }
 .theme-span-wrapper {
-    display: flex;
+  display: flex;
 
-    span {
-        width: 24px;
-        height: 24px;
-        border-radius: 50%;
-    }
-    span:not(:first-child) {
-        margin-left: -10px;
-    }
+  span {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+  }
+  span:not(:first-child) {
+    margin-left: -10px;
+  }
 }
 .js-font-btn {
-    margin-top: 8px;
+  margin-top: 8px;
 }
 .js-font-btn.active {
-    background: var(--primary);
-    color: var(--bg);
+  background: var(--primary);
+  color: var(--bg);
 }
 /* styling the checkboxes */
 [role="switch"][aria-checked="true"] :first-child,
 [role="switch"][aria-checked="false"] :last-child {
-    border-radius: .4em;
-    background: var(--primary);
-    color: var(--bg);
-    
+  border-radius: 0.4em;
+  background: var(--primary);
+  color: var(--bg);
 }
 
 .btn[role="switch"] span:not(:first-child) {
-    margin-left: .6em;
-
+  margin-left: 0.6em;
 }
 .btn[role="switch"] span {
-    display: inline-block;
-    padding: .6em;
-    pointer-events: none;
+  display: inline-block;
+  padding: 0.6em;
+  pointer-events: none;
 }
 
 /* tabs */

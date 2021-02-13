@@ -681,7 +681,7 @@ Highlight Text
 &lt;p&gt;
 Now you might be surprised how easy it is to highlight a whole paragraph of text with one line of css...
 &lt;/p&gt;
-&lt;pre class=&quot;prettyprint linenums&quot;&gt;
+&lt;pre class=&quot;language-css&quot;&gt;
 &lt;code class=&quot;lang-html&quot;&gt;// HTML code
 &amp;lt;p class=&quot;highlight-text&quot;&amp;gt;
 Lorem ipsum dolor sit amet consectetur adipisicing elit. At nam dignissimos nemo nihil iure illo nisi nobis voluptatum sit architecto reprehenderit, quibusdam molestiae, sunt, distinctio ea vero? Error, minus excepturi?
@@ -707,7 +707,7 @@ Lines on both side of an Element
 &lt;p&gt;
 You might be wondering, how do I place lines on both side of an Element in the most less messy way. It&#39;s actually kind of a breeze with css &lt;b&gt;LINEAR-GRADIENT&lt;/b&gt;
 &lt;/p&gt;
-&lt;pre class=&quot;prettyprint linenums&quot;&gt;
+&lt;pre class=&quot;language-css&quot;&gt;
 &lt;code class=&quot;lang-html&quot;&gt;
 // HTML code
 &amp;lt;div class=&quot;lines&quot;&amp;gt;
@@ -746,8 +746,8 @@ Css Wavy lines
 &lt;p&gt;
 With just a single &lt;b&gt;div&lt;/b&gt; you can create a Wavy effect with pure css
 &lt;/p&gt;
- &lt;pre class=&quot;prettyprint linenums&quot;&gt;
-&lt;code class=&quot;lang-css&quot;&gt;
+ &lt;pre class=&quot;language-css&quot;&gt;
+&lt;code class=&quot;language-css&quot;&gt;
  // HTML code
  &amp;lt;div class=&quot;wavy-line&quot;&amp;gt;&amp;lt;div&amp;gt;
 
@@ -790,8 +790,8 @@ Animate line on hover
 &lt;p&gt;
 Another cool thing you can do with css lines is animating them....
 &lt;/p&gt;
- &lt;pre class=&quot;prettyprint linenums&quot;&gt;
-&lt;code class=&quot;lang&quot;&gt;
+ &lt;pre class=&quot;language-css&quot;&gt;
+&lt;code class=&quot;language-css&quot;&gt;
  // HTML code
      &amp;lt;a href=&quot;#0&quot; class=&quot;line-animate&quot;&amp;gt;
         hover me
@@ -858,8 +858,8 @@ Image of header text with line from smashingmagazine
 &lt;p&gt;
 What if I told you it is quite easy to do with CSS 
 &lt;/p&gt;
- &lt;pre class=&quot;prettyprint linenums&quot;&gt;
-&lt;code class=&quot;lang&quot;&gt;
+ &lt;pre class=&quot;language-css&quot;&gt;
+&lt;code class=&quot;language-css&quot;&gt;
  // HTML code
    &amp;lt;div class=&quot;line-before&quot;&amp;gt;
      &amp;lt;span class=&quot;line-before__inner&quot;&amp;gt;
@@ -2253,7 +2253,7 @@ Next part of this series
 Hey there welcome to my personal blog where i write about my learning process as a supposed web designer.
 &lt;/p&gt;
  &lt;figure class=&quot;p-article__img&quot;&gt;
-  &lt;img src=&quot;https://spruce.com.ng/assets/img/spruce.png&quot; alt=&quot;website cover image&quot; /&gt;
+  &lt;img src=&quot;https://spruce.com.ng/assets/img/spruce.webp&quot; alt=&quot;website cover image&quot; /&gt;
  &lt;/figure&gt;
 &lt;p&gt;
 This site (My personal blog) Which was &lt;strong&gt;lunched&lt;/strong&gt; on the &lt;b&gt; 18th of November &lt;/b&gt; is my own personal online journal where i blog about everything web design.

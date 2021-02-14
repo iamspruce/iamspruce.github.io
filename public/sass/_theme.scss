@@ -1,8 +1,10 @@
 .section-theme.active {
+  display: block;
   right: 0%;
 }
 
 .section-theme {
+  display: none;
   background: var(--bg-alt);
   border-left: 1px solid var(--border);
   position: fixed;

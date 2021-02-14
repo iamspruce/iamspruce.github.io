@@ -545,7 +545,7 @@ div.nav__overlay {
   overflow-y: auto;
   background-color: var(--bg-alt);
   z-index: 900;
-  color: var(-text);
+  color: var(--text);
   right: -9999px;
   box-shadow: 1px 0px 2px 0 rgba(60, 64, 67, 0.3), 2px 0 6px 2px rgba(60, 64, 67, 0.15);
   transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
@@ -644,10 +644,12 @@ div.nav__overlay {
   }
 }
 .section-theme.active {
+  display: block;
   right: 0%;
 }
 
 .section-theme {
+  display: none;
   background: var(--bg-alt);
   border-left: 1px solid var(--border);
   position: fixed;

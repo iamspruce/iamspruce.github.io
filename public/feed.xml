@@ -160,7 +160,7 @@
     <id>https://spruce.com.ng/blog/on-designing-a-themeable-static-website/</id>
     <content type="html">&lt;p&gt;
   This post was originally written at
-  &lt;a href=&quot;https://freecodecamp.org/news/design-a-themeable-static-website/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Freecodecamp&lt;/a&gt;
+  &lt;a href=&quot;https://freecodecamp.org/news/design-a-themeable-static-website/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Freecodecamp: How to create a theme-able static website&lt;/a&gt;
   if you are a tutorial person you can go ahead and read the guide up
 &lt;/p&gt;
 &lt;p&gt;
@@ -618,7 +618,7 @@ eleventyExcludeFromCollections: true&lt;/h2&gt;
 &lt;p&gt;
   If you copied this code and would want to know how all this work, read the
   guide
-  &lt;a href=&quot;https://freecodecamp.org/news/design-a-themeable-static-website/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;here&lt;/a&gt;
+  &lt;a href=&quot;https://freecodecamp.org/news/design-a-themeable-static-website/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;how to create a theme-able static website&lt;/a&gt;
 &lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;
 </content>
@@ -962,9 +962,9 @@ Then the browser will go through the code and apply all of them. Yeah all of the
   &lt;code class=&quot;language-css&quot;&gt;
 &lt;p&gt;// the browser will read the code like this from top to bottom&lt;/p&gt;
 &lt;p&gt;&amp;lt;!-- css --&amp;gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style=&quot;color: yellow;&quot;&gt;background: blue&lt;/span&gt;; // oh here is a background with color of blue, use this.&lt;/p&gt;
-&lt;p&gt;&lt;span style=&quot;color: yellow;&quot;&gt;background: pink&lt;/span&gt;; // wait, don&#39;t use that, here is another background with color pink, definately use this.&lt;/p&gt;
-&lt;p&gt;&lt;span style=&quot;color: yellow;&quot;&gt;background: red;&lt;/span&gt; // what&#39;s wrong with this developer, here is another background with color red, jeez, is there another one?. nope, then use this.&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;color: var(--primary);&quot;&gt;background: blue&lt;/span&gt;; // oh here is a background with color of blue, use this.&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;color: var(--primary);&quot;&gt;background: pink&lt;/span&gt;; // wait, don&#39;t use that, here is another background with color pink, definately use this.&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;color: var(--primary);&quot;&gt;background: red;&lt;/span&gt; // what&#39;s wrong with this developer, here is another background with color red, jeez, is there another one?. nope, then use this.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&amp;amp;lt;!-- Html --&amp;amp;gt;
 
 &amp;amp;lt;button class=&amp;quot;button button-action&amp;quot;&amp;amp;gt;

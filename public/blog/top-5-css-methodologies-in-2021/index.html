@@ -108,7 +108,7 @@
 
 <link rel="manifest" href="/manifest.json">
 </head>
-<body>
+<body class="line-numbers">
     <section class="section-theme">
   <div class="section-theme__contain">
     <div class="theme__header flex">
@@ -517,8 +517,6 @@
           </div>
   </div>
 </section>
-    <section class="section section--pad__btm section--full">
-  <img class="image article__hero-image" src="/blog/top-5-css-methodologies-in-2021/img/preview.jpg" alt="Top 5 Css Methodologies In 2021"></section>
     <section class="section article__body">
 <p>Css is very difficult to manage when you are dealing with a large system, this is because Everything in css is <b>Global</b></p>
 <pre class="language-css">
@@ -568,9 +566,9 @@ Then the browser will go through the code and apply all of them. Yeah all of the
   <code class="language-css">
 <p>// the browser will read the code like this from top to bottom</p>
 <p>&lt;!-- css --&gt;</p>
-<p><span style="color: yellow;">background: blue</span>; // oh here is a background with color of blue, use this.</p>
-<p><span style="color: yellow;">background: pink</span>; // wait, don't use that, here is another background with color pink, definately use this.</p>
-<p><span style="color: yellow;">background: red;</span> // what's wrong with this developer, here is another background with color red, jeez, is there another one?. nope, then use this.</p>
+<p><span style="color: var(--primary);">background: blue</span>; // oh here is a background with color of blue, use this.</p>
+<p><span style="color: var(--primary);">background: pink</span>; // wait, don't use that, here is another background with color pink, definately use this.</p>
+<p><span style="color: var(--primary);">background: red;</span> // what's wrong with this developer, here is another background with color red, jeez, is there another one?. nope, then use this.</p>
 <pre><code>&amp;lt;!-- Html --&amp;gt;
 
 &amp;lt;button class=&quot;button button-action&quot;&amp;gt;

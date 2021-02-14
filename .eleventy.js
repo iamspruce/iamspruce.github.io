@@ -1,14 +1,28 @@
 const pluginDate = require("eleventy-plugin-date");
-const timeToRead = require("eleventy-plugin-time-to-read");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
-const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const Image = require("@11ty/eleventy-img");
+
+async function imageShortcode(src, alt) {
+  if(alt === undefined) {
+    // You bet we throw an error on missing alt (alt="" works okay)
+    throw new Error(`Missing \`alt\` on myImage from: ${src}`);
+  }
+
+  let metadata = await Image(src, {
+    widths: [600],
+    formats: ["webp"]
+  });
+
+  let data = metadata.webp[metadata.webp.length - 1];
+  return `<img src="${data.url}" width="${data.width}" height="${data.height}" alt="${alt}" loading="lazy" decoding="async">`;
+}
+  
+
 module.exports = function(eleventyConfig) {
 
     eleventyConfig.setUseGitIgnore(false);
     eleventyConfig.addPlugin(pluginDate);
     eleventyConfig.addPlugin(pluginRss);
-    eleventyConfig.addPlugin(timeToRead);
-    eleventyConfig.addPlugin(syntaxHighlight);
     eleventyConfig.addWatchTarget("./src/sass/");
     eleventyConfig.addPassthroughCopy("./src/sass/");
     eleventyConfig.addPassthroughCopy("./src/assets/fonts/");
@@ -27,6 +41,7 @@ module.exports = function(eleventyConfig) {
         "json",
         "njk"
     ]);
+    eleventyConfig.addLiquidShortcode("image", imageShortcode);
     eleventyConfig.addShortcode("codepen", function(name, title,  hash) {
         return `<p data-height="370" data-theme-id="light" data-slug-hash="${hash}" data-default-tab="result" data-user="Spruce_khalifa" class="codepen">
             See the pen 

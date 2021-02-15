@@ -505,6 +505,9 @@
   <link href="/assets/prism.css" rel="stylesheet" />
   <script src="/assets/js/prism.js"></script>
 </head>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v9.0" nonce="AENkVOkz"></script>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <div class="container">
   <section class="section">
     <div class="article__wrapper">
@@ -843,17 +846,12 @@ again thanks for reading...
         <div class="media__figure">
           <a
             href="https://twitter.com/share?ref_src=twsrc%5Etfw"
+            data-url="/blog/css-flexbox-and-some-use-cases/"
             data-via="sprucekhalifa"
             data-hashtags="DevCommunity"
             data-show-count="false"
-            aria-label="upvote"
             class="feedback__vote feedback__vote--upvote"
           >
-            <script 
-              async
-              src="https://platform.twitter.com/widgets.js"
-              charset="utf-8"
-            ></script>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="64"
@@ -877,11 +875,9 @@ again thanks for reading...
                   <use xlink:href="#logo-twitter"></use>
                 </g>
               </g>
-            </svg></button
-          ><button
-            aria-label="downvote"
-            class="feedback__vote feedback__vote--downvote"
-          >
+            </svg></a>
+          <span class="fb-share-button" data-href="/blog/css-flexbox-and-some-use-cases/" data-layout="button">
+            <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fspruce.com.ng%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="64"
@@ -906,7 +902,8 @@ again thanks for reading...
                 </g>
               </g>
             </svg>
-          </button>
+          </a>
+        </span>
         </div>
       </div>
       <!---->

@@ -737,12 +737,10 @@ Add line in the middle of a word
 <p>
 Have you ever wanted create a header text like the one below?
 </p>
- <figure class="p-article__img">
-  <img src="img/line-article.jpg" alt="image of header text with Line from smashingmagazine" />
-<figcaption>
-Image of header text with line from smashingmagazine
-</figcaption>
- </figure>
+<figure class="p-article__img"><picture><source media="(max-width: 799px)" srcset="img/line-article.jpg?nf_resize=fit&w=480">
+        <source media="(min-width: 800px)" srcset="img/line-article.jpg?nf_resize=fit&w=800">
+        <img src="img/line-article.jpg?nf_resize=fit&w=800" alt="image of header text with Line from smashingmagazine">
+        </picture><figcaption>image of header text with Line from smashingmagazine</figcaption></figure>
 <p>
 What if I told you it is quite easy to do with CSS 
 </p>
@@ -838,7 +836,7 @@ Thanks for reading
                 </g>
               </g>
             </svg></a>
-          <span class="fb-share-button" data-href="/blog/5-cool-css-only-line-effects/" data-layout="button">
+          <span class="" data-href="/blog/5-cool-css-only-line-effects/" data-layout="button">
             <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fspruce.com.ng%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">
             <svg
               xmlns="http://www.w3.org/2000/svg"

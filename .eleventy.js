@@ -1,22 +1,5 @@
 const pluginDate = require("eleventy-plugin-date");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
-const Image = require("@11ty/eleventy-img");
-
-async function imageShortcode(src, alt) {
-  if(alt === undefined) {
-    // You bet we throw an error on missing alt (alt="" works okay)
-    throw new Error(`Missing \`alt\` on myImage from: ${src}`);
-  }
-
-  let metadata = await Image(src, {
-    widths: [600],
-    formats: ["webp"]
-  });
-
-  let data = metadata.webp[metadata.webp.length - 1];
-  return `<img src="${data.url}" width="${data.width}" height="${data.height}" alt="${alt}" loading="lazy" decoding="async">`;
-}
-  
 
 module.exports = function(eleventyConfig) {
 
@@ -41,7 +24,6 @@ module.exports = function(eleventyConfig) {
         "json",
         "njk"
     ]);
-    eleventyConfig.addLiquidShortcode("image", imageShortcode);
     eleventyConfig.addShortcode("codepen", function(name, title,  hash) {
         return `<p data-height="370" data-theme-id="light" data-slug-hash="${hash}" data-default-tab="result" data-user="Spruce_khalifa" class="codepen">
             See the pen 
@@ -49,7 +31,14 @@ module.exports = function(eleventyConfig) {
         ${title}
         </a>, by @${name} on <a href="https://codepen.io">Codepen</a>
         </p>`
-    }); 
+    });
+    eleventyConfig.addShortcode("image", function(url, alt) {
+        return `<figure class="p-article__img"><picture><source media="(max-width: 799px)" srcset="img/${url}?nf_resize=fit&w=480">
+        <source media="(min-width: 800px)" srcset="img/${url}?nf_resize=fit&w=800">
+        <img src="img/${url}?nf_resize=fit&w=800" alt="${alt}">
+        </picture><figcaption>${alt}</figcaption></figure>`
+    });
+
     eleventyConfig.addShortcode("caniuse", function(feature) {
         return `<p class="ciu_embed" data-feature="${feature}" data-periods="future_1,current,past_1,past_2" data-accessible-colours="false">
         <picture>

@@ -73,9 +73,9 @@
     Very useful when working with logos and when you need an image of specific file size, just add &lt;b&gt;imagesize:500x400&lt;/b&gt; at the begining of a word or phrase &lt;br /&gt;
     &lt;span style=&quot;color: var(--primary);&quot;&gt;imagesize:500x400 spongeBob&lt;/span&gt;
 &lt;/p&gt;
- &lt;figure class=&quot;p-article__img&quot;&gt;&lt;picture&gt;&lt;source media=&quot;(max-width: 799px)&quot; srcset=&quot;https://spruce.com.ng/blog/15-ways-to-use-google-like-a-pro/img/advanced-search.png?nf_resize=fit&amp;w=480&quot; /&gt;
-        &lt;source media=&quot;(min-width: 800px)&quot; srcset=&quot;https://spruce.com.ng/blog/15-ways-to-use-google-like-a-pro/img/advanced-search.png?nf_resize=fit&amp;w=800&quot; /&gt;
-        &lt;img src=&quot;https://spruce.com.ng/blog/15-ways-to-use-google-like-a-pro/img/advanced-search.png?nf_resize=fit&amp;w=800&quot; alt=&quot;Exact 500x400 spongebob image&quot; /&gt;
+ &lt;figure class=&quot;p-article__img&quot;&gt;&lt;picture&gt;&lt;source media=&quot;(max-width: 799px)&quot; srcset=&quot;https://spruce.com.ng/blog/15-ways-to-use-google-like-a-pro/img/image-size.png?nf_resize=fit&amp;w=480&quot; /&gt;
+        &lt;source media=&quot;(min-width: 800px)&quot; srcset=&quot;https://spruce.com.ng/blog/15-ways-to-use-google-like-a-pro/img/image-size.png?nf_resize=fit&amp;w=800&quot; /&gt;
+        &lt;img src=&quot;https://spruce.com.ng/blog/15-ways-to-use-google-like-a-pro/img/image-size.png?nf_resize=fit&amp;w=800&quot; alt=&quot;Exact 500x400 spongebob image&quot; /&gt;
         &lt;/picture&gt;&lt;figcaption&gt;Exact 500x400 spongebob image&lt;/figcaption&gt;&lt;/figure&gt;
 &lt;h6 class=&quot;h3&quot;&gt;
     06. Search Social Media

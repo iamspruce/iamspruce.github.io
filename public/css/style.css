@@ -208,6 +208,30 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text);
 }
 
+.h1 {
+  font-size: 44px;
+}
+
+.h2 {
+  font-size: 40px;
+}
+
+.h3 {
+  font-size: 36px;
+}
+
+.h4 {
+  font-size: 32px;
+}
+
+.h5 {
+  font-size: 28px;
+}
+
+.h6 {
+  font-size: 24px;
+}
+
 h1 {
   margin-bottom: 1em;
 }
@@ -1063,8 +1087,8 @@ div.nav__overlay {
 }
 
 .feedback {
-  border-bottom: 0.1rem solid rgba(14, 30, 37, 0.054);
-  border-top: 0.1rem solid rgba(14, 30, 37, 0.054);
+  border-bottom: 0.1rem solid var(--border);
+  border-top: 0.1rem solid var(--border);
   margin-top: 2.5rem;
   padding: 1.5rem 0;
   position: relative;
@@ -1103,7 +1127,7 @@ div.nav__overlay {
 }
 
 .feedback__vote:disabled svg circle {
-  fill: rgba(14, 30, 37, 0.054);
+  fill: var(--border);
 }
 
 .feedback__vote:disabled svg g path {

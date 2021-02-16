@@ -13,17 +13,22 @@
   const scheme = localStorage.getItem("theme-name");
   document.documentElement.setAttribute("data-theme", scheme);
 
-  const fontSize = localStorage.getItem("font-size");
-  document.documentElement.style.setProperty("--font-size", `${fontSize}px`);
+  if (localStorage.getItem("font-size") == null) {
+    document.documentElement.style.setProperty("--font-size", "18px");
+  } else {
+    const fontSize = localStorage.getItem("font-size");
+    document.documentElement.style.setProperty("--font-size", `${fontSize}px`);
+  }
 
   const position = localStorage.getItem("position");
-  if (position == "fixed") {
+  if (position == "fixed" || position == null) {
     document.documentElement.style.setProperty("--position", "fixed");
     document.documentElement.style.setProperty("--top-margin", "96px");
   } else {
     document.documentElement.style.setProperty("--position", "static");
     document.documentElement.style.setProperty("--top-margin", "0px");
   }
+
 </script>
 
 <meta name="description" content="Have you ever wanted to own your own blog? Well if you have, this series will get you started immediately

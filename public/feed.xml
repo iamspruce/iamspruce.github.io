@@ -44,31 +44,31 @@
         &lt;source media=&quot;(min-width: 800px)&quot; srcset=&quot;https://spruce.com.ng/blog/15-ways-to-use-google-like-a-pro/img/advanced-search.png?nf_resize=fit&amp;w=800&quot; /&gt;
         &lt;img src=&quot;https://spruce.com.ng/blog/15-ways-to-use-google-like-a-pro/img/advanced-search.png?nf_resize=fit&amp;w=800&quot; alt=&quot;Google advanced search preview&quot; /&gt;
         &lt;/picture&gt;&lt;figcaption&gt;Google advanced search preview&lt;/figcaption&gt;&lt;/figure&gt;
-&lt;h2&gt;
+&lt;h3 class=&quot;h3&quot;&gt;
     02. Finding Quick Definations 
-&lt;/h2&gt;
+&lt;/h3&gt;
 &lt;p&gt;
     Google does a great job in finding answers to your search word or phrases, like &lt;b&gt;what is css&lt;/b&gt;, but you can find the meaning of any word in google by adding &lt;b&gt;Define&lt;/b&gt; at the begining of the word &lt;br /&gt; 
     &lt;span style=&quot;color: var(--primary);&quot;&gt;Define&lt;/span&gt; Css
 &lt;/p&gt;
-&lt;h2&gt;
+&lt;h4 class=&quot;h3&quot;&gt;
     03. Perform Calculations
-&lt;/h2&gt;
+&lt;/h4&gt;
 &lt;p&gt;
     You can also perform calculations in google as well by entering any maths equation like so &lt;br /&gt;
     &lt;span style=&quot;color: var(--primary);&quot;&gt;30*800&lt;/span&gt;
 &lt;/p&gt;
-&lt;h2&gt;
+&lt;h5 class=&quot;h3&quot;&gt;
     04. Unit conversion
-&lt;/h2&gt;
+&lt;/h5&gt;
 &lt;p&gt;
     Google also performs unit conversion just by entering any unit conversion in the search box &lt;br /&gt;
     &lt;span style=&quot;color: var(--primary);&quot;&gt;200m to mm&lt;/span&gt;&lt;br /&gt;
     &lt;span style=&quot;color: var(--primary);&quot;&gt;100 dollers to naira&lt;/span&gt;
 &lt;/p&gt;
-&lt;h2&gt;
+&lt;h6 class=&quot;h3&quot;&gt;
     05. Searching for an exact image size
-&lt;/h2&gt;
+&lt;/h6&gt;
 &lt;p&gt;
     Very useful when working with logos and when you need an image of specific file size, just add &lt;b&gt;imagesize:500x400&lt;/b&gt; at the begining of a word or phrase &lt;br /&gt;
     &lt;span style=&quot;color: var(--primary);&quot;&gt;imagesize:500x400 spongeBob&lt;/span&gt;
@@ -77,76 +77,76 @@
         &lt;source media=&quot;(min-width: 800px)&quot; srcset=&quot;https://spruce.com.ng/blog/15-ways-to-use-google-like-a-pro/img/advanced-search.png?nf_resize=fit&amp;w=800&quot; /&gt;
         &lt;img src=&quot;https://spruce.com.ng/blog/15-ways-to-use-google-like-a-pro/img/advanced-search.png?nf_resize=fit&amp;w=800&quot; alt=&quot;Exact 500x400 spongebob image&quot; /&gt;
         &lt;/picture&gt;&lt;figcaption&gt;Exact 500x400 spongebob image&lt;/figcaption&gt;&lt;/figure&gt;
-&lt;h2&gt;
+&lt;h6 class=&quot;h3&quot;&gt;
     06. Search Social Media
-&lt;/h2&gt;
+&lt;/h6&gt;
 &lt;p&gt;
     It is very easy to narrow a search to only social media in google, you can search only social media for a particular user or word in google by just adding &lt;b&gt;@&lt;/b&gt; at the begining of the word like &lt;br /&gt;
     &lt;span style=&quot;color: var(--primary);&quot;&gt;@SpruceEmmanuel&lt;/span&gt;
 &lt;/p&gt;
-&lt;h2&gt;
+&lt;h6 class=&quot;h3&quot;&gt;
     07. Search For Hashtags
-&lt;/h2&gt;
+&lt;/h6&gt;
 &lt;p&gt;
     You can also search for your favourite hashtags by just adding &lt;b&gt;#&lt;/b&gt; at the begining of the hashtag &lt;br /&gt;
     &lt;span style=&quot;color: var(--primary);&quot;&gt;#100daysOfCode&lt;/span&gt;
 &lt;/p&gt;
-&lt;h2&gt;
+&lt;h6 class=&quot;h3&quot;&gt;
     08. Search for Items with a specific prize
-&lt;/h2&gt;
+&lt;/h6&gt;
 &lt;p&gt;
     Finding items that falls withing your budget is one of the coolest thing i like in Google, this can be acheived by simply adding the &lt;b&gt;$&lt;/b&gt; to the begining of the price &lt;br /&gt;
     &lt;span style=&quot;color: var(--primary);&quot;&gt;Intro to python books $100&lt;/span&gt;
 &lt;/p&gt;
-&lt;h2&gt;
+&lt;h6 class=&quot;h3&quot;&gt;
     09. Exclude certain words from your search result
-&lt;/h2&gt;
+&lt;/h6&gt;
 &lt;p&gt;
     This is done by adding an &lt;b&gt;-&lt;/b&gt; at the begining of the woed you want to exclude &lt;br /&gt;
 &lt;span style=&quot;color: var(--primary);&quot;&gt;Create a blog with only html -css&lt;/span&gt;
 &lt;/p&gt;
-&lt;h2&gt;
+&lt;h6 class=&quot;h3&quot;&gt;
     10. Searching for an exact match
-&lt;/h2&gt;
+&lt;/h6&gt;
 &lt;p&gt;
     You can search for an exact match of a word or phrase by puting the word or phrase in qoute &lt;br /&gt;
     &lt;span style=&quot;color: var(--primary);&quot;&gt;&quot;What is Javascript&quot;&lt;/span&gt;
 &lt;/p&gt;
-&lt;h2&gt;
+&lt;h6 class=&quot;h3&quot;&gt;
     11. Search within a range of numbers
-&lt;/h2&gt;
+&lt;/h6&gt;
 &lt;p&gt;This is extremely useful when you have a minimum and maximum budget, you can Search for items price that are sold for &lt;b&gt;$40 t0 200$&lt;/b&gt; by adding &lt;b&gt;...&lt;/b&gt; between two numbers &lt;br /&gt;
     &lt;span style=&quot;color: var(--primary);&quot;&gt;Javascript Cookbook $50...$100&lt;/span&gt;
 &lt;/p&gt;
-&lt;h2&gt;
+&lt;h6 class=&quot;h3&quot;&gt;
     12. Combining Search
-&lt;/h2&gt;
+&lt;/h6&gt;
 &lt;p&gt;
     Add &lt;b&gt;OR&lt;/b&gt; between two search query to search for two items at at time. You can combine this with other search parameters to get more accurate search result, also notice that the &quot;OR&quot; is in uppercase &lt;br /&gt;
     &lt;span style=&quot;color: var(--primary);&quot;&gt;Javascript Cookbook $50...$100 OR Python offline guide $40&lt;/span&gt;
 &lt;/p&gt;
-&lt;h2&gt;
+&lt;h6 class=&quot;h3&quot;&gt;
     13. Search a particular site
-&lt;/h2&gt;
+
 &lt;p&gt;
     You can search a specific site by adding &lt;b&gt;site:&lt;/b&gt; at the begining of a site or domain &lt;br /&gt;
     &lt;span style=&quot;color: var(--primary);&quot;&gt;site:spruce.com.ng&lt;/span&gt;&lt;br /&gt;
     &lt;span style=&quot;color: var(--primary);&quot;&gt;site:.dev&lt;/span&gt; 
 &lt;/p&gt;
-&lt;h2&gt;
+&lt;h6 class=&quot;h3&quot;&gt;
     14. Search for a related site
-&lt;/h2&gt;
+&lt;/h6&gt;
 &lt;p&gt;
     Check similar sites is possible in google by adding &lt;b&gt;related:&lt;/b&gt; at the begining of a site &lt;br /&gt;
     &lt;span style=&quot;color: var(--primary);&quot;&gt;related:spruce.com.ng&lt;/span&gt; 
 &lt;/p&gt;
-&lt;h2&gt;
+&lt;h6 class=&quot;h3&quot;&gt;
     15. Google cached version of a site
-&lt;/h2&gt;
+&lt;/h6&gt;
 &lt;p&gt;
     Can&#39;t find an article you once read on a site? you can always check the cache version of a site in google by adding &lt;b&gt;cache&lt;/b&gt; at the begining of a site &lt;br /&gt;
     &lt;span style=&quot;color: var(--primary);&quot;&gt;cache:spruce.com.ng&lt;/span&gt; 
-&lt;/p&gt;</content>
+&lt;/p&gt;&lt;/h6&gt;</content>
   </entry>
   
   <entry>
@@ -671,9 +671,9 @@ Add line in the middle of a word
 &lt;p&gt;
 Let&#39;s jump right into actually creating this stuff
 &lt;/p&gt;
-&lt;h3 id=&quot;highlight-text&quot;&gt;
+&lt;h2 class=&quot;h2&quot; id=&quot;highlight-text&quot;&gt;
 Highlight Text
-&lt;/h3&gt;
+&lt;/h2&gt;
 &lt;p&gt;
 Now you might be surprised how easy it is to highlight a whole paragraph of text with one line of css...
 &lt;/p&gt;
@@ -736,9 +736,9 @@ You might be wondering, how do I place lines on both side of an Element in the m
     &lt;/div&gt; 
 &lt;/div&gt;
 &lt;p&gt;&lt;/p&gt;
-&lt;h3 id=&quot;wavy-line&quot;&gt;
+&lt;h4 class=&quot;h3&quot; id=&quot;wavy-line&quot;&gt;
 Css Wavy lines
-&lt;/h3&gt;
+&lt;/h4&gt;
 &lt;p&gt;
 With just a single &lt;b&gt;div&lt;/b&gt; you can create a Wavy effect with pure css
 &lt;/p&gt;
@@ -780,9 +780,9 @@ There you go, and the preview should look like the one below
 &lt;div&gt;
  &lt;div class=&quot;wavy-line&quot;&gt;&lt;/div&gt;
     &lt;/div&gt; 
-&lt;h3 id=&quot;line-hover&quot;&gt;
+&lt;h5 class=&quot;h3&quot; id=&quot;line-hover&quot;&gt;
 Animate line on hover
-&lt;/h3&gt;
+&lt;/h5&gt;
 &lt;p&gt;
 Another cool thing you can do with css lines is animating them....
 &lt;/p&gt;
@@ -839,9 +839,9 @@ Another cool thing you can do with css lines is animating them....
 &lt;p&gt;
 And there you have it, a cool hover line effect created with css
 &lt;/p&gt;
-&lt;h3 id=&quot;line-one-side&quot;&gt;
+&lt;h6 class=&quot;h3&quot; id=&quot;line-one-side&quot;&gt;
 Add line in the middle of a word
-&lt;/h3&gt;
+&lt;/h6&gt;
 &lt;p&gt;
 Have you ever wanted create a header text like the one below?
 &lt;/p&gt;
@@ -976,25 +976,25 @@ Browser will use the red background
 &lt;p&gt;
 The problem of managing css is what every developer must face one way or the other, not to mention (one of the hardest thing in css) naming classes, along the line you are going to run out of class names, that&#39;s where css methodologies comes in play(sticking to a particular naming convention)... 
 &lt;/p&gt;
-&lt;h1&gt;
+&lt;h2 class=&quot;h1&quot;&gt;
 What are css methodologies?
-&lt;/h1&gt;
+&lt;/h2&gt;
 &lt;p&gt;
 css methodologies are systems that are formaly documented down that help us to auhor/write css as isolated modules, rather than just some long indivisible code.
 &lt;/p&gt;
-&lt;h2&gt;
+&lt;h3 class=&quot;h2&quot;&gt;
 Top 5 Css Methodologies in 2021
-&lt;/h2&gt;
-&lt;h4&gt;
+&lt;/h3&gt;
+&lt;h4 class=&quot;h3&quot;&gt;
 &lt;a href=&quot;https://acss.io/&quot;&gt;1. Atomic Css&lt;/a&gt;
 &lt;/h4&gt;
 &lt;p&gt;
 Atomic Css is a collection of single purpose styling units that fits well with components in templated framewoks...
 &lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;
-&lt;h6&gt;
+&lt;h5 class=&quot;h4&quot;&gt;
 Benefits of using Atomic Css
-&lt;/h6&gt;
+&lt;/h5&gt;
 &lt;ol&gt;
 &lt;li&gt;
 Moves specifity out of the way
@@ -1007,9 +1007,9 @@ Allows to share content and assets easily
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;/p&gt;
-&lt;h6&gt;
+&lt;h5 class=&quot;h4&quot;&gt;
 Further reading 
-&lt;/h6&gt;
+&lt;/h5&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;a href=&quot;https://acss.io/frequently-asked-questions.html&quot;&gt;Atomic css frequently asked questions&lt;/a&gt;
@@ -1019,7 +1019,7 @@ Further reading
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;/p&gt;
-&lt;h4&gt;
+&lt;h4 class=&quot;h2&quot;&gt;
 &lt;a href=&quot;https://getbem.com/&quot;&gt;2. BEM&lt;/a&gt;
 &lt;/h4&gt;
 &lt;p&gt;
@@ -1033,9 +1033,9 @@ A part of a block that has no standalone meaning (it must be used within a block
 &lt;b&gt;Modifier:&lt;/b&gt;&lt;br /&gt;
 A flag on a block or element, basically we use this to change the appearance or state of an element.
 &lt;/p&gt;
-&lt;h6&gt;
+&lt;h5 class=&quot;h3&quot;&gt;
 Benefits of using BEM
-&lt;/h6&gt;
+&lt;/h5&gt;
 &lt;ol&gt;
 &lt;li&gt;
 Modularity
@@ -1048,9 +1048,9 @@ Structure
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;/p&gt;
-&lt;h6&gt;
+&lt;h5 class=&quot;h4&quot;&gt;
 Further reading 
-&lt;/h6&gt;
+&lt;/h5&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;a href=&quot;https://getbem.com/introduction/&quot;&gt;Intro to BEM&lt;/a&gt;
@@ -1063,18 +1063,18 @@ Further reading
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;/p&gt;
-&lt;h4&gt;
+&lt;h5 class=&quot;h2&quot;&gt;
 &lt;a href=&quot;https://getbem.com/&quot;&gt;3. ITCSS&lt;/a&gt;
-&lt;/h4&gt;
+
 &lt;p&gt;
 ITCSS - stands for &lt;b&gt;INVERTED TRIANGLE CSS&lt;/b&gt;
 &lt;/p&gt;
 &lt;p&gt;
 This is a methodolgy for structuring your css files in the best and stress free way as possible.
 &lt;/p&gt;
-&lt;h6&gt;
+&lt;h5 class=&quot;h3&quot;&gt;
 Benefits of using ITCSS
-&lt;/h6&gt;
+&lt;/h5&gt;
 &lt;ol&gt;
 &lt;li&gt;
 Less thinking on naming things
@@ -1087,9 +1087,9 @@ Flexibility
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;/p&gt;
-&lt;h6&gt;
+&lt;h5 class=&quot;h4&quot;&gt;
 Further reading 
-&lt;/h6&gt;
+&lt;/h5&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;a href=&quot;https://xfive.co/blog/itcss-scalable-maintainable-css-architecture&quot;&gt;ITCSS: Scalable and Maintainable Css Architecture&lt;/a&gt;
@@ -1099,16 +1099,16 @@ Further reading
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;/p&gt;
-&lt;h4&gt;
+&lt;h5 class=&quot;h2&quot;&gt;
 &lt;a href=&quot;https://smacss.com/&quot;&gt;4. SMACSS&lt;/a&gt;
-&lt;/h4&gt;
+
 &lt;p&gt;
 SMACSS stands for - &lt;b&gt;SCALABLE and MODULAR ARCHITECTURE for CSS&lt;/b&gt;
 &lt;/p&gt;
 &lt;p&gt;
-&lt;/p&gt;&lt;h6&gt;
+&lt;/p&gt;&lt;h5 class=&quot;h3&quot;&gt;
 Benefits of using SMACSS
-&lt;/h6&gt;
+&lt;/h5&gt;
 &lt;ol&gt;
 &lt;li&gt;
 Scalable
@@ -1118,24 +1118,24 @@ Ease of Reading
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;/p&gt;
-&lt;h6&gt;
+&lt;h5 class=&quot;h4&quot;&gt;
 Further reading 
-&lt;/h6&gt;
+&lt;/h5&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;a href=&quot;https://smacss.com/&quot;&gt;Smacss guide&lt;/a&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;/p&gt;
-&lt;h4&gt;
+&lt;h5 class=&quot;h2&quot;&gt;
 &lt;a href=&quot;https://oocss.org/&quot;&gt;5. OOCSS&lt;/a&gt;
-&lt;/h4&gt;
+
 &lt;p&gt;
 OOCSS stands for - &lt;b&gt;OBJECT ORIENTED CSS&lt;/b&gt;
 &lt;/p&gt;
-&lt;h6&gt;
+&lt;h5 class=&quot;h3&quot;&gt;
 Two main principles of OOCSS
-&lt;/h6&gt;
+&lt;/h5&gt;
 &lt;ol&gt;
 &lt;li&gt;
 Separating Structure From Skin
@@ -1145,9 +1145,9 @@ Separating Container And Content
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;/p&gt;
-&lt;h6&gt;
+&lt;h5 class=&quot;h4&quot;&gt;
 Benefits of using OOCSS
-&lt;/h6&gt;
+&lt;/h5&gt;
 &lt;ol&gt;
 &lt;li&gt;
 Maintainable stylesheets
@@ -1160,9 +1160,9 @@ Easier to modify common styles
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;/p&gt;
-&lt;h6&gt;
+&lt;h5 class=&quot;h4&quot;&gt;
 Further reading 
-&lt;/h6&gt;
+&lt;/h5&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;a href=&quot;https://oocss.org/&quot;&gt;Object oriented Css&lt;/a&gt;
@@ -1185,7 +1185,7 @@ Another css methodology that is currently on a fast rise is the &lt;a href=&quot
           &lt;/div&gt;
 &lt;p&gt;
 Thanks for reading
-&lt;/p&gt;</content>
+&lt;/p&gt;&lt;/h5&gt;&lt;/h5&gt;&lt;/h5&gt;</content>
   </entry>
   
   <entry>
@@ -1196,9 +1196,9 @@ Thanks for reading
     <content type="html">&lt;p class=&quot;lead&quot;&gt;
 In this quick article, we are going to learn what and how to use css flexbox with some use cases of flexbox 
 &lt;/p&gt;
-&lt;h1&gt;
+&lt;h2 class=&quot;h1&quot;&gt;
 What is Css Flexbox?
-&lt;/h1&gt;
+&lt;/h2&gt;
 &lt;p&gt;
 &lt;blockqoute&gt;
 In the flex layout model, the children of a flex container can be laid in any direction, and can &lt;b&gt;&quot;flex&quot;&lt;/b&gt; their sizes, either growing to fill unused space or shrinking to avoid overflowing the parent. Both horizontal and vertical alignment of the childern can be easily manipulated.
@@ -1208,9 +1208,9 @@ In the flex layout model, the children of a flex container can be laid in any di
 &lt;p&gt;
 from the css flexbox specification above, you see that flexbox is a layout model which can be used to lay out the children of a container easily... 
 &lt;/p&gt;
-&lt;h2&gt;
+&lt;h3 class=&quot;h2&quot;&gt;
 Flex Container
-&lt;/h2&gt;
+&lt;/h3&gt;
 &lt;p&gt;
 The flex container takes the css property and value&lt;strong&gt; display: flex&lt;/strong&gt; or&lt;strong&gt; display: inline-flex&lt;/strong&gt;  and it is the box generated by an element with a computed &lt;b&gt;display&lt;/b&gt; of &lt;b&gt;flex&lt;/b&gt;, children of this container are called &lt;b&gt;flex items&lt;/b&gt;
 &lt;/p&gt;
@@ -1253,9 +1253,9 @@ vertical-align: middle; // this will have no effect too
 }
 &lt;/p&gt;&lt;/code&gt;
 &lt;/pre&gt;&lt;p&gt;&lt;/p&gt;
-&lt;h3&gt;
+&lt;h4 class=&quot;h3&quot;&gt;
 Flex items
-&lt;/h3&gt;
+&lt;/h4&gt;
 &lt;pre class=&quot;language-html&quot;&gt;
 &lt;code class=&quot;language-html&quot;&gt;
 &lt;p&gt;&amp;lt;!-- html code --&amp;gt;
@@ -1299,10 +1299,10 @@ From the preview(when display: flex; is added to the flex-container) above you s
 }
 &lt;/code&gt;
 &lt;/pre&gt;
-&lt;h4&gt;
+&lt;h5 class=&quot;h4&quot;&gt;
 Some Flexbox Use Cases
-&lt;/h4&gt;
-&lt;h6&gt;
+&lt;/h5&gt;
+&lt;h6 class=&quot;h4&quot;&gt;
 Flexbox reponsive header
 &lt;/h6&gt;
 &lt;p&gt;
@@ -1318,7 +1318,7 @@ take a look at the responsive website header below
         &lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;&lt;/p&gt;
-&lt;h6&gt;
+&lt;h6 class=&quot;h4&quot;&gt;
 Flexbox Card component
 &lt;/h6&gt;
 &lt;p&gt;
@@ -1385,7 +1385,7 @@ you just need to add the flex-grow: 1; to the card content and it will always gr
         &lt;/a&gt;, by @Spruce_khalifa on &lt;a href=&quot;https://codepen.io/&quot;&gt;Codepen&lt;/a&gt;
         &lt;/p&gt;
 &lt;/div&gt;
-&lt;h6&gt;
+&lt;h6 class=&quot;h4&quot;&gt;
 Ordering Elements
 &lt;/h6&gt;
 &lt;p&gt;
@@ -1430,7 +1430,7 @@ yep, flexbox can be used to flip elements around
  &lt;/figcaption&gt;
  &lt;/figure&gt;
 &lt;p&gt;&lt;/p&gt;
- &lt;h6&gt;
+ &lt;h6 class=&quot;h4&quot;&gt;
 Center An Element
 &lt;/h6&gt;
 &lt;p&gt;
@@ -1489,7 +1489,7 @@ If you want to support older browsers, you should check the browser support leve
         &lt;/picture&gt;
     &lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;
-&lt;h6&gt;
+&lt;h6 class=&quot;h4&quot;&gt;
 Other Resources
 &lt;/h6&gt;
 &lt;p&gt;
@@ -1515,9 +1515,9 @@ again thanks for reading...
     <content type="html">&lt;p class=&quot;lead&quot;&gt;
 Sad to announce the end of this &quot;how to create a blog on your mobile phone series&quot;, well i know we have learned a lot of new things in this web series
 &lt;/p&gt;
-&lt;h6&gt;
+&lt;h2&gt;
 Some things we have learned so far
-&lt;/h6&gt;
+&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;
 what mobile blogging is
@@ -1538,9 +1538,9 @@ and so many other things
 &lt;p&gt;
 incase you missed the other series, don&#39;t worry you can always go back and read them up
 &lt;/p&gt;
-&lt;h6&gt;
+&lt;h3&gt;
 Link to previous series
-&lt;/h6&gt;
+&lt;/h3&gt;
 &lt;p&gt;
 &lt;a href=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone&quot;&gt;Create a blog on your mobile phone part 1&lt;/a&gt;
  &lt;/p&gt;
@@ -1550,18 +1550,18 @@ Link to previous series
  &lt;p&gt;
 Now lets go back to what we are really here for, blogging from your mobile phone
  &lt;/p&gt;
- &lt;h1&gt;
+ &lt;h4 class=&quot;h2&quot;&gt;
 What is blogging
- &lt;/h1&gt;
+ &lt;/h4&gt;
  &lt;p&gt;
  &lt;b&gt;Blogging&lt;/b&gt; refers to writing, photography, and other media that is self-published online.
  &lt;/p&gt;
  &lt;p&gt;
 So basically you know what blogging is all about, its a way for a lot of people to express their feelings and share there ideas online.
  &lt;/p&gt;
- &lt;h2&gt;
+ &lt;h5 class=&quot;h3&quot;&gt;
 Blogging with jekyll
- &lt;/h2&gt;
+ &lt;/h5&gt;
  &lt;p&gt;
 your blog posts live in a directory called &lt;b&gt;_posts&lt;/b&gt; in the root of your site, so basically thats where you will add all your blog posts
  &lt;/p&gt;
@@ -1573,9 +1573,9 @@ so when creating your post, always follow the order &lt;b&gt;Year&lt;/b&gt;-&lt;
 for a detailed on how to write blog posts on jekyll please refer to this jekyll guide below &lt;br /&gt; &lt;br /&gt;
 &lt;a href=&quot;https://jekyllrb.com/docs/blog&quot;&gt;Learn more about jekyll post&lt;/a&gt;
  &lt;/p&gt;
- &lt;h3&gt;
+ &lt;h6 class=&quot;h4&quot;&gt;
 Publishing your first post
- &lt;/h3&gt;
+ &lt;/h6&gt;
  &lt;p&gt;&lt;/p&gt;
 The first step is to open your spck editor, &lt;a href=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone.html&quot;&gt;The editor you downloaded in the first part of this series&lt;/a&gt;, open it and navigate to your _posts folder
  &lt;p&gt;&lt;/p&gt;
@@ -1634,9 +1634,9 @@ and there you have it, you just created your first post, go ahead and preview yo
   &lt;p&gt;
     [create a blog on rour mobile phone with jekyll part 2](/blog/create-a-blog-on-your-mobile-phone-part-2)
  &lt;/p&gt;
- &lt;h5&gt;
+ &lt;h6 class=&quot;h4&quot;&gt;
 Other resources to learn from
- &lt;/h5&gt;
+ &lt;/h6&gt;
   &lt;p&gt;
 &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web&quot;&gt; Getting Started With The Web &lt;/a&gt;
  &lt;/p&gt;
@@ -1659,9 +1659,9 @@ thanks for reading....
     <content type="html">&lt;p&gt;
 Hello dear reader and welcome to the second part of this web series on how to create a website or blog right from your mobile phone.  
 &lt;/p&gt;
-&lt;h1&gt;
+&lt;h2&gt;
 Quick Recap
-&lt;/h1&gt;
+&lt;/h2&gt;
 &lt;p&gt;
 Like i said this is the second part of this series, incase you missed the first part you can always go back and read it here: &lt;br /&gt; &lt;br /&gt;
 &lt;a href=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/&quot;&gt;Create a blog on your mobile phone part 1&lt;/a&gt;. &lt;br /&gt;
@@ -1685,9 +1685,9 @@ and quit a all lot of other things
 &lt;br /&gt;
 Don&#39;t just take my word for it, you should read it up yourself.
 &lt;p&gt;&lt;/p&gt;
-&lt;h2&gt;
+&lt;h3&gt;
 Requirements
-&lt;/h2&gt;
+&lt;/h3&gt;
 &lt;p&gt;
 Before you continue on this tutorial you should have at least a basic knowledge of the things listed below
 &lt;/p&gt;
@@ -1702,15 +1702,15 @@ How the web works (refer to part 1)
 &lt;p&gt;
 Yep thats all you will be needing for this part of the series...
 &lt;/p&gt;
-&lt;h3&gt;
+&lt;h4&gt;
 Welcome to jekyll
-&lt;/h3&gt;
+&lt;/h4&gt;
 &lt;p&gt;
 If you are the curious type like me, you would have asked yourself, what is &lt;b&gt;JEKYLL&lt;/b&gt;
 &lt;/p&gt;
-&lt;h4&gt;
+&lt;h5 class=&quot;h4&quot;&gt;
 What really is Jekyll?
-&lt;/h4&gt;
+&lt;/h5&gt;
 &lt;blockqoute&gt;
 &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; is a static site generator. it takes text written in your favorite markup language and uses layouts to create a static website. You can &lt;b&gt;tweak the sites&#39;s look and feel&lt;/b&gt;, URLs, the data displayed on the page and more 
 &lt;/blockqoute&gt;
@@ -1725,9 +1725,9 @@ In addition to all its other cools features and plugins, it also uses the &lt;b&
 Did i also mention that jekyll and github are completely free? &lt;br /&gt;
 Yep they sure are.
 &lt;/p&gt;
-&lt;h5&gt;
+&lt;h6 class=&quot;h4&quot;&gt;
 Resources to learn jekyll
-&lt;/h5&gt;
+&lt;/h6&gt;
 &lt;p&gt;
 you can learn all about jekyll and liquid from the below links
 &lt;/p&gt;
@@ -1739,7 +1739,7 @@ you can learn all about jekyll and liquid from the below links
 &lt;a href=&quot;https://shopify.github.io/liquid/basics/introduction/&quot;&gt;liquid official documentation&lt;/a&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h6&gt;
+&lt;h6 class=&quot;h4&quot;&gt;
 Intro to git 
 &lt;/h6&gt;
 &lt;p&gt;
@@ -1764,7 +1764,7 @@ A lot of terminologies used here, dont worry about that, you will soon see them 
 &lt;strong&gt;REMOTE REPO:&lt;/strong&gt; This is a common repository that all team members use to exchange their changes. This repository is stored on a code hosting service like Github(That&#39;s where github comes in)
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h6&gt;
+&lt;h6 class=&quot;h4&quot;&gt;
 Conncecting the dots...
 &lt;/h6&gt;
 &lt;p&gt;
@@ -1782,7 +1782,7 @@ A place to run Git commands from
 &lt;p&gt;
 you already have a remote repo, so you shouldn&#39;t worry about that, what i will introduce to you is &lt;b&gt;how you can execute git commands on your mobile phone&lt;/b&gt;
 &lt;/p&gt;
-&lt;h6&gt;
+&lt;h6 class=&quot;h4&quot;&gt;
 I guess we are done talking...
 &lt;/h6&gt;
 &lt;p&gt;
@@ -1971,7 +1971,7 @@ Go ahead and preview your website
  &lt;p&gt;
 Well thats the end of this part of the series... Next stop is &lt;b&gt;Blogging&lt;/b&gt;, Thanks for reading...
  &lt;/p&gt;
- &lt;h6&gt;
+ &lt;h6 class=&quot;h4&quot;&gt;
 Previous parts of this series
  &lt;/h6&gt;
  &lt;p&gt;
@@ -2211,9 +2211,9 @@ Though not really much now, Before the end of this series you will learn how to 
  &lt;p&gt;
   Next step is Customizing your new website, and introducing you to &lt;b&gt;GIT&lt;/b&gt; on your mobile phone... Thanks for reading.
  &lt;/p&gt;
-&lt;h6&gt;
+&lt;h4&gt;
 Next part of this series
-&lt;/h6&gt;
+&lt;/h4&gt;
 &lt;p&gt;
 &lt;a href=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone-part-2/&quot;&gt;Create a blog on your mobile phone part 2&lt;/a&gt;
 &lt;/p&gt;

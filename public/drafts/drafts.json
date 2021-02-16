@@ -1,0 +1,8 @@
+{
+    "layout": "layouts/posts.liquid",
+    "changefreq": "monthly",
+    "priority": "0.9",
+    "tags": "posts",
+    "eleventyExcludeFromCollections": "true",
+    "sitemapIgnore": "true"
+}

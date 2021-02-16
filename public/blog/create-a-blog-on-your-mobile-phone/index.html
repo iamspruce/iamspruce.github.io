@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="default" class="js-html">
+<head>
+    <meta charset="utf-8" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0, user-scalable=yes"
+/>
+<title>Spruce | Create A Blog On Your Mobile Phone With Jekyll On Github</title>
+<script>
+  const scheme = localStorage.getItem("theme-name");
+  document.documentElement.setAttribute("data-theme", scheme);
+
+  if (localStorage.getItem("font-size") == null) {
+    document.documentElement.style.setProperty("--font-size", "18px");
+  } else {
+    const fontSize = localStorage.getItem("font-size");
+    document.documentElement.style.setProperty("--font-size", `${fontSize}px`);
+  }
+
+  const position = localStorage.getItem("position");
+  if (position == "fixed" || position == null) {
+    document.documentElement.style.setProperty("--position", "fixed");
+    document.documentElement.style.setProperty("--top-margin", "96px");
+  } else {
+    document.documentElement.style.setProperty("--position", "static");
+    document.documentElement.style.setProperty("--top-margin", "0px");
+  }
+
+</script>
+
+<meta name="description" content="Have you ever wanted to own your own blog? Well if you have, this series will get you started immediately
+" />
+<meta property="og:description" content="Have you ever wanted to own your own blog? Well if you have, this series will get you started immediately
+" />
+
+<meta name="author" content="Spruce Emmanuel" />
+<meta property="og:url" content="/blog/create-a-blog-on-your-mobile-phone/" />
+
+<meta property="og:image" content="/blog/create-a-blog-on-your-mobile-phone/img/preview.png" />
+<meta name="twitter:image" content="/blog/create-a-blog-on-your-mobile-phone/img/preview.png" />
+<meta name="twitter:card" content="summary_large_image" />
+
+
+<meta name="author" content="Spruce Emmanuel" />
+<meta property="og:site_name" content="Spruce Emmanuel" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:site" content="@sprucekhalifa" />
+<meta name="twitter:creator" content="@sprucekhalifa" />
+<meta name="twitter:title" content="Create A Blog On Your Mobile Phone With Jekyll On Github" />
+<meta property="og:image:width" content="637" />
+<meta property="og:image:width" content="403" />
+
+<script type="application/ld+json">
+  {
+      "name":"Spruce Emmanuel",
+      "description":"Have you ever wanted to own your own blog? Well if you have, this series will get you started immediately
+",
+      "author": {
+          "@type":"Person",
+          "name":"Spruce Emmanuel"
+      },
+      "@type":"WebSite",
+      "url":"https://spruce.com.ng",
+      
+      "image":"/blog/create-a-blog-on-your-mobile-phone/img/preview.png",
+      
+      "headline":"Spruce Emmanuel",
+      "sameAs":[
+          "https://twitter.com/sprucekhallifa",
+          "https://github.com/iamspruce",
+          "https://facebook.com/spruce.emma"
+      ],
+      "@context":"http://schema.org"
+  }
+</script>
+<link
+  rel="apple-touch-icon"
+  sizes="180x180"
+  href="/assets/img/favicon/apple-touch-icon.png"
+/>
+<link
+  rel="icon"
+  type="image/png"
+  href="/assets/img/favicon/favicon-32x32.png"
+  sizes="32x32"
+/>
+<link
+  rel="icon"
+  type="image/png"
+  href="/assets/img/favicon/favicon-16x16.png"
+  sizes="16x16"
+/>
+<link
+  rel="shortcut icon"
+  href="/assets/img/favicon/favicon.ico"
+/>
+<meta name="theme-color" content="" />
+
+<link rel="me" href="https://twitter.com/sprucekhalifa" />
+<link rel="stylesheet" href="/css/style.css"/>
+<link
+  rel="alternate"
+  type="application/rss+xml"
+  title="Spruce.com.ng - Have you ever wanted to own your own blog? Well if you have, this series will get you started immediately
+"
+  href="/feed.xml"
+/>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4WLJKYZR1L"></script>
+
+<link rel="manifest" href="/manifest.json">
+</head>
+<body class="line-numbers">
+    <section class="section-theme">
+  <div class="section-theme__contain">
+    <div class="theme__header flex">
+      <h4 class="theme__title">Theme Settings</h4>
+      <button
+        class="header__icon js-close-theme"
+        aria-expanded="false"
+        aria-controls="nav-menu"
+        aria-label="toggle menu"
+      >
+        <svg class="icon icon--small icon--btn" width="26px" height="26px">
+          <title>Close Theme Switcher</title>
+          <use xlink:href="#icon-close"></use>
+        </svg>
+      </button>
+    </div>
+
+    <div class="theme__top">
+      <div class="js-tab-content theme-top-col show" id="tab-1-content">
+        <h5 class="theme-title">Fonts</h5>
+        <p>Choose default font size for articles</p>
+
+        <div class="theme-btn-wrapper js-btn-wrapper">
+          <button class="btn btn--small btn--border js-font-btn" value="16">
+            16px
+          </button>
+          <button class="btn btn--small btn--border js-font-btn" value="18">
+            18px
+          </button>
+          <button class="btn btn--small btn--border js-font-btn" value="20">
+            20px
+          </button>
+          <button class="btn btn--small btn--border js-font-btn" value="22">
+            22px
+          </button>
+        </div>
+      </div>
+      <div class="js-tab-content theme-top-col two" id="tab-2-content">
+        <h5 class="theme-title">Fixed Header</h5>
+        <p>Static or Fixed Header? your choice</p>
+
+        <div class="check-wrapper">
+          <span id="btn-label" class="sr-only">Fixed or static header</span>
+          <button
+            role="switch"
+            type="button"
+            aria-checked="true"
+            aria-labelledby="btn-label"
+            class="js-theme-toggle btn btn--border btn--rounded btn--toggle"
+          >
+            <span>On</span>
+            <span>Off</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="js-tab-content theme__bottom" id="tab-3-content">
+      <h5 class="theme-title">Choose Color Scheme</h5>
+      <p>Pick a color scheme of your choice</p>
+
+      <div class="theme-color-wrapper js-theme-scheme">
+        
+        <button
+          type="button"
+          class="theme-color js-theme-color"
+          style="background-color: #ffffff; border: 1px solid #f8f8f8"
+          value="default"
+        >
+          <div
+            class="theme-color__secondary"
+            style="background-color: #f8f8f8; margin-bottom: .5em;"
+          ></div>
+          <span
+            class="theme-color-text"
+            style="background: linear-gradient(180deg, #2b2c34 100%, #2b2c34 100%); color: #2b2c34"
+          ></span>
+          <span
+            class="theme-color-text"
+            style="background: linear-gradient(180deg, #2b2c34 100%, #2b2c34 100%); color: #2b2c34"
+          ></span>
+          <br />
+          <div class="flex">
+            <span
+              class="theme-color__name"
+              style="color: #2b2c34;"
+            >
+              default
+            </span>
+            <span class="theme-span-wrapper" style="margin-top: 0.5em">
+              <span
+                style="background-color: #6246ea;"
+              ></span>
+              <span
+                style="background-color: #e45858;"
+              ></span>
+              <span
+                style="background-color: #d1d1e9;"
+              ></span>
+            </span>
+          </div>
+        </button>
+        
+        <button
+          type="button"
+          class="theme-color js-theme-color"
+          style="background-color: #0f0e17; border: 1px solid black"
+          value="dark"
+        >
+          <div
+            class="theme-color__secondary"
+            style="background-color: black; margin-bottom: .5em;"
+          ></div>
+          <span
+            class="theme-color-text"
+            style="background: linear-gradient(180deg, #ffffff 100%, #ffffff 100%); color: #ffffff"
+          ></span>
+          <span
+            class="theme-color-text"
+            style="background: linear-gradient(180deg, #ffffff 100%, #ffffff 100%); color: #ffffff"
+          ></span>
+          <br />
+          <div class="flex">
+            <span
+              class="theme-color__name"
+              style="color: #ffffff;"
+            >
+              dark
+            </span>
+            <span class="theme-span-wrapper" style="margin-top: 0.5em">
+              <span
+                style="background-color: #ff8906;"
+              ></span>
+              <span
+                style="background-color: #e53170;"
+              ></span>
+              <span
+                style="background-color: #f25f4c;"
+              ></span>
+            </span>
+          </div>
+        </button>
+        
+        <button
+          type="button"
+          class="theme-color js-theme-color"
+          style="background-color: #004643; border: 1px solid #abd1c6"
+          value="green"
+        >
+          <div
+            class="theme-color__secondary"
+            style="background-color: #abd1c6; margin-bottom: .5em;"
+          ></div>
+          <span
+            class="theme-color-text"
+            style="background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe"
+          ></span>
+          <span
+            class="theme-color-text"
+            style="background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe"
+          ></span>
+          <br />
+          <div class="flex">
+            <span
+              class="theme-color__name"
+              style="color: #fffffe;"
+            >
+              green
+            </span>
+            <span class="theme-span-wrapper" style="margin-top: 0.5em">
+              <span
+                style="background-color: #f9bc60;"
+              ></span>
+              <span
+                style="background-color: #e16162;"
+              ></span>
+              <span
+                style="background-color: #abd1c6;"
+              ></span>
+            </span>
+          </div>
+        </button>
+        
+        <button
+          type="button"
+          class="theme-color js-theme-color"
+          style="background-color: #eff0f3; border: 1px solid #fffffe"
+          value="fame"
+        >
+          <div
+            class="theme-color__secondary"
+            style="background-color: #fffffe; margin-bottom: .5em;"
+          ></div>
+          <span
+            class="theme-color-text"
+            style="background: linear-gradient(180deg, #0d0d0d 100%, #0d0d0d 100%); color: #0d0d0d"
+          ></span>
+          <span
+            class="theme-color-text"
+            style="background: linear-gradient(180deg, #0d0d0d 100%, #0d0d0d 100%); color: #0d0d0d"
+          ></span>
+          <br />
+          <div class="flex">
+            <span
+              class="theme-color__name"
+              style="color: #0d0d0d;"
+            >
+              fame
+            </span>
+            <span class="theme-span-wrapper" style="margin-top: 0.5em">
+              <span
+                style="background-color: #ff8e3c;"
+              ></span>
+              <span
+                style="background-color: #d9376e;"
+              ></span>
+              <span
+                style="background-color: #eaddcf;"
+              ></span>
+            </span>
+          </div>
+        </button>
+        
+        <button
+          type="button"
+          class="theme-color js-theme-color"
+          style="background-color: #232946; border: 1px solid #d4d8f0"
+          value="dark-blue"
+        >
+          <div
+            class="theme-color__secondary"
+            style="background-color: #d4d8f0; margin-bottom: .5em;"
+          ></div>
+          <span
+            class="theme-color-text"
+            style="background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe"
+          ></span>
+          <span
+            class="theme-color-text"
+            style="background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe"
+          ></span>
+          <br />
+          <div class="flex">
+            <span
+              class="theme-color__name"
+              style="color: #fffffe;"
+            >
+              dark-blue
+            </span>
+            <span class="theme-span-wrapper" style="margin-top: 0.5em">
+              <span
+                style="background-color: #eebbc3;"
+              ></span>
+              <span
+                style="background-color: #b8c1ec;"
+              ></span>
+              <span
+                style="background-color: #eaddcf;"
+              ></span>
+            </span>
+          </div>
+        </button>
+        
+        <button
+          type="button"
+          class="theme-color js-theme-color"
+          style="background-color: #55423d; border: 1px solid #271c19"
+          value="brown"
+        >
+          <div
+            class="theme-color__secondary"
+            style="background-color: #271c19; margin-bottom: .5em;"
+          ></div>
+          <span
+            class="theme-color-text"
+            style="background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe"
+          ></span>
+          <span
+            class="theme-color-text"
+            style="background: linear-gradient(180deg, #fffffe 100%, #fffffe 100%); color: #fffffe"
+          ></span>
+          <br />
+          <div class="flex">
+            <span
+              class="theme-color__name"
+              style="color: #fffffe;"
+            >
+              brown
+            </span>
+            <span class="theme-span-wrapper" style="margin-top: 0.5em">
+              <span
+                style="background-color: #ffc0ad;"
+              ></span>
+              <span
+                style="background-color: #e78fb3;"
+              ></span>
+              <span
+                style="background-color: #9656a1;"
+              ></span>
+            </span>
+          </div>
+        </button>
+        
+      </div>
+    </div>
+  </div>
+</section>
+<div class="nav__overlay fixed__right js-nav">
+    <nav class="nav">
+        <div class="nav__header flex">
+            <a class="header__logo flex" href="/" rel="home" aria-label="Go To Homepage">
+                <img class="header__logo--avatar" src="/assets/img/spruce.webp" alt="" width="38px" height="38px"> 
+                <span class="header__logo--text">Spruce</span>
+            </a>
+            <button class="nav__icon js-nav-close" aria-expanded="false" aria-controls="nav-menu" aria-label="close menu">
+                <svg class="icon icon--small icon--btn" width="18px" height="18px">
+                    <title>Close Navigation</title>
+                    <use xlink:href="#icon-close"></use>
+                </svg>
+            </button>
+        </div>
+        <div class="footer__links--col first">
+            <div class="title">
+                site links
+
+            </div>
+            <ul class="link__items">
+                <li class="link__items--list">
+                <a href="/" class="link">
+              Homepage
+            </a>
+            </li>
+                <li class="link__items--list">
+                <a href="/about/" rel="about" class="link">
+                    About Me
+                </a>
+                </li>
+                    <li class="link__items--list">
+                        <a href="/articles/" class="link">
+                        Articles
+                    </a>
+                    </li>
+                    <li class="link__items--list">
+                        <a href="/privacy/" class="link">
+                        Privacy
+                    </a>
+                    </li>
+                    </ul>
+                    </div>
+
+                    <div class="footer__links--col">
+                        <div class="title">
+                            other links
+                        </div>
+                        <ul class="link__items">
+                            <li class="link__items--list">
+                                <a href="https://facebook.com/spruce.com.ng" target="_blank" rel="noreferrer noopener" class="link">
+                                    Facebook
+                                </a>
+                            </li>
+                            <li class="link__items--list">
+                                    <a href="https://twitter.com/sprucekhalifa" target="_blank" rel="noreferrer noopener" class="link">
+                                        @sprucekhalifa
+                                    </a>
+                                </li>
+                                <li class="link__items--list">
+                                    <a href="https://instagram.com/iamspruce" target="_blank" rel="noreferrer noopener" class="link">
+                                        @iamspruce
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+    </nav>
+</div><header class="header fixed fixed__top" role="banner">
+    <div class="header__inner container flex">
+        <a class="header__logo flex" href="/" rel="home" aria-label="Go To Homepage">
+            <img class="header__logo--avatar" src="/assets/img/spruce.webp" alt="" width="38px" height="38px"> 
+            <span class="header__logo--text">Spruce</span>
+        </a>
+        <button style="margin-left: auto; font-size: 18px;" class="header__icon js-theme-btn" aria-expanded="false" aria-controls="nav-menu" aria-label="toggle menu">
+            Theme
+        </button>
+        <button class="header__icon js-nav-open" aria-expanded="false" aria-controls="nav-menu" aria-label="toggle menu">
+            <svg class="icon icon--small icon--btn" width="26px" height="26px">
+                <title>Open Navigation</title>
+                <use xlink:href="#icon-menu"></use>
+            </svg>
+        </button>
+    </div>
+    </header><main id="main" class="">
+    
+<head>
+  <script src="https://cdn.jsdelivr.net/gh/ireade/caniuse-embed/public/caniuse-embed.min.js"></script>
+  <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+  <link href="/assets/prism.css" rel="stylesheet" />
+  <script src="/assets/js/prism.js"></script>
+</head>
+<div class="container">
+  <section class="section">
+    <div class="article__wrapper">
+      <div class="article__header">
+        <div class="article__meta">
+          <span class="article__meta-published-date">December 20, 2020</span>
+        </div>
+        <h1 class="article__heading">Create A Blog On Your Mobile Phone With Jekyll On Github</h1>
+        <p class="article__meta-authors"></p>
+      </div>
+    </div>
+  </section>
+  <section class="section article__body">
+    <p class="p-article__lead">
+Welcome to the series <b>"How to create a blog on your mobile phone with Jekyll on Github"</b>
+</p>
+<p>
+Yep i said it... You can create a free blog from your mobile phone, so get ready to start your journey as a blogger...  
+</p>
+<p>
+a lot of people do ask:
+<ol class='p-article__items'>
+<li>
+How can i create a website with my phone?
+</li>
+<li>
+Can we blog from mobile?
+</li>
+<li>
+what is the best phone for blogging?
+</li>
+</ol>
+</p>
+<p>
+Yes, Yes and Yes you can create a website with your phone, you can blog from your mobile phone and you dont need a special phone for  blogging. 
+</p>
+<h1>
+What is moblie bloging?
+</h1>
+<p>
+Mobile blogging is a method of <b>publishing to a website or blog from a mobile phone or other handheld device.</b> A mobile blogs help habitual bloggers to post write-ups directly from their phones even when on the move.
+</p>
+<p>
+Well i hope from the defination you understand what a mobile blog is and what we are trying to do here...
+well as you might have guessed we are trying to create a free website or blog which you can update, design and post to directly from your mobile phone. 
+</p>
+<h2>
+Requirements:
+</h2>
+<ol class='p-article__items'>
+<li>
+HTML
+</li>
+<li>
+CSS
+</li>
+<li>
+JAVASCRIPT (optional)
+</li>
+<li>
+Github account
+</li>
+<li>
+SPCK Editor
+</li>
+</ol>
+<p>
+Before you beging this series with me, it is required you just have a basic knowledge of Html, Css, and javascript is optional for now, well if you dont have a basic knowledge and you are just hearing about all this for the first time, dont worry this articles <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web"> Getting Started With The Web </a>, <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML">Structuring the web with HTML </a> should basically get you started. 
+</p>
+<p>
+Other requirements are the github account: Github is a subsidiary of Microsoft which provides hosting for software development and version control using Git. <br>
+Now dont worry about the defination, you probably will never need it anyway. All you need is to Create an Account(which is totally free), head over to <a href="https://github.com">Github.com</a> and create an account. 
+</p>
+<p>
+Then <a href="https://spck.io">Spck Editor</a>, this is just a really cool code editor and js sandbox, this is the closest thing that is close to vscode on a mobile phone. <br>
+Head over to play store search for "Spck editor" and install it. This editor is what we'll use to write to our blog...
+</p>
+ <div class="info info--note">
+   <div class="info__content">
+       <strong>Note:</strong> It is required that you create a github account, and have downloaded and installed the app before you continue. <br>
+       Please don't use Opera Mini, use a modern browser like Chrome or Firefox
+                </div>
+          </div>
+<h3>
+Getting Started
+</h3>
+<p>
+Now make sure you have created your Github account by signing up <br>
+Now Click below link (Open in a different tab) <br>
+<a href="https://github.com/barryclark/jekyll-now">Jekyll now starter theme
+</a>
+</p>
+<figure class="p-article__img"><picture><source media="(max-width: 799px)" srcset="img/jekyll-theme.png?nf_resize=fit&w=480">
+        <source media="(min-width: 800px)" srcset="img/jekyll-theme.png?nf_resize=fit&w=800">
+        <img src="img/jekyll-theme.png?nf_resize=fit&w=800" alt="You should see a page that looks like this">
+        </picture><figcaption>You should see a page that looks like this</figcaption></figure>
+ <p>
+  Now its time to <b>Fork</b> the starter theme <br>
+  click on the <b>Forks icon</b> 
+ </p>
+ <figure class="p-article__img">
+  <img src="img/click-forks.png" alt="Jekyll now fork icon" />
+  <figcaption>
+    Click on the forks icon
+  </figcaption>
+ </figure>
+<p>
+The page would reload and you would see a desktop view of the page, just look at the right side of the page at the header (top of the webpage) and click on <b>fork</b>
+</p>
+<figure class="p-article__img"><picture><source media="(max-width: 799px)" srcset="img/fork-theme.png?nf_resize=fit&w=480">
+        <source media="(min-width: 800px)" srcset="img/fork-theme.png?nf_resize=fit&w=800">
+        <img src="img/fork-theme.png?nf_resize=fit&w=800" alt="Click the fork icon there">
+        </picture><figcaption>Click the fork icon there</figcaption></figure>
+ <p>
+After doing that the next page you are going to see would ask you to change your <b>Forked theme name</b> <br>
+Now change the name of the website to: "github-username.github.io"
+ </p>
+<figure class="p-article__img"><picture><source media="(max-width: 799px)" srcset="img/rename-theme.png?nf_resize=fit&w=480">
+        <source media="(min-width: 800px)" srcset="img/rename-theme.png?nf_resize=fit&w=800">
+        <img src="img/rename-theme.png?nf_resize=fit&w=800" alt="Old one looks like this">
+        </picture><figcaption>Old one looks like this</figcaption></figure>
+<figure class="p-article__img"><picture><source media="(max-width: 799px)" srcset="img/rename-theme-me.png?nf_resize=fit&w=480">
+        <source media="(min-width: 800px)" srcset="img/rename-theme-me.png?nf_resize=fit&w=800">
+        <img src="img/rename-theme-me.png?nf_resize=fit&w=800" alt="Change it to something like this with your own github username">
+        </picture><figcaption>Change it to something like this with your own github username</figcaption></figure>
+ <p>
+Now its time to create a github token for the spck editor app you downloaded earlier... <br>
+click on the dropdown menu at the top of the page
+ </p>
+ <figure class="p-article__img"><picture><source media="(max-width: 799px)" srcset="img/click-settings.png?nf_resize=fit&w=480">
+        <source media="(min-width: 800px)" srcset="img/click-settings.png?nf_resize=fit&w=800">
+        <img src="img/click-settings.png?nf_resize=fit&w=800" alt="Dropdown menu">
+        </picture><figcaption>Dropdown menu</figcaption></figure>
+ <p>
+ <ol>
+ from the dropdown: 
+ <br>
+<li> Click on settings </li>
+<li> developer settings </li>
+<li> personal access tokens </li>
+<li> Generate New Token </li>
+<li> You may be asked for password, just enter your github password and continue </li> 
+ <ol>
+<li> Give it a note: Spck editor </li>
+<li>click on the repo box (select everything under it) </li>
+<li>Scroll select <b>write:packages</b> and <b> admin:org</b> </li>
+<li>Click "Generate Token"</li>
+ </ol>
+ </ol>
+ </p>
+ <figure class="p-article__img"><picture><source media="(max-width: 799px)" srcset="img/spck-token.png?nf_resize=fit&w=480">
+        <source media="(min-width: 800px)" srcset="img/spck-token.png?nf_resize=fit&w=800">
+        <img src="img/spck-token.png?nf_resize=fit&w=800" alt="Select the repo box">
+        </picture><figcaption>Select the repo box</figcaption></figure> 
+ <p>
+After you have generated your token ensure you copy it to your phone clipboard because you wont see again unless you re-generate it.
+ </p>
+ <figure class="p-article__img"><picture><source media="(max-width: 799px)" srcset="img/spck-token-sucess.png?nf_resize=fit&w=480">
+        <source media="(min-width: 800px)" srcset="img/spck-token-sucess.png?nf_resize=fit&w=800">
+        <img src="img/spck-token-sucess.png?nf_resize=fit&w=800" alt="Ensure you copy the token">
+        </picture><figcaption>Ensure you copy the token</figcaption></figure> 
+ <p>
+If you have followed this guide perfectly, you are just a few steps away from your newly phone managed blog or website.
+ </p>
+ <p>
+Moving on, Do you remember the "Spck editor" you downloaded earlier? Yep i guess you do <br>
+Now open it up <br>
+And you should see something that looks like this image below
+ </p>
+ <figure class="p-article__img"><picture><source media="(max-width: 799px)" srcset="img/spck-editor.png?nf_resize=fit&w=480">
+        <source media="(min-width: 800px)" srcset="img/spck-editor.png?nf_resize=fit&w=800">
+        <img src="img/spck-editor.png?nf_resize=fit&w=800" alt="Yep. Click on the first tab and you should see this">
+        </picture><figcaption>Yep. Click on the first tab and you should see this</figcaption></figure> 
+ <p>
+Next step is to look at the <b>PROJECTS</b> tab <br>
+Click on the third icon (The fork icon)
+ </p>
+ <figure class="p-article__img"><picture><source media="(max-width: 799px)" srcset="img/spck-editor-fork.png?nf_resize=fit&w=480">
+        <source media="(min-width: 800px)" srcset="img/spck-editor-fork.png?nf_resize=fit&w=800">
+        <img src="img/spck-editor-fork.png?nf_resize=fit&w=800" alt="On the projects tab, click the fork icon (the third icon)">
+        </picture><figcaption>On the projects tab, click the fork icon (the third icon)</figcaption></figure> 
+ <p>
+When you click on fork icon <br>
+Select credentials <br> 
+Set up your Credentials as follows: <br> 
+name: Github username <br> 
+password/token: The token you Generated earlier (The one you copied) <br> 
+email: for email (The one used in opening your github account) <br>
+Then just Click on "OK"
+ </p>
+ <p>
+Now its time to clone your website to your mobile phone <br>
+Click on the Fork icon again <br>
+Just enter your Url like this </p> 
+<figure class="p-article__img">
+  <img src="img/spck-clone.png" alt="clone website on Spck editor" />
+  <figcaption>
+ Enter your repo link 
+  </figcaption>
+ </figure>
+ <p>
+ url: https://github.com/github-username/github-username.github.io 
+ <br>
+just change "github-username" to your own github username <br>
+then just Click on "OK" <br>
+and wait for your website to clone (Speed depends on your internet connection, mine took a few seconds)
+ </p>
+ <figure class="p-article__img">
+  <img src="img/spck-editor-success.png" alt="Successfully clone website on Spck editor" />
+  <figcaption>
+ After you have finished cloning you should see something like this
+  </figcaption>
+ </figure>
+ <p>
+Yep, You guessed it, that's all. If you followed the steps correctly then i congratulate you(yeah you can feel proud). You have created a free website, and you can now manage, edit and design it on your mob ile phone.   
+ </p>
+ <p>
+To view your website <br>
+go to your browser <br>
+type in your website url <br>
+"github-username.github.io" <br>
+in my case "sprucestatic.github.io"
+ </p>
+ <figure class="p-article__img">
+  <img src="img/theme-preview.png" alt="Free website created with jekyll on github" />
+  <figcaption>
+Your new site should look like this
+  </figcaption>
+ </figure>
+ <p>
+Honestly you should be proud now. Welcome to the bloggers and website owners association of the world. <br>
+Now you can go and tell your family members, friends, share it on facebook and twitter, about your new website...  
+ </p>
+<p>
+Though not really much now, Before the end of this series you will learn how to create and update a fully functional blog from your mobile phone...
+</p>
+ <p>
+  Next step is Customizing your new website, and introducing you to <b>GIT</b> on your mobile phone... Thanks for reading.
+ </p>
+<h4>
+Next part of this series
+</h4>
+<p>
+<a href="/blog/create-a-blog-on-your-mobile-phone-part-2/">Create a blog on your mobile phone part 2</a>
+</p>
+
+    <br />
+    <div class="feedback"> 
+      <div class="media">
+        <div class="media__body">
+          <h3 class="media__title">Did you find this Article useful?</h3>
+          <!---->
+          <p class="media__copy">Why not tell others about it.</p>
+          <!---->
+          <!---->
+        </div>
+        <div class="media__figure">
+          <a href="https://twitter.com/intent/tweet?Have you ever wanted to own your own blog? Well if you have, this series will get you started immediately
+&url=/blog/create-a-blog-on-your-mobile-phone/" class="feedback__vote feedback__vote--upvote" target="_blank" rel="noopener noreferrer">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="54"
+              height="54"
+              aria-hidden="true"
+            >
+            <title>Share on Twitter</title>
+              <g fill="none" fill-rule="evenodd">
+                <circle
+                  cx="27"
+                  cy="27"
+                  r="27"
+                  fill="#E0F6EC"
+                  fill-rule="nonzero"
+                ></circle>
+                <g
+                  stroke="#0F7B72"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <use xlink:href="#logo-twitter"></use>
+                </g>
+              </g>
+            </svg></a>
+          <span class="" data-href="/blog/create-a-blog-on-your-mobile-phone/" data-layout="button">
+            <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/sharer/sharer.php?u=/blog/create-a-blog-on-your-mobile-phone/">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="54"
+              height="54"
+              aria-hidden="true"
+            >
+            <title>Share on facebook</title>
+              <g fill="none" fill-rule="evenodd">
+                <circle
+                  cx="27"
+                  cy="27"
+                  r="27"
+                  fill="#F9CECC"
+                  fill-rule="nonzero"
+                ></circle>
+                <g
+                  stroke="#812F2B"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                >
+                  <use xlink:href="#logo-facebook"></use>
+                </g>
+              </g>
+            </svg>
+          </a>
+        </span>
+        </div>
+      </div>
+      <!---->
+    </div>
+  </section>
+</div>
+
+</main><footer class="footer">
+<div class="footer__inner container">
+    <div class="footer__intro">
+        <div class="footer__logo">
+            <a class="footer__logo" href="/" rel="home" aria-label="Go To Homepage">
+                <img class="header__logo--avatar" src="/assets/img/spruce.webp" alt="" width="32px" height="32px"> 
+            </a>
+        </div>
+            <p class="footer__text">
+                Content of this blog are written by <a href="/about/" class="link">me</a> or otherwise stated.
+                Developed and designed with love and <a href="https://11ty.com" class="link">11TY</a> on <b>NETLIFY</b>, by <a href="/about/" class="link">Spruce</a>
+            </p>
+        </div>
+        <div class="footer__links">
+            
+                <div class="footer__links--col">
+                <div class="title">
+                    site links
+
+                </div>
+                <ul class="link__items">
+                    <li class="link__items--list">
+                    <a href="/" class="link">
+                  Homepage
+                </a>
+                </li>
+                    <li class="link__items--list">
+                    <a href="/about/" rel="about" class="link">
+                        About Me
+                    </a>
+                    </li>
+                        <li class="link__items--list">
+                            <a href="/articles/" class="link">
+                            Articles
+                        </a>
+                        </li>
+                        </ul>
+                        </div>
+                            <div class="footer__links--col">
+                                <div class="title">
+                                    other links
+                                </div>
+                                <ul class="link__items">
+                                    <li class="link__items--list">
+                                        <a href="https://facebook.com/spruce.com.ng" target="_blank" rel="noreferrer noopener" class="link">
+                                            Facebook
+                                        </a>
+                                    </li>
+                                    <li class="link__items--list">
+                                            <a href="https://twitter.com/sprucekhalifa" target="_blank" rel="noreferrer noopener" class="link">
+                                                @sprucekhalifa
+                                            </a>
+                                        </li>
+                                        <li class="link__items--list">
+                                            <a href="https://instagram.com/iamspruce" target="_blank" rel="noreferrer noopener" class="link">
+                                                Instagram
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                         
+        </div>
+    </div>
+</footer>
+</body>
+<script src="/assets/js/main.js"></script>
+<script src="/assets/js/theme.js"></script>
+
+
+
+<svg width="0" height="0" style="display:none" xmlns="http://www.w3.org/2000/">
+    <symbol id="icon-caret-right" viewBox="0 0 20 20">
+      <path d="M14.989,9.491L6.071,0.537C5.78,0.246,5.308,0.244,5.017,0.535c-0.294,0.29-0.294,0.763-0.003,1.054l8.394,8.428L5.014,18.41c-0.291,0.291-0.291,0.763,0,1.054c0.146,0.146,0.335,0.218,0.527,0.218c0.19,0,0.382-0.073,0.527-0.218l8.918-8.919C15.277,10.254,15.277,9.784,14.989,9.491z"></path>        
+  </symbol>
+     
+      <symbol id="icon-close" viewBox="0 0 20 20">
+        <path d="M11.469,10l7.08-7.08c0.406-0.406,0.406-1.064,0-1.469c-0.406-0.406-1.063-0.406-1.469,0L10,8.53l-7.081-7.08
+        c-0.406-0.406-1.064-0.406-1.469,0c-0.406,0.406-0.406,1.063,0,1.469L8.531,10L1.45,17.081c-0.406,0.406-0.406,1.064,0,1.469
+        c0.203,0.203,0.469,0.304,0.735,0.304c0.266,0,0.531-0.101,0.735-0.304L10,11.469l7.08,7.081c0.203,0.203,0.469,0.304,0.735,0.304
+        c0.267,0,0.532-0.101,0.735-0.304c0.406-0.406,0.406-1.064,0-1.469L11.469,10z"></path>
+              
+      </symbol>
+     
+      <symbol id="logo-twitter" viewBox="0 0 20 20">
+        <path d="M18.258,3.266c-0.693,0.405-1.46,0.698-2.277,0.857c-0.653-0.686-1.586-1.115-2.618-1.115c-1.98,0-3.586,1.581-3.586,3.53c0,0.276,0.031,0.545,0.092,0.805C6.888,7.195,4.245,5.79,2.476,3.654C2.167,4.176,1.99,4.781,1.99,5.429c0,1.224,0.633,2.305,1.596,2.938C2.999,8.349,2.445,8.19,1.961,7.925C1.96,7.94,1.96,7.954,1.96,7.97c0,1.71,1.237,3.138,2.877,3.462c-0.301,0.08-0.617,0.123-0.945,0.123c-0.23,0-0.456-0.021-0.674-0.062c0.456,1.402,1.781,2.422,3.35,2.451c-1.228,0.947-2.773,1.512-4.454,1.512c-0.291,0-0.575-0.016-0.855-0.049c1.588,1,3.473,1.586,5.498,1.586c6.598,0,10.205-5.379,10.205-10.045c0-0.153-0.003-0.305-0.01-0.456c0.7-0.499,1.308-1.12,1.789-1.827c-0.644,0.28-1.334,0.469-2.06,0.555C17.422,4.782,17.99,4.091,18.258,3.266"/></symbol>
+        <symbol id="icon-read" viewBox="0 0 24 24">
+        <path d="M9.896,3.838L0.792,1.562v14.794l9.104,2.276L19,16.356V1.562L9.896,3.838z M9.327,17.332L1.93,15.219V3.27
+                                  l7.397,1.585V17.332z M17.862,15.219l-7.397,2.113V4.855l7.397-1.585V15.219z"></path>
+          </symbol>
+          <symbol id="logo-facebook" viewBox="0 0 20 20">
+            <path d="M11.344,5.71c0-0.73,0.074-1.122,1.199-1.122h1.502V1.871h-2.404c-2.886,0-3.903,1.36-3.903,3.646v1.765h-1.8V10h1.8v8.128h3.601V10h2.403l0.32-2.718h-2.724L11.344,5.71z"/></symbol>
+           
+  
+              <symbol id="logo-instagram" viewBox="0 0 20 20">
+                <path d="M14.52,2.469H5.482c-1.664,0-3.013,1.349-3.013,3.013v9.038c0,1.662,1.349,3.012,3.013,3.012h9.038c1.662,0,3.012-1.35,3.012-3.012V5.482C17.531,3.818,16.182,2.469,14.52,2.469 M13.012,4.729h2.26v2.259h-2.26V4.729z M10,6.988c1.664,0,3.012,1.349,3.012,3.012c0,1.664-1.348,3.013-3.012,3.013c-1.664,0-3.012-1.349-3.012-3.013C6.988,8.336,8.336,6.988,10,6.988 M16.025,14.52c0,0.831-0.676,1.506-1.506,1.506H5.482c-0.831,0-1.507-0.675-1.507-1.506V9.247h1.583C5.516,9.494,5.482,9.743,5.482,10c0,2.497,2.023,4.52,4.518,4.52c2.494,0,4.52-2.022,4.52-4.52c0-0.257-0.035-0.506-0.076-0.753h1.582V14.52z"/></symbol>
+                
+  
+                  <symbol id="logo-github" viewBox="0 0 24 24">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                  </symbol>
+                   
+          <symbol id="icon-menu" viewBox="0 0 20 20">
+            <path d="M3.314,4.8h13.372c0.41,0,0.743-0.333,0.743-0.743c0-0.41-0.333-0.743-0.743-0.743H3.314
+              c-0.41,0-0.743,0.333-0.743,0.743C2.571,4.467,2.904,4.8,3.314,4.8z M16.686,15.2H3.314c-0.41,0-0.743,0.333-0.743,0.743
+              s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,15.2,16.686,15.2z M16.686,9.257H3.314
+              c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,9.257,16.686,9.257z"></path>
+          </symbol>
+          <symbol id="icon-tag" viewBox="0 0 20 20">
+            <path d="M17.35,2.219h-5.934c-0.115,0-0.225,0.045-0.307,0.128l-8.762,8.762c-0.171,0.168-0.171,0.443,0,0.611l5.933,5.934c0.167,0.171,0.443,0.169,0.612,0l8.762-8.763c0.083-0.083,0.128-0.192,0.128-0.307V2.651C17.781,2.414,17.587,2.219,17.35,2.219M16.916,8.405l-8.332,8.332l-5.321-5.321l8.333-8.332h5.32V8.405z M13.891,4.367c-0.957,0-1.729,0.772-1.729,1.729c0,0.957,0.771,1.729,1.729,1.729s1.729-0.772,1.729-1.729C15.619,5.14,14.848,4.367,13.891,4.367 M14.502,6.708c-0.326,0.326-0.896,0.326-1.223,0c-0.338-0.342-0.338-0.882,0-1.224c0.342-0.337,0.881-0.337,1.223,0C14.84,5.826,14.84,6.366,14.502,6.708">
+            </path>
+          </symbol>
+          <symbol id="icon-time" viewBox="0 0 20 20">
+            <path d="M10.281,1.781C5.75,1.781,2.062,5.469,2.062,10s3.688,8.219,8.219,8.219S18.5,14.531,18.5,10S14.812,1.781,10.281,1.781M10.714,2.659c3.712,0.216,6.691,3.197,6.907,6.908h-6.907V2.659z M10.281,17.354c-4.055,0-7.354-3.298-7.354-7.354c0-3.911,3.067-7.116,6.921-7.341V10c0,0.115,0.045,0.225,0.127,0.305l5.186,5.189C13.863,16.648,12.154,17.354,10.281,17.354M15.775,14.882l-4.449-4.449h6.295C17.522,12.135,16.842,13.684,15.775,14.882"></path>
+          </symbol>
+                </svg>    
+</html>

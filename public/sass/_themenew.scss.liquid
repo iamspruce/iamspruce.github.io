@@ -1,0 +1,27 @@
+---
+permalink: '/sass/_themenew.scss'
+eleventyExcludeFromCollections: true
+---
+:root {
+    --text: {{ theme[0].backgrounds.colors.color[0].text }};
+    --border: {{ theme[0].backgrounds.colors[0].color.border }};
+    --bg: {{ theme[0].backgrounds.colors[0].color.bg }};
+    --bg-alt: {{ theme[0].backgrounds.colors[0].color.bg-alt }};
+}  
+@media(prefers-color-scheme: dark) {
+    :root {
+    --text: {{ theme[0].backgrounds.colors[1].color.text }};
+    --border: {{ theme[0].backgrounds.colors[1].color.border }};
+    --bg: {{ theme[0].backgrounds.colors[1].color.bg }};
+    --bg-alt: {{ theme[0].backgrounds.colors[1].color.bg-alt }};
+    }
+}
+
+{% for theme in theme[0].backgrounds.colors %}
+ [data-theme="{{ theme.id }}"] {
+    --text:  {{ theme.color.text }};
+    --border: {{ theme.color.border }};
+    --bg: {{ theme.color.bg }};
+    --bg-alt: {{ theme.color.bg-alt }};
+ }
+{% endfor %}

@@ -1,0 +1,536 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'Gibson';
+  src: url("../assets/fonts/");
+  src: url("../assets/fonts/?#iefix") format("embedded-opentype"), url("../assets/fonts/Gibson-Bold.woff2") format("woff2"), url("../assets/fonts/Gibson-Bold.woff") format("woff"), url("../assets/fonts/Gibson-Bold.ttf") format("truetype"), url("../assets/fonts/Gibson-Bold.svg#Gibson-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gibson';
+  src: url("../assets/fonts/Gibson-BoldItalic.eot");
+  src: url("../assets/fonts/Gibson-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Gibson-BoldItalic.woff2") format("woff2"), url("../assets/fonts/Gibson-BoldItalic.woff") format("woff"), url("../assets/fonts/Gibson-BoldItalic.ttf") format("truetype"), url("../assets/fonts/Gibson-BoldItalic.svg#Gibson-BoldItalic") format("svg");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gibson';
+  src: url("../assets/fonts/Gibson-Light.eot");
+  src: url("../assets/fonts/Gibson-Light.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Gibson-Light.woff2") format("woff2"), url("../assets/fonts/Gibson-Light.woff") format("woff"), url("../assets/fonts/Gibson-Light.ttf") format("truetype"), url("../assets/fonts/Gibson-Light.svg#Gibson-Light") format("svg");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gibson';
+  src: url("../assets/fonts/Gibson-Italic.eot");
+  src: url("../assets/fonts/Gibson-Italic.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Gibson-Italic.woff2") format("woff2"), url("../assets/fonts/Gibson-Italic.woff") format("woff"), url("../assets/fonts/Gibson-Italic.ttf") format("truetype"), url("../assets/fonts/Gibson-Italic.svg#Gibson-Italic") format("svg");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gibson';
+  src: url("../assets/fonts/Gibson-Regular.eot");
+  src: url("../assets/fonts/Gibson-Regular.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Gibson-Regular.woff2") format("woff2"), url("../assets/fonts/Gibson-Regular.woff") format("woff"), url("../assets/fonts/Gibson-Regular.ttf") format("truetype"), url("../assets/fonts/Gibson-Regular.svg#Gibson-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gibson';
+  src: url("../assets/fonts/Gibson-SemiBold.eot");
+  src: url("../assets/fonts/Gibson-SemiBold.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Gibson-SemiBold.woff2") format("woff2"), url("../assets/fonts/Gibson-SemiBold.woff") format("woff"), url("../assets/fonts/Gibson-SemiBold.ttf") format("truetype"), url("../assets/fonts/Gibson-SemiBold.svg#Gibson-SemiBold") format("svg");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gibson';
+  src: url("../assets/fonts/Gibson-SemiboldIt.eot");
+  src: url("../assets/fonts/Gibson-SemiboldIt.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Gibson-SemiboldIt.woff2") format("woff2"), url("../assets/fonts/Gibson-SemiboldIt.woff") format("woff"), url("../assets/fonts/Gibson-SemiboldIt.ttf") format("truetype"), url("../assets/fonts/Gibson-SemiboldIt.svg#Gibson-SemiboldIt") format("svg");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gibson';
+  src: url("../assets/fonts/Gibson-LightIt.eot");
+  src: url("../assets/fonts/Gibson-LightIt.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Gibson-LightIt.woff2") format("woff2"), url("../assets/fonts/Gibson-LightIt.woff") format("woff"), url("../assets/fonts/Gibson-LightIt.ttf") format("truetype"), url("../assets/fonts/Gibson-LightIt.svg#Gibson-LightIt") format("svg");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@page {
+  size: A4;
+}
+
+@page :left {
+  margin-left: 2cm;
+}
+
+@page :right {
+  margin-left: 2cm;
+}
+
+@media print {
+  * {
+    color: #000;
+  }
+  header, footer {
+    display: none;
+  }
+  .header-artwork {
+    display: none;
+  }
+  h2 {
+    margin-bottom: 0.5cm;
+  }
+  h1 {
+    page-break-before: always;
+  }
+}
+
+/*------------------------------------*  #BOX-SIZING
+\*------------------------------------*/
+/**
+ * More sensible default box-sizing:
+ * css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
+ */
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+/**
+ * Reset some basic elements
+ */
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+  margin: 0;
+  padding: 0;
+}
+
+/*------------------------------------*  #SHARED
+\*------------------------------------*/
+/**
+ * Shared declarations for certain elements.
+ */
+/**
+ * Always declare margins in the same direction:
+ * csswizardry.com/2012/06/single-direction-margin-declarations
+ */
+input,
+textarea,
+button {
+  font-family: inherit;
+}
+
+textarea {
+  resize: none;
+}
+
+/*------------------------------------*  #PAGE
+\*------------------------------------*/
+/**
+ * Page-level styling (e.g. HTML and BODY elements).
+ */
+:root {
+  --normal:400;
+  --semi:500;
+  --bold:600;
+  --font:Gibson,sans-serif;
+}
+
+html {
+  font-family: var(--font);
+  font-weight: var(--normal);
+  color: var(--text);
+  font-size: 18px;
+}
+
+body {
+  background-color: var(--bg);
+}
+
+#main {
+  margin-top: 96px;
+}
+
+html, body {
+  height: 100vh;
+}
+
+/*------------------------------------*  #HEADINGS
+  \*------------------------------------*/
+/**
+   * Simple default styles for headings 1 through 6.
+   */
+h1, h2, h3, h4, h5, h6 {
+  font-family: Gibson;
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+  color: var(--text);
+}
+
+h1 {
+  max-width: 100%;
+  font-size: 48px;
+  line-height: 52px;
+  margin-bottom: 40px;
+  font-weight: var(--bold);
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 64px;
+    line-height: 68px;
+  }
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: var(--normal);
+  line-height: 27px;
+  color: var(--text);
+  margin-bottom: 48px;
+}
+
+/*------------------------------------*  #PARAGRAPHS
+  \*------------------------------------*/
+/**
+   * Basic styling for paragraphs.
+   */
+p {
+  line-height: 27px;
+}
+
+/*------------------------------------*  #LINKS
+  \*------------------------------------*/
+/**
+   * Default styles for simple hyperlinks.
+   */
+a {
+  text-decoration: none;
+}
+
+button {
+  background: transparent;
+  cursor: pointer;
+  border: 0;
+}
+
+svg {
+  vertical-align: middle;
+  fill: currentColor;
+}
+
+/*------------------------------------*  #LISTS
+  \*------------------------------------*/
+/**
+   * Remove trailing margins from nested lists.
+   */
+li > ul,
+li > ol {
+  margin-bottom: 0;
+}
+
+/**
+   * Visually offset definition titles from their definitions.
+   */
+dt {
+  font-weight: 700;
+}
+
+/*------------------------------------*    #IMAGES
+  \*------------------------------------*/
+/**
+   * 1. Fluid images for responsive purposes.
+   * 2. Offset `alt` text from surrounding copy.
+   * 3. Setting `vertical-align` removes the whitespace that appears under `img`
+   *    elements when they are dropped into a page as-is. Safer alternative to
+   *    using `display: block;`.
+   */
+img {
+  max-width: 100%;
+  /* [1] */
+  font-style: italic;
+  /* [2] */
+  vertical-align: middle;
+  /* [3] */
+}
+
+/**
+   * 1. If a `width` and/or `height` attribute have been explicitly defined, let’s
+   *    not make the image fluid.
+   */
+img[width],
+img[height] {
+  /* [1] */
+  max-width: none;
+}
+
+/*------------------------------------*  #QUOTES
+  \*------------------------------------*/
+/**
+   * Basic styling for quoted text.
+   */
+q {
+  quotes: "‘" "’";
+}
+
+q:before {
+  content: open-quote;
+}
+
+q:after {
+  content: close-quote;
+}
+
+blockquote {
+  quotes: "“" "”";
+}
+
+.container {
+  width: 84%;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-x: hidden;
+}
+
+.container__inner {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* flex */
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/* links */
+.link {
+  color: var(--text);
+  border-bottom: 1px solid var(--text);
+  display: inline-block;
+  color: currentColor;
+}
+
+/* titles */
+.title {
+  font-size: 14px;
+  color: var(--text-light);
+  font-weight: var(--semi);
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+  .title {
+    margin-bottom: 32px;
+  }
+}
+
+/* position */
+.fixed {
+  position: fixed;
+}
+
+.fixed__right {
+  top: 0;
+  right: 0;
+}
+
+.fixed__top {
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* texts */
+.text--center {
+  text-align: center;
+}
+
+.text--left {
+  text-align: left;
+}
+
+.header {
+  background-color: var(--bg);
+}
+
+.header__inner {
+  height: 80px;
+}
+
+.header__logo {
+  font-weight: var(--semi);
+  font-size: 24px;
+  line-height: 20px;
+  cursor: pointer;
+  color: var(--text);
+}
+
+.header__logo--avatar {
+  display: block;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-right: 8px;
+}
+
+/* navigation */
+div.nav__overlay {
+  width: 320px;
+  height: 100vh;
+  overflow-y: auto;
+  background-color: var(--text-dark);
+  z-index: 90;
+  color: var(--bg);
+  right: -100%;
+  -webkit-transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.nav__overlay.active {
+  right: 0%;
+}
+
+.nav__overlay.active::after {
+  content: '';
+  position: fixed;
+  z-index: -20;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 320px) {
+  .nav__overlay {
+    width: 100%;
+  }
+}
+
+.nav {
+  padding: 40px;
+}
+
+.nav .nav__header {
+  margin-bottom: 64px;
+}
+
+.nav .nav__header .nav__icon, .nav .nav__header .header__logo {
+  color: var(--bg);
+}
+
+.nav .link__items {
+  padding: 16px;
+  list-style: disc;
+}
+
+.nav .link__items--list {
+  margin-bottom: 24px;
+  font-size: 18px;
+}
+
+.footer {
+  padding: 40px 0;
+}
+
+.footer__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.footer__logo {
+  margin-bottom: 24px;
+}
+
+.footer__intro {
+  margin-bottom: 32px;
+  min-width: 37%;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    padding: 80px 0;
+  }
+  .footer__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .footer__intro {
+    max-width: 480px;
+    margin-bottom: 0;
+  }
+}
+
+.link__items {
+  padding: 0;
+  list-style-type: none;
+}
+
+.link__items--list {
+  margin-bottom: 16px;
+  font-size: 18px;
+}
+
+.footer__links--col {
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .footer__links > *:nth-child(1) {
+    margin: 0 64px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

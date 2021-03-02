@@ -30,7 +30,14 @@ module.exports = function(eleventyConfig) {
         ${title}
         </a>, by @${name} on <a href="https://codepen.io">Codepen</a>
         </p>`
-    }); 
+    });
+    eleventyConfig.addShortcode("image", function(url, alt) {
+        return `<figure class="p-article__img"><picture><source media="(max-width: 799px)" srcset="img/${url}?nf_resize=fit&w=480">
+        <source media="(min-width: 800px)" srcset="img/${url}?nf_resize=fit&w=800">
+        <img src="img/${url}?nf_resize=fit&w=800" alt="${alt}">
+        </picture><figcaption>${alt}</figcaption></figure>`
+    });
+
     eleventyConfig.addShortcode("caniuse", function(feature) {
         return `<p class="ciu_embed" data-feature="${feature}" data-periods="future_1,current,past_1,past_2" data-accessible-colours="false">
         <picture>

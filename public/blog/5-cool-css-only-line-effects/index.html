@@ -28,14 +28,15 @@
   
   window.onload = function() {
     class SetActive {
-    constructor(storedItem,button) {
+    constructor(storedItem,button,defaultBtn) {
       this.eachBtn = button;
         this.name = storedItem;
+        this.defaultBtn = defaultBtn;
         this.eachBtn.forEach((btn) => {
             const btnTag = btn;
             const btnVal = btn.value;
             const btnName = localStorage.getItem(this.name);
-            if (btnName == btnVal) {
+            if (btnName == btnVal || btnVal == this.defaultBtn) {
               btnTag.classList.add('active')
             }
         });
@@ -44,9 +45,9 @@
   let themeFont = document.querySelectorAll('.c-theme__button--font');
   let themeColor = document.querySelectorAll('.c-theme__color');
   let themeBgs = document.querySelectorAll('.c-theme__bg');
-  new SetActive('font-size',themeFont);
-  new SetActive('color',themeColor);
-  new SetActive('bg',themeBgs);
+  new SetActive('font-size',themeFont,'16px');
+  new SetActive('color',themeColor,'203, 89%, 53%');
+  new SetActive('bg',themeBgs,'Default');
   }
  
 
@@ -650,7 +651,7 @@ Thanks for reading
   <div class="c-theme__wrapper">
     <div class="c-theme__head">
         <button class="c-theme__close js-theme-close" hidden>
-          <svg class="icon--medium" width="26px" height="26px">
+          <svg class="icon--medium" width="26px" height="26px" focusable="false">
             <title>Close Theme Settings</title>
             <use xlink:href="#icon-back"></use>
           </svg>
@@ -660,7 +661,7 @@ Thanks for reading
     <div class="c-theme__body">
       <div class="c-theme__body--inner">
       <div class="c-theme__body--head text--center">
-        <p class="c-theme__title--mt">
+        <p class="c-theme__title--mt" style="margin-top: 12px;">
           Manage your font size, Color and Background. Theme Settings affect all
           pages opened in this browser.
         </p>
@@ -694,36 +695,46 @@ Thanks for reading
                 <button
                   class="c-theme__button--font"
                   value="22px"
+                  aria-label="Extra Large"
+                  tabindex="0"
                 >
-                  <title>Extra Large</title>
+                <span class="sr-only">Extra Large</span>
                 </button>
                 
                 <button
                   class="c-theme__button--font"
                   value="20px"
+                  aria-label="Large"
+                  tabindex="0"
                 >
-                  <title>Large</title>
+                <span class="sr-only">Large</span>
                 </button>
                 
                 <button
                   class="c-theme__button--font"
                   value="18px"
+                  aria-label="Default"
+                  tabindex="0"
                 >
-                  <title>Default</title>
+                <span class="sr-only">Default</span>
                 </button>
                 
                 <button
                   class="c-theme__button--font"
                   value="16px"
+                  aria-label="Small"
+                  tabindex="0"
                 >
-                  <title>Small</title>
+                <span class="sr-only">Small</span>
                 </button>
                 
                 <button
                   class="c-theme__button--font"
                   value="15px"
+                  aria-label="Extra Small"
+                  tabindex="0"
                 >
-                  <title>Extra Small</title>
+                <span class="sr-only">Extra Small</span>
                 </button>
                 
               </div>
@@ -742,13 +753,13 @@ Thanks for reading
                   style="background: hsl(203, 89%, 53%);"
                   value="203, 89%, 53%"
                   id="theme-color"
+                  aria-label="fresh"
                 >
-                <title>fresh</title>
                   <svg width="25px" height="25px">
-                    <use xlink:href="#icon-good"></use>
+                    <use xlink:href="#icon-good" focusable="false"></use>
                   </svg>
                 </button>
-                <span>💧</span>
+                <span><span class="sr-only">fresh</span>💧</span>
               </label>
               
               <label for="theme-color" class="c-theme__color--label">
@@ -757,13 +768,13 @@ Thanks for reading
                   style="background: hsl(38, 100%, 56%);"
                   value="38, 100%, 56%"
                   id="theme-color"
+                  aria-label="Star"
                 >
-                <title>Star</title>
                   <svg width="25px" height="25px">
-                    <use xlink:href="#icon-good"></use>
+                    <use xlink:href="#icon-good" focusable="false"></use>
                   </svg>
                 </button>
-                <span>⭐</span>
+                <span><span class="sr-only">Star</span>⭐</span>
               </label>
               
               <label for="theme-color" class="c-theme__color--label">
@@ -772,13 +783,13 @@ Thanks for reading
                   style="background: hsl(341, 75%, 51%);"
                   value="341, 75%, 51%"
                   id="theme-color"
+                  aria-label="hot"
                 >
-                <title>hot</title>
                   <svg width="25px" height="25px">
-                    <use xlink:href="#icon-good"></use>
+                    <use xlink:href="#icon-good" focusable="false"></use>
                   </svg>
                 </button>
-                <span>🔥</span>
+                <span><span class="sr-only">hot</span>🔥</span>
               </label>
               
               <label for="theme-color" class="c-theme__color--label">
@@ -787,13 +798,13 @@ Thanks for reading
                   style="background: hsl(263, 51%, 53%);"
                   value="263, 51%, 53%"
                   id="theme-color"
+                  aria-label="berry"
                 >
-                <title>berry</title>
                   <svg width="25px" height="25px">
-                    <use xlink:href="#icon-good"></use>
+                    <use xlink:href="#icon-good" focusable="false"></use>
                   </svg>
                 </button>
-                <span>🍆</span>
+                <span><span class="sr-only">berry</span>🍆</span>
               </label>
               
               <label for="theme-color" class="c-theme__color--label">
@@ -802,13 +813,13 @@ Thanks for reading
                   style="background: hsl(17, 91%, 55%);"
                   value="17, 91%, 55%"
                   id="theme-color"
+                  aria-label="Yummy"
                 >
-                <title>Yummy</title>
                   <svg width="25px" height="25px">
-                    <use xlink:href="#icon-good"></use>
+                    <use xlink:href="#icon-good" focusable="false"></use>
                   </svg>
                 </button>
-                <span>🍯</span>
+                <span><span class="sr-only">Yummy</span>🍯</span>
               </label>
               
               <label for="theme-color" class="c-theme__color--label">
@@ -817,13 +828,13 @@ Thanks for reading
                   style="background: hsl(147, 79%, 42%);"
                   value="147, 79%, 42%"
                   id="theme-color"
+                  aria-label="love"
                 >
-                <title>love</title>
                   <svg width="25px" height="25px">
-                    <use xlink:href="#icon-good"></use>
+                    <use xlink:href="#icon-good" focusable="false"></use>
                   </svg>
                 </button>
-                <span>🍏</span>
+                <span><span class="sr-only">love</span>🍏</span>
               </label>
               
             </div>
@@ -834,28 +845,28 @@ Thanks for reading
           <div class="block block-bg">
             <div class="block__inner">
               
-            <button style="background:  #ffffff; color: #0f1419" class="c-theme__bg" value="Default">
+                <button style="background:  #ffffff; color: #0f1419" class="c-theme__bg" value="Default" aria-label="Default">
               <div class="button-check" role="radio" style="border: 2px solid rgba(0,0,0,.1); background: ;box-shadow: 1px 1px 2px rgba(0,0,0,.1);">
                   <svg width="18px" height="18px">
-                    <use xlink:href="#icon-good"></use>
+                    <use xlink:href="#icon-good" focusable="false"></use>
                   </svg>
                 </div>
                 <span class="c-theme__bg--text" style="color: #0f1419;"> Default </span>
               </button>
               
-            <button style="background:  #15202b; color: #ffffff" class="c-theme__bg" value="Dim">
+                <button style="background:  #15202b; color: #ffffff" class="c-theme__bg" value="Dim" aria-label="Dim">
               <div class="button-check" role="radio" style="border: 2px solid rgba(255,255,255,.1); background: ;box-shadow: 1px 1px 2px rgba(255,255,255,.1);">
                   <svg width="18px" height="18px">
-                    <use xlink:href="#icon-good"></use>
+                    <use xlink:href="#icon-good" focusable="false"></use>
                   </svg>
                 </div>
                 <span class="c-theme__bg--text" style="color: #ffffff;"> Dim </span>
               </button>
               
-            <button style="background:  #000000; color: #ffffff" class="c-theme__bg" value="Light Out">
+                <button style="background:  #000000; color: #ffffff" class="c-theme__bg" value="Light Out" aria-label="Light Out">
               <div class="button-check" role="radio" style="border: 2px solid rgba(225,225,225,.1); background: ;box-shadow: 1px 1px 2px rgba(225,225,225,.1);">
                   <svg width="18px" height="18px">
-                    <use xlink:href="#icon-good"></use>
+                    <use xlink:href="#icon-good" focusable="false"></use>
                   </svg>
                 </div>
                 <span class="c-theme__bg--text" style="color: #ffffff;"> Light Out </span>

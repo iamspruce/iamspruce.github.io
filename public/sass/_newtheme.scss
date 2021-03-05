@@ -1,14 +1,24 @@
+.bg-overlay.active {
+z-index: 0;
+bottom: 0px;
+left: 0px;
+position: fixed;
+right: 0px;
+top: 0px;
+background-color: rgba(91, 112, 131, 0.4);
+z-index: 1000;
+}
 .c-theme__title,.c-theme__title--sub {
     font-weight: bold;
     margin-bottom: .1em;
+    color: var(--text-bg);
 }
 .c-theme__title {
     font-size: 1.3em;
 }
 .c-theme__title {
-    margin-bottom: .3em;
+    margin-bottom: 0em;
 }
-
 .c-theme {
     position: fixed;
     z-index: 2000;
@@ -21,82 +31,141 @@
     max-width: 600px;
     max-height: 90vh;
     border: 2px solid var(--border);
-    overflow: hidden;
+    display: none;
+    flex: 1 1 auto;
 }
-.c-theme__wrapper {
+.c-theme.active {
     display: flex;
-    flex-direction: column;
 }
 .c-theme__head {
     margin-top: 32px;
     margin-bottom: 12px;
 }
-.c-theme__body {
-    padding: 1em 32px;
+@media (max-width: 600px) {
+    .c-theme {
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        min-height: 100vh;
+        transform: translate(0px,0px);
+        border-radius: 0px;
+    }
+    .c-theme__head {
+        min-height: 53px;
+        margin-top: 0px;
+        border-bottom: 1px solid var(--border);
+        display: flex;
+        align-items: center;
+        padding: 0em 1.5em;
+        text-overflow: ellipsis;
+
+
+        button {
+            margin-right: 2em;
+        }
+        p {
+            text-overflow: ellipsis;
+        }
+    }
+    .c-theme__close {
+        display: block;
+    }
 }
-.c-theme__body--inner {
-    
+
+.c-theme__wrapper {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
 
 }
+.c-theme__body {
+    overflow-y: auto;
+    flex: 1 1 auto;
+ 
+}
+.c-theme__body--inner {
+    height: 100%;
+    padding: 0em 32px 32px 32px;
+}
+
 /* theme card */
 .c-theme__card {
     border: 1px solid var(--border);
     border-radius: 11px;
-    padding: .5em;
-    margin: .3em 1.2em;
+    padding: 16px;
+    margin-bottom: 16px;
     display: flex;
 }
 .c-theme__card--img {
-    margin-right: .8em;
+    margin-right: 12px;
 
     img {
         border-radius: 50%;
     }
 }
 /* block */
+
 .block {
     background-color: var(--bg-alt);
-    border: 1px solid var(--border);
+    border-radius: 16px;
     border-radius: 11px;
-    padding: 16px;
-    margin-top: .4em;
+    padding: 4px 12px;
+    margin-bottom: 12px;
 
 }
-.c-theme__block {
-    margin-top: .8em;
+
+.c-theme__block--title {
+    margin-bottom: 4px;
+    display: block;
+    font-size: var(--font-size);
+    color: var(--text-alt)
 }
 .block__inner {
     display: flex;
+    justify-content: space-around;
+}
+.block__inner.c-theme__button-pad {
+    padding: 16px;
+}
+@media (max-width: 480px) {
+    .block__inner {
+        flex-wrap: wrap;
+    }
+    .c-theme__bg {
+        min-width: 100%;
+    } 
+    
 }
 /* theme font buttons */
 .c-theme__button--fonts {
-    padding-left: 5px;
-    padding-right: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
     display: flex;
+    flex-direction: row-reverse;
     flex-grow: 1;
     justify-content: space-between;
     align-items: center;
     border-radius: 2px;
 }
 .c-theme__button--font {
-    background-color: var(--primary--alt);
-    width: calc((100% - 1px)/4);
+    background-color: var(--primary-color-alt);
+    width: calc(90%);
     height: 4px;
     position: relative;
-    outline-color: var(--primary);
+    outline-style: none;
     
-
-    &:first-child {
-        width: 1px;
-    }
+    
     &:last-child {
-        
+        width: 3%;
+    }
+    &:first-child {
+        width: calc(90% + 3%);
     }
 
     &::after,&::before {
         content: "";
         display: block;
-        background-color: var(--primary);
+        background-color: var(--primary-color);
         opacity: 1;
         width: 12px;
         height: 12px;
@@ -105,49 +174,65 @@
         top: 50%;
         transform: translateY(-50%);
         z-index: 2;
-        transition: all .3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+        transition: all .2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+        left: 85%;
+        box-shadow: rgba(101, 119, 134, 0.2) 0px 0px 7px, rgba(101, 119, 134, 0.15) 0px 1px 3px 1px;
 
     }
-    &:not(:last-child)::after,&:not(:last-child)::before {
-        left: 90%;
-    }
-    &:last-child::after,&:last-child::before,&:first-child::after,&:first-child::before  {
-        left: calc(100% - 17px);
-    } 
-    &::before {
-        box-shadow: 1px 2px 2px var(--border);
+    &:first-child::after,&:first-child::before {
+        left: calc(80%-3%);
     }
     &:hover::after {
-        box-shadow: 0 0 2px var(--primary);
-        background-color: var(--primary--alt);
+        background-color: var(--primary-color-alt);
         transform: scale(2);
         top: -100%;
     }
 }
+.c-theme__button--font.active {
+    
+    &::after,&::before {
+        width: 16px;
+        height: 16px;
+    }
+}
+.c-theme__button--font.active ~ *,.c-theme__button--font.active {
+    background-color: var(--primary-color);
+}
 /* theme color  */
 .c-theme__color--label {
     display: flex;
+    width: 33.3333%;
+    padding-bottom: 4px;
+    padding-top: 4px;
+    flex-basis: auto;
     flex-direction: column;
-    text-align: center;
+    align-items: center;
 
-    span {
-        margin-top: .6em;
-    }
 }
 .c-theme__color {
     width: 45px;
     height: 45px;
     border-radius: 50%;
     color: #fff;
+    margin-bottom: 4px;
+    outline-style: none;
 
 
     svg {
         display: none;
     }
 }
+.c-theme__color.active {
+
+    svg {
+        display: inline;
+    }
+}
 /* theme background button */
 .c-theme__bg {
-    padding:1em;
+    margin: 4px;
+    padding:1em 20px;
+    border-width: 2px;
     min-height: 64px;
     width: calc(100% / 3 - 6px);
     border: 1px solid var(--border);
@@ -161,5 +246,23 @@
         height: 25px;
         border-radius: 50%;
         margin-right: 16px;
+
+        svg {
+            display: none;
+        }
     }
+}
+.c-theme__bg.active {
+    border-color: var(--primary-color);
+
+    .button-check {
+
+        svg {
+            display: inline;
+        }
+    }
+}
+.c-theme__done {
+    margin-top: 16px;
+    margin-bottom: 32px;
 }

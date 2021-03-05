@@ -60,6 +60,8 @@ div.nav__overlay {
 }
 .nav {
     padding: 30px;
+    height: 100%;
+    overflow-y: auto;
 
     .nav__header {
         margin-bottom: 54px;
@@ -73,7 +75,7 @@ div.nav__overlay {
     padding: 16px;
     list-style: disc;
 }
-.link__items--list {
+.link__items--list, .link__items--list button {
     margin-bottom: 24px;
     font-size: 18px;
 }

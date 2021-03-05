@@ -1,19 +1,28 @@
+let themeOpener = document.querySelector('.js-theme-opener');
+let themeClosers = document.querySelectorAll('.js-theme-close');
 
-const themeBtn = document.querySelector('.js-theme-btn');
-themeBtn.addEventListener('click', (e) => {
-    const themeWrapper = document.querySelector('.section-theme');
-    themeWrapper.classList.toggle('active')
+themeOpener.addEventListener('click', () => {
+    const theme = document.querySelector('.c-theme');
+    const bgOverlay = document.querySelector('.bg-overlay');
+    theme.classList.add('active');
+    bgOverlay.classList.add('active');
+    document.documentElement.classList.add('active');
 });
 
-const themeClose = document.querySelector('.js-close-theme');
-themeClose.addEventListener('click', (e) => {
-    const themeWrapper = document.querySelector('.section-theme');
-    themeWrapper.classList.remove('active')
-});
-
-   
-class CustomTheme {
-    constructor() {
+themeClosers.forEach((btn) => {
+    btn.addEventListener('click', () => {
+    const theme = document.querySelector('.c-theme');
+    const bgOverlay = document.querySelector('.bg-overlay');
+    theme.classList.remove('active');
+    bgOverlay.classList.remove('active');
+    document.documentElement.classList.remove('active');
+    })
+})
+let themeFonts = document.querySelectorAll('.c-theme__button--font');
+let themeColors = document.querySelectorAll('.c-theme__color');
+let themeBg = document.querySelectorAll('.c-theme__bg');
+class Theme {
+    constructor(button,name,property) {
         this.islocalStorage = function() {
             try {
                 localStorage.setItem("test", "testing");
@@ -21,90 +30,51 @@ class CustomTheme {
                 return true;
             } catch (error) {
                 return false
-            }
-           
+            } 
         };
-
-        this.schemeBtns = document.querySelectorAll('.js-theme-color');
-        this.schemeBtns.forEach((btn) => {
-            const btnVal = btn.value;
-            btn.addEventListener('click', () => this.themeScheme(btnVal))
-        });
-
-        this.fontBtns = document.querySelectorAll('.js-font-btn');
-        this.fontBtns.forEach((btn) => {
-            const btnVal = btn.value;
+        this.eachBtn = button;
+        this.name = name;
+        this.property = property;
+        this.eachBtn.forEach((btn) => {
             const btnTag = btn;
-            btn.addEventListener('click', () => this.themeFont(btnVal, btnTag))
+            const btnTags = this.eachBtn;
+            const btnVal = btn.value;
+            const btnName = this.name;
+            const btnProp = this.property;
+            btn.addEventListener('click', () => this.useTheme(btnVal,btnName,btnProp,btnTag,btnTags))
         });
-
-        this.switchBtn = document.querySelector('.js-theme-toggle');
-        const clicked = this.switchBtn;
-        this.switchBtn.addEventListener('click', () => this.themePosition(clicked))
+        this.removeActive = (btn) => {
+            const btnTag = this.eachBtn;
+            btn.addEventListener('click', remove(btnTag))
+        }
     }
-
-    themeScheme(btnVal) {
-        document.documentElement.setAttribute('data-theme', btnVal);
+    useTheme(btnVal,btnName,btnProp,btnTag,btnTags) {
         if (this.islocalStorage) {
-            localStorage.setItem('theme-name', btnVal);
-        }
-    };
-    
-    themeFont(btnVal,btnTag) {
-        document.documentElement.style.setProperty('--font-size', `${btnVal}px`);
-        if (this.islocalStorage) {
-            localStorage.setItem('font-size', btnVal);
-        }
-        ;
-        if (btnVal == localStorage.getItem('font-size')) {
-            removeActive();
+            this.remove(btnTags);
             btnTag.classList.add('active');
-    }
-};
-
-    themePosition(clicked) {
-    if (clicked.getAttribute('aria-checked') == 'true') {
-        clicked.setAttribute('aria-checked', 'false');
-        document.documentElement.style.setProperty('--position', 'static');
-        document.documentElement.style.setProperty('--top-margin', '0px');
-        if (this.islocalStorage) {
-            localStorage.setItem('position', 'static');
+            let buttonVal = btnVal;            
+            let buttonName = btnName;
+            localStorage.setItem(buttonName, buttonVal);
+            let storedItem = localStorage.getItem(btnName);
+            if (storedItem == "Dim" || storedItem == "Default" || storedItem == "Light Out") {
+                document.documentElement.setAttribute('data-theme',btnVal)
+            } else {
+            document.documentElement.style.setProperty(btnProp,btnVal)            
+            }
         }
-
-    } else {
-        clicked.setAttribute('aria-checked', 'true');
-        document.documentElement.style.setProperty('--position', 'fixed');
-        document.documentElement.style.setProperty('--top-margin', '96px');
-        if (this.islocalStorage) {
-            localStorage.setItem('position', 'fixed');
         }
-    }
-
-    }
+        remove(btnTag) {
+            btnTag.forEach(btn => {
+                btn.classList.remove('active')
+            });
+        }
 }
 
-function removeActive() {
-    const btns = document.querySelectorAll('.js-font-btn');
-    btns.forEach((btn) => {
-        btn.classList.remove('active');
-    })
-}
+
 
 if (window.CSS && CSS.supports('color', 'var(--i-support')) {
-    new CustomTheme()
+    new Theme(themeFonts,'font-size','--font-size');
+    new Theme(themeColors,'color','--primary');
+    new Theme(themeBg,'bg','--bg');
 };
-
-    
-window.addEventListener('load', () => {
-    const fontBtns = document.querySelectorAll('.js-font-btn');
-    fontBtns.forEach((btn) => {
-        const btnVal = btn.value;
-        const btnTag = btn;
-        if (btnVal == localStorage.getItem('font-size')) {
-            btnTag.classList.add('active');
-    }
-    });
-
-    
-})
 

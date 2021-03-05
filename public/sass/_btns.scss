@@ -18,23 +18,23 @@
     padding:.5em 1em;
 }
 .btn--large {
-    padding: .7em 2em;
+    padding: 1em 2em;
 }
 .btn--tab {
     padding: 1.2em 1em;
     font-size: 16px;
 }
 .btn--tab.active {
-    border-bottom: 2px solid var(--primary);
+    border-bottom: 2px solid var(--primary-color);
 }
 .btn--toggle {
     padding: .5em 2em;
 }
 .btn--primary {
-    background-color: var(--primary);
+    background-color: var(--primary-color);
     color: #fff;
 }
-.btn.btn--rounded {
+.btn--rounded {
     border-radius: 40em;
 }
 .btn--border {

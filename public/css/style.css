@@ -252,7 +252,7 @@ p.margin-btm-reset {
  */
 a {
   text-decoration: none;
-  color: var(--primary);
+  color: var(--primary-color);
 }
 
 button {
@@ -822,7 +822,6 @@ div.nav__overlay {
 
 .c-theme__head {
   margin-top: 32px;
-  margin-bottom: 12px;
 }
 
 @media (max-width: 600px) {
@@ -853,6 +852,7 @@ div.nav__overlay {
 
   .c-theme__close {
     display: block;
+    color: var(--primary-color);
   }
 }
 .c-theme__wrapper {
@@ -867,7 +867,6 @@ div.nav__overlay {
 }
 
 .c-theme__body--inner {
-  height: 100%;
   padding: 0em 32px 32px 32px;
 }
 
@@ -975,6 +974,9 @@ div.nav__overlay {
   width: 16px;
   height: 16px;
 }
+.c-theme__button--font.active:hover::after {
+  top: -150%;
+}
 
 .c-theme__button--font.active ~ *, .c-theme__button--font.active {
   background-color: var(--primary-color);
@@ -1039,7 +1041,6 @@ div.nav__overlay {
 
 .c-theme__done {
   margin-top: 16px;
-  margin-bottom: 32px;
 }
 
 .btn {
@@ -1263,7 +1264,7 @@ div.nav__overlay {
   content: counter(listCounter, decimal-leading-zero);
   font-size: 0.7em;
   font-weight: 700;
-  color: var(--primary);
+  color: var(--primary-color);
   left: 0.8em;
   position: absolute;
   font-family: Product Sans, AvenirNext, Avenir, -apple-system, BlinkMacSystemFont, Roboto Slab, Droid Serif, Segoe UI, Oxygen-Sans, Ubuntu, Cantarell, Georgia, serif;

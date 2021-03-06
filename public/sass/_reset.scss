@@ -81,8 +81,6 @@ textarea {
     --primary: 203, 89%, 53%;
     --primary-color: hsla(var(--primary), 100%);
     --primary-color-alt: hsla(var(--primary), 30%);
-    --position: fixed;
-    --top-margin: 96px;
    }
 
 html {
@@ -91,7 +89,7 @@ font-weight: var(--normal);
 color: var(--text);
 font-size: 16px;
 transition: all .3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-line-height: 1.7;
+line-height: 1.4;
 letter-spacing: 0.011em;
  }
  html.active {
@@ -161,7 +159,7 @@ font-weight: normal;
    * Basic styling for paragraphs.
    */
   p {
-    line-height: 1.7;
+    line-height: 1.4;
     max-width: 50em;
     margin-bottom: 1.5em;
     font-size: var(--font-size);

@@ -106,10 +106,10 @@
 
 
     &:hover:after {
-        background-color: var(--secondary)
+        background-color: var(--primary-color-alt)
     }
     &:hover:before {
-        border-color: var(--secondary)
+        border-color: var(--primary-color-alt)
     }
 
     &::after {
@@ -121,7 +121,7 @@
         height: 90%;
         top: -10%;
         left: 20%;
-        background-color: var(--primary);
+        background-color: var(--primary-color);
         opacity: .2em;
         transition: all .3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
     }
@@ -136,7 +136,7 @@
         top: 65%;
         left: -5%;
         background-color: transparent;
-        border-color: var(--primary);
+        border-color: var(--primary-color);
         border-width: 2px;
         border-left-style: solid;
         border-bottom-style: solid;

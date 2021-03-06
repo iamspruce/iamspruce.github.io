@@ -134,8 +134,6 @@ textarea {
   --primary: 203, 89%, 53%;
   --primary-color: hsla(var(--primary), 100%);
   --primary-color-alt: hsla(var(--primary), 30%);
-  --position: fixed;
-  --top-margin: 96px;
 }
 
 html {
@@ -144,7 +142,7 @@ html {
   color: var(--text);
   font-size: 16px;
   transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  line-height: 1.7;
+  line-height: 1.4;
   letter-spacing: 0.011em;
 }
 
@@ -235,7 +233,7 @@ h6 {
  * Basic styling for paragraphs.
  */
 p {
-  line-height: 1.7;
+  line-height: 1.4;
   max-width: 50em;
   margin-bottom: 1.5em;
   font-size: var(--font-size);
@@ -447,10 +445,10 @@ blockquote {
   cursor: pointer;
 }
 .img-overlay:hover:after {
-  background-color: var(--secondary);
+  background-color: var(--primary-color-alt);
 }
 .img-overlay:hover:before {
-  border-color: var(--secondary);
+  border-color: var(--primary-color-alt);
 }
 .img-overlay::after {
   content: "";
@@ -461,7 +459,7 @@ blockquote {
   height: 90%;
   top: -10%;
   left: 20%;
-  background-color: var(--primary);
+  background-color: var(--primary-color);
   opacity: 0.2em;
   transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
@@ -475,7 +473,7 @@ blockquote {
   top: 65%;
   left: -5%;
   background-color: transparent;
-  border-color: var(--primary);
+  border-color: var(--primary-color);
   border-width: 2px;
   border-left-style: solid;
   border-bottom-style: solid;
@@ -833,6 +831,7 @@ div.nav__overlay {
     min-height: 100vh;
     transform: translate(0px, 0px);
     border-radius: 0px;
+    border: none;
   }
 
   .c-theme__head {
@@ -1002,6 +1001,9 @@ div.nav__overlay {
   margin-bottom: 4px;
   outline-style: none;
 }
+.c-theme__color:hover {
+  box-shadow: 1px 2px 4px var(--primary-color-alt);
+}
 .c-theme__color svg {
   display: none;
 }
@@ -1023,14 +1025,29 @@ div.nav__overlay {
   display: flex;
   align-items: center;
 }
+.c-theme__bg:hover .button-check::after {
+  background-color: var(--primary-color-alt);
+}
 .c-theme__bg .button-check {
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   margin-right: 16px;
+  position: relative;
 }
 .c-theme__bg .button-check svg {
   display: none;
+}
+.c-theme__bg .button-check::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
 }
 
 .c-theme__bg.active {

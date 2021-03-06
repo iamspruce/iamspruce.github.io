@@ -35,8 +35,11 @@
         this.eachBtn.forEach((btn) => {
             const btnTag = btn;
             const btnVal = btn.value;
+            if (!localStorage.hasOwnProperty(this.name)) {
+              localStorage.setItem(this.name,this.defaultBtn)
+            }
             const btnName = localStorage.getItem(this.name);
-            if (btnName == btnVal || btnVal == this.defaultBtn) {
+            if (btnVal == btnName) {
               btnTag.classList.add('active')
             }
         });
@@ -555,7 +558,7 @@ thanks for reading....
           <span class="c-theme__block--title"> Font Size </span>
           <div class="block">
             <div class="block__inner c-theme__button-pad">
-              <span class="block--text" style="font-size: 13px;"> Aa </span>
+              <span class="block--text" style="font-size: 10px;"> Aa </span>
               <div class="c-theme__button--fonts">
                 
                 <button

@@ -48,6 +48,7 @@ z-index: 1000;
         min-height: 100vh;
         transform: translate(0px,0px);
         border-radius: 0px;
+        border: none;
     }
     .c-theme__head {
         min-height: 53px;
@@ -220,6 +221,10 @@ z-index: 1000;
     margin-bottom: 4px;
     outline-style: none;
 
+    &:hover {
+        box-shadow: 1px 2px 4px var(--primary-color-alt);
+    }
+
 
     svg {
         display: none;
@@ -244,15 +249,36 @@ z-index: 1000;
     display: flex;
     align-items: center;
 
+    &:hover {
+        
+        .button-check::after {
+            background-color: var(--primary-color-alt);
+        }
+    }
+
     .button-check {
-        width: 25px;
-        height: 25px;
+        width: 20px;
+        height: 20px;
         border-radius: 50%;
         margin-right: 16px;
+        position: relative;
 
         svg {
             display: none;
         }
+
+        &::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            border-radius: 50%;
+        }
+        
     }
 }
 .c-theme__bg.active {

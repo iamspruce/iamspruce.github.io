@@ -141,7 +141,6 @@ z-index: 1000;
     margin-left: 20px;
     margin-right: 20px;
     display: flex;
-    flex-direction: row-reverse;
     flex-grow: 1;
     justify-content: space-between;
     align-items: center;
@@ -152,7 +151,6 @@ z-index: 1000;
     width: calc(90%);
     height: 4px;
     position: relative;
-    outline-style: none;
     
     
     &:last-child {

@@ -1,23 +1,53 @@
-let themeOpener = document.querySelector('.js-theme-opener');
-let themeClosers = document.querySelectorAll('.js-theme-close');
+let themeOpener = document.querySelector('.js-theme-opener'),
+    themeClosers = document.querySelectorAll('.js-theme-close'),
+    lastFocus,
+    theme = document.querySelector('.c-theme'),
+    bgOverlay = document.querySelector('.bg-overlay');
 
-themeOpener.addEventListener('click', () => {
-    const theme = document.querySelector('.c-theme');
-    const bgOverlay = document.querySelector('.bg-overlay');
+    // to show our modal
+themeOpener.addEventListener( 'click', function( e ) {
+    lastFocus = document.activeElement;
+    theme.setAttribute('tabindex', '1');
+    theme.focus();
     theme.classList.add('active');
     bgOverlay.classList.add('active');
     document.documentElement.classList.add('active');
-});
-
-themeClosers.forEach((btn) => {
-    btn.addEventListener('click', () => {
-    const theme = document.querySelector('.c-theme');
-    const bgOverlay = document.querySelector('.bg-overlay');
+    focusRestrict(theme)
+  });
+  
+  // to close our modal
+  themeClosers.forEach(btn => {
+    btn.addEventListener( 'click', function( e ) {
     theme.classList.remove('active');
     bgOverlay.classList.remove('active');
     document.documentElement.classList.remove('active');
+    lastFocus.focus();
     })
-})
+  });
+
+
+
+  function modalClose ( e ) {
+    if ( !e.keyCode || e.keyCode === 27 ) {
+        lastFocus.focus();
+        document.querySelector('.c-theme').classList.remove('active');
+        document.querySelector('.bg-overlay').classList.remove('active');
+        document.documentElement.classList.remove('active');
+    }
+  }
+  
+  document.addEventListener('keydown', modalClose);
+
+function focusRestrict ( event ) {
+    document.addEventListener('focus', function( event ) {
+      if ( theme && !theme.contains( event.target ) ) {
+        event.stopPropagation();
+        theme.focus();
+      }
+    }, true);
+  }
+  
+  
 let themeFonts = document.querySelectorAll('.c-theme__button--font');
 let themeColors = document.querySelectorAll('.c-theme__color');
 let themeBg = document.querySelectorAll('.c-theme__bg');

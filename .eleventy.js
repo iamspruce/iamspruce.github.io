@@ -32,9 +32,9 @@ module.exports = function(eleventyConfig) {
         </p>`
     });
     eleventyConfig.addShortcode("image", function(url, alt) {
-        return `<figure class="p-article__img"><picture><source media="(max-width: 799px)" srcset="img/${url}?nf_resize=fit&w=480">
-        <source media="(min-width: 800px)" srcset="img/${url}?nf_resize=fit&w=800">
-        <img src="img/${url}?nf_resize=fit&w=800" alt="${alt}">
+        return `<figure class="p-article__img"><picture><source media="(max-width: 799px)" srcset="img/${url}" class="spdr-c2tn-480xxsw spdr-convert-jpeg">
+        <source media="(min-width: 800px)" srcset="img/${url}" class="spdr-c2tn-800xxsw spdr-convert-jpeg">
+        <img src="img/${url}" alt="${alt}" class="spdr-convert-jpeg">
         </picture><figcaption>${alt}</figcaption></figure>`
     });
 

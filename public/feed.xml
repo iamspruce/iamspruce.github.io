@@ -40,9 +40,9 @@
         &lt;a href=&quot;https://google.com/advanced_book_search&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Google&#39;s advanced search for books&lt;/a&gt;
     &lt;/li&gt;
 &lt;/ol&gt;
-&lt;figure class=&quot;p-article__img&quot;&gt;&lt;picture&gt;&lt;source media=&quot;(max-width: 799px)&quot; srcset=&quot;https://spruce.com.ng/blog/15-ways-to-use-google-like-a-pro/img/advanced-search.png?nf_resize=fit&amp;w=480&quot; /&gt;
-        &lt;source media=&quot;(min-width: 800px)&quot; srcset=&quot;https://spruce.com.ng/blog/15-ways-to-use-google-like-a-pro/img/advanced-search.png?nf_resize=fit&amp;w=800&quot; /&gt;
-        &lt;img src=&quot;https://spruce.com.ng/blog/15-ways-to-use-google-like-a-pro/img/advanced-search.png?nf_resize=fit&amp;w=800&quot; alt=&quot;Google advanced search preview&quot; /&gt;
+&lt;figure class=&quot;p-article__img&quot;&gt;&lt;picture&gt;&lt;source media=&quot;(max-width: 799px)&quot; srcset=&quot;https://spruce.com.ng/blog/15-ways-to-use-google-like-a-pro/img/advanced-search.png&quot; class=&quot;spdr-c2tn-480xxsw spdr-convert-jpeg&quot; /&gt;
+        &lt;source media=&quot;(min-width: 800px)&quot; srcset=&quot;https://spruce.com.ng/blog/15-ways-to-use-google-like-a-pro/img/advanced-search.png&quot; class=&quot;spdr-c2tn-800xxsw spdr-convert-jpeg&quot; /&gt;
+        &lt;img src=&quot;https://spruce.com.ng/blog/15-ways-to-use-google-like-a-pro/img/advanced-search.png&quot; alt=&quot;Google advanced search preview&quot; class=&quot;spdr-convert-jpeg&quot; /&gt;
         &lt;/picture&gt;&lt;figcaption&gt;Google advanced search preview&lt;/figcaption&gt;&lt;/figure&gt;
 &lt;h3 class=&quot;h3&quot;&gt;
     02. Finding Quick Definations 
@@ -73,9 +73,9 @@
     Very useful when working with logos and when you need an image of specific file size, just add &lt;b&gt;imagesize:500x400&lt;/b&gt; at the begining of a word or phrase &lt;br /&gt;
     &lt;span style=&quot;color: var(--primary);&quot;&gt;imagesize:500x400 spongeBob&lt;/span&gt;
 &lt;/p&gt;
- &lt;figure class=&quot;p-article__img&quot;&gt;&lt;picture&gt;&lt;source media=&quot;(max-width: 799px)&quot; srcset=&quot;https://spruce.com.ng/blog/15-ways-to-use-google-like-a-pro/img/image-size.png?nf_resize=fit&amp;w=480&quot; /&gt;
-        &lt;source media=&quot;(min-width: 800px)&quot; srcset=&quot;https://spruce.com.ng/blog/15-ways-to-use-google-like-a-pro/img/image-size.png?nf_resize=fit&amp;w=800&quot; /&gt;
-        &lt;img src=&quot;https://spruce.com.ng/blog/15-ways-to-use-google-like-a-pro/img/image-size.png?nf_resize=fit&amp;w=800&quot; alt=&quot;Exact 500x400 spongebob image&quot; /&gt;
+ &lt;figure class=&quot;p-article__img&quot;&gt;&lt;picture&gt;&lt;source media=&quot;(max-width: 799px)&quot; srcset=&quot;https://spruce.com.ng/blog/15-ways-to-use-google-like-a-pro/img/image-size.png&quot; class=&quot;spdr-c2tn-480xxsw spdr-convert-jpeg&quot; /&gt;
+        &lt;source media=&quot;(min-width: 800px)&quot; srcset=&quot;https://spruce.com.ng/blog/15-ways-to-use-google-like-a-pro/img/image-size.png&quot; class=&quot;spdr-c2tn-800xxsw spdr-convert-jpeg&quot; /&gt;
+        &lt;img src=&quot;https://spruce.com.ng/blog/15-ways-to-use-google-like-a-pro/img/image-size.png&quot; alt=&quot;Exact 500x400 spongebob image&quot; class=&quot;spdr-convert-jpeg&quot; /&gt;
         &lt;/picture&gt;&lt;figcaption&gt;Exact 500x400 spongebob image&lt;/figcaption&gt;&lt;/figure&gt;
 &lt;h6 class=&quot;h3&quot;&gt;
     06. Search Social Media
@@ -845,9 +845,9 @@ Add line in the middle of a word
 &lt;p&gt;
 Have you ever wanted create a header text like the one below?
 &lt;/p&gt;
-&lt;figure class=&quot;p-article__img&quot;&gt;&lt;picture&gt;&lt;source media=&quot;(max-width: 799px)&quot; srcset=&quot;https://spruce.com.ng/blog/5-cool-css-only-line-effects/img/line-article.jpg?nf_resize=fit&amp;w=480&quot; /&gt;
-        &lt;source media=&quot;(min-width: 800px)&quot; srcset=&quot;https://spruce.com.ng/blog/5-cool-css-only-line-effects/img/line-article.jpg?nf_resize=fit&amp;w=800&quot; /&gt;
-        &lt;img src=&quot;https://spruce.com.ng/blog/5-cool-css-only-line-effects/img/line-article.jpg?nf_resize=fit&amp;w=800&quot; alt=&quot;image of header text with Line from smashingmagazine&quot; /&gt;
+&lt;figure class=&quot;p-article__img&quot;&gt;&lt;picture&gt;&lt;source media=&quot;(max-width: 799px)&quot; srcset=&quot;https://spruce.com.ng/blog/5-cool-css-only-line-effects/img/line-article.jpg&quot; class=&quot;spdr-c2tn-480xxsw spdr-convert-jpeg&quot; /&gt;
+        &lt;source media=&quot;(min-width: 800px)&quot; srcset=&quot;https://spruce.com.ng/blog/5-cool-css-only-line-effects/img/line-article.jpg&quot; class=&quot;spdr-c2tn-800xxsw spdr-convert-jpeg&quot; /&gt;
+        &lt;img src=&quot;https://spruce.com.ng/blog/5-cool-css-only-line-effects/img/line-article.jpg&quot; alt=&quot;image of header text with Line from smashingmagazine&quot; class=&quot;spdr-convert-jpeg&quot; /&gt;
         &lt;/picture&gt;&lt;figcaption&gt;image of header text with Line from smashingmagazine&lt;/figcaption&gt;&lt;/figure&gt;
 &lt;p&gt;
 What if I told you it is quite easy to do with CSS 
@@ -2064,9 +2064,9 @@ Now Click below link (Open in a different tab) &lt;br /&gt;
 &lt;a href=&quot;https://github.com/barryclark/jekyll-now&quot;&gt;Jekyll now starter theme
 &lt;/a&gt;
 &lt;/p&gt;
-&lt;figure class=&quot;p-article__img&quot;&gt;&lt;picture&gt;&lt;source media=&quot;(max-width: 799px)&quot; srcset=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/jekyll-theme.png?nf_resize=fit&amp;w=480&quot; /&gt;
-        &lt;source media=&quot;(min-width: 800px)&quot; srcset=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/jekyll-theme.png?nf_resize=fit&amp;w=800&quot; /&gt;
-        &lt;img src=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/jekyll-theme.png?nf_resize=fit&amp;w=800&quot; alt=&quot;You should see a page that looks like this&quot; /&gt;
+&lt;figure class=&quot;p-article__img&quot;&gt;&lt;picture&gt;&lt;source media=&quot;(max-width: 799px)&quot; srcset=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/jekyll-theme.png&quot; class=&quot;spdr-c2tn-480xxsw spdr-convert-jpeg&quot; /&gt;
+        &lt;source media=&quot;(min-width: 800px)&quot; srcset=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/jekyll-theme.png&quot; class=&quot;spdr-c2tn-800xxsw spdr-convert-jpeg&quot; /&gt;
+        &lt;img src=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/jekyll-theme.png&quot; alt=&quot;You should see a page that looks like this&quot; class=&quot;spdr-convert-jpeg&quot; /&gt;
         &lt;/picture&gt;&lt;figcaption&gt;You should see a page that looks like this&lt;/figcaption&gt;&lt;/figure&gt;
  &lt;p&gt;
   Now its time to &lt;b&gt;Fork&lt;/b&gt; the starter theme &lt;br /&gt;
@@ -2081,29 +2081,29 @@ Now Click below link (Open in a different tab) &lt;br /&gt;
 &lt;p&gt;
 The page would reload and you would see a desktop view of the page, just look at the right side of the page at the header (top of the webpage) and click on &lt;b&gt;fork&lt;/b&gt;
 &lt;/p&gt;
-&lt;figure class=&quot;p-article__img&quot;&gt;&lt;picture&gt;&lt;source media=&quot;(max-width: 799px)&quot; srcset=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/fork-theme.png?nf_resize=fit&amp;w=480&quot; /&gt;
-        &lt;source media=&quot;(min-width: 800px)&quot; srcset=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/fork-theme.png?nf_resize=fit&amp;w=800&quot; /&gt;
-        &lt;img src=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/fork-theme.png?nf_resize=fit&amp;w=800&quot; alt=&quot;Click the fork icon there&quot; /&gt;
+&lt;figure class=&quot;p-article__img&quot;&gt;&lt;picture&gt;&lt;source media=&quot;(max-width: 799px)&quot; srcset=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/fork-theme.png&quot; class=&quot;spdr-c2tn-480xxsw spdr-convert-jpeg&quot; /&gt;
+        &lt;source media=&quot;(min-width: 800px)&quot; srcset=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/fork-theme.png&quot; class=&quot;spdr-c2tn-800xxsw spdr-convert-jpeg&quot; /&gt;
+        &lt;img src=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/fork-theme.png&quot; alt=&quot;Click the fork icon there&quot; class=&quot;spdr-convert-jpeg&quot; /&gt;
         &lt;/picture&gt;&lt;figcaption&gt;Click the fork icon there&lt;/figcaption&gt;&lt;/figure&gt;
  &lt;p&gt;
 After doing that the next page you are going to see would ask you to change your &lt;b&gt;Forked theme name&lt;/b&gt; &lt;br /&gt;
 Now change the name of the website to: &quot;github-username.github.io&quot;
  &lt;/p&gt;
-&lt;figure class=&quot;p-article__img&quot;&gt;&lt;picture&gt;&lt;source media=&quot;(max-width: 799px)&quot; srcset=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/rename-theme.png?nf_resize=fit&amp;w=480&quot; /&gt;
-        &lt;source media=&quot;(min-width: 800px)&quot; srcset=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/rename-theme.png?nf_resize=fit&amp;w=800&quot; /&gt;
-        &lt;img src=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/rename-theme.png?nf_resize=fit&amp;w=800&quot; alt=&quot;Old one looks like this&quot; /&gt;
+&lt;figure class=&quot;p-article__img&quot;&gt;&lt;picture&gt;&lt;source media=&quot;(max-width: 799px)&quot; srcset=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/rename-theme.png&quot; class=&quot;spdr-c2tn-480xxsw spdr-convert-jpeg&quot; /&gt;
+        &lt;source media=&quot;(min-width: 800px)&quot; srcset=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/rename-theme.png&quot; class=&quot;spdr-c2tn-800xxsw spdr-convert-jpeg&quot; /&gt;
+        &lt;img src=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/rename-theme.png&quot; alt=&quot;Old one looks like this&quot; class=&quot;spdr-convert-jpeg&quot; /&gt;
         &lt;/picture&gt;&lt;figcaption&gt;Old one looks like this&lt;/figcaption&gt;&lt;/figure&gt;
-&lt;figure class=&quot;p-article__img&quot;&gt;&lt;picture&gt;&lt;source media=&quot;(max-width: 799px)&quot; srcset=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/rename-theme-me.png?nf_resize=fit&amp;w=480&quot; /&gt;
-        &lt;source media=&quot;(min-width: 800px)&quot; srcset=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/rename-theme-me.png?nf_resize=fit&amp;w=800&quot; /&gt;
-        &lt;img src=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/rename-theme-me.png?nf_resize=fit&amp;w=800&quot; alt=&quot;Change it to something like this with your own github username&quot; /&gt;
+&lt;figure class=&quot;p-article__img&quot;&gt;&lt;picture&gt;&lt;source media=&quot;(max-width: 799px)&quot; srcset=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/rename-theme-me.png&quot; class=&quot;spdr-c2tn-480xxsw spdr-convert-jpeg&quot; /&gt;
+        &lt;source media=&quot;(min-width: 800px)&quot; srcset=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/rename-theme-me.png&quot; class=&quot;spdr-c2tn-800xxsw spdr-convert-jpeg&quot; /&gt;
+        &lt;img src=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/rename-theme-me.png&quot; alt=&quot;Change it to something like this with your own github username&quot; class=&quot;spdr-convert-jpeg&quot; /&gt;
         &lt;/picture&gt;&lt;figcaption&gt;Change it to something like this with your own github username&lt;/figcaption&gt;&lt;/figure&gt;
  &lt;p&gt;
 Now its time to create a github token for the spck editor app you downloaded earlier... &lt;br /&gt;
 click on the dropdown menu at the top of the page
  &lt;/p&gt;
- &lt;figure class=&quot;p-article__img&quot;&gt;&lt;picture&gt;&lt;source media=&quot;(max-width: 799px)&quot; srcset=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/click-settings.png?nf_resize=fit&amp;w=480&quot; /&gt;
-        &lt;source media=&quot;(min-width: 800px)&quot; srcset=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/click-settings.png?nf_resize=fit&amp;w=800&quot; /&gt;
-        &lt;img src=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/click-settings.png?nf_resize=fit&amp;w=800&quot; alt=&quot;Dropdown menu&quot; /&gt;
+ &lt;figure class=&quot;p-article__img&quot;&gt;&lt;picture&gt;&lt;source media=&quot;(max-width: 799px)&quot; srcset=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/click-settings.png&quot; class=&quot;spdr-c2tn-480xxsw spdr-convert-jpeg&quot; /&gt;
+        &lt;source media=&quot;(min-width: 800px)&quot; srcset=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/click-settings.png&quot; class=&quot;spdr-c2tn-800xxsw spdr-convert-jpeg&quot; /&gt;
+        &lt;img src=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/click-settings.png&quot; alt=&quot;Dropdown menu&quot; class=&quot;spdr-convert-jpeg&quot; /&gt;
         &lt;/picture&gt;&lt;figcaption&gt;Dropdown menu&lt;/figcaption&gt;&lt;/figure&gt;
  &lt;p&gt;
  &lt;/p&gt;&lt;ol&gt;
@@ -2122,16 +2122,16 @@ click on the dropdown menu at the top of the page
  &lt;/ol&gt;
  &lt;/ol&gt;
  &lt;p&gt;&lt;/p&gt;
- &lt;figure class=&quot;p-article__img&quot;&gt;&lt;picture&gt;&lt;source media=&quot;(max-width: 799px)&quot; srcset=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/spck-token.png?nf_resize=fit&amp;w=480&quot; /&gt;
-        &lt;source media=&quot;(min-width: 800px)&quot; srcset=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/spck-token.png?nf_resize=fit&amp;w=800&quot; /&gt;
-        &lt;img src=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/spck-token.png?nf_resize=fit&amp;w=800&quot; alt=&quot;Select the repo box&quot; /&gt;
+ &lt;figure class=&quot;p-article__img&quot;&gt;&lt;picture&gt;&lt;source media=&quot;(max-width: 799px)&quot; srcset=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/spck-token.png&quot; class=&quot;spdr-c2tn-480xxsw spdr-convert-jpeg&quot; /&gt;
+        &lt;source media=&quot;(min-width: 800px)&quot; srcset=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/spck-token.png&quot; class=&quot;spdr-c2tn-800xxsw spdr-convert-jpeg&quot; /&gt;
+        &lt;img src=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/spck-token.png&quot; alt=&quot;Select the repo box&quot; class=&quot;spdr-convert-jpeg&quot; /&gt;
         &lt;/picture&gt;&lt;figcaption&gt;Select the repo box&lt;/figcaption&gt;&lt;/figure&gt; 
  &lt;p&gt;
 After you have generated your token ensure you copy it to your phone clipboard because you wont see again unless you re-generate it.
  &lt;/p&gt;
- &lt;figure class=&quot;p-article__img&quot;&gt;&lt;picture&gt;&lt;source media=&quot;(max-width: 799px)&quot; srcset=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/spck-token-sucess.png?nf_resize=fit&amp;w=480&quot; /&gt;
-        &lt;source media=&quot;(min-width: 800px)&quot; srcset=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/spck-token-sucess.png?nf_resize=fit&amp;w=800&quot; /&gt;
-        &lt;img src=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/spck-token-sucess.png?nf_resize=fit&amp;w=800&quot; alt=&quot;Ensure you copy the token&quot; /&gt;
+ &lt;figure class=&quot;p-article__img&quot;&gt;&lt;picture&gt;&lt;source media=&quot;(max-width: 799px)&quot; srcset=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/spck-token-sucess.png&quot; class=&quot;spdr-c2tn-480xxsw spdr-convert-jpeg&quot; /&gt;
+        &lt;source media=&quot;(min-width: 800px)&quot; srcset=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/spck-token-sucess.png&quot; class=&quot;spdr-c2tn-800xxsw spdr-convert-jpeg&quot; /&gt;
+        &lt;img src=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/spck-token-sucess.png&quot; alt=&quot;Ensure you copy the token&quot; class=&quot;spdr-convert-jpeg&quot; /&gt;
         &lt;/picture&gt;&lt;figcaption&gt;Ensure you copy the token&lt;/figcaption&gt;&lt;/figure&gt; 
  &lt;p&gt;
 If you have followed this guide perfectly, you are just a few steps away from your newly phone managed blog or website.
@@ -2141,17 +2141,17 @@ Moving on, Do you remember the &quot;Spck editor&quot; you downloaded earlier? Y
 Now open it up &lt;br /&gt;
 And you should see something that looks like this image below
  &lt;/p&gt;
- &lt;figure class=&quot;p-article__img&quot;&gt;&lt;picture&gt;&lt;source media=&quot;(max-width: 799px)&quot; srcset=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/spck-editor.png?nf_resize=fit&amp;w=480&quot; /&gt;
-        &lt;source media=&quot;(min-width: 800px)&quot; srcset=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/spck-editor.png?nf_resize=fit&amp;w=800&quot; /&gt;
-        &lt;img src=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/spck-editor.png?nf_resize=fit&amp;w=800&quot; alt=&quot;Yep. Click on the first tab and you should see this&quot; /&gt;
+ &lt;figure class=&quot;p-article__img&quot;&gt;&lt;picture&gt;&lt;source media=&quot;(max-width: 799px)&quot; srcset=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/spck-editor.png&quot; class=&quot;spdr-c2tn-480xxsw spdr-convert-jpeg&quot; /&gt;
+        &lt;source media=&quot;(min-width: 800px)&quot; srcset=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/spck-editor.png&quot; class=&quot;spdr-c2tn-800xxsw spdr-convert-jpeg&quot; /&gt;
+        &lt;img src=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/spck-editor.png&quot; alt=&quot;Yep. Click on the first tab and you should see this&quot; class=&quot;spdr-convert-jpeg&quot; /&gt;
         &lt;/picture&gt;&lt;figcaption&gt;Yep. Click on the first tab and you should see this&lt;/figcaption&gt;&lt;/figure&gt; 
  &lt;p&gt;
 Next step is to look at the &lt;b&gt;PROJECTS&lt;/b&gt; tab &lt;br /&gt;
 Click on the third icon (The fork icon)
  &lt;/p&gt;
- &lt;figure class=&quot;p-article__img&quot;&gt;&lt;picture&gt;&lt;source media=&quot;(max-width: 799px)&quot; srcset=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/spck-editor-fork.png?nf_resize=fit&amp;w=480&quot; /&gt;
-        &lt;source media=&quot;(min-width: 800px)&quot; srcset=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/spck-editor-fork.png?nf_resize=fit&amp;w=800&quot; /&gt;
-        &lt;img src=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/spck-editor-fork.png?nf_resize=fit&amp;w=800&quot; alt=&quot;On the projects tab, click the fork icon (the third icon)&quot; /&gt;
+ &lt;figure class=&quot;p-article__img&quot;&gt;&lt;picture&gt;&lt;source media=&quot;(max-width: 799px)&quot; srcset=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/spck-editor-fork.png&quot; class=&quot;spdr-c2tn-480xxsw spdr-convert-jpeg&quot; /&gt;
+        &lt;source media=&quot;(min-width: 800px)&quot; srcset=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/spck-editor-fork.png&quot; class=&quot;spdr-c2tn-800xxsw spdr-convert-jpeg&quot; /&gt;
+        &lt;img src=&quot;https://spruce.com.ng/blog/create-a-blog-on-your-mobile-phone/img/spck-editor-fork.png&quot; alt=&quot;On the projects tab, click the fork icon (the third icon)&quot; class=&quot;spdr-convert-jpeg&quot; /&gt;
         &lt;/picture&gt;&lt;figcaption&gt;On the projects tab, click the fork icon (the third icon)&lt;/figcaption&gt;&lt;/figure&gt; 
  &lt;p&gt;
 When you click on fork icon &lt;br /&gt;

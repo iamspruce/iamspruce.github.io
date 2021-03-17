@@ -188,7 +188,6 @@
                   class="c-theme__button--font"
                   value="22px"
                   aria-label="Extra Large"
-                  tabindex="6"
                 >
                 <span class="sr-only">Extra Large</span>
                 </button>
@@ -197,7 +196,6 @@
                   class="c-theme__button--font"
                   value="20px"
                   aria-label="Large"
-                  tabindex="5"
                 >
                 <span class="sr-only">Large</span>
                 </button>
@@ -206,7 +204,6 @@
                   class="c-theme__button--font"
                   value="18px"
                   aria-label="Default"
-                  tabindex="4"
                 >
                 <span class="sr-only">Default</span>
                 </button>
@@ -215,7 +212,6 @@
                   class="c-theme__button--font"
                   value="16px"
                   aria-label="Small"
-                  tabindex="3"
                 >
                 <span class="sr-only">Small</span>
                 </button>
@@ -224,7 +220,6 @@
                   class="c-theme__button--font"
                   value="15px"
                   aria-label="Extra Small"
-                  tabindex="2"
                 >
                 <span class="sr-only">Extra Small</span>
                 </button>
@@ -237,7 +232,7 @@
         <div class="c-theme__block">
           <span class="c-theme__block--title"> Color </span>
           <div class="block">
-            <div class="block__inner">
+            <div class="block__inner js-theme_color--labels">
               
               <label for="theme-color" class="c-theme__color--label">
                 <button
@@ -246,7 +241,6 @@
                   value="203, 89%, 53%"
                   id="theme-color"
                   aria-label="fresh"
-                  tabindex="7"
                 >
                   <svg width="25px" height="25px">
                     <use xlink:href="#icon-good" focusable="false"></use>
@@ -262,7 +256,6 @@
                   value="38, 100%, 56%"
                   id="theme-color"
                   aria-label="Star"
-                  tabindex="8"
                 >
                   <svg width="25px" height="25px">
                     <use xlink:href="#icon-good" focusable="false"></use>
@@ -278,7 +271,6 @@
                   value="341, 75%, 51%"
                   id="theme-color"
                   aria-label="hot"
-                  tabindex="9"
                 >
                   <svg width="25px" height="25px">
                     <use xlink:href="#icon-good" focusable="false"></use>
@@ -294,7 +286,6 @@
                   value="263, 51%, 53%"
                   id="theme-color"
                   aria-label="berry"
-                  tabindex="10"
                 >
                   <svg width="25px" height="25px">
                     <use xlink:href="#icon-good" focusable="false"></use>
@@ -310,7 +301,6 @@
                   value="17, 91%, 55%"
                   id="theme-color"
                   aria-label="Yummy"
-                  tabindex="11"
                 >
                   <svg width="25px" height="25px">
                     <use xlink:href="#icon-good" focusable="false"></use>
@@ -326,7 +316,6 @@
                   value="147, 79%, 42%"
                   id="theme-color"
                   aria-label="love"
-                  tabindex="12"
                 >
                   <svg width="25px" height="25px">
                     <use xlink:href="#icon-good" focusable="false"></use>
@@ -343,7 +332,7 @@
           <div class="block block-bg">
             <div class="block__inner">
               
-                <button style="background:  #ffffff; color: #0f1419" class="c-theme__bg" value="Default" aria-label="Default" tabindex="13">
+                <button style="background:  #ffffff; color: #0f1419" class="c-theme__bg" value="Default" aria-label="Default">
               <div class="button-check" role="radio" style="border: 2px solid rgba(0,0,0,.1); background: ;box-shadow: 1px 1px 2px rgba(0,0,0,.1);">
                   <svg width="18px" height="18px">
                     <use xlink:href="#icon-good" focusable="false"></use>
@@ -352,7 +341,7 @@
                 <span class="c-theme__bg--text" style="color: #0f1419;"> Default </span>
               </button>
               
-                <button style="background:  #15202b; color: #ffffff" class="c-theme__bg" value="Dim" aria-label="Dim" tabindex="14">
+                <button style="background:  #15202b; color: #ffffff" class="c-theme__bg" value="Dim" aria-label="Dim">
               <div class="button-check" role="radio" style="border: 2px solid rgba(255,255,255,.1); background: ;box-shadow: 1px 1px 2px rgba(255,255,255,.1);">
                   <svg width="18px" height="18px">
                     <use xlink:href="#icon-good" focusable="false"></use>
@@ -361,7 +350,7 @@
                 <span class="c-theme__bg--text" style="color: #ffffff;"> Dim </span>
               </button>
               
-                <button style="background:  #000000; color: #ffffff" class="c-theme__bg" value="Light Out" aria-label="Light Out" tabindex="15">
+                <button style="background:  #000000; color: #ffffff" class="c-theme__bg" value="Light Out" aria-label="Light Out">
               <div class="button-check" role="radio" style="border: 2px solid rgba(225,225,225,.1); background: ;box-shadow: 1px 1px 2px rgba(225,225,225,.1);">
                   <svg width="18px" height="18px">
                     <use xlink:href="#icon-good" focusable="false"></use>
@@ -375,7 +364,7 @@
         </div>
       </div>
       <div class="c-theme__done text--center">
-        <button class="btn--large btn--primary btn--rounded js-theme-close" tabindex="16">
+        <button class="btn--large btn--primary btn--rounded js-theme-close">
           Done
         </button>
     </div>
@@ -566,9 +555,9 @@ Now Click below link (Open in a different tab) <br>
 <a href="https://github.com/barryclark/jekyll-now">Jekyll now starter theme
 </a>
 </p>
-<figure class="p-article__img"><picture><source media="(max-width: 799px)" srcset="img/jekyll-theme.png?nf_resize=fit&w=480">
-        <source media="(min-width: 800px)" srcset="img/jekyll-theme.png?nf_resize=fit&w=800">
-        <img src="img/jekyll-theme.png?nf_resize=fit&w=800" alt="You should see a page that looks like this">
+<figure class="p-article__img"><picture><source media="(max-width: 799px)" srcset="img/jekyll-theme.png" class="spdr-c2tn-480xxsw spdr-convert-jpeg">
+        <source media="(min-width: 800px)" srcset="img/jekyll-theme.png" class="spdr-c2tn-800xxsw spdr-convert-jpeg">
+        <img src="img/jekyll-theme.png" alt="You should see a page that looks like this" class="spdr-convert-jpeg">
         </picture><figcaption>You should see a page that looks like this</figcaption></figure>
  <p>
   Now its time to <b>Fork</b> the starter theme <br>
@@ -583,29 +572,29 @@ Now Click below link (Open in a different tab) <br>
 <p>
 The page would reload and you would see a desktop view of the page, just look at the right side of the page at the header (top of the webpage) and click on <b>fork</b>
 </p>
-<figure class="p-article__img"><picture><source media="(max-width: 799px)" srcset="img/fork-theme.png?nf_resize=fit&w=480">
-        <source media="(min-width: 800px)" srcset="img/fork-theme.png?nf_resize=fit&w=800">
-        <img src="img/fork-theme.png?nf_resize=fit&w=800" alt="Click the fork icon there">
+<figure class="p-article__img"><picture><source media="(max-width: 799px)" srcset="img/fork-theme.png" class="spdr-c2tn-480xxsw spdr-convert-jpeg">
+        <source media="(min-width: 800px)" srcset="img/fork-theme.png" class="spdr-c2tn-800xxsw spdr-convert-jpeg">
+        <img src="img/fork-theme.png" alt="Click the fork icon there" class="spdr-convert-jpeg">
         </picture><figcaption>Click the fork icon there</figcaption></figure>
  <p>
 After doing that the next page you are going to see would ask you to change your <b>Forked theme name</b> <br>
 Now change the name of the website to: "github-username.github.io"
  </p>
-<figure class="p-article__img"><picture><source media="(max-width: 799px)" srcset="img/rename-theme.png?nf_resize=fit&w=480">
-        <source media="(min-width: 800px)" srcset="img/rename-theme.png?nf_resize=fit&w=800">
-        <img src="img/rename-theme.png?nf_resize=fit&w=800" alt="Old one looks like this">
+<figure class="p-article__img"><picture><source media="(max-width: 799px)" srcset="img/rename-theme.png" class="spdr-c2tn-480xxsw spdr-convert-jpeg">
+        <source media="(min-width: 800px)" srcset="img/rename-theme.png" class="spdr-c2tn-800xxsw spdr-convert-jpeg">
+        <img src="img/rename-theme.png" alt="Old one looks like this" class="spdr-convert-jpeg">
         </picture><figcaption>Old one looks like this</figcaption></figure>
-<figure class="p-article__img"><picture><source media="(max-width: 799px)" srcset="img/rename-theme-me.png?nf_resize=fit&w=480">
-        <source media="(min-width: 800px)" srcset="img/rename-theme-me.png?nf_resize=fit&w=800">
-        <img src="img/rename-theme-me.png?nf_resize=fit&w=800" alt="Change it to something like this with your own github username">
+<figure class="p-article__img"><picture><source media="(max-width: 799px)" srcset="img/rename-theme-me.png" class="spdr-c2tn-480xxsw spdr-convert-jpeg">
+        <source media="(min-width: 800px)" srcset="img/rename-theme-me.png" class="spdr-c2tn-800xxsw spdr-convert-jpeg">
+        <img src="img/rename-theme-me.png" alt="Change it to something like this with your own github username" class="spdr-convert-jpeg">
         </picture><figcaption>Change it to something like this with your own github username</figcaption></figure>
  <p>
 Now its time to create a github token for the spck editor app you downloaded earlier... <br>
 click on the dropdown menu at the top of the page
  </p>
- <figure class="p-article__img"><picture><source media="(max-width: 799px)" srcset="img/click-settings.png?nf_resize=fit&w=480">
-        <source media="(min-width: 800px)" srcset="img/click-settings.png?nf_resize=fit&w=800">
-        <img src="img/click-settings.png?nf_resize=fit&w=800" alt="Dropdown menu">
+ <figure class="p-article__img"><picture><source media="(max-width: 799px)" srcset="img/click-settings.png" class="spdr-c2tn-480xxsw spdr-convert-jpeg">
+        <source media="(min-width: 800px)" srcset="img/click-settings.png" class="spdr-c2tn-800xxsw spdr-convert-jpeg">
+        <img src="img/click-settings.png" alt="Dropdown menu" class="spdr-convert-jpeg">
         </picture><figcaption>Dropdown menu</figcaption></figure>
  <p>
  <ol>
@@ -624,16 +613,16 @@ click on the dropdown menu at the top of the page
  </ol>
  </ol>
  </p>
- <figure class="p-article__img"><picture><source media="(max-width: 799px)" srcset="img/spck-token.png?nf_resize=fit&w=480">
-        <source media="(min-width: 800px)" srcset="img/spck-token.png?nf_resize=fit&w=800">
-        <img src="img/spck-token.png?nf_resize=fit&w=800" alt="Select the repo box">
+ <figure class="p-article__img"><picture><source media="(max-width: 799px)" srcset="img/spck-token.png" class="spdr-c2tn-480xxsw spdr-convert-jpeg">
+        <source media="(min-width: 800px)" srcset="img/spck-token.png" class="spdr-c2tn-800xxsw spdr-convert-jpeg">
+        <img src="img/spck-token.png" alt="Select the repo box" class="spdr-convert-jpeg">
         </picture><figcaption>Select the repo box</figcaption></figure> 
  <p>
 After you have generated your token ensure you copy it to your phone clipboard because you wont see again unless you re-generate it.
  </p>
- <figure class="p-article__img"><picture><source media="(max-width: 799px)" srcset="img/spck-token-sucess.png?nf_resize=fit&w=480">
-        <source media="(min-width: 800px)" srcset="img/spck-token-sucess.png?nf_resize=fit&w=800">
-        <img src="img/spck-token-sucess.png?nf_resize=fit&w=800" alt="Ensure you copy the token">
+ <figure class="p-article__img"><picture><source media="(max-width: 799px)" srcset="img/spck-token-sucess.png" class="spdr-c2tn-480xxsw spdr-convert-jpeg">
+        <source media="(min-width: 800px)" srcset="img/spck-token-sucess.png" class="spdr-c2tn-800xxsw spdr-convert-jpeg">
+        <img src="img/spck-token-sucess.png" alt="Ensure you copy the token" class="spdr-convert-jpeg">
         </picture><figcaption>Ensure you copy the token</figcaption></figure> 
  <p>
 If you have followed this guide perfectly, you are just a few steps away from your newly phone managed blog or website.
@@ -643,17 +632,17 @@ Moving on, Do you remember the "Spck editor" you downloaded earlier? Yep i guess
 Now open it up <br>
 And you should see something that looks like this image below
  </p>
- <figure class="p-article__img"><picture><source media="(max-width: 799px)" srcset="img/spck-editor.png?nf_resize=fit&w=480">
-        <source media="(min-width: 800px)" srcset="img/spck-editor.png?nf_resize=fit&w=800">
-        <img src="img/spck-editor.png?nf_resize=fit&w=800" alt="Yep. Click on the first tab and you should see this">
+ <figure class="p-article__img"><picture><source media="(max-width: 799px)" srcset="img/spck-editor.png" class="spdr-c2tn-480xxsw spdr-convert-jpeg">
+        <source media="(min-width: 800px)" srcset="img/spck-editor.png" class="spdr-c2tn-800xxsw spdr-convert-jpeg">
+        <img src="img/spck-editor.png" alt="Yep. Click on the first tab and you should see this" class="spdr-convert-jpeg">
         </picture><figcaption>Yep. Click on the first tab and you should see this</figcaption></figure> 
  <p>
 Next step is to look at the <b>PROJECTS</b> tab <br>
 Click on the third icon (The fork icon)
  </p>
- <figure class="p-article__img"><picture><source media="(max-width: 799px)" srcset="img/spck-editor-fork.png?nf_resize=fit&w=480">
-        <source media="(min-width: 800px)" srcset="img/spck-editor-fork.png?nf_resize=fit&w=800">
-        <img src="img/spck-editor-fork.png?nf_resize=fit&w=800" alt="On the projects tab, click the fork icon (the third icon)">
+ <figure class="p-article__img"><picture><source media="(max-width: 799px)" srcset="img/spck-editor-fork.png" class="spdr-c2tn-480xxsw spdr-convert-jpeg">
+        <source media="(min-width: 800px)" srcset="img/spck-editor-fork.png" class="spdr-c2tn-800xxsw spdr-convert-jpeg">
+        <img src="img/spck-editor-fork.png" alt="On the projects tab, click the fork icon (the third icon)" class="spdr-convert-jpeg">
         </picture><figcaption>On the projects tab, click the fork icon (the third icon)</figcaption></figure> 
  <p>
 When you click on fork icon <br>

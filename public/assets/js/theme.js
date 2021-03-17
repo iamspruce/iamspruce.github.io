@@ -51,6 +51,33 @@ function focusRestrict ( event ) {
 let themeFonts = document.querySelectorAll('.c-theme__button--font');
 let themeColors = document.querySelectorAll('.c-theme__color');
 let themeBg = document.querySelectorAll('.c-theme__bg');
+  
+  themeFonts.forEach((btn,index) => {
+    if (index == themeFonts.length -1) {
+        btn.setAttribute('tabindex', 0);
+      } else {
+        btn.setAttribute('tabindex', -1); 
+      } 
+      let val = document.querySelector('.js-theme_color--labels');
+      let nextVal = val.firstElementChild;
+    btn.addEventListener('keydown', (e) => {
+        if (e.keyCode == 9) {
+            e.preventDefault();
+            btn.setAttribute('tabindex', -1);
+            let nextEl = btn.previousElementSibling;
+            if (btn.previousElementSibling != null) {
+              nextEl.setAttribute('tabindex', 0);
+              nextEl.focus();
+            } else {
+              let firstEl = document.querySelector('.c-theme__button--fonts').lastElementChild;
+              firstEl.setAttribute('tabindex',0);
+              nextVal.focus();
+            }
+        }
+    })
+       
+  })
+
 class Theme {
     constructor(button,name,property) {
         this.islocalStorage = function() {
